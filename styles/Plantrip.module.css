@@ -1,0 +1,56 @@
+@media only screen and (max-width:768px) {
+    .home_PlanTrip .home_bestTrip h1{
+        font-size: 40px !important;
+        padding: 0% 8% !important;
+    }
+}
+.home_PlanTrip {
+    background: url(../public/images/home/Rectangle\ 4544.png);
+    height: 600px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home_PlanTrip .home_bestTrip {
+    top: 50%;
+    transform: translate(-0%, -50%);
+    position: absolute;
+    text-align: center;
+}
+
+.home_PlanTrip .home_bestTrip h1 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding: 0% 15%;
+}
+
+#home_planYourTrip {
+    background: #00754A;
+    border-radius: 32px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 180%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.home_planButton {
+    text-align: center;
+    top: -25px;
+    position: relative;
+
+}

@@ -1,0 +1,81 @@
+@media only screen and (max-width:768px) {
+    .home_dream .home_div_1 {
+        font-size: 40px !important;
+    }
+    .home_dream .home_div_2 {
+        font-size: 40px !important;
+    }
+    .home_dream p{
+        font-size: 15px !important;
+    }
+}
+
+.home_dream {
+    text-align: center;
+}
+
+.home_dream .home_div_1 {
+    color: #121212;
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 120%;
+}
+
+.home_dream .home_div_2 {
+    color: #00754A;
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 120%;
+}
+
+.home_dream p {
+    font-style: normal;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 142%;
+    color: rgba(18, 18, 18, 0.8);
+}
+
+.home_carousal_card {
+    border: none;
+    text-align: center;
+}
+
+.bca {
+    position: relative;
+}
+
+.home_carousal_card .abc {
+    position: absolute;
+    top: 50%;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 158.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home_carousal_title {
+    top: 90%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -200%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 151%;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+
+.styles.arrow {
+    color: red !important;
+}
