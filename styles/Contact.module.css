@@ -1,0 +1,272 @@
+#main_contact_container {
+  padding: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.contact_image {
+  position: absolute;
+}
+.contact_all_div11 {
+  padding-bottom: 60px;
+}
+.contact_tourist_care {
+  position: absolute;
+  text-align: center;
+  font-size: 64px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.contact_founding_team {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 130%;
+  text-align: center;
+  color: #121212;
+  padding-top: 75px;
+}
+.contact_all_card {
+  padding: 0% 15% 0% 15%;
+}
+.contact_second_div {
+  /* background-color: #e5e5e5; */
+  padding-bottom: 50px;
+}
+.text_div {
+  margin-top: -10px;
+}
+#contact_card_one {
+  height: 464px;
+  width: 368px;
+  height: 426px;
+  padding: 22px;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02),
+    0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852),
+    0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481),
+    0px 20px 13px rgba(0, 0, 0, 0.01),
+    0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185),
+    0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481);
+  background: #ffffff;
+  border: 0px;
+  border-radius: 20px;
+}
+#contact_card_title {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  color: rgba(18, 18, 18, 0.8);
+}
+#contact_card_text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 171.5%;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: rgba(18, 18, 18, 0.8);
+}
+.all_icons {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#user_icons {
+  border: 1px solid rgba(18, 18, 18, 0.8);
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  font-size: 18px;
+  text-align: center;
+  margin: 6px;
+  cursor: pointer;
+}
+.contact_user_h1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 130%;
+  color: #121212;
+}
+.contact_user_para {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: rgba(18, 18, 18, 0.8);
+}
+.contact_number {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+  padding-left: 15px;
+  color: rgba(18, 18, 18, 0.8);
+}
+.contact_gmail {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  padding-left: 15px;
+  color: rgba(18, 18, 18, 0.8);
+}
+.contact_channel_text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  margin-right: 90px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: end;
+  color: rgba(18, 18, 18, 0.8);
+}
+.contact_social_icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: center;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+#contact_main_mail {
+  padding-top: 15px;
+}
+#contact_info_container {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.contact_your_details {
+  padding: 0% 15% 0% 15%;
+}
+.contact_your_text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  color: #121212;
+}
+.contact_inputs11 {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.contact_inputs22 {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.contact_message_input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  height: 90px;
+  margin-top: 20px;
+}
+.contact_submit_btn {
+  outline: none;
+  width: 170px;
+  height: 50px;
+  background: #00754a;
+  border-radius: 32px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0.02em;
+  border: none;
+}
+.contact_main_btn {
+  padding: 35px;
+  text-align: center;
+}
+.contact_info11 {
+  padding: 0% 15% 0% 15%;
+}
+@media only screen and (max-width: 768px) {
+  .contact_tourist_care {
+    top: 20% !important;
+    font-size: 45px !important;
+  }
+  .contact_founding_team {
+    font-size: 45px !important;
+  }
+  #contact_card_one {
+    width: 90% !important;
+    height: 90% !important;
+    padding: 45px !important;
+    justify-content: center !important;
+  }
+  .contact_user_h1 {
+    font-size: 45px !important;
+  }
+  .contact_user_para {
+    font-size: 22px !important;
+  }
+  .contact_channel_text {
+    text-align: start !important;
+    margin-top: 10px !important;
+  }
+  #contact_social11 {
+    justify-content: start !important;
+  }
+  .contact_inputs22 {
+    margin-top: 15px !important;
+  }
+  .contact_parent_div {
+    width: 80% !important;
+    margin: auto !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .contact_tourist_care {
+    top: 40% !important;
+  }
+}
