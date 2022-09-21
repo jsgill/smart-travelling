@@ -30,7 +30,7 @@ function Footer() {
                         <div className={styles.footer_image3}>
                             <h4>Follow us on</h4>
                             <div>
-                               <Link href="mailto:info@makemywebsite.com.au"><a target="_blank" className={styles.home_linkdian}><Image src={media3} width="60px" height="60px" /></a></Link>
+                               {/* <Link href="mailto:info@makemywebsite.com.au"><a target="_blank" className={styles.home_linkdian}><Image src={media3} width="60px" height="60px" /></a></Link> */}
                                <Link href="https://instagram.com/thesmartraveller.in?igshid=YmMyMTA2M2Y="><a target="_blank" className={styles.home_insta}><Image src={media2} width="60px" height="60px" /></a></Link>
                                 <Link href="https://www.linkedin.com/company/the-smart-traveller/?viewAsMember=true"><a target="_blank" className={styles.home_facebook}><Image src={media1} width="60px" height="60px" /></a></Link>
                             </div>
