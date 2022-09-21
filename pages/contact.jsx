@@ -13,6 +13,7 @@ import linkdin_img from "../public/images/contact/linkdin.png";
 import insta_img from "../public/images/contact/insta.png";
 import facebook_img from "../public/images/contact/facebook.png";
 import Navbar from "../components/navbar"
+import Link from "next/link";
 
 function Contact() {
     return (
@@ -22,7 +23,7 @@ function Contact() {
                 <div className={styles.contact_image}>
                     <h1 className={styles.contact_tourist_care}>TOURIST CARE</h1>
                 </div>
-        </div>
+            </div>
             <div className={styles.contact_all_div11}>
                 <div className={styles.contact_second_div}>
                     <div className="container" id={styles.contact_second_container}>
@@ -41,13 +42,21 @@ function Contact() {
                                             </div>
                                             <div className={styles.all_icons}>
                                                 <div id={styles.user_icons}>
-                                                    <Image src={envelope_img} alt="envelope" />
+                                                    <Link href='https://nihal@thesmartraveller.com'>
+                                                        <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
+                                                    </Link>
                                                 </div>
                                                 <div id={styles.user_icons}>
-                                                    <Image src={group_img} alt="envelope" />
+                                                    <Link href="https://instagram.com/nihilistic___?igshid=YmMyMTA2M2Y">
+                                                        <a target="_blank"><Image src={group_img} alt="envelope" /></a>
+                                                    </Link>
                                                 </div>
                                                 <div id={styles.user_icons}>
-                                                    <Image src={vector_img} alt="envelope" />
+                                                    <Link href="https://www.linkedin.com/in/nihalchoudhary">
+                                                        <a target="_blank">
+                                                            <Image src={vector_img} alt="envelope" />
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -65,13 +74,22 @@ function Contact() {
                                             </div>
                                             <div className={styles.all_icons}>
                                                 <div id={styles.user_icons}>
-                                                    <Image src={envelope_img} alt="envelope" />
+                                                    <Link href="https://dhruv@thesmartraveller.com">
+                                                        <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
+                                                    </Link>
+
                                                 </div>
                                                 <div id={styles.user_icons}>
-                                                    <Image src={group_img} alt="envelope" />
+                                                    <Link href="https://instagram.com/_dhruvsihag?igshid=YmMyMTA2M2Y">
+                                                        <a target="_blank"><Image src={group_img} alt="envelope" /></a>
+                                                    </Link>
                                                 </div>
                                                 <div id={styles.user_icons}>
-                                                    <Image src={vector_img} alt="envelope" />
+                                                    <Link href="https://www.linkedin.com/in/dhruv-sihag-99a1b91a0">
+                                                        <a target="_blank">
+                                                            <Image src={vector_img} alt="envelope" />
+                                                        </a>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -107,10 +125,18 @@ function Contact() {
                                         <Image src={facebook_img} alt="facebook" />
                                     </div>
                                     <div className={styles.contact_social_icon}>
-                                        <Image src={insta_img} alt="insta" />
+                                        <Link href="https://instagram.com/thesmartraveller.in?igshid=YmMyMTA2M2Y">
+                                            <a target="_blank">
+                                                <Image src={insta_img} alt="insta" />
+                                            </a>
+                                        </Link>
                                     </div>
                                     <div className={styles.contact_social_icon}>
-                                        <Image src={linkdin_img} alt="linkdin" />
+                                        <Link href="https://www.linkedin.com/company/the-smart-traveller/?viewAsMember=true">
+                                            <a target="_blank">
+                                                <Image src={linkdin_img} alt="linkdin" />
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
 
