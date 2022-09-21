@@ -10,49 +10,41 @@ import destination_4 from "../public/images/trip/destination_4.png";
 import destination_5 from "../public/images/trip/destination_5.png";
 import cross from "../public/images/trip/cross.png";
 import styles from "../styles/TripOne.module.css";
+import swal from 'sweetalert';
+
 
 function TripOne() {
+  const [userInfo, setUserInfo] = useState([]);
   const [input1, setInput1] = useState(false);
-
+  const [info, setInfo] = useState("");
+  const handleChange = (e) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      setUserInfo([...userInfo, value])
+    }
+  }
+  const handleClick = () => {
+    if (userInfo.length === 1) {
+      swal({
+        text: "Select minumum 2 destination",
+        icon: "warning",
+        button: "Ok",
+      });
+    }
+    else {
+      toggleInput1()
+      for (let i = 0; i < userInfo.length; i++) {
+        info = info.concat(userInfo[i])
+        if (i < userInfo.length - 1) {
+          info = info.concat(', ')
+        }
+      }
+      setInfo(info)
+    }
+  }
   function toggleInput1() {
     setInput1(!input1);
   }
-  const [circle, setcircle] = useState({
-    MOHALI: false,
-    KASOL: false,
-    LEHLADAKH: false,
-  });
-  console.log("circle=========>", circle);
-  function handleChange(e) {
-    var { name, checked } = e.target;
-    setcircle((e) => {
-      var selectDestination = e.renu;
-
-      return (selectDestination[name] = checked);
-    });
-  }
-  // var displayDestination = circle.renu;
-
-  // function handleChange(e) {
-  //   console.log("temp =====>", e.target.name);
-  //   var arr = ;
-  //   arr.push(e.target.name);
-  //   console.log("id =====>", arr);
-  //   var newvar = 0;
-  //   var count;
-  //   for (count = 0; count < arr.length; count++) {
-  //     console.log(" count ===>", count);
-  //     newvar++;
-  //     if (arr[count] == 0) {
-  //       newvar = newvar + 1;
-  //       console.log("temp==============>", temp[count].checked);
-  //     }
-  //     console.log("new ====>", newvar);
-  //   }
-  //   if (newvar >= 2) {
-  //     alert("min length is 2");
-  //   }
-  // }
 
   return (
     <div>
@@ -98,9 +90,9 @@ function TripOne() {
         </div>
         <div className={styles.input_container}>
           <input
-            defaultValue="Choose Destination"
             className={styles.input_field}
             onClick={toggleInput1}
+            value={info.length === 0 ? "Choose Destination" : info}
           />
 
           {/*hide show div for first input  */}
@@ -128,7 +120,8 @@ function TripOne() {
                   <Image src={destination_1} alt="destination-image" />
                   <input
                     type="checkbox"
-                    name="MANALI"
+                    name="place"
+                    value="MANALI"
                     onChange={handleChange}
                     className={styles.tripOne_circle1}
                   />
@@ -141,7 +134,8 @@ function TripOne() {
                   <Image src={destination_2} alt="destination-image" />
                   <input
                     type="checkbox"
-                    name="KASOL"
+                    name="place"
+                    value="KASOL"
                     onChange={handleChange}
                     className={styles.tripOne_circle2}
                   />
@@ -154,7 +148,8 @@ function TripOne() {
                   <Image src={destination_3} alt="destination-image" />
                   <input
                     type="checkbox"
-                    name="LEHLADAKH"
+                    name="place"
+                    value="LEHLADAKH"
                     onChange={handleChange}
                     className={styles.tripOne_circle3}
                   />
@@ -190,7 +185,7 @@ function TripOne() {
                 </div>
               </div>
               <div className={styles.tripOne_inputone_btn_container}>
-                <button className={styles.tripOne_inputone_btn}>Save</button>
+                <button className={styles.tripOne_inputone_btn} onClick={handleClick}>Save</button>
               </div>
             </div>
           </div>
@@ -207,5 +202,4 @@ function TripOne() {
     </div>
   );
 }
-
 export default TripOne;
