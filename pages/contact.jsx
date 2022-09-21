@@ -19,11 +19,10 @@ function Contact() {
         <div>
             <Navbar />
             <div className="container-fluid" id={styles.main_contact_container}>
-                <Image src={contact_img} width={1440} height={520} alt="contact_img" className={styles.contact_image} />
-                <div className="text-center">
+                <div className={styles.contact_image}>
                     <h1 className={styles.contact_tourist_care}>TOURIST CARE</h1>
                 </div>
-            </div>
+        </div>
             <div className={styles.contact_all_div11}>
                 <div className={styles.contact_second_div}>
                     <div className="container" id={styles.contact_second_container}>

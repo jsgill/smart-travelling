@@ -4,7 +4,13 @@
   padding-left: 0px;
 }
 .contact_image {
-  position: absolute;
+ background: url(../public/images/contact/Rectangle\ 4564.png);
+ height: 520px;
+ width: 100%;
+ position: relative;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
 }
 .contact_all_div11 {
   padding-bottom: 60px;
@@ -232,8 +238,7 @@
 }
 @media only screen and (max-width: 768px) {
   .contact_tourist_care {
-    top: 20% !important;
-    font-size: 45px !important;
+    font-size: 26px !important;
   }
   .contact_founding_team {
     font-size: 45px !important;
@@ -265,8 +270,8 @@
     margin: auto !important;
   }
 }
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   .contact_tourist_care {
     top: 40% !important;
   }
-}
+} */
