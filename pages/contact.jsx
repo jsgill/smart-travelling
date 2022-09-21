@@ -42,7 +42,7 @@ function Contact() {
                                             </div>
                                             <div className={styles.all_icons}>
                                                 <div id={styles.user_icons}>
-                                                    <Link href='https://nihal@thesmartraveller.com'>
+                                                    <Link href='mailto:nihal@thesmartraveller.com'>
                                                         <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
                                                     </Link>
                                                 </div>
@@ -74,7 +74,7 @@ function Contact() {
                                             </div>
                                             <div className={styles.all_icons}>
                                                 <div id={styles.user_icons}>
-                                                    <Link href="https://dhruv@thesmartraveller.com">
+                                                    <Link href="mailto:dhruv@thesmartraveller.com">
                                                         <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
                                                     </Link>
 
