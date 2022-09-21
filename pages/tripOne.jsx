@@ -17,6 +17,10 @@ function TripOne() {
   const [userInfo, setUserInfo] = useState([]);
   const [input1, setInput1] = useState(false);
   const [info, setInfo] = useState("");
+
+  const [input2, setInput2] = useState(false);
+  const [inputTwo, setInputTwo] = useState("");
+  const [count, setCount] = useState(0);
   const handleChange = (e) => {
     const { value, checked } = e.target;
     if (checked) {
@@ -44,7 +48,30 @@ function TripOne() {
   function toggleInput1() {
     setInput1(!input1);
   }
+  function toggleInput2() {
+    setInput2(!input2);
+  }
 
+  function increment() {
+    setCount(function (prevCount) {
+      return (prevCount += 1);
+    });
+  }
+
+  function decrement() {
+    setCount(function (prevCount) {
+      if (prevCount > 0) {
+        return (prevCount -= 1);
+      } else {
+        return (prevCount = 0);
+      }
+    });
+  }
+  function inputTwoBtn() {
+    console.log("count ====>", count);
+    toggleInput2();
+    setInputTwo(count);
+  }
   return (
     <div>
       <div>
@@ -194,7 +221,6 @@ function TripOne() {
             </div>
           </div>
           <input
-            //defaultValue="No. of Guests"
             value={inputTwo.length == 0 ? "No. of Guests" : inputTwo}
             className={styles.input_field}
             onClick={toggleInput2}
