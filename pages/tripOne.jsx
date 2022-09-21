@@ -17,10 +17,10 @@ function TripOne() {
   const [userInfo, setUserInfo] = useState([]);
   const [input1, setInput1] = useState(false);
   const [info, setInfo] = useState("");
-
   const [input2, setInput2] = useState(false);
   const [inputTwo, setInputTwo] = useState("");
   const [count, setCount] = useState(0);
+
   const handleChange = (e) => {
     const { value, checked } = e.target;
     if (checked) {
@@ -68,7 +68,6 @@ function TripOne() {
     });
   }
   function inputTwoBtn() {
-    console.log("count ====>", count);
     toggleInput2();
     setInputTwo(count);
   }
