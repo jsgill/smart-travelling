@@ -1,8 +1,66 @@
-.home_happening h1{
+.home_happening h1 {
     font-style: normal;
     font-weight: 600;
     font-size: 64px;
     line-height: 130%;
     text-align: center;
     color: #121212;
+    font-family: "Poppins", sans-serif;
+}
+.home_happening{
+    padding: 40px 0px 40px 0px;
+}
+
+.saprater p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: rgba(18, 18, 18, 0.8);
+}
+
+.saprater {
+    border-bottom: 2px solid #00754A;
+    width: 100%;
+    padding: 10px 0px 16px 0px;
+}
+
+.home_mountain {
+    padding: 22% 0% 0% 0%;
+   
+}
+.demo{
+    border-bottom: 2px solid #00754A;
+    width: 100%;
+     padding: 26% 0% 0% 0%;
+}
+.home_mountain h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 130%;
+    color: #121212;
+    font-family: "Poppins", sans-serif;
+}
+
+.home_mountain p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: rgba(18, 18, 18, 0.8);
+    font-family: "Poppins", sans-serif;
+}
+.home_explore{
+    font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 130%;
+font-family: "Poppins",sans-serif;
+color: #00754A;
+}
+.home_right_button{
+    height: 8.5px;
+    width: 15.5px;
 }

@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import DreamCall from '../components/dreamCall'
+import Footer from '../components/footer'
 import FullyFurnished from '../components/fullyFurnished'
 import HappeningNow from '../components/happeningNow'
+import HowItWorks from '../components/howItWorks'
 import Navbar from '../components/navbar'
 import PlanTrip from '../components/planTrip'
 import styles from '../styles/Home.module.css'
@@ -29,6 +31,9 @@ export default function Home() {
       <FullyFurnished/>
       <DreamCall/>
       <HappeningNow/>
+      <HowItWorks/>
+      <Footer/>
+       
     </div>
   )
 }

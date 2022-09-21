@@ -35,7 +35,7 @@ function DreamCall() {
                 </div>
             </div>
             <div className='row justify-content-center'>
-                <div className="col-md-10">
+                <div className="col-md-12">
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
                          <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
