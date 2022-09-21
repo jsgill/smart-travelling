@@ -53,7 +53,7 @@ function Contact() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-6">
+                                <div className="col-lg-6" id={styles.contact_second_user22}>
                                     <div className="card" id={styles.contact_card_one}>
                                         <div>
                                             <Image src={user_two} width="214px" height="214px" alt="user-two" />
@@ -125,7 +125,7 @@ function Contact() {
                             <div className="col-lg-6">
                                 <input type="text" placeholder="Your name" name="name" className={styles.contact_inputs11} />
                             </div>
-                            <div className="col-lg-6">
+                            <div className="col-lg-6" id={styles.contact_ph_info}>
                                 <input type="text" placeholder="Phone number" name="phone" className={styles.contact_inputs22} />
                             </div>
                             <div className="col-lg-12">

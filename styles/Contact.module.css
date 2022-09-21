@@ -4,13 +4,13 @@
   padding-left: 0px;
 }
 .contact_image {
- background: url(../public/images/contact/Rectangle\ 4564.png);
- height: 520px;
- width: 100%;
- position: relative;
- background-repeat: no-repeat;
- background-size: cover;
- background-position: center;
+  background: url(../public/images/contact/Rectangle\ 4564.png);
+  height: 520px;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .contact_all_div11 {
   padding-bottom: 60px;
@@ -237,6 +237,9 @@
   padding: 0% 15% 0% 15%;
 }
 @media only screen and (max-width: 768px) {
+  .contact_all_card {
+    padding: 0px !important;
+  }
   .contact_tourist_care {
     font-size: 26px !important;
   }
@@ -244,10 +247,9 @@
     font-size: 45px !important;
   }
   #contact_card_one {
-    width: 90% !important;
-    height: 90% !important;
-    padding: 45px !important;
-    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0px !important;
   }
   .contact_user_h1 {
     font-size: 45px !important;
@@ -269,9 +271,38 @@
     width: 80% !important;
     margin: auto !important;
   }
-}
-/* @media only screen and (max-width: 1024px) {
-  .contact_tourist_care {
-    top: 40% !important;
+  .contact_info11 {
+    padding: 0% !important;
   }
-} */
+  .contact_your_details {
+    padding: 0% !important;
+  }
+  #contact_second_user22 {
+    margin-top: 25px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* .contact_tourist_care {
+    top: 40% !important;
+  } */
+  #contact_card_one {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0px !important;
+    margin-top: 20px !important;
+  }
+}
+@media only screen and (max-width: 912px) {
+  #contact_second_user22 {
+    margin-top: 25px !important;
+  }
+  .contact_channel_text {
+    text-align: start !important;
+  }
+  #contact_social11 {
+    justify-content: start !important;
+  }
+  #contact_ph_info {
+    margin-top: 20px !important;
+  }
+}
