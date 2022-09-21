@@ -9,9 +9,9 @@ import destination_3 from "../public/images/trip/destination_3.png";
 import destination_4 from "../public/images/trip/destination_4.png";
 import destination_5 from "../public/images/trip/destination_5.png";
 import cross from "../public/images/trip/cross.png";
+import minus from "../public/images/trip/minus.png";
 import styles from "../styles/TripOne.module.css";
-import swal from 'sweetalert';
-
+import swal from "sweetalert";
 
 function TripOne() {
   const [userInfo, setUserInfo] = useState([]);
@@ -20,9 +20,9 @@ function TripOne() {
   const handleChange = (e) => {
     const { value, checked } = e.target;
     if (checked) {
-      setUserInfo([...userInfo, value])
+      setUserInfo([...userInfo, value]);
     }
-  }
+  };
   const handleClick = () => {
     if (userInfo.length === 1) {
       swal({
@@ -30,18 +30,17 @@ function TripOne() {
         icon: "warning",
         button: "Ok",
       });
-    }
-    else {
-      toggleInput1()
+    } else {
+      toggleInput1();
       for (let i = 0; i < userInfo.length; i++) {
-        info = info.concat(userInfo[i])
+        info = info.concat(userInfo[i]);
         if (i < userInfo.length - 1) {
-          info = info.concat(', ')
+          info = info.concat(", ");
         }
       }
-      setInfo(info)
+      setInfo(info);
     }
-  }
+  };
   function toggleInput1() {
     setInput1(!input1);
   }
@@ -185,11 +184,71 @@ function TripOne() {
                 </div>
               </div>
               <div className={styles.tripOne_inputone_btn_container}>
-                <button className={styles.tripOne_inputone_btn} onClick={handleClick}>Save</button>
+                <button
+                  className={styles.tripOne_inputone_btn}
+                  onClick={handleClick}
+                >
+                  Save
+                </button>
               </div>
             </div>
           </div>
-          <input defaultValue="No.of Guests" className={styles.input_field} />
+          <input
+            //defaultValue="No. of Guests"
+            value={inputTwo.length == 0 ? "No. of Guests" : inputTwo}
+            className={styles.input_field}
+            onClick={toggleInput2}
+          />
+          {/*input second popup for no. of people */}
+
+          <div
+            style={{
+              display: input2 ? "block" : "none",
+            }}
+          >
+            <div className="container" id={styles.tripOne_inputtwo_container}>
+              <p className={styles.tripOne_cross_para} onClick={toggleInput2}>
+                <Image
+                  src={cross}
+                  alt="cross_image"
+                  height={12}
+                  width={15}
+                  className={styles.cross_image}
+                />
+              </p>
+              <div className="row">
+                <div className={styles.tripOne_inputtwo_content_container}>
+                  <div className={styles.inputtwo_div1}>
+                    <button
+                      onClick={increment}
+                      className={styles.tripOne_content_inc_dec_operator1}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <p className={styles.tripOne_content_btn} value={inputTwo}>
+                    {count}
+                  </p>
+                  <div className={styles.tripOne_content_inc_dec_operator2}>
+                    <Image
+                      src={minus}
+                      alt="minus-operator"
+                      onClick={decrement}
+                    />
+                  </div>
+                </div>
+                <div className={styles.tripOne_inputone_btn_container}>
+                  <button
+                    className={styles.tripOne_inputone_btn}
+                    onClick={inputTwoBtn}
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <input
             defaultValue="Select the Start & End Date"
             className={styles.input_field}

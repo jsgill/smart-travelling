@@ -366,3 +366,48 @@
 .circleClicked--close{
     background-color: #00754A;
 }
+
+
+/* tripone input two css start */
+
+#tripOne_inputtwo_container{
+    position: absolute;
+    background-color: #FFFFFF;
+    z-index: 1;
+    top:-14%;
+    left: 0;
+    padding: 50px 100px;
+    border-radius: 10px;
+ }
+ .tripOne_inputtwo_content_container{
+    display: flex;
+    justify-content: space-around;
+ }
+.inputtwo_div1{
+    height: 20px;
+    border-radius: 50%;
+}
+.tripOne_content_inc_dec_operator1{
+    font-size: 28px;
+    width: 43px;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+.tripOne_content_inc_dec_operator2{
+    padding-left: 10px;
+    padding-top: 8px;
+    width: 40px;
+    height: 45px;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+.tripOne_content_btn{
+    color: #00754A;
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 600;
+}
