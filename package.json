@@ -12,6 +12,7 @@
     "next": "12.3.0",
     "owl.carousel": "^2.3.4",
     "react": "18.2.0",
+    "react-calendar": "^3.9.0",
     "react-datepicker": "^4.8.0",
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.2",
