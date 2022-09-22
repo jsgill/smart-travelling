@@ -2,9 +2,15 @@ import React from 'react'
 import styles from '../styles/dreamCall.module.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import Link from 'next/link';
 import Image from 'next/image';
 import group1 from '../public/images/home/Group 22104.png';
 import group2 from '../public/images/home/Group 22103.png'
+import group3 from '../public/images/home/Rectangle 4566.png'
+import group4 from '../public/images/home/Rectangle 4567.png'
+import circle from '../public/images/home/Ellipse 293.png'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 function DreamCall() {
     const responsive = {
 
@@ -37,52 +43,76 @@ function DreamCall() {
             <div className='row justify-content-center'>
                 <div className="col-md-12">
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
-                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}>
-                                <Image src={group1} height="382px" width="351px"></Image>
-                            </div>
-                            <div className={styles.abc}>245 trips booked in last week</div>
-                            <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
-                        </div> 
-                        <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}>
-                                <Image src={group2} height="382px" width="351px"></Image>
-                            </div>
-                            <div className={styles.abc}>Sssh, hidden gem just for you</div>
-                            <div className={styles.home_carousal_title}>MANALI</div>
-                        </div> 
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
                                 <Image src={group1} height="382px" width="351px"></Image>
                             </div>
                             <div className={styles.abc}>245 trips booked in last week</div>
                             <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
-                        </div> 
+                        </div>
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
-                                <Image src={group2} height="382px" width="351px"></Image>
+                              
+                                <Popup className={styles.popup}
+                                    trigger={<Image src={group2} className="button" height="382px" width="351px"></Image>}
+                                    modal
+                                    nested
+                                    contentStyle={{ borderRadius: "5px" }}
+                                >
+                                    {close => (
+                                        <div className={styles.modal}>
+                                            <button className={styles.close} onClick={close}>
+                                                &times;
+                                            </button>
+                                            <div className={styles.content}>
+                                                <div className='row justify-content-center pt-3'>
+                                                    <div className='col-md-8'>
+                                                        <div><Image src={group3} height="365px" width="645px"></Image></div>
+                                                    </div>
+                                                    <div className='col-md-4 '>
+                                                        <div><Image src={group4} height="520px" ></Image></div>
+                                                    </div>
+                                                </div>
+                                                <div className='row justify-content-center'>
+
+                                                    <div className={styles.home_popup_title}>
+                                                        <h2>Manali</h2>
+                                                    </div>
+                                                    <div className={styles.home_popup_para}>
+                                                        <div><Image src={circle} width="15px" height="15px"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
+                                                        <div><Image src={circle} height="15px" width="15px"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
+                                                    </div>
+                                                    <div className={styles.home_popup_para}>
+
+                                                    </div>
+                                                    <div className={styles.Popup_bottom_button}>
+                                                        <Link href="/">
+                                                            <a className="btn" id={styles.home_popup_planYourTrip} type="button">
+                                                                <span>Plan your Trip</span>
+                                                            </a>
+                                                        </Link>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </Popup>
                             </div>
                             <div className={styles.abc}>Sssh, hidden gem just for you</div>
                             <div className={styles.home_carousal_title}>MANALI</div>
-                        </div> 
+                        </div>
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
                                 <Image src={group1} height="382px" width="351px"></Image>
                             </div>
                             <div className={styles.abc}>245 trips booked in last week</div>
                             <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
-                        </div> 
-                        <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}>
-                                <Image src={group2} height="382px" width="351px"></Image>
-                            </div>
-                            <div className={styles.abc}>Sssh, hidden gem just for you</div>
-                            <div className={styles.home_carousal_title}>MANALI</div>
-                           
-                        </div> 
+                        </div>
                     </Carousel>
                 </div>
             </div>
+
         </div>
     )
 }

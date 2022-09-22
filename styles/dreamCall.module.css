@@ -2,10 +2,12 @@
     .home_dream .home_div_1 {
         font-size: 40px !important;
     }
+
     .home_dream .home_div_2 {
         font-size: 40px !important;
     }
-    .home_dream p{
+
+    .home_dream p {
         font-size: 15px !important;
     }
 }
@@ -78,4 +80,88 @@
 
 .styles.arrow {
     color: red !important;
+}
+
+.modal {
+    font-size: 12px;
+}
+
+.modal>.header {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.modal>.content {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.content div {
+    padding-right: 0px !important;
+}
+
+.modal>.actions {
+    width: 100%;
+    padding: 10px 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: 0px;
+    top: 0px;
+    font-size: 24px;
+    background: #ffffff;
+    border: none;
+}
+.home_popup_para{
+    padding: 0px 50px 0px 50px;
+}
+
+.home_popup_para div span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 182%;
+    color: rgba(18, 18, 18, 0.75);
+    font-family: "Poppins", sans-serif;
+    padding-left: 10px;
+}
+
+.home_popup_title h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 130%;
+    color: rgba(18, 18, 18, 0.8);
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#home_popup_planYourTrip {
+    background: #00754A;
+    border-radius: 32px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 180%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    box-shadow: none;
+}
+.Popup_bottom_button{
+    text-align: center;
+    padding-top: 50px;
 }
