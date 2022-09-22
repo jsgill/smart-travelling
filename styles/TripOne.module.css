@@ -411,3 +411,25 @@
     margin-top: 10px;
     font-weight: 600;
 }
+/* tripone input three css start */
+
+#tripOne_inputthree_container{
+    position: absolute;
+    background-color: #FFFFFF;
+    z-index: 1;
+    width: 70%;
+    top:-45%;
+    left: 15%;
+    padding: 50px 100px;
+    border-radius: 10px;
+ }
+ .tripOne_cross_para1{
+    background-color: #000000;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding-top: 3px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}

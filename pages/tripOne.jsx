@@ -12,20 +12,30 @@ import cross from "../public/images/trip/cross.png";
 import minus from "../public/images/trip/minus.png";
 import styles from "../styles/TripOne.module.css";
 import swal from "sweetalert";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
 function TripOne() {
   const [userInfo, setUserInfo] = useState([]);
   const [input1, setInput1] = useState(false);
   const [info, setInfo] = useState("");
   const [input2, setInput2] = useState(false);
+  const [input3, setInput3] = useState(false);
   const [inputTwo, setInputTwo] = useState("");
+  const [inputThree, setInputThree] = useState("");
   const [count, setCount] = useState(0);
+  const [date, setDate] = useState(new Date());
+  var startDate = new Date(date[0]).toLocaleDateString();
+  var endDate = new Date(date[1]).toLocaleDateString();
 
   const handleChange = (e) => {
     const { value, checked } = e.target;
     if (checked) {
       setUserInfo([...userInfo, value]);
     }
+  };
+  const handleInput = () => {
+    console.log("input1======>", input1);
   };
   const handleClick = () => {
     if (userInfo.length === 1) {
@@ -51,6 +61,9 @@ function TripOne() {
   function toggleInput2() {
     setInput2(!input2);
   }
+  function toggleInput3() {
+    setInput3(!input3);
+  }
 
   function increment() {
     setCount(function (prevCount) {
@@ -71,6 +84,11 @@ function TripOne() {
     toggleInput2();
     setInputTwo(count);
   }
+  function inputThreeBtn() {
+    toggleInput3();
+    setInputThree(date);
+  }
+
   return (
     <div>
       <div>
@@ -118,6 +136,7 @@ function TripOne() {
             className={styles.input_field}
             onClick={toggleInput1}
             value={info.length === 0 ? "Choose Destination" : info}
+            onChange={handleInput}
           />
 
           {/*hide show div for first input  */}
@@ -222,6 +241,7 @@ function TripOne() {
           <input
             value={inputTwo.length == 0 ? "No. of Guests" : inputTwo}
             className={styles.input_field}
+            onChange={handleInput}
             onClick={toggleInput2}
           />
           {/*input second popup for no. of people */}
@@ -275,9 +295,64 @@ function TripOne() {
           </div>
 
           <input
-            defaultValue="Select the Start & End Date"
+            value={
+              inputThree.length == 0
+                ? "Select the Start & End Date"
+                : startDate.concat(" - ") + endDate
+            }
             className={styles.input_field}
+            onChange={handleInput}
+            onClick={toggleInput3}
           />
+          <div
+            style={{
+              display: input3 ? "block" : "none",
+            }}
+          >
+            <div
+              className="container text-center"
+              id={styles.tripOne_inputthree_container}
+            >
+              <p className={styles.tripOne_cross_para1} onClick={toggleInput3}>
+                <Image
+                  src={cross}
+                  alt="cross_image"
+                  height={12}
+                  width={15}
+                  className={styles.cross_image}
+                />
+              </p>
+              <div className={styles.app}>
+                <div className={styles.calendar_container}>
+                  <Calendar
+                    onChange={setDate}
+                    value={date}
+                    selectRange={true}
+                  />
+                  {date.length > 0 ? (
+                    <p className="text-center">
+                      <span className="bold">Start:</span>
+                      {date[0].toDateString()}
+                      &nbsp;|&nbsp;
+                      <span className="bold">End:</span>{" "}
+                      {date[1].toDateString()}
+                    </p>
+                  ) : (
+                    <p className="text-center"></p>
+                  )}
+                </div>
+              </div>
+              <div className={styles.tripOne_inputone_btn_container}>
+                <button
+                  className={styles.tripOne_inputone_btn}
+                  onClick={inputThreeBtn}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+
           <div className={styles.btn_container}>
             <button className={styles.save_btn}>Save & Continue</button>
           </div>
