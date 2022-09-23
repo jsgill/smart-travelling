@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import tripOne_logo_1 from "../public/images/trip/tripOne_logo_1.png";
 import tripOne_logo_2 from "../public/images/trip/tripOne_logo_2.png";
 import tripOne_logo_3 from "../public/images/trip/tripOne_logo_3.png";
@@ -94,8 +95,8 @@ function TripOne() {
       <div>
         <Image
           src="/../public/images/trip/trip_background.png"
-          height={676}
-          width={1366}
+          className={styles.TripOne_image_container}
+          layout="fill"
         />
         <div className={styles.tripOne_logo_container}>
           <div className={styles.tripOne_line}>
@@ -354,7 +355,14 @@ function TripOne() {
           </div>
 
           <div className={styles.btn_container}>
-            <button className={styles.save_btn}>Save & Continue</button>
+            <Link href="/contact">
+              <button
+                className={styles.save_btn}
+                disabled={!info || !inputTwo || !inputThree}
+              >
+                Save & Continue
+              </button>
+            </Link>
           </div>
         </div>
       </div>

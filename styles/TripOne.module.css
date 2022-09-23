@@ -82,42 +82,44 @@
 }
 
 /* media query for reponsive background */
-@media only screen and (max-width: 400px) {
+
+  
+   @media only screen and (max-width: 1024px) {
     .input_container{
         position: absolute;
-        top: 59px;
-        left: 100px;
+        top: 190px;
+        left: 220px;
     }
     .input_field {
-        width: 200px;
-        margin-bottom: 8px;
-        height: 20px;
-        font-size: 8px;
+        width: 560px;
+        margin-bottom: 28px;
+        height: 55px;
+        font-size: 14px;
     }
     .tripOne_line{
         height: 1px;
         border-right: 2px solid #FFFFFF;
-        border-width: 75px;
-        margin-left: -20px;
-        margin-right: 20px;
+        border-width: 180px;
+        margin-left: 0px;
+        margin-right: 10px;
     }
   
     .tripOne_logo{
-        width: 35px;
-        padding-top: 5px;
-        padding-left: 8px;
-        height: 35px;
+        width: 50px;
+        padding-top: 15px;
+        padding-left: 15px;
+        height: 50px;
         background: #FFFFFF;
         border-radius: 50%;
         margin-top: -15px;
-        margin-left: 10px;
+        margin-left: -2px;
         margin-right: 10px;
     }
     .tripOne_logo_1{
-        width: 35px;
-        padding-top: 4px;
-        padding-left: 1px;
-        height: 35px;
+        width: 50px;
+        padding-top: 13px;
+        padding-left: 2px;
+        height: 50px;
         border-radius: 50%;
         margin-top: -15px;
         margin-left: 10px;
@@ -125,38 +127,41 @@
     }
     .tripOne_logo_container{
         position: absolute;
-        top: 19px;
-        left: 50px;
+        top: 89px;
+        left: 210px;
         display: flex;
     }
     .btn_container{
         position: absolute;
-        width: 102px;
-        height: 30px;
-        left: 50px;
-        top: 100px;
+        width: 160px;
+        height: 60px;
+        left: 180px;
+        top: 240px;
         background: #FFFFFF;
         border-radius: 32px;
         text-align: center;
-        margin-top: -10px;
+        margin-top: 30px;
     }
     .save_btn{
         font-family: 'Poppins', sans-serif;
         font-style: normal;
-        margin-top: -30px;
-        font-size: 9px;
+        padding: 10px 18px;
+        font-size: 12px;
         line-height: 90%;
         letter-spacing: 0.01em;
         color: #000000;
         border: none;
+        cursor: pointer;
     }
-  }
-
+   }
+   
+   
  /* trip one input one popup css */
  #tripOne_inputone_container{
     position: absolute;
     background-color: #FFFFFF;
     z-index: 1;
+    width: 100%;
     top:-64%;
     left: 0;
     padding: 50px 100px;
@@ -335,10 +340,8 @@
     left: 225px;
     z-index: 1;
     padding: 8px;
-  
+    border: 2px solid #E3E3E3;
     border-radius: 50%;
-    /* background-color: #00000066; */
-    
     cursor: pointer;
 }
 .tripOne_circle2{
@@ -362,9 +365,6 @@
     background-color: #00000066;
     border: 2px solid #FFFFFF;
     cursor: pointer;
-}
-.circleClicked--close{
-    background-color: #00754A;
 }
 
 
@@ -432,4 +432,7 @@
     position: absolute;
     right: 10px;
     top: 10px;
+}
+.colorChange{
+    background-color: #00754A;
 }
