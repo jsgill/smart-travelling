@@ -1,0 +1,15 @@
+/* @media only screen and (max-width:1024px) {
+    .tripTwo{
+        width: 1440px !important;
+    }
+} */
+.tripTwo {
+    background: url(../public/images/tripTwo/Rectangle\ 4571.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 982px;
+    width: 100%;
+}
+
