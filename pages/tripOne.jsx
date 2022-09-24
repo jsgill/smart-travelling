@@ -26,8 +26,8 @@ function TripOne() {
   const [inputThree, setInputThree] = useState("");
   const [count, setCount] = useState(0);
   const [date, setDate] = useState(new Date());
-  var startDate = new Date(date[0]).toLocaleDateString();
-  var endDate = new Date(date[1]).toLocaleDateString();
+  var startDate = new Date(date[0]).toDateString();
+  var endDate = new Date(date[1]).toDateString();
 
   const handleChange = (e) => {
     const { value, checked } = e.target;
@@ -355,7 +355,7 @@ function TripOne() {
           </div>
 
           <div className={styles.btn_container}>
-            <Link href="/contact">
+            <Link href="/tripTwo">
               <button
                 className={styles.save_btn}
                 disabled={!info || !inputTwo || !inputThree}
