@@ -109,7 +109,7 @@ function TripOne() {
             </div>
           </div>
           <div className='row justify-content-center'>
-            <div className='col-10'>
+            <div className='col-8'>
               <input className={styles.input_field} onClick={toggleInput1} value={info.length === 0 ? "Choose Destination" : info} onChange={handleInput} />
               {/*hide show div for first input  */}
               <div className="row justify-content-center">
