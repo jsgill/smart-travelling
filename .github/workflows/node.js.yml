@@ -27,8 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         
-    - run: npm cache clear 
-    - run: npm cache verify
+  
     - run: npm i -g npm@latest
     - run: npm install
     - run: npm run build --if-present
