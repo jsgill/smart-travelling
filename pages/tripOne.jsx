@@ -95,6 +95,7 @@ function TripOne() {
       <div>
         <Image
           src="/../public/images/trip/trip_background.png"
+          alt="trip-one"
           className={styles.TripOne_image_container}
           layout="fill"
         />

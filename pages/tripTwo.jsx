@@ -36,11 +36,11 @@ function TripTwo() {
     <div className={styles.tripTwo}>
       <div className="container">
         <div className="text-center">
-          <Image src={icon1} height="" width="" className="" />
-          <Image src={rectangle1} height="" width="" className="" />
-          <Image src={icon2} height="" width="" className="" />
-          <Image src={rectangle2} height="" width="" className="" />
-          <Image src={icon3} height="" width="" className="" />
+          <Image src={icon1} alt="trip-two" />
+          <Image src={rectangle1} alt="trip-two" />
+          <Image src={icon2} alt="trip-two" />
+          <Image src={rectangle2} alt="trip-two" />
+          <Image src={icon3} alt="trip-two" />
         </div>
       </div>
       <div className={styles.tripTwo_input_Container}>
