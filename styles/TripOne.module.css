@@ -22,13 +22,10 @@
         font-size: 10px !important;
         top: -40px !important;
     }
-    /* .tripOne_inputone_btn_container{
-        margin-top: 30px !important;
-    } */
 }
 
 .main_top_background {
-    background: url(../public/images/tripTwo/Rectangle\ 4571.png);
+    background: url(../public/images/tripTwo/Rectangle4571.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
