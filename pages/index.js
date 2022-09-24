@@ -35,8 +35,7 @@ export default function Home() {
       <HappeningNow/>
       <HowItWorks/>
       <Footer/>
-      {/* <TripTwo/> */}
-      <TripOne/>
+  
        
     </div>
   )

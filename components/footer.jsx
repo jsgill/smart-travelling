@@ -4,7 +4,6 @@ import styles from '../styles/footer.module.css'
 import smart from '../public/images/home/Smart Traveller.png'
 import media1 from '../public/images/home/Group 22067.png'
 import media2 from '../public/images/home/Group 22068.png'
-import media3 from '../public/images/home/Group 22069.png'
 import Link from 'next/link'
 function Footer() {
     return (
