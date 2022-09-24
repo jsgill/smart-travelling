@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import tripOne_logo_1 from "../public/images/trip/tripOne_logo_1.png";
-import tripOne_logo_2 from "../public/images/trip/tripOne_logo_2.png";
-import tripOne_logo_3 from "../public/images/trip/tripOne_logo_3.png";
+import icon1 from "../public/images/tripTwo/Group 22133.png";
+import icon2 from "../public/images/tripTwo/Group 22134.png";
+import icon3 from "../public/images/tripTwo/Group 22135.png";
 import destination_1 from "../public/images/trip/destination_1.png";
 import destination_2 from "../public/images/trip/destination_2.png";
 import destination_3 from "../public/images/trip/destination_3.png";
@@ -92,282 +92,162 @@ function TripOne() {
 
   return (
     <div>
-      <div>
-        <Image
-          src="/../public/images/trip/trip_background.png"
-          alt="trip-one"
-          className={styles.TripOne_image_container}
-          layout="fill"
-        />
-        <div className={styles.tripOne_logo_container}>
-          <div className={styles.tripOne_line}>
-            <div className={styles.tripOne_logo}>
-              <Image
-                src={tripOne_logo_1}
-                alt="trip_section_logo"
-                height={22}
-                width={20}
-                className={styles.logo}
-              />
+      <div className={styles.main_top_background}>
+
+        <div className="container">
+          <div className='row mb-5 justify-content-center' id={styles.icon_main_row}>
+            <div className='col-1 p-0'>
+              <Image src={icon1} alt="trip_section_logo" />
+            </div>
+            <div className='col-3 p-0'> <div className={styles.tripOne_line}></div></div>
+            <div className='col-1 p-0'> <Image src={icon2} alt="trip_section_logo" /></div>
+            <div className='col-3 p-0'>
+              <div className={styles.tripOne_line}></div>
+            </div>
+            <div className='col-1 p-0'>
+              <Image src={icon3} alt="trip_section_logo" />
             </div>
           </div>
-          <div className={styles.tripOne_line}>
-            <div className={styles.tripOne_logo_1}>
-              <Image
-                src={tripOne_logo_2}
-                alt="trip_section_logo"
-                height={22}
-                width={20}
-                className={styles.logo}
-              />
-            </div>
-          </div>
-
-          <div className={styles.tripOne_logo_1}>
-            <Image
-              src={tripOne_logo_3}
-              alt="trip_section_logo"
-              height={22}
-              width={20}
-              className={styles.logo}
-            />
-          </div>
-        </div>
-        <div className={styles.input_container}>
-          <input
-            className={styles.input_field}
-            onClick={toggleInput1}
-            value={info.length === 0 ? "Choose Destination" : info}
-            onChange={handleInput}
-          />
-
-          {/*hide show div for first input  */}
-          <div
-            style={{
-              display: input1 ? "block" : "none",
-            }}
-          >
-            <div className="container" id={styles.tripOne_inputone_container}>
-              <p className={styles.tripOne_content}>Choose 2 or more</p>
-              <p className={styles.tripOne_cross_para} onClick={toggleInput1}>
-                <Image
-                  src={cross}
-                  alt="cross_image"
-                  height={12}
-                  width={15}
-                  className={styles.cross_image}
-                />
-              </p>
-              <div className="row">
-                <div
-                  className="col-md-4 p-0"
-                  id={styles.tripOne_inputone_content_container1}
-                >
-                  <Image src={destination_1} alt="destination-image" />
-                  <input
-                    type="checkbox"
-                    name="place"
-                    value="MANALI"
-                    onChange={handleChange}
-                    className={styles.tripOne_circle1}
-                  />
-                </div>
-                <p className={styles.tripOne_inputone_content_1}>MANALI</p>
-                <div
-                  className="col-md-4 p-0"
-                  id={styles.tripOne_inputone_content_container2}
-                >
-                  <Image src={destination_2} alt="destination-image" />
-                  <input
-                    type="checkbox"
-                    name="place"
-                    value="KASOL"
-                    onChange={handleChange}
-                    className={styles.tripOne_circle2}
-                  />
-                </div>
-                <p className={styles.tripOne_inputone_content_2}>KASOL</p>
-                <div
-                  className="col-md-4 p-0"
-                  id={styles.tripOne_inputone_content_container3}
-                >
-                  <Image src={destination_3} alt="destination-image" />
-                  <input
-                    type="checkbox"
-                    name="place"
-                    value="LEHLADAKH"
-                    onChange={handleChange}
-                    className={styles.tripOne_circle3}
-                  />
-                </div>
-                <p className={styles.tripOne_inputone_content_3}>Leh-Ladakh</p>
-                <div
-                  className="col-md-12"
-                  id={styles.tripOne_inputone_image_container}
-                >
-                  <p className={styles.tripOne_inputone_content_6}>
-                    Coming Soon
-                  </p>
-                  <div className="row px-3">
-                    <div className="col-md-6 p-0">
-                      <Image
-                        src={destination_4}
-                        alt="destination-image"
-                        height={117}
-                      />
-                    </div>
-                    <p className={styles.tripOne_inputone_content_4}>Goa</p>
-                    <div className="col-md-6 p-0">
-                      <Image
-                        src={destination_5}
-                        alt="destination-image"
-                        height={230}
-                      />
-                    </div>
-                    <p className={styles.tripOne_inputone_content_5}>
-                      Rajsthan
+          <div className='row justify-content-center'>
+            <div className='col-10'>
+              <input className={styles.input_field} onClick={toggleInput1} value={info.length === 0 ? "Choose Destination" : info} onChange={handleInput} />
+              {/*hide show div for first input  */}
+              <div className="row justify-content-center">
+                <div style={{ display: input1 ? "block" : "none", }}>
+                  <div className="container" id={styles.tripOne_inputone_container}>
+                    <p className={styles.tripOne_content}>Choose 2 or more</p>
+                    <p className={styles.tripOne_cross_para} onClick={toggleInput1}>
+                      <Image src={cross} alt="cross_image" height={12} width={15} className={styles.cross_image} />
                     </p>
+                    <div className="row justify-content-center">
+                      <div className="col-4 text-center" id={styles.tripOne_inputone_content_container}>
+                        <div className={styles.tripOne_circle1}><input type="checkbox" name="place" value="MANALI" onChange={handleChange} /></div>
+                        <Image src={destination_1} alt="destination-image" height="235px" width="228px" />
+                        <p className={styles.tripOne_inputone_content}>MANALI</p>
+                      </div>
+                      <div className="col-4 text-center" id={styles.tripOne_inputone_content_container}>
+                        <div className={styles.tripOne_circle2}><input type="checkbox" name="place" value="KASOL" onChange={handleChange} /></div>
+                        <Image src={destination_2} alt="destination-image" height="235px" width="228px" />
+                        <p className={styles.tripOne_inputone_content}>KASOL</p>
+                      </div>
+                      <div className="col-4 text-center" id={styles.tripOne_inputone_content_container}>
+                        <div className={styles.tripOne_circle3}><input type="checkbox" name="place" value="KASOL" onChange={handleChange} /></div>
+                        <Image src={destination_3} alt="destination-image" height="235px" width="228px" />
+                        <p className={styles.tripOne_inputone_content}>Leh-Ladakh</p>
+                      </div>
+                    </div>
+                    <div className="row justify-content-center">
+                      <div className="col-10" id={styles.tripOne_inputone_image_container}>
+                        <p className={styles.tripOne_inputone_content_6}> Coming Soon </p>
+                        <div className="row">
+                          <div className="col-6" id={styles.remove_image_padding}>
+                            <Image src={destination_4} alt="destination-image" height={117} />
+                            <p className={styles.tripOne_inputone_content_4}>Goa</p>
+                          </div>
+                          <div className="col-6" id={styles.remove_image_padding}>
+                            <Image src={destination_5} alt="destination-image" height={187} />
+                            <p className={styles.tripOne_inputone_content_5}>
+                              Rajsthan
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className={styles.tripOne_inputone_btn_container}>
+                        <button className={styles.tripOne_inputone_btn} onClick={handleClick}>Save</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className={styles.tripOne_inputone_btn_container}>
-                <button
-                  className={styles.tripOne_inputone_btn}
-                  onClick={handleClick}
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </div>
-          <input
-            value={inputTwo.length == 0 ? "No. of Guests" : inputTwo}
-            className={styles.input_field}
-            onChange={handleInput}
-            onClick={toggleInput2}
-          />
-          {/*input second popup for no. of people */}
+              <input value={inputTwo.length == 0 ? "No. of Guests" : inputTwo} className={styles.input_field} onChange={handleInput} onClick={toggleInput2} />
+              {/*input second popup for no. of people */}
 
-          <div
-            style={{
-              display: input2 ? "block" : "none",
-            }}
-          >
-            <div className="container" id={styles.tripOne_inputtwo_container}>
-              <p className={styles.tripOne_cross_para} onClick={toggleInput2}>
-                <Image
-                  src={cross}
-                  alt="cross_image"
-                  height={12}
-                  width={15}
-                  className={styles.cross_image}
-                />
-              </p>
-              <div className="row">
-                <div className={styles.tripOne_inputtwo_content_container}>
-                  <div className={styles.inputtwo_div1}>
-                    <button
-                      onClick={increment}
-                      className={styles.tripOne_content_inc_dec_operator1}
-                    >
-                      +
-                    </button>
-                  </div>
-                  <p className={styles.tripOne_content_btn} value={inputTwo}>
-                    {count}
-                  </p>
-                  <div className={styles.tripOne_content_inc_dec_operator2}>
-                    <Image
-                      src={minus}
-                      alt="minus-operator"
-                      onClick={decrement}
-                    />
-                  </div>
-                </div>
-                <div className={styles.tripOne_inputone_btn_container}>
-                  <button
-                    className={styles.tripOne_inputone_btn}
-                    onClick={inputTwoBtn}
-                  >
-                    Save
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <input
-            value={
-              inputThree.length == 0
-                ? "Select the Start & End Date"
-                : startDate.concat(" - ") + endDate
-            }
-            className={styles.input_field}
-            onChange={handleInput}
-            onClick={toggleInput3}
-          />
-          <div
-            style={{
-              display: input3 ? "block" : "none",
-            }}
-          >
-            <div
-              className="container text-center"
-              id={styles.tripOne_inputthree_container}
-            >
-              <p className={styles.tripOne_cross_para1} onClick={toggleInput3}>
-                <Image
-                  src={cross}
-                  alt="cross_image"
-                  height={12}
-                  width={15}
-                  className={styles.cross_image}
-                />
-              </p>
-              <div className={styles.app}>
-                <div className={styles.calendar_container}>
-                  <Calendar
-                    onChange={setDate}
-                    value={date}
-                    selectRange={true}
-                  />
-                  {date.length > 0 ? (
-                    <p className="text-center">
-                      <span className="bold">Start:</span>
-                      {date[0].toDateString()}
-                      &nbsp;|&nbsp;
-                      <span className="bold">End:</span>{" "}
-                      {date[1].toDateString()}
-                    </p>
-                  ) : (
-                    <p className="text-center"></p>
-                  )}
-                </div>
-              </div>
-              <div className={styles.tripOne_inputone_btn_container}>
-                <button
-                  className={styles.tripOne_inputone_btn}
-                  onClick={inputThreeBtn}
-                >
-                  Save
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.btn_container}>
-            <Link href="/tripTwo">
-              <button
-                className={styles.save_btn}
-                disabled={!info || !inputTwo || !inputThree}
+              <div
+                style={{
+                  display: input2 ? "block" : "none",
+                }}
               >
-                Save & Continue
-              </button>
-            </Link>
+                <div className="container" >
+                  <div className="row justify-content-center" >
+                    <div className="col-6 text-center" id={styles.tripOne_inputtwo_container}>
+                      <p className={styles.tripOne_cross_para1} onClick={toggleInput2}>
+                        <Image src={cross} alt="cross_image" height={12} width={15} className={styles.cross_image} />
+                      </p>
+                      <div className="row justify-content-center">
+                        <div className="col-md-6 py-4">
+                          <div className={styles.tripOne_inputtwo_content_container}>
+                            <div className={styles.inputtwo_div1}>
+                              <button onClick={increment} className={styles.tripOne_content_inc_dec_operator1}>+</button>
+                            </div>
+                            <p className={styles.tripOne_content_btn} value={inputTwo}>
+                              {count}
+                            </p>
+                            <div className={styles.inputtwo_div1}>
+                              <button onClick={increment} className={styles.tripOne_content_inc_dec_operator2}>-</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.tripOne_inputone_btn_container}>
+                          <button className={styles.tripOne_inputone_btn} onClick={inputTwoBtn}>Save</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <input value={inputThree.length == 0 ? "Select the Start & End Date" : startDate.concat(" - ") + endDate} className={styles.input_field} onChange={handleInput} onClick={toggleInput3} />
+              <div style={{ display: input3 ? "block" : "none", }} >
+                <div className="container text-center" >
+                  <div className="row justify-content-center">
+                    <div className="col-md-6" id={styles.tripOne_inputthree_container}>
+                      <p className={styles.tripOne_cross_para1} onClick={toggleInput3}>
+                        <Image src={cross} alt="cross_image" height={12} width={15} className={styles.cross_image} /></p>
+                      <div className={styles.app}>
+                        <div className="row justify-content-center">
+                          <div className="col-md-10">
+                            <div className={styles.calendar_container}>
+                              <Calendar onChange={setDate} value={date} selectRange={true} />
+                              {date.length > 0 ? (
+                                <p className="text-center">
+                                  <span className="bold">Start:</span>
+                                  {date[0].toDateString()}
+                                  &nbsp;|&nbsp;
+                                  <span className="bold">End:</span>{" "}
+                                  {date[1].toDateString()}
+                                </p>
+                              ) : (
+                                <p className="text-center"></p>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className={styles.tripOne_inputone_btn_container}>
+                        <button className={styles.tripOne_inputone_btn} onClick={inputThreeBtn}>Save</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div className='row justify-content-center'>
+                <div className='col-md-4 text-center'>
+                  <Link href="/contact">
+                    <button
+                      className={styles.save_btn}
+                      disabled={!info || !inputTwo || !inputThree}
+                    >
+                      Save & Continue
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
   );
 }
 export default TripOne;

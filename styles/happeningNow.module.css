@@ -7,7 +7,8 @@
     color: #121212;
     font-family: "Poppins", sans-serif;
 }
-.home_happening{
+
+.home_happening {
     padding: 40px 0px 40px 0px;
 }
 
@@ -28,13 +29,15 @@
 
 .home_mountain {
     padding: 22% 0% 0% 0%;
-   
+
 }
-.demo{
+
+.demo {
     border-bottom: 2px solid #00754A;
     width: 100%;
-     padding: 26% 0% 0% 0%;
+    padding: 26% 0% 0% 0%;
 }
+
 .home_mountain h4 {
     font-style: normal;
     font-weight: 600;
@@ -52,15 +55,17 @@
     color: rgba(18, 18, 18, 0.8);
     font-family: "Poppins", sans-serif;
 }
-.home_explore{
+
+.home_explore {
     font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 130%;
-font-family: "Poppins",sans-serif;
-color: #00754A;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    font-family: "Poppins", sans-serif;
+    color: #00754A;
 }
-.home_right_button{
+
+.home_right_button {
     height: 8.5px;
     width: 15.5px;
 }

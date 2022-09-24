@@ -1,4 +1,98 @@
-.tripOne_logo_container{
+@media only screen and (max-width:768px) {
+    .save_btn {
+        width: 70% !important;
+        height: 50px !important;
+        font-size: 10px !important;
+    }
+
+    .input_field {
+        height: 50px !important;
+        font-size: 10px !important;
+    }
+    .tripOne_inputone_content_6 {
+        font-size: 10px !important;
+    }
+    .tripOne_inputone_content_4{
+        font-size: 10px !important;
+    }
+    .tripOne_inputone_content_5{
+        font-size: 10px !important;
+    }
+    .tripOne_inputone_content {
+        font-size: 10px !important;
+        top: -40px !important;
+    }
+    /* .tripOne_inputone_btn_container{
+        margin-top: 30px !important;
+    } */
+}
+
+.main_top_background {
+    background: url(../public/images/tripTwo/Rectangle\ 4571.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0px 100px 0px;
+}
+
+.logo_saparator {
+    top: -20px;
+    margin: 0px 10px;
+
+}
+
+.tripOne_line {
+    height: 1px;
+    border-top: 1px solid #FFFFFF;
+    border-width: 100% !important;
+    margin: 0px 5px;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -45%);
+    position: relative;
+}
+
+.input_field {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.37);
+    border-radius: 44px;
+    cursor: pointer;
+}
+
+.save_btn {
+    margin-top: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: none;
+    width: 100%;
+    height: 64px;
+    background: #FFFFFF;
+    border-radius: 32px;
+
+}
+
+/* .tripOne_logo_container{
     position: absolute;
     top: 80px;
     left: 250px;
@@ -31,6 +125,21 @@
     height: 1px;
     border-right: 2px solid #FFFFFF;
     border-width: 315px;
+} */
+/* .logo_saparator{
+    top: -20px;
+    margin: 0px 10px;
+    
+}
+.tripOne_line{
+    height: 1px;
+    border-top: 1px solid #FFFFFF;
+    border-width: 100% !important;
+    margin: 0px 5px;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%,-45%);
+    position: relative;
 }
 .input_container{
     display: flex;
@@ -79,12 +188,12 @@
     color: #000000;
     background-color: #FFFFFF;
     border: none;
-}
+} */
 
 /* media query for reponsive background */
 
-  
-   @media only screen and (max-width: 1024px) {
+
+/* @media only screen and (max-width: 1024px) {
     .input_container{
         position: absolute;
         top: 190px;
@@ -157,21 +266,23 @@
    
    
  /* trip one input one popup css */
- #tripOne_inputone_container{
-    position: absolute;
+#tripOne_inputone_container {
+    position: relative;
     background-color: #FFFFFF;
     z-index: 1;
     width: 100%;
-    top:-64%;
-    left: 0;
-    padding: 50px 100px;
+    left: 50%;
+    transform: translate(-50%);
     border-radius: 10px;
- }
- .tripOne_inputone_content_1{
-    position: absolute;
-    left: -25%;
-    top: 217px;
-    font-family: 'Poppins';
+    padding: 20px 0px 20px 0px;
+}
+
+.tripOne_inputone_content_1 {
+    position: relative;
+    top: -80px;
+    left: 50px;
+    color: white;
+    /* font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -179,10 +290,11 @@
     text-align: center;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    z-index: 1;
- }
- .tripOne_inputone_content_2{
-    position: absolute;
+    z-index: 1; */
+}
+
+.tripOne_inputone_content_2 {
+    /* position: absolute;
     left: 0;
     top: 217px;
     font-family: 'Poppins';
@@ -193,12 +305,15 @@
     text-align: center;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    z-index: 1;
- }
- .tripOne_inputone_content_3{
-    position: absolute;
-    left: 26%;
-    top: 217px;
+    z-index: 1; */
+    position: relative;
+    top: -80px;
+    left: 50px;
+    color: white;
+}
+
+.tripOne_inputone_content {
+    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -208,11 +323,13 @@
     letter-spacing: 0.05em;
     color: #FFFFFF;
     z-index: 1;
- }
- .tripOne_inputone_content_4{
-    position: absolute;
-    left: -20%;
-    top: 355px;
+    position: relative;
+    top: -80px;
+
+    color: white;
+}
+
+.tripOne_inputone_content_4 {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -220,13 +337,17 @@
     line-height: 180%;
     text-align: center;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: #ffffff;
     z-index: 1;
- }
- .tripOne_inputone_content_6{
-    position: absolute;
-    left: 42%;
-    top: 310px;
+    position: relative;
+    top: -30%;
+}
+
+.tripOne_inputone_content_6 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -234,13 +355,12 @@
     line-height: 180%;
     text-align: center;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: #ffffff;
     z-index: 1;
- }
- .tripOne_inputone_content_5{
-    position: absolute;
-    left: 20%;
-    top: 355px;
+}
+
+.tripOne_inputone_content_5 {
+    position: relative;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -248,10 +368,12 @@
     line-height: 180%;
     text-align: center;
     letter-spacing: 0.05em;
-    color: #FFFFFF;
+    color: #ffffff;
     z-index: 1;
- }
- #tripOne_inputone_content_container1::before{
+    top: -30%;
+}
+
+/* #tripOne_inputone_content_container1::before{
   position: absolute;
   left: 113px;
   top: 116px;
@@ -295,11 +417,19 @@
    padding: 0;
    z-index: 1;
    border-radius: 5px;
-   }
-   #tripOne_inputone_image_container{
-   margin-top: 10px;
-    }
-.tripOne_content{
+   } */
+
+#remove_image_padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+#tripOne_inputone_content_container {
+    position: relative;
+    ;
+}
+
+.tripOne_content {
     text-align: center;
     margin-bottom: 15px;
     font-family: 'Poppins';
@@ -308,81 +438,103 @@
     letter-spacing: 0.04em;
     color: #121212;
 }
-.tripOne_inputone_btn_container{
+
+.tripOne_inputone_btn_container {
     text-align: center;
-    margin-top: 40px;
+   
 }
-.tripOne_inputone_btn{
-  background: #00754A;
-  border-radius: 20px;
-  outline: none;
-  border: none;
-  color: #FFFFFF;
-  padding: 8px 50px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
+
+.tripOne_inputone_btn {
+    background: #00754A;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
-.tripOne_cross_para{
+
+.tripOne_cross_para1 {
     background-color: #000000;
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    padding-left: 8px;
     padding-top: 3px;
     position: absolute;
     right: 10px;
     top: 10px;
 }
-.tripOne_circle1{
+
+.tripOne_circle1 {
+    /* position: absolute;
+    text-align: end; */
+    left: 70%;
     position: absolute;
-    top: 130px;
-    left: 225px;
+    top: 10%;
     z-index: 1;
-    padding: 8px;
-    border: 2px solid #E3E3E3;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.tripOne_circle2{
-    position: absolute;
-    top: 130px;
-    left: 415px;
-    padding: 8px;
-    z-index: 1;
-    border-radius: 50%;
-    background-color: #00000066;
-    border: 2px solid #FFFFFF;
-    cursor: pointer;
-}
-.tripOne_circle3{
-    position: absolute;
-    top: 130px;
-    left: 605px;
-    padding: 8px;
-    z-index: 1;
-    border-radius: 50%;
-    background-color: #00000066;
-    border: 2px solid #FFFFFF;
-    cursor: pointer;
 }
 
+.tripOne_circle2 {
+    z-index: 1;
+    top: 10%;
+    left: 70%;
+    position: absolute;
+}
 
-/* tripone input two css start */
+.tripOne_circle3 {
+    top: 10%;
+    left: 70%;
+    position: absolute;
+    z-index: 1;
 
+}
 #tripOne_inputtwo_container{
     position: absolute;
     background-color: #FFFFFF;
     z-index: 1;
-    top:-14%;
-    left: 0;
-    padding: 50px 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: 10px;
  }
  .tripOne_inputtwo_content_container{
     display: flex;
     justify-content: space-around;
  }
+ .inputtwo_div1{
+    height: 20px;
+    border-radius: 50%;
+}
+.tripOne_content_inc_dec_operator1{
+    font-size: 28px;
+    width: 43px;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+.tripOne_content_btn{
+    color: #00754A;
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 600;
+    padding: 0px 20px 0px 20px;
+}
+.tripOne_content_inc_dec_operator2{
+    font-size: 28px;
+    width: 43px;
+    background: #FFFFFF;
+    border: 1px solid #E3E3E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+}
+
+
+/* tripone input two css start */
+
+/* 
+ 
 .inputtwo_div1{
     height: 20px;
     border-radius: 50%;
@@ -410,20 +562,18 @@
     font-size: 25px;
     margin-top: 10px;
     font-weight: 600;
-}
+} */
 /* tripone input three css start */
 
-#tripOne_inputthree_container{
-    position: absolute;
+#tripOne_inputthree_container {
+    position: relative;
     background-color: #FFFFFF;
     z-index: 1;
-    width: 70%;
-    top:-45%;
-    left: 15%;
-    padding: 50px 100px;
+    padding: 20px ;
     border-radius: 10px;
- }
- .tripOne_cross_para1{
+}
+
+.tripOne_cross_para1 {
     background-color: #000000;
     height: 30px;
     width: 30px;
@@ -433,6 +583,18 @@
     right: 10px;
     top: 10px;
 }
-.colorChange{
+.tripOne_cross_para {
+    background-color: #000000;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding-top: 3px;
+    padding-left: 8px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.colorChange {
     background-color: #00754A;
 }

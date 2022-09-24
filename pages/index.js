@@ -8,6 +8,8 @@ import HowItWorks from '../components/howItWorks'
 import Navbar from '../components/navbar'
 import PlanTrip from '../components/planTrip'
 import styles from '../styles/Home.module.css'
+import TripOne from './tripOne'
+import TripTwo from './tripTwo'
 
 export default function Home() {
   return (
@@ -26,13 +28,15 @@ export default function Home() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
       </Head>
       <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossOrigin="anonymous"/>
-      <Navbar/>
+      {/* <Navbar/>
       <PlanTrip/>
       <FullyFurnished/>
       <DreamCall/>
       <HappeningNow/>
       <HowItWorks/>
-      <Footer/>
+      <Footer/> */}
+      {/* <TripTwo/> */}
+      <TripOne/>
        
     </div>
   )
