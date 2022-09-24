@@ -29,7 +29,6 @@ function TripTwo() {
   };
   const handleChangeColor = () => {
     setChangeColor(!changeColor);
-    console.log("changecolor=======>", changeColor);
   };
 
   return (
