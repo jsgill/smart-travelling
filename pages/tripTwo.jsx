@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import styles from "../styles/tripTwo.module.css";
 import icon1 from "../public/images/tripTwo/Group 22133.png";
 import icon2 from "../public/images/tripTwo/Group 22134.png";
