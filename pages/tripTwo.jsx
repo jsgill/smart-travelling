@@ -56,13 +56,13 @@ function TripTwo() {
           <div className="container p-0" id={styles.tripTwo_inputtwo_container}>
             <p className={styles.tripTwo_content}>Choose 1 or more</p>
             <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
-              <Image
+              {/* <Image
                 src={cross}
                 alt="cross_image"
                 height={12}
                 width={15}
                 className={styles.cross_image}
-              />
+              /> */}
             </p>
             <div className={styles.image_display_container}>
               <div
@@ -74,7 +74,7 @@ function TripTwo() {
                 onClick={handleChangeColor}
               >
                 <p>
-                  <Image src={image1} height={50} width={50} />
+                  {/* <Image src={image1} height={50} width={50} /> */}
                 </p>
                 <p className={styles.image_para_content}>Camping</p>
               </div>
@@ -87,7 +87,7 @@ function TripTwo() {
                 onClick={handleChangeColor}
               >
                 <p>
-                  <Image src={image2} height={50} width={50} />
+                  {/* <Image src={image2} height={50} width={50} /> */}
                 </p>
                 <p className={styles.image_para_content}>Hiking</p>
               </div>
@@ -100,7 +100,7 @@ function TripTwo() {
                 onClick={handleChangeColor}
               >
                 <p>
-                  <Image src={image3} height={50} width={50} />
+                  {/* <Image src={image3} height={50} width={50} /> */}
                 </p>
                 <p className={styles.image_para_content}>Offbeat</p>
               </div>
@@ -113,7 +113,7 @@ function TripTwo() {
                 onClick={handleChangeColor}
               >
                 <p>
-                  <Image src={image4} height={50} width={50} />
+                  {/* <Image src={image4} height={50} width={50} /> */}
                 </p>
                 <p className={styles.image_para_content2}>Apple Orchards</p>
               </div>
@@ -136,13 +136,13 @@ function TripTwo() {
               id={styles.tripTwo_inputtwo_container2}
             >
               <p className={styles.tripTwo_cross_para} onClick={toggleInput2}>
-                <Image
+                {/* <Image
                   src={cross}
                   alt="cross_image"
                   height={12}
                   width={15}
                   className={styles.cross_image}
-                />
+                /> */}
               </p>
               <div className={styles.tripTwo_inputTwo_input_container}>
                 <input
