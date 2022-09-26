@@ -191,7 +191,7 @@ function TripOne() {
                           <input
                             type="checkbox"
                             name="place"
-                            value="KASOL"
+                            value="Leh-Ladakh"
                             onChange={handleChange}
                           />
                         </div>
