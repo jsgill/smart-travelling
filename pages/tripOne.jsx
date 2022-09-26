@@ -109,9 +109,10 @@ function TripOne() {
             <div className='col-8'>
               <input className={styles.input_field} onClick={toggleInput1} value={info.length === 0 ? "Choose Destination" : info} onChange={handleInput} />
               {/*hide show div for first input  */}
+              <div style={{ display: input1 ? "block" : "none", }}>
+              <div className="container">
               <div className="row justify-content-center">
-                <div style={{ display: input1 ? "block" : "none", }}>
-                  <div className="container" id={styles.tripOne_inputone_container}>
+                  <div className="col-md-12" id={styles.tripOne_inputone_container}>
                     <p className={styles.tripOne_content}>Choose 2 or more</p>
                     <p className={styles.tripOne_cross_para} onClick={toggleInput1}>
                       <Image src={cross} alt="cross_image" height={12} width={15} className={styles.cross_image} />
@@ -156,6 +157,7 @@ function TripOne() {
                   </div>
                 </div>
               </div>
+              </div>
               <input value={inputTwo.length == 0 ? "No. of Guests" : inputTwo} className={styles.input_field} onChange={handleInput} onClick={toggleInput2} />
               {/*input second popup for no. of people */}
 
@@ -190,14 +192,14 @@ function TripOne() {
               </div>
               <input value={inputThree.length == 0 ? "Select the Start & End Date" : startDate.concat(" - ") + endDate} className={styles.input_field} onChange={handleInput} onClick={toggleInput3} />
               <div style={{ display: input3 ? "block" : "none", }} >
-                <div className="container text-center" >
+                <div className="container" >
                   <div className="row justify-content-center">
                     <div className="col-md-6" id={styles.tripOne_inputthree_container}>
                       <p className={styles.tripOne_cross_para1} onClick={toggleInput3}>
                         <Image src={cross} alt="cross_image" height={12} width={15} className={styles.cross_image} /></p>
                       <div className={styles.app}>
                         <div className="row justify-content-center">
-                          <div className="col-md-10">
+                          <div className="col-md-6">
                             <div className={styles.calendar_container}>
                               <Calendar onChange={setDate} value={date} selectRange={true} />
                               {date.length > 0 ? (
