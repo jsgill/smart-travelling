@@ -290,8 +290,14 @@ function TripOne() {
                             }
                           >
                             <div className={styles.inputtwo_div1}>
-                             
-                              <button onClick={decrement} className={styles.tripOne_content_inc_dec_operator1}>-</button>
+                              <button
+                                onClick={decrement}
+                                className={
+                                  styles.tripOne_content_inc_dec_operator1
+                                }
+                              >
+                                -
+                              </button>
                             </div>
                             <p
                               className={styles.tripOne_content_btn}
@@ -300,7 +306,14 @@ function TripOne() {
                               {count}
                             </p>
                             <div className={styles.inputtwo_div1}>
-                              <button onClick={increment} className={styles.tripOne_content_inc_dec_operator2}>+</button>
+                              <button
+                                onClick={increment}
+                                className={
+                                  styles.tripOne_content_inc_dec_operator2
+                                }
+                              >
+                                +
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -329,9 +342,18 @@ function TripOne() {
               />
               <div style={{ display: input3 ? "block" : "none" }}>
                 <div className="container text-center">
-                  <input value={inputThree.length == 0 ? "Select the Start & End Date" : startDate.concat(" - ") + endDate} className={styles.input_field} onChange={handleInput} onClick={toggleInput3} />
-                  <div style={{ display: input3 ? "block" : "none", }} >
-                    <div className="container  text-center" >
+                  <input
+                    value={
+                      inputThree.length == 0
+                        ? "Select the Start & End Date"
+                        : startDate.concat(" - ") + endDate
+                    }
+                    className={styles.input_field}
+                    onChange={handleInput}
+                    onClick={toggleInput3}
+                  />
+                  <div style={{ display: input3 ? "block" : "none" }}>
+                    <div className="container  text-center">
                       <div className="row justify-content-center">
                         <div
                           className="col-md-6"
@@ -373,7 +395,9 @@ function TripOne() {
                               </div>
                             </div>
                           </div>
-                          <div className={styles.tripOne_inputone_btn_container}>
+                          <div
+                            className={styles.tripOne_inputone_btn_container}
+                          >
                             <button
                               className={styles.tripOne_inputone_btn}
                               onClick={inputThreeBtn}
@@ -385,22 +409,21 @@ function TripOne() {
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
             </div>
             <div className="row justify-content-center">
-                    <div className="col-md-4 text-center">
-                      <Link href="/tripTwo">
-                        <button
-                          className={styles.save_btn}
-                          disabled={!info || !inputTwo || !inputThree}
-                        >
-                          Save & Continue
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
+              <div className="col-md-4 text-center">
+                <Link href="/tripTwo">
+                  <button
+                    className={styles.save_btn}
+                    disabled={!info || !inputTwo || !inputThree}
+                  >
+                    Save & Continue
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
