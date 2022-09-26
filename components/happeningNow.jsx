@@ -14,10 +14,10 @@ function HappeningNow() {
                 </div>
             </div>
             <div className='row justify-content-center'>
-                <div className='col-md-8'>
+                <div className='col-md-8 text-center'>
                     <div>
                         <div className='row'>
-                            <div className='col-md-4'>
+                            <div className='col-md-4 '>
                                 <Image src={image1} height="413px" width='279px' alt="tour"></Image>
                             </div>
                             <div className='col-md-8'>
