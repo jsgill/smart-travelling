@@ -145,6 +145,7 @@ function TripTwo() {
           <div className="col-md-8">
             <input
               value={info.length == 0 ? "Choose Interest" : text}
+              onChange={demo}
               className={styles.input_field}
               onClick={toggleInput1}
             />
@@ -186,8 +187,7 @@ function TripTwo() {
                     onClick={() => handleFirstColor("Hiking")}
                   >
                     <p>
-                      {" "}
-                      <Image src={image2} height={50} width={50} />{" "}
+                      <Image src={image2} height={50} width={50} />
                     </p>
                     <p className={styles.image_para_content}>Hiking</p>
                   </div>
@@ -200,7 +200,7 @@ function TripTwo() {
                     onClick={() => handleSecondColor("Offbeat")}
                   >
                     <p>
-                      <Image src={image3} height={50} width={50} />{" "}
+                      <Image src={image3} height={50} width={50} />
                     </p>
                     <p className={styles.image_para_content}>Offbeat</p>
                   </div>
@@ -228,7 +228,6 @@ function TripTwo() {
                     onClick={() => handleFourthColor("Biking")}
                   >
                     <p>
-                      {" "}
                       <Image src={image5} height={50} width={50} />
                     </p>
                     <p className={styles.image_para_content}>Biking</p>
@@ -268,7 +267,6 @@ function TripTwo() {
                     onClick={() => handleSeventhColor("Romantic")}
                   >
                     <p>
-                      {" "}
                       <Image src={image8} height={50} width={50} />{" "}
                     </p>
                     <p className={styles.image_para_content}>Romantic</p>
@@ -284,7 +282,6 @@ function TripTwo() {
                     onClick={() => handleEighthColor("Adventure")}
                   >
                     <p>
-                      {" "}
                       <Image src={image9} height={50} width={50} />{" "}
                     </p>
                     <p className={styles.image_para_content}>Adventure</p>
@@ -432,8 +429,13 @@ function TripTwo() {
         </div>
         <div className="row justify-content-center">
           <div className="col-md-4 text-center">
-            <Link href="/contact">
-              <button className={styles.save_btn}>Save & Continue</button>
+            <Link href="/tripTwo">
+              <button
+                className={styles.save_btn}
+                disabled={!info || !inputTwo || !inputThree}
+              >
+                Save & Continue
+              </button>
             </Link>
           </div>
         </div>

@@ -101,15 +101,12 @@ function TripOne() {
               <Image src={icon1} alt="trip_section_logo" />
             </div>
             <div className="col-3 p-0">
-              {" "}
               <div className={styles.tripOne_line}></div>
             </div>
             <div className="col-1 p-0">
-              {" "}
               <Image src={icon2} alt="trip_section_logo" />
             </div>
             <div className="col-3 p-0">
-              {" "}
               <div className={styles.tripOne_line}></div>
             </div>
             <div className="col-1 p-0">
@@ -216,8 +213,7 @@ function TripOne() {
                         id={styles.tripOne_inputone_image_container}
                       >
                         <p className={styles.tripOne_inputone_content_6}>
-                          {" "}
-                          Coming Soon{" "}
+                          Coming Soon
                         </p>
                         <div className="row">
                           <div
@@ -312,7 +308,7 @@ function TripOne() {
                             </p>
                             <div className={styles.inputtwo_div1}>
                               <button
-                                onClick={increment}
+                                onClick={decrement}
                                 className={
                                   styles.tripOne_content_inc_dec_operator2
                                 }
