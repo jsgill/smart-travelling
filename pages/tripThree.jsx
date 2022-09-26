@@ -62,11 +62,11 @@ function TripThree() {
                                         <div className={styles.model}>
 
                                             <div className={styles.popup_img11}>
-                                                <Image src={popup_img} width="110px" height="110px" />
+                                                <Image src={popup_img} width="110px" height="110px" alt="popup" />
                                             </div>
                                             <p className={styles.header}>Success, Done, Let's Go</p>
                                             <div className={styles.popup_view_details}>
-                                                <Link href="/tripDetails"><button className={styles.popup_btn}>View Details </button></Link>
+                                                <Link href="/tripDetails"><a><button className={styles.popup_btn}>View Details </button></a></Link>
                                             </div>
                                         </div>
                                     }

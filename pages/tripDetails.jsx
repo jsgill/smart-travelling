@@ -18,7 +18,7 @@ function TripDetails() {
                                 </div>
                                 <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
                                 <div className={styles.main_back_btn11}>
-                                    <Link href="/"><button className={styles.back_home_btn}><Image src={left_arrow} /><span className={styles.back_btn11}>Back To Home</span></button></Link>
+                                    <Link href="/"><button className={styles.back_home_btn}><Image src={left_arrow} alt="arrow" /><span className={styles.back_btn11}>Back To Home</span></button></Link>
                                 </div>
                             </div>
                         </div>
