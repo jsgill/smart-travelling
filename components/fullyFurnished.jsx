@@ -13,7 +13,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image127} />
+                                <Image src={image127} alt="home" />
                             </div>
                             <div>
                                 <h5>Fully Personalised</h5>
@@ -25,7 +25,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image128} />
+                                <Image src={image128} alt="card" />
                             </div>
                             <div>
                                 <h5>Fast & Free</h5>
@@ -37,7 +37,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image129} />
+                                <Image src={image129} alt="card2" />
                             </div>
                             <div>
                                 <h5>Save Extra</h5>
@@ -49,7 +49,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image130} />
+                                <Image src={image130} alt="card3" />
                             </div>
                             <div>
                                 <h5>Easy to Customise</h5>

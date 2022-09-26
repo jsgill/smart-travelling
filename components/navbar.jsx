@@ -9,7 +9,7 @@ function Navbar() {
                 <div className="container">
                     <Link href="/">
                         <a className="navbar-brand d-flex">
-                            <Image src={logo} height="50px" width="50px" />
+                            <Image src={logo} height="50px" width="50px" alt="navbar" />
                             <div className='smart'>The Smart Traveller</div>
                         </a>
                     </Link>

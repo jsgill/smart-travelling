@@ -12,7 +12,7 @@ function HowItWorks() {
             </div>
             <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
                 <div className='col-md-8'>
-                    <Image src={rectangle} height="456px" width="664px" />
+                    <Image src={rectangle} height="456px" width="664px" alt="angle" />
                 </div>
                 <div className='col-md-4'>
                     <div className={styles.home_needs1}>
@@ -29,12 +29,12 @@ function HowItWorks() {
                         </div>
                     </div>
                     <div className='col-md-6'>
-                        <Image src={rectangle1} height="815px" width="455px" />
+                        <Image src={rectangle1} height="815px" width="455px" alt="angle1" />
                     </div>
                 </div>
                 <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
                     <div className='col-md-8'>
-                        <Image src={rectangle3} height="430px" width="621px" />
+                        <Image src={rectangle3} height="430px" width="621px" alt="angle3" />
                     </div>
                     <div className='col-md-4'>
                         <div className={styles.home_needs1}>

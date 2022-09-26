@@ -45,7 +45,7 @@ function DreamCall() {
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
-                                <Image src={group1} height="382px" width="351px"></Image>
+                                <Image src={group1} height="382px" width="351px" alt="group"></Image>
                             </div>
                             <div className={styles.abc}>245 trips booked in last week</div>
                             <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
@@ -53,9 +53,9 @@ function DreamCall() {
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
                                 <Popup
-                                    trigger={<Image src={group2} className="button" height="382px" width="351px"></Image>}
+                                    trigger={<Image src={group2} className="button" height="382px" width="351px" alt="group2"></Image>}
                                     modal
-                                    contentStyle={{ borderRadius: "20px",width:"70%" }}
+                                    contentStyle={{ borderRadius: "20px", width: "70%" }}
                                 >
                                     {close => (
                                         <div className={styles.modal}>
@@ -65,10 +65,10 @@ function DreamCall() {
                                             <div className={styles.content}>
                                                 <div className='row justify-content-center pt-3'>
                                                     <div className='col-8'>
-                                                        <div><Image src={group3} height="365px" width="645px"></Image></div>
+                                                        <div><Image src={group3} height="365px" width="645px" alt="group3"></Image></div>
                                                     </div>
                                                     <div className='col-4 '>
-                                                        <div><Image src={group4} height="520px" ></Image></div>
+                                                        <div><Image src={group4} height="520px" alt="group4"></Image></div>
                                                     </div>
                                                 </div>
                                                 <div className='row justify-content-center'>
@@ -77,8 +77,8 @@ function DreamCall() {
                                                         <h2>Manali</h2>
                                                     </div>
                                                     <div className={styles.home_popup_para}>
-                                                        <div><Image src={circle} width="15px" height="15px"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
-                                                        <div><Image src={circle} height="15px" width="15px"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
+                                                        <div><Image src={circle} width="15px" height="15px" alt="circle"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
+                                                        <div><Image src={circle} height="15px" width="15px" alt="circle2"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
                                                     </div>
                                                     <div className={styles.home_popup_para}>
 
