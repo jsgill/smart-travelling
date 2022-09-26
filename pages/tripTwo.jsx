@@ -1,13 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import styles from "../styles/tripTwo.module.css";
 import icon1 from "../public/images/tripTwo/Group 22133.png";
 import icon2 from "../public/images/tripTwo/Group 22134.png";
 import icon3 from "../public/images/tripTwo/Group 22135.png";
-import rectangle1 from "../public/images/tripTwo/Rectangle 4574.png";
-import rectangle2 from "../public/images/tripTwo/Rectangle 4575.png";
+
 import image1 from "../public/images/tripTwo/image1.png";
 import image2 from "../public/images/tripTwo/image2.png";
 import image3 from "../public/images/tripTwo/image3.png";
