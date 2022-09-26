@@ -5,11 +5,11 @@ import logo from '../public/images/home/Group 18260.png'
 function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-sm navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container">
                     <Link href="/">
                         <a className="navbar-brand d-flex">
-                            <Image src={logo} height="50px" width="50px" alt="navbar" />
+                            <Image src={logo} height="50%" width="50%" alt="navbar" />
                             <div className='smart'>The Smart Traveller</div>
                         </a>
                     </Link>

@@ -121,6 +121,7 @@ function TripOne() {
                 onChange={handleInput}
               />
               {/*hide show div for first input  */}
+              {/*Create one component and make sure to use map method to render others*/}
               <div className="row justify-content-center">
                 <div style={{ display: input1 ? "block" : "none" }}>
                   <div
@@ -135,8 +136,8 @@ function TripOne() {
                       <Image
                         src={cross}
                         alt="cross_image"
-                        height={12}
-                        width={15}
+                        height="10%"
+                        width="13%"
                         className={styles.cross_image}
                       />
                     </p>
@@ -156,8 +157,8 @@ function TripOne() {
                         <Image
                           src={destination_1}
                           alt="destination-image"
-                          height="235px"
-                          width="228px"
+                          height="200rem"
+                          width="300rem"
                         />
                         <p className={styles.tripOne_inputone_content}>
                           MANALI
@@ -178,8 +179,8 @@ function TripOne() {
                         <Image
                           src={destination_2}
                           alt="destination-image"
-                          height="235px"
-                          width="228px"
+                          height="200rem"
+                          width="300rem"
                         />
                         <p className={styles.tripOne_inputone_content}>KASOL</p>
                       </div>
@@ -198,8 +199,8 @@ function TripOne() {
                         <Image
                           src={destination_3}
                           alt="destination-image"
-                          height="235px"
-                          width="228px"
+                          height="200rem"
+                          width="300rem"
                         />
                         <p className={styles.tripOne_inputone_content}>
                           Leh-Ladakh

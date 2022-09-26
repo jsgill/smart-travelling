@@ -16,7 +16,7 @@
 .home_PlanTrip .home_bestTrip {
     top: 50%;
     transform: translate(-0%, -50%);
-    position: absolute;
+    position: relative;
     text-align: center;
 }
 
