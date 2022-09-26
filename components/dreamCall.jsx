@@ -102,7 +102,7 @@ function DreamCall() {
                         </div>
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
-                                <Image src={group1} height="382px" width="351px"></Image>
+                                <Image src={group1} height="382px" width="351px" alt="bca"></Image>
                             </div>
                             <div className={styles.abc}>245 trips booked in last week</div>
                             <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
