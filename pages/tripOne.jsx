@@ -11,7 +11,7 @@ import destination_4 from "../public/images/trip/destination_4.png";
 import destination_5 from "../public/images/trip/destination_5.png";
 import cross from "../public/images/trip/cross.png";
 import styles from "../styles/TripOne.module.css";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
@@ -39,7 +39,7 @@ function TripOne() {
   };
   const handleClick = () => {
     if (userInfo.length === 1) {
-      swal({
+      Swal.fire({
         text: "Select minumum 2 destination",
         icon: "warning",
         button: "Ok",
