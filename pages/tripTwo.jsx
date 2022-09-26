@@ -429,13 +429,8 @@ function TripTwo() {
         </div>
         <div className="row justify-content-center">
           <div className="col-md-4 text-center">
-            <Link href="/tripTwo">
-              <button
-                className={styles.save_btn}
-                disabled={!info || !inputTwo || !inputThree}
-              >
-                Save & Continue
-              </button>
+            <Link href="/tripThree">
+              <button className={styles.save_btn}>Save & Continue</button>
             </Link>
           </div>
         </div>
