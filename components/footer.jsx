@@ -5,6 +5,7 @@ import smart from '../public/images/home/Smart Traveller.png'
 import media1 from '../public/images/home/Group 22067.png'
 import media2 from '../public/images/home/Group 22068.png'
 import Link from 'next/link'
+
 function Footer() {
     return (
         <div className={styles.footer}>
@@ -23,7 +24,7 @@ function Footer() {
                     </div>
                     <div className='col-md-3'>
                         <div className={styles.footer_image}>
-                            <h4>Contact Us</h4>
+                            <Link href="/contact"><h4>Contact Us</h4></Link>
                             <h4>Blog</h4>
                         </div>
                     </div>
