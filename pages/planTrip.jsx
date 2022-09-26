@@ -1,9 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/Plantrip.module.css";
+
 function PlanTrip() {
   return (
     <>
+
       <div className={styles.home_PlanTrip}>
         <div className={styles.home_bestTrip}>
           <h1>

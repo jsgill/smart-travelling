@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";
-import contact_img from "../public/images/contact/Rectangle 4564.png";
 import user_one from "../public/images/contact/Rectangle 4409.png";
 import user_two from "../public/images/contact/Rectangle 4411.png";
 import envelope_img from "../public/images/contact/envelope.png";
