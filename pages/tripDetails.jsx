@@ -11,18 +11,18 @@ function TripDetails() {
             <div className={styles.main_container}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-lg-6">
                             <div className={styles.happy_travling}>
                                 <div>
                                     <p className={styles.happy_travel_p1}>Happy Travelling!</p>
                                 </div>
                                 <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
                                 <div className={styles.main_back_btn11}>
-                                    <Link href="/planTrip"><button className={styles.back_home_btn}><Image src={left_arrow} alt="left-arrow" /><span className={styles.back_btn11}>Back To Home</span></button></Link>
+                                    <Link href="/"><button className={styles.back_home_btn}><Image src={left_arrow} /><span className={styles.back_btn11}>Back To Home</span></button></Link>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-6" id={styles.main_card_div}>
+                        <div className="col-lg-6" id={styles.main_card_div}>
                             <div>
                                 <p className={styles.trip_details_p}>Trip Detail</p>
                                 <div className={styles.hr_line}></div>

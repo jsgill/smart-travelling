@@ -151,7 +151,7 @@ function TripTwo() {
             />
             <div style={{ display: input1 ? "block" : "none" }}>
               <div
-                className="container p-0"
+                className="container"
                 id={styles.tripTwo_inputtwo_container2}
               >
                 <p className={styles.tripTwo_content}>Choose 1 or more</p>

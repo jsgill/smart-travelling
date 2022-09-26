@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import icon1 from "../public/images/tripTwo/Group 22133.png";
-import icon2 from "../public/images/tripTwo/Group 22134.png";
-import icon3 from "../public/images/tripTwo/Group 22135.png";
+import icon1 from "../public/images/trip/Group 22133.png";
+import icon2 from "../public/images/trip/Group 22134.png";
+import icon3 from "../public/images/trip/Group 22135.png";
 import destination_1 from "../public/images/trip/destination_1.png";
 import destination_2 from "../public/images/trip/destination_2.png";
 import destination_3 from "../public/images/trip/destination_3.png";
@@ -88,7 +88,6 @@ function TripOne() {
     toggleInput3();
     setInputThree(date);
   }
-
   return (
     <div>
       <div className={styles.main_top_background}>
@@ -291,14 +290,8 @@ function TripOne() {
                             }
                           >
                             <div className={styles.inputtwo_div1}>
-                              <button
-                                onClick={increment}
-                                className={
-                                  styles.tripOne_content_inc_dec_operator1
-                                }
-                              >
-                                +
-                              </button>
+                             
+                              <button onClick={decrement} className={styles.tripOne_content_inc_dec_operator1}>-</button>
                             </div>
                             <p
                               className={styles.tripOne_content_btn}
@@ -307,14 +300,7 @@ function TripOne() {
                               {count}
                             </p>
                             <div className={styles.inputtwo_div1}>
-                              <button
-                                onClick={decrement}
-                                className={
-                                  styles.tripOne_content_inc_dec_operator2
-                                }
-                              >
-                                -
-                              </button>
+                              <button onClick={increment} className={styles.tripOne_content_inc_dec_operator2}>+</button>
                             </div>
                           </div>
                         </div>
@@ -343,72 +329,78 @@ function TripOne() {
               />
               <div style={{ display: input3 ? "block" : "none" }}>
                 <div className="container text-center">
-                  <div className="row justify-content-center">
-                    <div
-                      className="col-md-6"
-                      id={styles.tripOne_inputthree_container}
-                    >
-                      <p
-                        className={styles.tripOne_cross_para1}
-                        onClick={toggleInput3}
-                      >
-                        <Image
-                          src={cross}
-                          alt="cross_image"
-                          height={12}
-                          width={15}
-                          className={styles.cross_image}
-                        />
-                      </p>
-                      <div className={styles.app}>
-                        <div className="row justify-content-center">
-                          <div className="col-md-6">
-                            <div className={styles.calendar_container}>
-                              <Calendar
-                                onChange={setDate}
-                                value={date}
-                                selectRange={true}
-                              />
-                              {date.length > 0 ? (
-                                <p className="text-center">
-                                  <span className="bold">Start:</span>
-                                  {date[0].toDateString()}
-                                  &nbsp;|&nbsp;
-                                  <span className="bold">End:</span>{" "}
-                                  {date[1].toDateString()}
-                                </p>
-                              ) : (
-                                <p className="text-center"></p>
-                              )}
+                  <input value={inputThree.length == 0 ? "Select the Start & End Date" : startDate.concat(" - ") + endDate} className={styles.input_field} onChange={handleInput} onClick={toggleInput3} />
+                  <div style={{ display: input3 ? "block" : "none", }} >
+                    <div className="container  text-center" >
+                      <div className="row justify-content-center">
+                        <div
+                          className="col-md-6"
+                          id={styles.tripOne_inputthree_container}
+                        >
+                          <p
+                            className={styles.tripOne_cross_para1}
+                            onClick={toggleInput3}
+                          >
+                            <Image
+                              src={cross}
+                              alt="cross_image"
+                              height={12}
+                              width={15}
+                              className={styles.cross_image}
+                            />
+                          </p>
+                          <div className={styles.app}>
+                            <div className="row justify-content-center">
+                              <div className="col-md-6">
+                                <div className={styles.calendar_container}>
+                                  <Calendar
+                                    onChange={setDate}
+                                    value={date}
+                                    selectRange={true}
+                                  />
+                                  {date.length > 0 ? (
+                                    <p className="text-center">
+                                      <span className="bold">Start:</span>
+                                      {date[0].toDateString()}
+                                      &nbsp;|&nbsp;
+                                      <span className="bold">End:</span>{" "}
+                                      {date[1].toDateString()}
+                                    </p>
+                                  ) : (
+                                    <p className="text-center"></p>
+                                  )}
+                                </div>
+                              </div>
                             </div>
+                          </div>
+                          <div className={styles.tripOne_inputone_btn_container}>
+                            <button
+                              className={styles.tripOne_inputone_btn}
+                              onClick={inputThreeBtn}
+                            >
+                              Save
+                            </button>
                           </div>
                         </div>
                       </div>
-                      <div className={styles.tripOne_inputone_btn_container}>
-                        <button
-                          className={styles.tripOne_inputone_btn}
-                          onClick={inputThreeBtn}
-                        >
-                          Save
-                        </button>
-                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div className="row justify-content-center">
-                <div className="col-md-4 text-center">
-                  <Link href="/tripTwo">
-                    <button
-                      className={styles.save_btn}
-                      disabled={!info || !inputTwo || !inputThree}
-                    >
-                      Save & Continue
-                    </button>
-                  </Link>
+                  
                 </div>
               </div>
             </div>
+            <div className="row justify-content-center">
+                    <div className="col-md-4 text-center">
+                      <Link href="/tripTwo">
+                        <button
+                          className={styles.save_btn}
+                          disabled={!info || !inputTwo || !inputThree}
+                        >
+                          Save & Continue
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
           </div>
         </div>
       </div>

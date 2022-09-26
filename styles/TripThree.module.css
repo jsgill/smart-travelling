@@ -1,6 +1,7 @@
-.home_trip_img {
+.main_top_background {
   background: url(../public/images/trip/trip_background.png);
-  height: 600px;
+  height: 100%;
+  width: 100%;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,16 +36,16 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-.tripThree_line {
+/* .tripThree_line {
   height: 1px;
   border-right: 2px solid #ffffff;
   border-width: 315px;
-}
+} */
 .three_inputs_container {
   padding: 17% 20% 0% 20%;
 }
 .trip_three_inputs {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -52,29 +53,14 @@
   font-size: 16px;
   line-height: 180%;
   letter-spacing: 0.02em;
-  color: #ffffff;
-  width: 749px;
+  color: #FFFFFF;
+  width: 100%;
   border: none;
   outline: none;
   height: 60px;
   background: rgba(0, 0, 0, 0.37);
   border-radius: 44px;
   cursor: pointer;
-}
-.trip_three_submit_btn {
-  background-color: #ffffff;
-  border-radius: 32px;
-  width: 300px;
-  height: 60px;
-  outline: none;
-  border: 0px;
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 180%;
-  letter-spacing: 0.02em;
-  color: #000000;
 }
 .popup_content {
   position: absolute;
@@ -228,11 +214,18 @@
     font-size: 40px !important;
     text-align: center !important;
   }
-  .happy_travling {
-    text-align: center !important;
-  }
+  
   .back_home_btn {
     width: 250px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .happy_travel_p1 {
+    font-size: 40px !important;
+    text-align: center !important;
+  }
+  .happy_travling {
+    text-align: center !important;
   }
 }
 .main_container {
@@ -251,4 +244,34 @@
   padding: 50% 0% 0% 0%;
   position: absolute;
   transform: translate(15%, 30%);
+}
+
+.tripThree_line {
+  height: 1px;
+  border-top: 1px solid #FFFFFF;
+  border-width: 100% !important;
+  margin: 0px 5px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -45%);
+  position: relative;
+}
+.trip_three_submit_btn{
+  margin-top: 19px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: none;
+    width: 100%;
+    height: 64px;
+    background: #FFFFFF;
+    border-radius: 32px;
+}
+.top_tripThree_padding{
+  padding: 50px 0px 100px 0px;
 }
