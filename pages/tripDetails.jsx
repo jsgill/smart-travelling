@@ -49,7 +49,7 @@ function TripDetails() {
                                     <div className={styles.trip_user_p}>
                                         <p>Rohan Gupta</p>
                                         <p>+91 7734220098</p>
-                                        <p>Manal</p>
+                                        <p>Manali</p>
                                         <p>2</p>
                                         <p>11Sep - 20 Sept, 2022</p>
                                         <p>Camping, Hiking</p>
