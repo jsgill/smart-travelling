@@ -37,12 +37,20 @@ function TripOne() {
     if (checked) {
       setUserInfo([...userInfo, value]);
     }
+    else {
+      var val = userInfo.indexOf(e.target.value)
+      if (val !== -1) {
+        var val11 = userInfo.splice(val, 1)
+        var filter = userInfo.filter(item => item !== val11)
+        setUserInfo(filter)
+      }
+    }
   };
   const handleInput = () => {
     console.log("input1======>", input1);
   };
   const handleClick = () => {
-    if (userInfo.length === 1) {
+    if (userInfo.length === 1 || userInfo.length === 0) {
       Swal.fire({
         text: "Select minumum 2 destination",
         icon: "warning",
@@ -121,7 +129,7 @@ function TripOne() {
               <input
                 className={styles.input_field}
                 onClick={toggleInput1}
-                value={info.length === 0 ? "Choose Destination" : info}
+                value={info.length === 0 ? "Choose Destination" : userInfo}
                 onChange={handleInput}
               />
               {/*hide show div for first input  */}
@@ -195,7 +203,7 @@ function TripOne() {
                           <input
                             type="checkbox"
                             name="place"
-                            value="KASOL"
+                            value="Leh-Ladakh"
                             onChange={handleChange}
                           />
                         </div>

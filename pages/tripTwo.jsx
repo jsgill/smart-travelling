@@ -36,6 +36,7 @@ function TripTwo() {
   const [tenthColor, setTenthColor] = useState(true);
   const [elevenColor, setElevenColor] = useState(true);
   const [text, setText] = useState([]);
+  const [filterValue, setFilterValue] = useState([])
   const [info, setInfo] = useState("");
 
   const toggleInput1 = () => {
@@ -49,10 +50,9 @@ function TripTwo() {
     setAmount(event.target.value);
   };
   const handleBudgetAmount = (e) => {
-    console.log("budget ======>", e.target.value);
     setAmount(e.target.value);
   };
-  const demo = () => {};
+  const demo = () => { };
 
   const saveBtn = () => {
     toggleInput2();
@@ -108,10 +108,12 @@ function TripTwo() {
   };
   const handleSubmit = () => {
     toggleInput1();
-    console.log("submit text ====>", text);
-    for (let i = 0; i < text.length; i++) {
-      info = info.concat(text[i]);
-      if (i < text.length - 1) {
+    var filter = text.filter((item, index, array) => text.indexOf(item) === array.lastIndexOf(item));
+    setFilterValue(filter)
+    filter.sort()
+    for (let i = 0; i < filter.length; i++) {
+      info = info.concat(filter[i]);
+      if (i < filter.length - 1) {
         info = info.concat(", ");
       }
     }
@@ -144,7 +146,7 @@ function TripTwo() {
         <div className="row justify-content-center py-5">
           <div className="col-md-8">
             <input
-              value={info.length == 0 ? "Choose Interest" : text}
+              value={info.length == 0 || filterValue.length == 0 ? "Choose Interest" : filterValue}
               onChange={demo}
               className={styles.input_field}
               onClick={toggleInput1}
@@ -166,13 +168,12 @@ function TripTwo() {
                 </p>
                 <div className={styles.image_display_container}>
                   <div
-                    className={`${
-                      !changeColor
-                        ? styles.camping_div_color
-                        : styles.camping_div
-                    }`}
-                    onClick={() => handleChangeColor("camping")}
-                  >
+                    className={`${!changeColor
+                      ? styles.camping_div_color
+                      : styles.camping_div
+                      }`}
+                    onClick={() => handleChangeColor("camping")}>
+
                     <p>
                       <Image
                         src={image1}
@@ -184,11 +185,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Camping</p>
                   </div>
                   <div
-                    className={`${
-                      !firstColor
-                        ? styles.camping_div_color
-                        : styles.camping_div
-                    }`}
+                    className={`${!firstColor
+                      ? styles.camping_div_color
+                      : styles.camping_div
+                      }`}
                     onClick={() => handleFirstColor("Hiking")}
                   >
                     <p>
@@ -197,11 +197,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Hiking</p>
                   </div>
                   <div
-                    className={`${
-                      !secondColor
-                        ? styles.camping_div_color
-                        : styles.camping_div
-                    }`}
+                    className={`${!secondColor
+                      ? styles.camping_div_color
+                      : styles.camping_div
+                      }`}
                     onClick={() => handleSecondColor("Offbeat")}
                   >
                     <p>
@@ -215,11 +214,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Offbeat</p>
                   </div>
                   <div
-                    className={`${
-                      !thirdColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!thirdColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleThirdColor("Apple Orchards")}
                   >
                     <p>
@@ -230,11 +228,10 @@ function TripTwo() {
                 </div>
                 <div className={styles.image_display_container}>
                   <div
-                    className={`${
-                      !fourthColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!fourthColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleFourthColor("Biking")}
                   >
                     <p>
@@ -243,11 +240,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Biking</p>
                   </div>
                   <div
-                    className={`${
-                      !fifthColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!fifthColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleFifthColor("Forest")}
                   >
                     <p>
@@ -256,11 +252,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Forest</p>
                   </div>
                   <div
-                    className={`${
-                      !sixthColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!sixthColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleSixthColor("Historical")}
                   >
                     <p>
@@ -274,11 +269,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Historical</p>
                   </div>
                   <div
-                    className={`${
-                      !seventhColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!seventhColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleSeventhColor("Romantic")}
                   >
                     <p>
@@ -294,11 +288,10 @@ function TripTwo() {
                 </div>
                 <div className={styles.image_display_container}>
                   <div
-                    className={`${
-                      !eighthColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!eighthColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleEighthColor("Adventure")}
                   >
                     <p>
@@ -312,11 +305,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Adventure</p>
                   </div>
                   <div
-                    className={`${
-                      !ninthColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!ninthColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleNinthColor("Offroading")}
                   >
                     <p>
@@ -330,11 +322,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Offroading</p>
                   </div>
                   <div
-                    className={`${
-                      !tenthColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!tenthColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleTenthColor("Traditional")}
                   >
                     <p>
@@ -348,11 +339,10 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Traditional</p>
                   </div>
                   <div
-                    className={`${
-                      !elevenColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                    }`}
+                    className={`${!elevenColor
+                      ? styles.camping_div_color1
+                      : styles.camping_div1
+                      }`}
                     onClick={() => handleElevenColor("Waterfall")}
                   >
                     <p>
@@ -411,44 +401,40 @@ function TripTwo() {
                 </div>
                 <div className={styles.tripTwo_input_container}>
                   <input
-                    className={`${
-                      amount === "5,000"
-                        ? styles.TripTwo_btn_container_btn2
-                        : styles.TripTwo_btn_container_btn
-                    }`}
+                    className={`${amount === "5,000"
+                      ? styles.TripTwo_btn_container_btn2
+                      : styles.TripTwo_btn_container_btn
+                      }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="5,000"
                     onChange={demo}
                     id={styles.TripTwo_input_container_btn}
                   />
                   <input
-                    className={`${
-                      amount === "10,000"
-                        ? styles.TripTwo_btn_container_btn2
-                        : styles.TripTwo_btn_container_btn
-                    }`}
+                    className={`${amount === "10,000"
+                      ? styles.TripTwo_btn_container_btn2
+                      : styles.TripTwo_btn_container_btn
+                      }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="10,000"
                     onChange={demo}
                     id={styles.TripTwo_input_container_btn}
                   />
                   <input
-                    className={`${
-                      amount === "15,000"
-                        ? styles.TripTwo_btn_container_btn2
-                        : styles.TripTwo_btn_container_btn
-                    }`}
+                    className={`${amount === "15,000"
+                      ? styles.TripTwo_btn_container_btn2
+                      : styles.TripTwo_btn_container_btn
+                      }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="15,000"
                     onChange={demo}
                     id={styles.TripTwo_input_container_btn}
                   />
                   <input
-                    className={`${
-                      amount === "20,000"
-                        ? styles.TripTwo_btn_container_btn2
-                        : styles.TripTwo_btn_container_btn
-                    }`}
+                    className={`${amount === "20,000"
+                      ? styles.TripTwo_btn_container_btn2
+                      : styles.TripTwo_btn_container_btn
+                      }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="20,000"
                     onChange={demo}
@@ -470,7 +456,7 @@ function TripTwo() {
         <div className="row justify-content-center">
           <div className="col-md-4 text-center">
             <Link href="/tripThree">
-              <button className={styles.save_btn}>Save & Continue</button>
+              <button className={styles.save_btn} disabled={!info || !amount}>Save & Continue</button>
             </Link>
           </div>
         </div>

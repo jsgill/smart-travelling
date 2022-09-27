@@ -13,6 +13,7 @@ import insta_img from "../public/images/contact/insta.png";
 import facebook_img from "../public/images/contact/facebook.png";
 import Navbar from "../components/navbar"
 import Link from "next/link";
+import Footer from "../components/footer";
 
 function Contact() {
     return (
@@ -163,6 +164,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
