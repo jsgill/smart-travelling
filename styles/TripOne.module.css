@@ -25,6 +25,8 @@
     #tripOne_inputone_container{
         width: 100% !important;
     }
+
+    
 }
 
 .main_top_background {
@@ -442,9 +444,12 @@
 
 .tripOne_inputone_btn_container {
     text-align: center;
-   
+   margin-top: 30px;
+   margin-bottom: 10px;
 }
-
+.calendar_container{
+    padding-top: 10px;
+}
 .tripOne_inputone_btn {
     background: #00754A;
     border-radius: 20px;

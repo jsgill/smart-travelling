@@ -12,8 +12,10 @@ import destination_5 from "../public/images/trip/destination_5.png";
 import cross from "../public/images/trip/cross.png";
 import styles from "../styles/TripOne.module.css";
 import Swal from "sweetalert2";
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
+import DatePicker, {
+  Calendar,
+  getAllDatesInRange,
+} from "react-multi-date-picker";
 
 function TripOne() {
   const [userInfo, setUserInfo] = useState([]);
@@ -24,9 +26,11 @@ function TripOne() {
   const [inputTwo, setInputTwo] = useState("");
   const [inputThree, setInputThree] = useState("");
   const [count, setCount] = useState(0);
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState([]);
   var startDate = new Date(date[0]).toDateString();
   var endDate = new Date(date[1]).toDateString();
+  let [inputValue, setInputValue] = useState("");
+  let [inputValue2, setInput2Value] = useState("");
 
   const handleChange = (e) => {
     const { value, checked } = e.target;
@@ -121,7 +125,6 @@ function TripOne() {
                 onChange={handleInput}
               />
               {/*hide show div for first input  */}
-              {/*Create one component and make sure to use map method to render others*/}
               <div className="row justify-content-center">
                 <div style={{ display: input1 ? "block" : "none" }}>
                   <div
@@ -136,8 +139,8 @@ function TripOne() {
                       <Image
                         src={cross}
                         alt="cross_image"
-                        height="10%"
-                        width="13%"
+                        height={12}
+                        width={15}
                         className={styles.cross_image}
                       />
                     </p>
@@ -157,8 +160,8 @@ function TripOne() {
                         <Image
                           src={destination_1}
                           alt="destination-image"
-                          height="200rem"
-                          width="300rem"
+                          height="235px"
+                          width="228px"
                         />
                         <p className={styles.tripOne_inputone_content}>
                           MANALI
@@ -179,8 +182,8 @@ function TripOne() {
                         <Image
                           src={destination_2}
                           alt="destination-image"
-                          height="200rem"
-                          width="300rem"
+                          height="235px"
+                          width="228px"
                         />
                         <p className={styles.tripOne_inputone_content}>KASOL</p>
                       </div>
@@ -192,15 +195,15 @@ function TripOne() {
                           <input
                             type="checkbox"
                             name="place"
-                            value="Leh-Ladakh"
+                            value="KASOL"
                             onChange={handleChange}
                           />
                         </div>
                         <Image
                           src={destination_3}
                           alt="destination-image"
-                          height="200rem"
-                          width="300rem"
+                          height="235px"
+                          width="228px"
                         />
                         <p className={styles.tripOne_inputone_content}>
                           Leh-Ladakh
@@ -354,7 +357,10 @@ function TripOne() {
                     onClick={toggleInput3}
                   />
                   <div style={{ display: input3 ? "block" : "none" }}>
-                    <div className="container  text-center">
+                    <div
+                      className="container  text-center"
+                      id={styles.calender_main_container}
+                    >
                       <div className="row justify-content-center">
                         <div
                           className="col-md-6"
@@ -375,23 +381,15 @@ function TripOne() {
                           <div className={styles.app}>
                             <div className="row justify-content-center">
                               <div className="col-md-6">
-                                <div className={styles.calendar_container}>
+                                <div className="justify-content-center">
                                   <Calendar
-                                    onChange={setDate}
+                                    multiple
+                                    onlyShowInRangeDates={true}
+                                    minDate={inputValue}
+                                    maxDate={inputValue2}
                                     value={date}
-                                    selectRange={true}
+                                    onChange={setDate}
                                   />
-                                  {date.length > 0 ? (
-                                    <p className="text-center">
-                                      <span className="bold">Start:</span>
-                                      {date[0].toDateString()}
-                                      &nbsp;|&nbsp;
-                                      <span className="bold">End:</span>{" "}
-                                      {date[1].toDateString()}
-                                    </p>
-                                  ) : (
-                                    <p className="text-center"></p>
-                                  )}
                                 </div>
                               </div>
                             </div>

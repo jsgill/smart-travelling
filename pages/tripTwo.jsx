@@ -52,7 +52,7 @@ function TripTwo() {
     console.log("budget ======>", e.target.value);
     setAmount(e.target.value);
   };
-  const demo = () => { };
+  const demo = () => {};
 
   const saveBtn = () => {
     toggleInput2();
@@ -166,22 +166,29 @@ function TripTwo() {
                 </p>
                 <div className={styles.image_display_container}>
                   <div
-                    className={`${!changeColor
+                    className={`${
+                      !changeColor
                         ? styles.camping_div_color
                         : styles.camping_div
-                      }`}
+                    }`}
                     onClick={() => handleChangeColor("camping")}
                   >
                     <p>
-                      <Image src={image1} height={50} width={50} alt="camping" />
+                      <Image
+                        src={image1}
+                        height={50}
+                        width={50}
+                        alt="camping"
+                      />
                     </p>
                     <p className={styles.image_para_content}>Camping</p>
                   </div>
                   <div
-                    className={`${!firstColor
+                    className={`${
+                      !firstColor
                         ? styles.camping_div_color
                         : styles.camping_div
-                      }`}
+                    }`}
                     onClick={() => handleFirstColor("Hiking")}
                   >
                     <p>
@@ -190,22 +197,29 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Hiking</p>
                   </div>
                   <div
-                    className={`${!secondColor
+                    className={`${
+                      !secondColor
                         ? styles.camping_div_color
                         : styles.camping_div
-                      }`}
+                    }`}
                     onClick={() => handleSecondColor("Offbeat")}
                   >
                     <p>
-                      <Image src={image3} height={50} width={50} alt="offbeat" />
+                      <Image
+                        src={image3}
+                        height={50}
+                        width={50}
+                        alt="offbeat"
+                      />
                     </p>
                     <p className={styles.image_para_content}>Offbeat</p>
                   </div>
                   <div
-                    className={`${!thirdColor
+                    className={`${
+                      !thirdColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleThirdColor("Apple Orchards")}
                   >
                     <p>
@@ -216,10 +230,11 @@ function TripTwo() {
                 </div>
                 <div className={styles.image_display_container}>
                   <div
-                    className={`${!fourthColor
+                    className={`${
+                      !fourthColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleFourthColor("Biking")}
                   >
                     <p>
@@ -228,10 +243,11 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Biking</p>
                   </div>
                   <div
-                    className={`${!fifthColor
+                    className={`${
+                      !fifthColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleFifthColor("Forest")}
                   >
                     <p>
@@ -240,76 +256,112 @@ function TripTwo() {
                     <p className={styles.image_para_content}>Forest</p>
                   </div>
                   <div
-                    className={`${!sixthColor
+                    className={`${
+                      !sixthColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleSixthColor("Historical")}
                   >
                     <p>
-                      <Image src={image7} height={50} width={50} alt="historical" />
+                      <Image
+                        src={image7}
+                        height={50}
+                        width={50}
+                        alt="historical"
+                      />
                     </p>
                     <p className={styles.image_para_content}>Historical</p>
                   </div>
                   <div
-                    className={`${!seventhColor
+                    className={`${
+                      !seventhColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleSeventhColor("Romantic")}
                   >
                     <p>
-                      <Image src={image8} height={50} width={50} alt="romantic" />{" "}
+                      <Image
+                        src={image8}
+                        height={50}
+                        width={50}
+                        alt="romantic"
+                      />{" "}
                     </p>
                     <p className={styles.image_para_content}>Romantic</p>
                   </div>
                 </div>
                 <div className={styles.image_display_container}>
                   <div
-                    className={`${!eighthColor
+                    className={`${
+                      !eighthColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleEighthColor("Adventure")}
                   >
                     <p>
-                      <Image src={image9} height={50} width={50} alt="adventure" />{" "}
+                      <Image
+                        src={image9}
+                        height={50}
+                        width={50}
+                        alt="adventure"
+                      />{" "}
                     </p>
                     <p className={styles.image_para_content}>Adventure</p>
                   </div>
                   <div
-                    className={`${!ninthColor
+                    className={`${
+                      !ninthColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleNinthColor("Offroading")}
                   >
                     <p>
-                      <Image src={image10} height={50} width={50} alt="offroading" />
+                      <Image
+                        src={image10}
+                        height={50}
+                        width={50}
+                        alt="offroading"
+                      />
                     </p>
                     <p className={styles.image_para_content}>Offroading</p>
                   </div>
                   <div
-                    className={`${!tenthColor
+                    className={`${
+                      !tenthColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleTenthColor("Traditional")}
                   >
                     <p>
-                      <Image src={image11} height={50} width={50} alt="traditional" />
+                      <Image
+                        src={image11}
+                        height={50}
+                        width={50}
+                        alt="traditional"
+                      />
                     </p>
                     <p className={styles.image_para_content}>Traditional</p>
                   </div>
                   <div
-                    className={`${!elevenColor
+                    className={`${
+                      !elevenColor
                         ? styles.camping_div_color1
                         : styles.camping_div1
-                      }`}
+                    }`}
                     onClick={() => handleElevenColor("Waterfall")}
                   >
                     <p>
-                      <Image src={image12} height={50} width={50} alt="waterfall" />
+                      <Image
+                        src={image12}
+                        height={50}
+                        width={50}
+                        alt="waterfall"
+                      />
                     </p>
                     <p className={styles.image_para_content}>Waterfall</p>
                   </div>
@@ -359,40 +411,44 @@ function TripTwo() {
                 </div>
                 <div className={styles.tripTwo_input_container}>
                   <input
-                    className={`${amount === "5,000"
+                    className={`${
+                      amount === "5,000"
                         ? styles.TripTwo_btn_container_btn2
                         : styles.TripTwo_btn_container_btn
-                      }`}
+                    }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="5,000"
                     onChange={demo}
                     id={styles.TripTwo_input_container_btn}
                   />
                   <input
-                    className={`${amount === "10,000"
+                    className={`${
+                      amount === "10,000"
                         ? styles.TripTwo_btn_container_btn2
                         : styles.TripTwo_btn_container_btn
-                      }`}
+                    }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="10,000"
                     onChange={demo}
                     id={styles.TripTwo_input_container_btn}
                   />
                   <input
-                    className={`${amount === "15,000"
+                    className={`${
+                      amount === "15,000"
                         ? styles.TripTwo_btn_container_btn2
                         : styles.TripTwo_btn_container_btn
-                      }`}
+                    }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="15,000"
                     onChange={demo}
                     id={styles.TripTwo_input_container_btn}
                   />
                   <input
-                    className={`${amount === "20,000"
+                    className={`${
+                      amount === "20,000"
                         ? styles.TripTwo_btn_container_btn2
                         : styles.TripTwo_btn_container_btn
-                      }`}
+                    }`}
                     onClick={(e) => handleBudgetAmount(e)}
                     value="20,000"
                     onChange={demo}
