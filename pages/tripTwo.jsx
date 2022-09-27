@@ -36,7 +36,6 @@ function TripTwo() {
   const [tenthColor, setTenthColor] = useState(true);
   const [elevenColor, setElevenColor] = useState(true);
   const [text, setText] = useState([]);
-  const [filterValue, setFilterValue] = useState([])
   const [info, setInfo] = useState("");
 
   const toggleInput1 = () => {
