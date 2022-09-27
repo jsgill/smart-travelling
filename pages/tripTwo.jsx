@@ -109,8 +109,9 @@ function TripTwo() {
   const handleSubmit = () => {
     toggleInput1();
     var filter = text.filter((item, index, array) => text.indexOf(item) === array.lastIndexOf(item));
-    setFilterValue(filter)
-    filter.sort()
+    console.log("filter =======>", filter)
+    setText(filter)
+    console.log("text ==========>", text)
     for (let i = 0; i < filter.length; i++) {
       info = info.concat(filter[i]);
       if (i < filter.length - 1) {
@@ -146,7 +147,7 @@ function TripTwo() {
         <div className="row justify-content-center py-5">
           <div className="col-md-8">
             <input
-              value={info.length == 0 || filterValue.length == 0 ? "Choose Interest" : filterValue}
+              value={info.length == 0 ? "Choose Interest" : text}
               onChange={demo}
               className={styles.input_field}
               onClick={toggleInput1}
@@ -192,7 +193,7 @@ function TripTwo() {
                     onClick={() => handleFirstColor("Hiking")}
                   >
                     <p>
-                      <Image src={image2} height={50} width={50} alt="hoking" />
+                      <Image src={image2} height={50} width={50} alt="hiking" />
                     </p>
                     <p className={styles.image_para_content}>Hiking</p>
                   </div>
