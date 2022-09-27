@@ -109,9 +109,7 @@ function TripTwo() {
   const handleSubmit = () => {
     toggleInput1();
     var filter = text.filter((item, index, array) => text.indexOf(item) === array.lastIndexOf(item));
-    console.log("filter =======>", filter)
     setText(filter)
-    console.log("text ==========>", text)
     for (let i = 0; i < filter.length; i++) {
       info = info.concat(filter[i]);
       if (i < filter.length - 1) {
