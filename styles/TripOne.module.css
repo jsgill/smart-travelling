@@ -4,6 +4,12 @@
         height: 50px !important;
         font-size: 10px !important;
     }
+    #tripOne_inputtwo_container{
+        width: 90% !important;
+    }
+    #tripOne_inputthree_container{
+        width: 90% !important;
+    }
 
     .input_field {
         height: 50px !important;
@@ -343,8 +349,7 @@
 
 .tripOne_inputone_btn_container {
     text-align: center;
-   margin-top: 30px;
-   margin-bottom: 10px;
+  
 }
 .calendar_container{
     padding-top: 10px;
@@ -355,8 +360,8 @@
     outline: none;
     border: none;
     color: #FFFFFF;
-    padding: 8px 50px;
-    font-size: 16px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -409,23 +414,25 @@
     position: absolute;
     background-color: #FFFFFF;
     z-index: 1;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     border-radius: 10px;
     top: 50%;
     left: 50%;
+   
     transform: translate(-50%,-50%);
  }
  .tripOne_inputtwo_content_container{
     display: flex;
     justify-content: space-around;
+    padding: 1.5rem 0rem;
  }
  .inputtwo_div1{
     height: 20px;
     border-radius: 50%;
 }
 .tripOne_content_inc_dec_operator1{
-    font-size: 28px;
+    font-size: 2rem;
     width: 43px;
     background: #FFFFFF;
     border: 1px solid #E3E3E3;
@@ -440,7 +447,7 @@
     padding: 0px 20px 0px 20px;
 }
 .tripOne_content_inc_dec_operator2{
-    font-size: 28px;
+    font-size: 2rem;
     width: 43px;
     background: #FFFFFF;
     border: 1px solid #E3E3E3;
@@ -487,12 +494,15 @@
     position: absolute;
     background-color: #FFFFFF;
     z-index: 1;
-    padding: 20px ;
     border-radius: 10px;
     top: 50%;
+    padding: 1.5rem 0rem;
     left: 50%;
     width: 80%;
     transform: translate(-50%,-50%);
+}
+.app{
+    position: relative;
 }
 
 .tripOne_cross_para1 {

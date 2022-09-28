@@ -124,7 +124,7 @@ function TripOne() {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-8">
+            <div className="col-md-8">
               <input
                 className={styles.input_field}
                 onClick={toggleInput1}
@@ -132,7 +132,7 @@ function TripOne() {
                 onChange={handleInput}
               />
               {/*hide show div for first input  */}
-              <MydModalWithGrid show={modalShow} change={handleChange}  onHide={() => handleClick()}/>
+              <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} />
               <input
                 value={inputTwo.length == 0 ? "No. of Guests" : inputTwo}
                 className={styles.input_field}
@@ -144,7 +144,7 @@ function TripOne() {
                 <div className="container">
                   <div className="row justify-content-center">
                     <div
-                      className="col-6 text-center"
+                      className="col-md-6 text-center"
                       id={styles.tripOne_inputtwo_container}
                     >
                       <p
@@ -160,7 +160,7 @@ function TripOne() {
                         />
                       </p>
                       <div className="row justify-content-center">
-                        <div className="col-md-6 py-4">
+                        <div className="col-md-6">
                           <div
                             className={
                               styles.tripOne_inputtwo_content_container

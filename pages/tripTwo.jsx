@@ -233,135 +233,214 @@ function TripTwo() {
                   </div>
                 </div>
                 <div className={styles.image_display_container}>
-                  <div
-                    className={`${!fourthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleFourthColor("Biking")}
-                  >
-                    <p>
-                      <Image src={image5} height={50} width={50} alt="biking" />
-                    </p>
-                    <p className={styles.image_para_content}>Biking</p>
-                  </div>
-                  <div
-                    className={`${!fifthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleFifthColor("Forest")}
-                  >
-                    <p>
-                      <Image src={image6} height={50} width={50} alt="forest" />
-                    </p>
-                    <p className={styles.image_para_content}>Forest</p>
-                  </div>
-                  <div
-                    className={`${!sixthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleSixthColor("Historical")}
-                  >
-                    <p>
-                      <Image
-                        src={image7}
-                        height={50}
-                        width={50}
-                        alt="historical"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Historical</p>
-                  </div>
-                  <div
-                    className={`${!seventhColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleSeventhColor("Romantic")}
-                  >
-                    <p>
-                      <Image
-                        src={image8}
-                        height={50}
-                        width={50}
-                        alt="romantic"
-                      />{" "}
-                    </p>
-                    <p className={styles.image_para_content}>Romantic</p>
+                  <div className="row jsutify-content-center">
+                    <div className="col-3 ">
+                      <div
+                        className={`${!changeColor
+                          ? styles.camping_div_color
+                          : styles.camping_div
+                          }`}
+                        onClick={() => handleChangeColor("camping")}>
+
+                        <p>
+                          <Image
+                            src={image1}
+                            height={50}
+                            width={50}
+                            alt="camping"
+                          />
+                        </p>
+                        <p className={styles.image_para_content}>Camping</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!firstColor
+                          ? styles.camping_div_color
+                          : styles.camping_div
+                          }`}
+                        onClick={() => handleFirstColor("Hiking")}
+                      >
+                        <p>
+                          <Image src={image2} height={50} width={50} alt="hiking" />
+                        </p>
+                        <p className={styles.image_para_content}>Hiking</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!secondColor
+                          ? styles.camping_div_color
+                          : styles.camping_div
+                          }`}
+                        onClick={() => handleSecondColor("Offbeat")}
+                      >
+                        <p>
+                          <Image
+                            src={image3}
+                            height={50}
+                            width={50}
+                            alt="offbeat"
+                          />
+                        </p>
+                        <p className={styles.image_para_content}>Offbeat</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!thirdColor
+                          ? styles.camping_div_color
+                          : styles.camping_div
+                          }`}
+                        onClick={() => handleThirdColor("Apple Orchards")}
+                      >
+                        <p>
+                          <Image src={image4} height={50} width={50} alt="apple" />
+                        </p>
+                        <p className={styles.image_para_content}>Apple Orchards</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!fourthColor
+                          ? styles.camping_div_color1
+                          : styles.camping_div1
+                          }`}
+                        onClick={() => handleFourthColor("Biking")}
+                      >
+                        <p>
+                          <Image src={image5} height={50} width={50} alt="biking" />
+                        </p>
+                        <p className={styles.image_para_content}>Biking</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!fifthColor
+                          ? styles.camping_div_color1
+                          : styles.camping_div1
+                          }`}
+                        onClick={() => handleFifthColor("Forest")}
+                      >
+                        <p>
+                          <Image src={image6} height={50} width={50} alt="forest" />
+                        </p>
+                        <p className={styles.image_para_content}>Forest</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!sixthColor
+                          ? styles.camping_div_color1
+                          : styles.camping_div1
+                          }`}
+                        onClick={() => handleSixthColor("Historical")}
+                      >
+                        <p>
+                          <Image
+                            src={image7}
+                            height={50}
+                            width={50}
+                            alt="historical"
+                          />
+                        </p>
+                        <p className={styles.image_para_content}>Historical</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!seventhColor
+                          ? styles.camping_div_color1
+                          : styles.camping_div1
+                          }`}
+                        onClick={() => handleSeventhColor("Romantic")}
+                      >
+                        <p>
+                          <Image
+                            src={image8}
+                            height={50}
+                            width={50}
+                            alt="romantic"
+                          />{" "}
+                        </p>
+                        <p className={styles.image_para_content}>Romantic</p>
+                      </div>
+                    </div>
+                   
+                    <div className="col-3 ">
+                      <div className={`${!eighthColor ? styles.camping_div_color1 : styles.camping_div1}`} onClick={() => handleEighthColor("Adventure")}>
+                        <p>
+                          <Image
+                            src={image9}
+                            height={50}
+                            width={50}
+                            alt="adventure"
+                          />{" "}
+                        </p>
+                        <p className={styles.image_para_content}>Adventure</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!ninthColor
+                          ? styles.camping_div_color1
+                          : styles.camping_div1
+                          }`}
+                        onClick={() => handleNinthColor("Offroading")}
+                      >
+                        <p>
+                          <Image
+                            src={image10}
+                            height={50}
+                            width={50}
+                            alt="offroading"
+                          />
+                        </p>
+                        <p className={styles.image_para_content}>Offroading</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!tenthColor
+                          ? styles.camping_div_color1
+                          : styles.camping_div1
+                          }`}
+                        onClick={() => handleTenthColor("Traditional")}
+                      >
+                        <p>
+                          <Image
+                            src={image11}
+                            height={50}
+                            width={50}
+                            alt="traditional"
+                          />
+                        </p>
+                        <p className={styles.image_para_content}>Traditional</p>
+                      </div>
+                    </div>
+                    <div className="col-3 ">
+                      <div
+                        className={`${!elevenColor
+                          ? styles.camping_div_color1
+                          : styles.camping_div1
+                          }`}
+                        onClick={() => handleElevenColor("Waterfall")}
+                      >
+                        <p>
+                          <Image
+                            src={image12}
+                            height={50}
+                            width={50}
+                            alt="waterfall"
+                          />
+                        </p>
+                        <p className={styles.image_para_content}>Waterfall</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className={styles.image_display_container}>
-                  <div
-                    className={`${!eighthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleEighthColor("Adventure")}
-                  >
-                    <p>
-                      <Image
-                        src={image9}
-                        height={50}
-                        width={50}
-                        alt="adventure"
-                      />{" "}
-                    </p>
-                    <p className={styles.image_para_content}>Adventure</p>
-                  </div>
-                  <div
-                    className={`${!ninthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleNinthColor("Offroading")}
-                  >
-                    <p>
-                      <Image
-                        src={image10}
-                        height={50}
-                        width={50}
-                        alt="offroading"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Offroading</p>
-                  </div>
-                  <div
-                    className={`${!tenthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleTenthColor("Traditional")}
-                  >
-                    <p>
-                      <Image
-                        src={image11}
-                        height={50}
-                        width={50}
-                        alt="traditional"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Traditional</p>
-                  </div>
-                  <div
-                    className={`${!elevenColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleElevenColor("Waterfall")}
-                  >
-                    <p>
-                      <Image
-                        src={image12}
-                        height={50}
-                        width={50}
-                        alt="waterfall"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Waterfall</p>
-                  </div>
-                </div>
+
+
                 <div className={styles.tripTwo_inputtwo_btn_container}>
                   <button
                     className={styles.tripTwo_inputtwo_btn}
@@ -464,7 +543,7 @@ function TripTwo() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-md-4 text-center">
+          <div className="col-3 text-center">
             <Link href="/tripThree">
               <button className={styles.save_btn} disabled={!info || !amount}>
                 Save & Continue
