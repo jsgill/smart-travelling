@@ -6,8 +6,8 @@ import left_arrow from "../public/images/trip/left_arrow.png";
 
 function TripDetails() {
 
-    const data = JSON.parse(localStorage.getItem('trip-three'));
-    console.log("data ====>", data)
+    // const data = JSON.parse(localStorage.getItem('trip-three'));
+    // console.log("data ====>", data)
     return (
         <div>
             <div className={styles.main_container}>
@@ -49,8 +49,8 @@ function TripDetails() {
 
                                     </div>
                                     <div className={styles.trip_user_p}>
-                                        <p>{data.name}</p>
-                                        <p>+{data.mobile}</p>
+                                        <p>Rohan Preet</p>
+                                        <p>+91 983483555</p>
                                         <p>Manali</p>
                                         <p>2</p>
                                         <p>11Sep - 20 Sept, 2022</p>
