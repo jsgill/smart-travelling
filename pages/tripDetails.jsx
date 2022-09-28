@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/TripThree.module.css";
 import left_arrow from "../public/images/trip/left_arrow.png";
-import trip_details_img from "../public/images/trip/trip_details_img.png";
 
 function TripDetails() {
+
+    const data = JSON.parse(localStorage.getItem('trip-three'));
+    console.log("data ====>", data)
     return (
         <div>
             <div className={styles.main_container}>
@@ -47,8 +49,8 @@ function TripDetails() {
 
                                     </div>
                                     <div className={styles.trip_user_p}>
-                                        <p>Rohan Gupta</p>
-                                        <p>+91 7734220098</p>
+                                        <p>{data.name}</p>
+                                        <p>+{data.mobile}</p>
                                         <p>Manali</p>
                                         <p>2</p>
                                         <p>11Sep - 20 Sept, 2022</p>

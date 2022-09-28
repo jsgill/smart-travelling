@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";
 import user_one from "../public/images/contact/Rectangle 4409.png";
@@ -14,8 +14,13 @@ import facebook_img from "../public/images/contact/facebook.png";
 import Navbar from "../components/navbar"
 import Link from "next/link";
 import Footer from "../components/footer";
+import { useForm } from "react-hook-form";
 
 function Contact() {
+    const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onTouched" });
+    const onSubmit = (data) => {
+        console.log(" contact data ====>", data)
+    }
     return (
         <div>
             <Navbar />
@@ -149,17 +154,34 @@ function Contact() {
                         <p className={styles.contact_your_text}>Your Details:</p>
                         <div className="row">
                             <div className="col-lg-6">
-                                <input type="text" placeholder="Your name" name="name" className={styles.contact_inputs11} />
+                                <input type="text" placeholder="Your name" autoComplete="off" name="name" className={styles.contact_inputs11} defaultValue=""
+                                    {...register("name",
+                                        {
+                                            required: true,
+                                        }
+                                    )} />
+                                {errors.name?.type === "required" && (<small style={{ color: "red" }}>Enter your name</small>)}
                             </div>
                             <div className="col-lg-6" id={styles.contact_ph_info}>
-                                <input type="text" placeholder="Phone number" name="phone" className={styles.contact_inputs22} />
+                                <input type="text" placeholder="Phone number" autoComplete="off" name="phone" maxLength={10} className={styles.contact_inputs22} defaultValue=""
+                                    {...register("phone", {
+                                        required: true,
+                                        pattern: /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i
+                                    })} />
+                                {errors.phone?.type === "required" && (<small style={{ color: "red" }}>Enter your phone number</small>)}
+                                {errors.phone?.type === "pattern" && (<small style={{ color: "red" }}>Only ten digit numbers are allowed</small>)}
                             </div>
                             <div className="col-lg-12">
-                                <textarea type="text" placeholder="Message" className={styles.contact_message_input} />
+                                <textarea type="text" placeholder="Message" autoComplete="off" name="message" className={styles.contact_message_input} defaultValue=""
+                                    {...register("message", {
+                                        required: true,
+                                    })} />
+                                {errors.message?.type === "required" && (<small style={{ color: "red" }}>Enter your message</small>)}
+
                             </div>
                         </div>
                         <div className={styles.contact_main_btn}>
-                            <button className={styles.contact_submit_btn}>Submit</button>
+                            <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
                         </div>
                     </div>
                 </div>
