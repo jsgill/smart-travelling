@@ -13,10 +13,7 @@ import MydModalWithGrid from "../components/modal";
 import cross from "../public/images/trip/cross.png";
 import styles from "../styles/TripOne.module.css";
 import Swal from "sweetalert2";
-import DatePicker, {
-  Calendar,
-  getAllDatesInRange,
-} from "react-multi-date-picker";
+import { Calendar } from "react-multi-date-picker";
 
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
@@ -256,7 +253,10 @@ function TripOne() {
                           </p>
                           <div className={styles.app}>
                             <div className="row justify-content-center">
-                              <div className="col-md-6">
+                              <div
+                                className="col-md-6"
+                                id={styles.calender_container}
+                              >
                                 <div className="justify-content-center">
                                   <Calendar
                                     multiple
@@ -265,6 +265,7 @@ function TripOne() {
                                     maxDate={inputValue2}
                                     value={date}
                                     onChange={setDate}
+                                    className={styles.calender}
                                   />
                                 </div>
                               </div>
