@@ -24,3 +24,21 @@
   color: #00754A !important;
   font-family: 'Poppins', sans-serif;
 }
+.card-image {
+  height: 100%;
+  width: 100%;
+}
+
+.noBorder {
+  border: solid 2px transparent;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+.withBorder {
+  border: solid 1px #000000;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFD2;
+  object-fit: fill;
+}

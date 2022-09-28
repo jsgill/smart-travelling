@@ -265,18 +265,20 @@
         cursor: pointer;
     }
    }
-   
-   
+
+
+
  /* trip one input one popup css */
+
 #tripOne_inputone_container {
     position: absolute;
-    background-color: #FFFFFF;
+    background-color: #FFFFF1;
     z-index: 1;
     width: 50%;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%,-50%);
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px 0px 20px 0px;
 }
 
@@ -429,7 +431,6 @@
 
 #tripOne_inputone_content_container {
     position: relative;
-    ;
 }
 
 .tripOne_content {
