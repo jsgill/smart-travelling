@@ -238,15 +238,17 @@
 }
 
 .tripOne_inputone_btn {
+    margin-top: 10px;
     background: #00754A;
-    border-radius: 30px;
+    border-radius: 20px;
     outline: none;
     border: none;
     color: #FFFFFF;
-    padding: 0.3rem 3rem;
-    font-size: 1.5rem;
-    font-weight: 400;
+    padding: 8px 50px;
+    font-size: 16px;
+    font-weight: 600;
     letter-spacing: 1px;
+    z-index: 999;
 }
 
 .tripOne_inputone_btn1 {
@@ -390,7 +392,7 @@
 }
 
 .calender {
-    padding-bottom: 52px;
+    padding-bottom: 43px;
     z-index: -1;
 }
 
