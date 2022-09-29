@@ -29,7 +29,7 @@ function HowItWorks() {
                         </div>
                     </div>
                     <div className='col-md-6'>
-                        <Image src={rectangle1} height="600px" width="450px" alt="angle1" />
+                        <Image src={rectangle1} height="550px" width="400px" alt="angle1" />
                     </div>
                 </div>
                 <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>

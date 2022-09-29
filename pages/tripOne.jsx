@@ -206,14 +206,16 @@ function TripOne() {
                             </div>
                           </div>
                         </div>
-                        <div className={styles.tripOne_inputone_btn_container}>
-                          <button
-                            className={styles.tripOne_inputone_btn}
-                            onClick={inputTwoBtn}
+                        <div
+                            className={styles.tripOne_inputone_btn_container}
                           >
-                            Save
-                          </button>
-                        </div>
+                            <button
+                              className={styles.tripOne_inputone_btn}
+                              onClick={inputTwoBtn}
+                            >
+                              Save
+                            </button>
+                          </div>
                       </div>
                     </div>
                   </div>

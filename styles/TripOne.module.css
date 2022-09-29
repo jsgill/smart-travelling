@@ -99,7 +99,7 @@
 }
 
 .save_btn {
-    margin-top: 19px;
+    margin-top: 29px;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -239,17 +239,18 @@
 
 .tripOne_inputone_btn {
     background: #00754A;
-    border-radius: 20px;
+    border-radius: 30px;
     outline: none;
     border: none;
     color: #FFFFFF;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 3rem;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 1px;
 }
 
 .tripOne_inputone_btn1 {
+    margin-top: 10px;
     background: #00754A;
     border-radius: 20px;
     outline: none;
@@ -389,7 +390,7 @@
 }
 
 .calender {
-    padding-bottom: 90px;
+    padding-bottom: 52px;
     z-index: -1;
 }
 
