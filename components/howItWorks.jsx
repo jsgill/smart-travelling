@@ -28,8 +28,8 @@ function HowItWorks() {
                             <p>Choose from a variety of stays <br /> & activities of your choice & <br /> budget</p>
                         </div>
                     </div>
-                    <div className='col-md-5'>
-                        <Image src={rectangle1} height="500px" width="350px" alt="angle1" />
+                    <div className='col-md-6'>
+                        <Image src={rectangle1} height="600px" width="450px" alt="angle1" />
                     </div>
                 </div>
                 <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
