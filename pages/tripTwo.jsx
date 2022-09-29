@@ -177,66 +177,7 @@ function TripTwo() {
                     className={styles.cross_image}
                   />
                 </p>
-                <div className={styles.image_display_container}>
-                  <div
-                    className={`${!changeColor
-                      ? styles.camping_div_color
-                      : styles.camping_div
-                      }`}
-                    onClick={() => handleChangeColor("camping")}
-                  >
-                    <p>
-                      <Image
-                        src={image1}
-                        height={50}
-                        width={50}
-                        alt="camping"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Camping</p>
-                  </div>
-                  <div
-                    className={`${!firstColor
-                      ? styles.camping_div_color
-                      : styles.camping_div
-                      }`}
-                    onClick={() => handleFirstColor("Hiking")}
-                  >
-                    <p>
-                      <Image src={image2} height={50} width={50} alt="hiking" />
-                    </p>
-                    <p className={styles.image_para_content}>Hiking</p>
-                  </div>
-                  <div
-                    className={`${!secondColor
-                      ? styles.camping_div_color
-                      : styles.camping_div
-                      }`}
-                    onClick={() => handleSecondColor("Offbeat")}
-                  >
-                    <p>
-                      <Image
-                        src={image3}
-                        height={50}
-                        width={50}
-                        alt="offbeat"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Offbeat</p>
-                  </div>
-                  <div
-                    className={`${!thirdColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleThirdColor("Apple Orchards")}
-                  >
-                    <p>
-                      <Image src={image4} height={42} width={45} alt="apple" />
-                    </p>
-                    <p className={styles.image_para_content2}>Apple Orchards</p>
-                  </div>
-                </div>
+               
                 <div className={styles.image_display_container}>
                   <div className="row jsutify-content-center">
                     <div className="col-3 ">
