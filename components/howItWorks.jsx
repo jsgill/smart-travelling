@@ -28,7 +28,7 @@ function HowItWorks() {
                             <p>Choose from a variety of stays <br /> & activities of your choice & <br /> budget</p>
                         </div>
                     </div>
-                    <div className='col-md-4'>
+                    <div className='col-md-5'>
                         <Image src={rectangle1} height="500px" width="350px" alt="angle1" />
                     </div>
                 </div>
