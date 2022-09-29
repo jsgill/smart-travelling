@@ -29,7 +29,7 @@
 }
 
 .home_needs2 {
-    padding: 30% 0% 50% 0%;
+    padding: 15% 0% 50% 0%;
 }
 
 .home_needs1 h1 {
@@ -76,4 +76,8 @@
     text-align: center;
     color: #121212;
     font-family: "Poppins", sans-serif;
+}
+
+#laptop_div {
+    margin-top: -120px;
 }

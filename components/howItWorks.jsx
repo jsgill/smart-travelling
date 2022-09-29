@@ -20,7 +20,7 @@ function HowItWorks() {
                         <p>Share your trip requirements to <br /> feed our magical <br /> recommendation algorithm</p>
                     </div>
                 </div>
-                <div className='row justify-content-center mb-2'>
+                <div className='row justify-content-center'>
                     <div className='col-md-6'>
                         <div className={styles.home_needs2}>
                             <h1>Start customising <br />
@@ -28,11 +28,11 @@ function HowItWorks() {
                             <p>Choose from a variety of stays <br /> & activities of your choice & <br /> budget</p>
                         </div>
                     </div>
-                    <div className='col-md-6'>
-                        <Image src={rectangle1} height="550px" width="400px" alt="angle1" />
+                    <div className='col-md-4'>
+                        <Image src={rectangle1} height="400px" width="300px" alt="angle1" />
                     </div>
                 </div>
-                <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
+                <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2' id={styles.laptop_div}>
                     <div className='col-md-8'>
                         <Image src={rectangle3} height="430px" width="621px" alt="angle3" />
                     </div>
