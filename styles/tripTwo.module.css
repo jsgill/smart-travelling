@@ -71,8 +71,9 @@
     font-size: 13px !important;
     width: 80px !important;
   }
-  #tripTwo_inputtwo_container2{
-     width: 90%!important;
+
+  #tripTwo_inputtwo_container2 {
+    width: 90% !important;
   }
 
 
@@ -118,7 +119,7 @@
     width: 60px !important;
   }
 
-  
+
 
   #enter_amount_input {
     font-size: 10px;
@@ -199,8 +200,8 @@
   top: 50%;
   left: 50%;
   width: 50%;
-  transform: translate(-50%,-50%);
- 
+  transform: translate(-50%, -50%);
+
   border-radius: 10px;
 }
 
@@ -283,21 +284,19 @@
   background-color: #00754A;
   color: #FFFFFF;
   border-radius: 50%;
-  
   text-align: center;
   border: 2px solid #00000016;
-  
+
 }
 
 .camping_div_color1 {
   background-color: #00754A;
   color: #FFFFFF;
   border-radius: 50%;
-
   text-align: center;
   border: 2px solid #00000016;
 
-  
+
 }
 
 .tripTwo_inputTwo_input_container {

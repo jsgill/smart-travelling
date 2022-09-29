@@ -4,10 +4,12 @@
         height: 50px !important;
         font-size: 10px !important;
     }
-    #tripOne_inputtwo_container{
+
+    #tripOne_inputtwo_container {
         width: 90% !important;
     }
-    #tripOne_inputthree_container{
+
+    #tripOne_inputthree_container {
         width: 90% !important;
     }
 
@@ -15,39 +17,40 @@
         height: 50px !important;
         font-size: 10px !important;
     }
+
     .tripOne_inputone_content_6 {
         font-size: 10px !important;
     }
-    .tripOne_inputone_content_4{
+
+    .tripOne_inputone_content_4 {
         font-size: 10px !important;
     }
-    .tripOne_inputone_content_5{
+
+    .tripOne_inputone_content_5 {
         font-size: 10px !important;
     }
+
     .tripOne_inputone_content {
         font-size: 10px !important;
         top: -40px !important;
     }
-    #tripOne_inputone_container{
+
+    #tripOne_inputone_container {
         width: 100% !important;
     }
-    #calender_container{
-       flex: 0 0 auto;
-       width: 36%;
-    }
-    .calender{
-        margin-left: -100px;
 
+    #calender_container {
+        flex: 0 0 auto;
+        width: 36%;
     }
 }
 
 @media only screen and (max-width:540px) {
-    #calender_container{
+    #calender_container {
         flex: 0 0 auto;
         width: 50%;
-      }
+    }
 }
-
 
 .main_top_background {
     background: url(../public/images/tripTwo/Rectangle4571.png);
@@ -63,7 +66,6 @@
 .logo_saparator {
     top: -20px;
     margin: 0px 10px;
-
 }
 
 .tripOne_line {
@@ -76,9 +78,7 @@
     transform: translate(-50%, -45%);
     position: relative;
 }
-.calender{
-    margin-left: -40px;
-}
+
 .input_field {
     margin-bottom: 40px;
     text-align: center;
@@ -116,85 +116,7 @@
 
 }
 
-
-/* media query for reponsive background */
-
-
-/* @media only screen and (max-width: 1024px) {
-    .input_container{
-        position: absolute;
-        top: 190px;
-        left: 220px;
-    }
-    .input_field {
-        width: 560px;
-        margin-bottom: 28px;
-        height: 55px;
-        font-size: 14px;
-    }
-    .tripOne_line{
-        height: 1px;
-        border-right: 2px solid #FFFFFF;
-        border-width: 180px;
-        margin-left: 0px;
-        margin-right: 10px;
-    }
-  
-    .tripOne_logo{
-        width: 50px;
-        padding-top: 15px;
-        padding-left: 15px;
-        height: 50px;
-        background: #FFFFFF;
-        border-radius: 50%;
-        margin-top: -15px;
-        margin-left: -2px;
-        margin-right: 10px;
-    }
-    .tripOne_logo_1{
-        width: 50px;
-        padding-top: 13px;
-        padding-left: 2px;
-        height: 50px;
-        border-radius: 50%;
-        margin-top: -15px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .tripOne_logo_container{
-        position: absolute;
-        top: 89px;
-        left: 210px;
-        display: flex;
-    }
-    .btn_container{
-        position: absolute;
-        width: 160px;
-        height: 60px;
-        left: 180px;
-        top: 240px;
-        background: #FFFFFF;
-        border-radius: 32px;
-        text-align: center;
-        margin-top: 30px;
-    }
-    .save_btn{
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
-        padding: 10px 18px;
-        font-size: 12px;
-        line-height: 90%;
-        letter-spacing: 0.01em;
-        color: #000000;
-        border: none;
-        cursor: pointer;
-    }
-   }
-
-
-
- /* trip one input one popup css */
-
+/* trip one input one popup css */
 #tripOne_inputone_container {
     position: absolute;
     background-color: #FFFFF1;
@@ -202,7 +124,7 @@
     width: 50%;
     top: 75%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 20px;
     padding: 20px 0px 20px 0px;
 }
@@ -222,7 +144,6 @@
 }
 
 .tripOne_inputone_content {
-    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
@@ -234,7 +155,6 @@
     z-index: 1;
     position: relative;
     top: -80px;
-
     color: white;
 }
 
@@ -282,52 +202,6 @@
     top: -30%;
 }
 
-/* #tripOne_inputone_content_container1::before{
-  position: absolute;
-  left: 113px;
-  top: 116px;
-  height: 146px;
-  border-radius: 10px;
-  width: 142px;
-  z-index: 1;
-  background-color: #00000036;
-  content: "";
- }
- #tripOne_inputone_content_container2::before{
-    position: absolute;
-    left: 303px;
-    top: 116px;
-    height: 146px;
-    border-radius: 10px;
-    width: 142px;
-    z-index: 1;
-    background-color: #00000036;
-    content: "";
-   }
-#tripOne_inputone_content_container3::before{
-    position: absolute;
-    left: 495px;
-    top: 116px;
-    height: 146px;
-    border-radius: 10px;
-    width: 142px;
-    z-index: 1;
-    background-color: #00000036;
-    content: "";
-   }
-#tripOne_inputone_image_container::before{
-   position: absolute;
-   content: "";
-   top: 307px;
-   left: 104px;
-   height: 86px;
-   background-color: #00000036;
-   width: 540px;
-   padding: 0;
-   z-index: 1;
-   border-radius: 5px;
-   } */
-
 #remove_image_padding {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -349,11 +223,20 @@
 
 .tripOne_inputone_btn_container {
     text-align: center;
-  
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
-.calendar_container{
-    padding-top: 10px;
+
+.tripOne_inputone_btn_container1 {
+    text-align: center;
+    position: absolute;
+    top: 76%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 999;
 }
+
 .tripOne_inputone_btn {
     background: #00754A;
     border-radius: 20px;
@@ -364,6 +247,19 @@
     font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: 1px;
+}
+
+.tripOne_inputone_btn1 {
+    background: #00754A;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    padding: 8px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 999;
 }
 
 .tripOne_cross_para1 {
@@ -381,10 +277,6 @@
     left: 74%;
     position: absolute;
     top: 11%;
-    /* border: 2px solid #1d1d1dc2;
-    background: #f5f5f5b0;
-    padding: 1px 9px;
-    border-radius: 50%; */
     z-index: 1;
 }
 
@@ -393,10 +285,6 @@
     top: 11%;
     left: 74%;
     position: absolute;
-    /* border: 2px solid #1d1d1dc2;
-    background: #f5f5f5b0;
-    padding: 1px 9px;
-    border-radius: 50%; */
     z-index: 1;
 }
 
@@ -405,12 +293,9 @@
     left: 74%;
     position: absolute;
     z-index: 1;
-    /* border: 2px solid #1d1d1dc2;
-    background: #f5f5f5b0;
-    padding: 1px 9px;
-    border-radius: 50%; */
 }
-#tripOne_inputtwo_container{
+
+#tripOne_inputtwo_container {
     position: absolute;
     background-color: #FFFFFF;
     z-index: 1;
@@ -419,19 +304,21 @@
     border-radius: 10px;
     top: 50%;
     left: 50%;
-   
-    transform: translate(-50%,-50%);
- }
- .tripOne_inputtwo_content_container{
+    transform: translate(-50%, -50%);
+}
+
+.tripOne_inputtwo_content_container {
     display: flex;
     justify-content: space-around;
     padding: 1.5rem 0rem;
- }
- .inputtwo_div1{
+}
+
+.inputtwo_div1 {
     height: 20px;
     border-radius: 50%;
 }
-.tripOne_content_inc_dec_operator1{
+
+.tripOne_content_inc_dec_operator1 {
     font-size: 2rem;
     width: 43px;
     background: #FFFFFF;
@@ -439,14 +326,16 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
 }
-.tripOne_content_btn{
+
+.tripOne_content_btn {
     color: #00754A;
     font-size: 25px;
     margin-top: 10px;
     font-weight: 600;
     padding: 0px 20px 0px 20px;
 }
-.tripOne_content_inc_dec_operator2{
+
+.tripOne_content_inc_dec_operator2 {
     font-size: 2rem;
     width: 43px;
     background: #FFFFFF;
@@ -455,53 +344,20 @@
     border-radius: 50%;
 }
 
-
-/* tripone input two css start */
-
-/* 
- 
-.inputtwo_div1{
-    height: 20px;
-    border-radius: 50%;
-}
-.tripOne_content_inc_dec_operator1{
-    font-size: 28px;
-    width: 43px;
-    background: #FFFFFF;
-    border: 1px solid #E3E3E3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
-}
-.tripOne_content_inc_dec_operator2{
-    padding-left: 10px;
-    padding-top: 8px;
-    width: 40px;
-    height: 45px;
-    background: #FFFFFF;
-    border: 1px solid #E3E3E3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
-}
-.tripOne_content_btn{
-    color: #00754A;
-    font-size: 25px;
-    margin-top: 10px;
-    font-weight: 600;
-} */
 /* tripone input three css start */
 
 #tripOne_inputthree_container {
     position: absolute;
-    background-color: #FFFFFF;
     z-index: 1;
     border-radius: 10px;
     top: 50%;
     padding: 1.5rem 0rem;
     left: 50%;
     width: 80%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.app{
+
+.app {
     position: relative;
 }
 
@@ -515,6 +371,7 @@
     right: 10px;
     top: 10px;
 }
+
 .tripOne_cross_para {
     background-color: #000000;
     height: 30px;
@@ -529,4 +386,14 @@
 
 .colorChange {
     background-color: #00754A;
+}
+
+.calender {
+    padding-bottom: 90px;
+    z-index: -1;
+}
+
+.Calendar_row {
+    display: flex;
+    justify-content: center;
 }

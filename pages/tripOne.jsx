@@ -39,10 +39,13 @@ function TripOne() {
       if (val !== -1) {
         var val11 = userInfo.splice(val, 1);
         var filter = userInfo.filter((item) => item !== val11);
+        
         setUserInfo(filter);
+       
       }
     }
   };
+  
   const handleInput = () => {
     console.log("input1======>", input1);
   };
@@ -61,6 +64,8 @@ function TripOne() {
           info = info.concat(", ");
         }
       }
+      // console.log("first_input==========>",userInfo)
+      // localStorage.setItem("choose_destination", JSON.stringify(userInfo));
       setInfo(info);
     }
     setModalShow(false);
@@ -93,11 +98,24 @@ function TripOne() {
   }
   function inputTwoBtn() {
     toggleInput2();
+    // console.log("second_input============>",count);
+    // localStorage.setItem("guests", JSON.stringify(count));
     setInputTwo(count);
   }
   function inputThreeBtn() {
     toggleInput3();
+    // console.log("third_input============>",startDate + " ,"  + endDate);
+    // localStorage.setItem("start & end date", JSON.stringify(startDate + " ,"  + endDate));
     setInputThree(date);
+  }
+  const handleSubmitInput1 = () =>{
+    const obj = {
+      destination: userInfo,
+      guests: count,
+      startdate: startDate,
+      enddate:endDate,
+  }
+  localStorage.setItem("trip-one", JSON.stringify(obj));
   }
   return (
     <div>
@@ -217,18 +235,8 @@ function TripOne() {
                 onChange={handleInput}
                 onClick={toggleInput3}
               />
-              <div style={{ display: input3 ? "block" : "none" }}>
-                <div className="container text-center">
-                  <input
-                    value={
-                      inputThree.length == 0
-                        ? "Select the Start & End Date"
-                        : startDate.concat(" - ") + endDate
-                    }
-                    className={styles.input_field}
-                    onChange={handleInput}
-                    onClick={toggleInput3}
-                  />
+             
+                
                   <div style={{ display: input3 ? "block" : "none" }}>
                     <div
                       className="container  text-center"
@@ -239,29 +247,18 @@ function TripOne() {
                           className="col-md-6"
                           id={styles.tripOne_inputthree_container}
                         >
-                          <p
-                            className={styles.tripOne_cross_para1}
-                            onClick={toggleInput3}
-                          >
-                            <Image
-                              src={cross}
-                              alt="cross_image"
-                              height={12}
-                              width={15}
-                              className={styles.cross_image}
-                            />
-                          </p>
+                         
                           <div className={styles.app}>
                             <div className="row justify-content-center">
                               <div
-                                className="col-md-6"
+                                className="col-md-2"
                                 id={styles.calender_container}
                               >
-                                <div className="justify-content-center">
+                                <div className={styles.Calendar_row} >
                                   <Calendar
                                     multiple
                                     onlyShowInRangeDates={true}
-                                    minDate={inputValue}
+                                    minDate={new Date()}
                                     maxDate={inputValue2}
                                     value={date}
                                     onChange={setDate}
@@ -272,10 +269,10 @@ function TripOne() {
                             </div>
                           </div>
                           <div
-                            className={styles.tripOne_inputone_btn_container}
+                            className={styles.tripOne_inputone_btn_container1}
                           >
                             <button
-                              className={styles.tripOne_inputone_btn}
+                              className={styles.tripOne_inputone_btn1}
                               onClick={inputThreeBtn}
                             >
                               Save
@@ -284,8 +281,7 @@ function TripOne() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
             <div className="row justify-content-center">
@@ -293,6 +289,7 @@ function TripOne() {
                 <Link href="/tripTwo">
                   <button
                     className={styles.save_btn}
+                    onClick={handleSubmitInput1}
                     disabled={!info || !inputTwo || !inputThree}
                   >
                     Save & Continue

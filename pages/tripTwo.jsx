@@ -55,8 +55,7 @@ function TripTwo() {
   const demo = () => { };
 
   const saveBtn = () => {
-    localStorage.setItem("budget_amount", JSON.stringify(amount));
-    console.log("second_input=============>", amount);
+   
     toggleInput2();
   };
 
@@ -113,8 +112,7 @@ function TripTwo() {
     var filter = text.filter(
       (item, index, array) => text.indexOf(item) === array.lastIndexOf(item)
     );
-    console.log("first_input=============>", filter);
-    localStorage.setItem("choose_intrest", JSON.stringify(filter));
+    
     setText(filter);
 
     for (let i = 0; i < filter.length; i++) {
@@ -125,6 +123,13 @@ function TripTwo() {
     }
     setInfo(info);
   };
+ const handleSubmit_TripTwoData =()=>{
+  const obj = {
+    intrest:text,
+    budget:amount,
+}
+localStorage.setItem("trip-two", JSON.stringify(obj));
+ }
 
   return (
     <div className={styles.tripTwo}>
@@ -545,7 +550,7 @@ function TripTwo() {
         <div className="row justify-content-center">
           <div className="col-3 text-center">
             <Link href="/tripThree">
-              <button className={styles.save_btn} disabled={!info || !amount}>
+              <button className={styles.save_btn} onClick={handleSubmit_TripTwoData} disabled={!info || !amount}>
                 Save & Continue
               </button>
             </Link>
