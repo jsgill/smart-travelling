@@ -47,12 +47,12 @@ function TripDetails() {
                                 <div className='d-flex'>
                                     <div className={styles.trip_user_p}>
                                         <p>Name</p>
-                                        <p>Mobile Number</p>
+                                        <p>Mobile</p>
                                         <p>Destination</p>
-                                        <p>No of Guests</p>
-                                        <p>Start & End Date</p>
+                                        <p>Guests</p>
                                         <p>Interest</p>
-                                        <p>Budget per Person</p>
+                                        <p>Budget</p>
+                                        <p>Start & End Date</p>
                                     </div>
                                     <div className={styles.trip_user_p}>
                                         <p>:</p>
@@ -69,9 +69,10 @@ function TripDetails() {
                                         <p>+{!!userDetails ? userDetails.mobile : null}</p>
                                         <p>{destinationPlace.destination}</p>
                                         <p>{!!destinationPlace ? destinationPlace.guests : null}</p>
-                                        <p>{!!destinationPlace ? destinationPlace.startdate : null}, {!!destinationPlace ? destinationPlace.enddate : null}</p>
                                         <p>{!!interest11 ? interest11.user_interest : null}</p>
                                         <p>₹ {!!interest11 ? interest11.budget : null}</p>
+                                        <p>{!!destinationPlace ? destinationPlace.startdate : null}, {!!destinationPlace ? destinationPlace.enddate : null}</p>
+
                                     </div>
                                 </div>
                             </div>
