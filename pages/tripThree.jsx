@@ -65,35 +65,39 @@ function TripThree() {
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center">
-                        <div className="col-md-7 text-center">
-                            <input type="text" autoComplete="off" value={name} name="username" className={styles.trip_three_inputs} onChange={(e) => setName(e.target.value)} onFocus={(e) => e.target.value = ""} />
-                            <input type="text" autoComplete="off" maxLength={10} value={mobile} name="mobileNumber" className={styles.trip_three_inputs} onChange={(e) => setMobile(e.target.value)} onFocus={(e) => e.target.value = ""} />
-                            <input type="text" autoComplete="off" value={promo} name="promoCode" className={styles.trip_three_inputs} onChange={(e) => setPromo(e.target.value)} onFocus={(e) => e.target.value = ""} />
+                    <div className='container'>
+                        <div className="row justify-content-center">
+                            <div className="col-md-7 text-center">
+                                <input type="text" autoComplete="off" value={name} name="username" className={styles.trip_three_inputs} onChange={(e) => setName(e.target.value)} onFocus={(e) => e.target.value = ""} />
+                                <input type="text" autoComplete="off" maxLength={10} value={mobile} name="mobileNumber" className={styles.trip_three_inputs} onChange={(e) => setMobile(e.target.value)} onFocus={(e) => e.target.value = ""} />
+                                <input type="text" autoComplete="off" value={promo} name="promoCode" className={styles.trip_three_inputs} onChange={(e) => setPromo(e.target.value)} onFocus={(e) => e.target.value = ""} />
+                            </div>
                         </div>
                     </div>
-                    <div className='row justify-content-center'>
-                        <div className='col-md-3'>
-                            <div className={styles.trip_three_btn}>
-                                <button className={styles.trip_three_submit_btn}
-                                    disabled={name == "Enter Your Name (optional)" || mobile == "Mobile Number" || promo == "Promo Code (optional)"}
-                                    onClick={handleSubmit}>Submit</button>
-                                {
-                                    open ?
-                                        <Popup position="top" open={open} contentStyle={{ borderRadius: "20px" }}>
-                                            {
-                                                <div className={styles.model}>
-                                                    <div className={styles.popup_img11}>
-                                                        <Image src={popup_img} width="110px" height="110px" alt="popup" />
+                    <div className='container'>
+                        <div className='row justify-content-center'>
+                            <div className='col-md-3'>
+                                <div className={styles.trip_three_btn}>
+                                    <button className={styles.trip_three_submit_btn}
+                                        disabled={name == "Enter Your Name (optional)" || mobile == "Mobile Number" || promo == "Promo Code (optional)"}
+                                        onClick={handleSubmit}>Submit</button>
+                                    {
+                                        open ?
+                                            <Popup position="top" open={open} contentStyle={{ borderRadius: "20px",width:"70%" }}>
+                                                {
+                                                    <div className={styles.model}>
+                                                        <div className={styles.popup_img11}>
+                                                            <Image src={popup_img} width="110px" height="110px" alt="popup" />
+                                                        </div>
+                                                        <p className={styles.header}>Success, Done, Let's Go</p>
+                                                        <div className={styles.popup_view_details}>
+                                                            <Link href="/tripDetails"><a><button className={styles.popup_btn}>View Details </button></a></Link>
+                                                        </div>
                                                     </div>
-                                                    <p className={styles.header}>Success, Done, Let's Go</p>
-                                                    <div className={styles.popup_view_details}>
-                                                        <Link href="/tripDetails"><a><button className={styles.popup_btn}>View Details </button></a></Link>
-                                                    </div>
-                                                </div>
-                                            }
-                                        </Popup> : null
-                                }
+                                                }
+                                            </Popup> : null
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>

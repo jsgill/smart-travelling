@@ -55,7 +55,8 @@ function TripTwo() {
   const demo = () => { };
 
   const saveBtn = () => {
-   
+    localStorage.setItem("budget_amount", JSON.stringify(amount));
+    console.log("second_input=============>", amount);
     toggleInput2();
   };
 
@@ -112,7 +113,8 @@ function TripTwo() {
     var filter = text.filter(
       (item, index, array) => text.indexOf(item) === array.lastIndexOf(item)
     );
-    
+    console.log("first_input=============>", filter);
+    localStorage.setItem("choose_intrest", JSON.stringify(filter));
     setText(filter);
 
     for (let i = 0; i < filter.length; i++) {
@@ -123,13 +125,6 @@ function TripTwo() {
     }
     setInfo(info);
   };
- const handleSubmit_TripTwoData =()=>{
-  const obj = {
-    intrest:text,
-    budget:amount,
-}
-  localStorage.setItem("trip-two", JSON.stringify(obj));
- }
 
   return (
     <div className={styles.tripTwo}>
@@ -162,7 +157,7 @@ function TripTwo() {
               className={styles.input_field}
               onClick={toggleInput1}
             />
-            <div style={{ display: input1 ? "block" : "none" }}>
+           <div style={{ display: input1 ? "block" : "none" }}>
               <div
                 className="container"
                 id={styles.tripTwo_inputtwo_container2}
@@ -180,7 +175,7 @@ function TripTwo() {
                
                 <div className={styles.image_display_container}>
                   <div className="row jsutify-content-center">
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!changeColor
                           ? styles.camping_div_color
@@ -188,18 +183,18 @@ function TripTwo() {
                           }`}
                         onClick={() => handleChangeColor("camping")}>
 
-                        <p>
+                        <p className="py-2">
                           <Image
                             src={image1}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="camping"
                           />
                         </p>
                         <p className={styles.image_para_content}>Camping</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!firstColor
                           ? styles.camping_div_color
@@ -207,13 +202,13 @@ function TripTwo() {
                           }`}
                         onClick={() => handleFirstColor("Hiking")}
                       >
-                        <p>
-                          <Image src={image2} height={50} width={50} alt="hiking" />
+                        <p className=" py-2">
+                          <Image src={image2} height={60} width={60} alt="hiking" />
                         </p>
                         <p className={styles.image_para_content}>Hiking</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!secondColor
                           ? styles.camping_div_color
@@ -221,18 +216,18 @@ function TripTwo() {
                           }`}
                         onClick={() => handleSecondColor("Offbeat")}
                       >
-                        <p>
+                        <p className=" py-2">
                           <Image
                             src={image3}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="offbeat"
                           />
                         </p>
                         <p className={styles.image_para_content}>Offbeat</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!thirdColor
                           ? styles.camping_div_color
@@ -240,13 +235,13 @@ function TripTwo() {
                           }`}
                         onClick={() => handleThirdColor("Apple Orchards")}
                       >
-                        <p>
-                          <Image src={image4} height={50} width={50} alt="apple" />
+                        <p className=" py-2">
+                          <Image src={image4} height={60} width={60} alt="apple" />
                         </p>
                         <p className={styles.image_para_content}>Apple Orchards</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4" id={styles.column}>
                       <div
                         className={`${!fourthColor
                           ? styles.camping_div_color1
@@ -254,13 +249,13 @@ function TripTwo() {
                           }`}
                         onClick={() => handleFourthColor("Biking")}
                       >
-                        <p>
-                          <Image src={image5} height={50} width={50} alt="biking" />
+                        <p className=" py-2">
+                          <Image src={image5} height={60} width={60} alt="biking" />
                         </p>
                         <p className={styles.image_para_content}>Biking</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!fifthColor
                           ? styles.camping_div_color1
@@ -268,13 +263,13 @@ function TripTwo() {
                           }`}
                         onClick={() => handleFifthColor("Forest")}
                       >
-                        <p>
-                          <Image src={image6} height={50} width={50} alt="forest" />
+                        <p className=" py-2">
+                          <Image src={image6} height={60} width={60} alt="forest" />
                         </p>
                         <p className={styles.image_para_content}>Forest</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!sixthColor
                           ? styles.camping_div_color1
@@ -282,18 +277,18 @@ function TripTwo() {
                           }`}
                         onClick={() => handleSixthColor("Historical")}
                       >
-                        <p>
+                        <p className=" py-2">
                           <Image
                             src={image7}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="historical"
                           />
                         </p>
                         <p className={styles.image_para_content}>Historical</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!seventhColor
                           ? styles.camping_div_color1
@@ -301,11 +296,11 @@ function TripTwo() {
                           }`}
                         onClick={() => handleSeventhColor("Romantic")}
                       >
-                        <p>
+                        <p className=" py-2">
                           <Image
                             src={image8}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="romantic"
                           />{" "}
                         </p>
@@ -313,20 +308,20 @@ function TripTwo() {
                       </div>
                     </div>
                    
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div className={`${!eighthColor ? styles.camping_div_color1 : styles.camping_div1}`} onClick={() => handleEighthColor("Adventure")}>
-                        <p>
+                        <p className=" py-2">
                           <Image
                             src={image9}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="adventure"
                           />{" "}
                         </p>
                         <p className={styles.image_para_content}>Adventure</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!ninthColor
                           ? styles.camping_div_color1
@@ -334,18 +329,18 @@ function TripTwo() {
                           }`}
                         onClick={() => handleNinthColor("Offroading")}
                       >
-                        <p>
+                        <p className=" py-2">
                           <Image
                             src={image10}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="offroading"
                           />
                         </p>
                         <p className={styles.image_para_content}>Offroading</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!tenthColor
                           ? styles.camping_div_color1
@@ -353,18 +348,18 @@ function TripTwo() {
                           }`}
                         onClick={() => handleTenthColor("Traditional")}
                       >
-                        <p>
+                        <p className=" py-2">
                           <Image
                             src={image11}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="traditional"
                           />
                         </p>
                         <p className={styles.image_para_content}>Traditional</p>
                       </div>
                     </div>
-                    <div className="col-3 ">
+                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
                       <div
                         className={`${!elevenColor
                           ? styles.camping_div_color1
@@ -372,11 +367,11 @@ function TripTwo() {
                           }`}
                         onClick={() => handleElevenColor("Waterfall")}
                       >
-                        <p>
+                        <p className=" py-2">
                           <Image
                             src={image12}
-                            height={50}
-                            width={50}
+                            height={60}
+                            width={60}
                             alt="waterfall"
                           />
                         </p>
@@ -488,11 +483,10 @@ function TripTwo() {
             </div>
           </div>
         </div>
-        
         <div className="row justify-content-center">
-          <div className="col-md-4 text-center">
+          <div className="col-xl-3  col-sm-4 text-center">
             <Link href="/tripThree">
-              <button className={styles.save_btn} onClick={handleSubmit_TripTwoData} disabled={!info || !amount}>
+              <button className={styles.save_btn} disabled={!info || !amount}>
                 Save & Continue
               </button>
             </Link>

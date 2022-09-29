@@ -87,7 +87,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 180%;
   letter-spacing: 0.02em;
   color: rgba(18, 18, 18, 0.9);
@@ -127,6 +127,7 @@
   border-radius: 32px;
   outline: none;
   border: 0px;
+  font-size: 1rem;
   color: #ffffff;
 }
 
@@ -238,7 +239,14 @@
   }
 
   .back_home_btn {
-    width: 250px !important;
+    width: 25% !important;
+  }
+  .popup_btn {
+    width: 120px !important;
+    font-size: 0.5rem;
+  }
+  .header{
+    font-size:1.2rem;
   }
 }
 

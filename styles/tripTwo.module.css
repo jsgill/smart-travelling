@@ -15,6 +15,9 @@
     font-size: 11px !important;
     width: 60px !important;
   }
+  #column{
+    width: 50% !important;
+  }
 
 }
 
@@ -74,6 +77,12 @@
 
   #tripTwo_inputtwo_container2 {
     width: 90% !important;
+    height: 50% !important;
+    overflow: scroll !important;
+  }
+  .image_para_content2 {
+    margin-top: -20px !important;
+   
   }
 
 
@@ -125,7 +134,9 @@
     font-size: 10px;
     width: 60%;
   }
-
+}
+#column{
+  margin-bottom: 20px !important;
 }
 
 .tripTwo {
@@ -215,7 +226,6 @@
 }
 
 .image_para_content2 {
-  margin-top: -20px;
   font-size: 11px;
 }
 
@@ -264,12 +274,8 @@
 
 .camping_div {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
   text-align: center;
   border: 2px solid #00000016;
-  margin: 20px;
-  padding: 15px;
 }
 
 .camping_div1 {
@@ -281,6 +287,7 @@
 .camping_div_color {
   background-repeat: no-repeat;
   background-color: #00754A;
+  background-repeat: no-repeat;
   color: #FFFFFF;
   border-radius: 50%;
   text-align: center;
