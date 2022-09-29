@@ -547,8 +547,9 @@ function TripTwo() {
             </div>
           </div>
         </div>
+        
         <div className="row justify-content-center">
-          <div className="col-3 text-center">
+          <div className="col-md-4 text-center">
             <Link href="/tripThree">
               <button className={styles.save_btn} onClick={handleSubmit_TripTwoData} disabled={!info || !amount}>
                 Save & Continue
