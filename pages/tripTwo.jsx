@@ -392,7 +392,7 @@ function TripTwo() {
                 </div>
 
 
-                <div className={styles.tripTwo_inputtwo_btn_container}>
+                <div className={styles.tripone_inputtwo_btn_container3}>
                   <button
                     className={styles.tripTwo_inputtwo_btn}
                     onClick={handleSubmit}
