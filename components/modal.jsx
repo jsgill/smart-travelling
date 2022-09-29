@@ -85,7 +85,7 @@ function MydModalWithGrid(props) {
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide} variant="success" size="lg">Save</Button>
+        <Button onClick={props.onHide} variant="success" size="md">Save</Button>
       </Modal.Footer>
     </Modal>
   );
