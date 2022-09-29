@@ -64,8 +64,6 @@ function TripOne() {
           info = info.concat(", ");
         }
       }
-      // console.log("first_input==========>",userInfo)
-      // localStorage.setItem("choose_destination", JSON.stringify(userInfo));
       setInfo(info);
     }
     setModalShow(false);
@@ -98,14 +96,10 @@ function TripOne() {
   }
   function inputTwoBtn() {
     toggleInput2();
-    // console.log("second_input============>",count);
-    // localStorage.setItem("guests", JSON.stringify(count));
     setInputTwo(count);
   }
   function inputThreeBtn() {
     toggleInput3();
-    // console.log("third_input============>",startDate + " ,"  + endDate);
-    // localStorage.setItem("start & end date", JSON.stringify(startDate + " ,"  + endDate));
     setInputThree(date);
   }
   const handleSubmitInput1 = () =>{
