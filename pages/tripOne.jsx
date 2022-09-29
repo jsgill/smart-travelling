@@ -28,8 +28,8 @@ function TripOne() {
   const [date, setDate] = useState([]);
   var startDate = new Date(date[0]).toDateString();
   var endDate = new Date(date[1]).toDateString();
-  let [inputValue, setInputValue] = useState("");
-  let [inputValue2, setInput2Value] = useState("");
+  const [inputValue2, setInput2Value] = useState("");
+  const [local, setLocal] = useState("");
 
   const handleChange = (key) => {
     if (userInfo.indexOf(key) == -1) {
@@ -39,15 +39,13 @@ function TripOne() {
       if (val !== -1) {
         var val11 = userInfo.splice(val, 1);
         var filter = userInfo.filter((item) => item !== val11);
-        
         setUserInfo(filter);
-       
       }
     }
   };
-  
+
   const handleInput = () => {
-    console.log("input1======>", input1);
+    console.log("++++input1++++", input1);
   };
   const handleClick = () => {
     if (userInfo.length === 1 || userInfo.length === 0) {
@@ -102,14 +100,21 @@ function TripOne() {
     toggleInput3();
     setInputThree(date);
   }
-  const handleSubmitInput1 = () =>{
+  const handleSubmitInput1 = () => {
+    for (let j = 0; j < userInfo.length; j++) {
+      local = local.concat(userInfo[j]);
+      if (j < userInfo.length - 1) {
+        local = local.concat(", ");
+      }
+    }
+    setLocal(local)
     const obj = {
-      destination: userInfo,
+      destination: local,
       guests: count,
       startdate: startDate,
-      enddate:endDate,
-  }
-  localStorage.setItem("trip-one", JSON.stringify(obj));
+      enddate: endDate,
+    }
+    localStorage.setItem("trip_one", JSON.stringify(obj));
   }
   return (
     <div>
@@ -231,53 +236,53 @@ function TripOne() {
                 onChange={handleInput}
                 onClick={toggleInput3}
               />
-             
-                
-                  <div style={{ display: input3 ? "block" : "none" }}>
+
+
+              <div style={{ display: input3 ? "block" : "none" }}>
+                <div
+                  className="container  text-center"
+                  id={styles.calender_main_container}
+                >
+                  <div className="row justify-content-center">
                     <div
-                      className="container  text-center"
-                      id={styles.calender_main_container}
+                      className="col-md-6"
+                      id={styles.tripOne_inputthree_container}
                     >
-                      <div className="row justify-content-center">
-                        <div
-                          className="col-md-6"
-                          id={styles.tripOne_inputthree_container}
-                        >
-                         
-                          <div className={styles.app}>
-                            <div className="row justify-content-center">
-                              <div
-                                className="col-md-2"
-                                id={styles.calender_container}
-                              >
-                                <div className={styles.Calendar_row} >
-                                  <Calendar
-                                    multiple
-                                    onlyShowInRangeDates={true}
-                                    minDate={new Date()}
-                                    maxDate={inputValue2}
-                                    value={date}
-                                    onChange={setDate}
-                                    className={styles.calender}
-                                  />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+
+                      <div className={styles.app}>
+                        <div className="row justify-content-center">
                           <div
-                            className={styles.tripOne_inputone_btn_container1}
+                            className="col-md-2"
+                            id={styles.calender_container}
                           >
-                            <button
-                              className={styles.tripOne_inputone_btn1}
-                              onClick={inputThreeBtn}
-                            >
-                              Save
-                            </button>
+                            <div className={styles.Calendar_row} >
+                              <Calendar
+                                multiple
+                                onlyShowInRangeDates={true}
+                                minDate={new Date()}
+                                maxDate={inputValue2}
+                                value={date}
+                                onChange={setDate}
+                                className={styles.calender}
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <div
+                        className={styles.tripOne_inputone_btn_container1}
+                      >
+                        <button
+                          className={styles.tripOne_inputone_btn1}
+                          onClick={inputThreeBtn}
+                        >
+                          Save
+                        </button>
+                      </div>
                     </div>
-                
+                  </div>
+                </div>
+
               </div>
             </div>
             <div className="row justify-content-center">

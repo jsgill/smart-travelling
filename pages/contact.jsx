@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";
 import user_one from "../public/images/contact/Rectangle 4409.png";
@@ -19,7 +19,8 @@ import { useForm } from "react-hook-form";
 function Contact() {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onTouched" });
     const onSubmit = (data) => {
-        console.log(" contact data ====>", data)
+        console.log(" ++++++contact data ++++", data)
+
     }
     return (
         <div>

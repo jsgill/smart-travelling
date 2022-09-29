@@ -13,28 +13,46 @@ function TripThree() {
     const [name, setName] = useState("Enter Your Name (optional)");
     const [mobile, setMobile] = useState("Mobile Number");
     const [promo, setPromo] = useState("Promo Code (optional)");
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const [destinationPlace, setDestinationPlace] = useState({})
+    const [interest11, setInterest11] = useState({});
 
+    useEffect(() => {
+        const user_dest = JSON.parse(localStorage.getItem('trip_one'));
+        if (user_dest) {
+            setDestinationPlace(user_dest)
+        }
+        const user_interest = JSON.parse(localStorage.getItem('trip_two'));
+        if (user_interest) {
+            setInterest11(user_interest)
+        }
+    }, [])
     const handleSubmit = () => {
         const obj = {
             name: '',
             mobile: '',
             promo: ''
         }
-        obj.name = name
+        obj.name = name === "Enter Your Name (optional)" ? "optional" : name
         obj.mobile = mobile
-        obj.promo = promo
-        console.log("obj ===>", obj)
-        localStorage.setItem('trip-three', JSON.stringify(obj))
+        obj.promo = promo === "Promo Code (optional)" ? "optional" : promo
+        localStorage.setItem('trip_three', JSON.stringify(obj))
         setOpen(true)
-        // fetch('api call',{
-        //     method: "POST",
-        //     body: JSON.stringify(obj),
-        //     headers: { 'Content-Type': 'application/json' },
-        // }).then((result) => result.json())
-        // .then((response) => {
-        //     console.log(" response ++++++++", response)
-        // })
+        fetch(`https://ap-south-1.aws.data.mongodb-api.com/app/smarttraveller-zapex/endpoint/userInput?mob=${obj.mobile}`, {
+            method: "POST",
+            body: JSON.stringify({
+                "userInterests": interest11.user_interest,
+                "userDestination": destinationPlace.destination,
+                "journeyBudget": interest11.budget,
+                "journeyStartingDate": destinationPlace.startdate,
+                "journeyEndingDate": destinationPlace.enddate,
+                "noOfGuests": destinationPlace.guests
+            }),
+            headers: { 'Content-Type': 'application/json' },
+        }).then((result) => result.json())
+            .then((response) => {
+                console.log("++++response ++++++", response)
+            })
     }
     return (
         <div>
@@ -79,11 +97,11 @@ function TripThree() {
                             <div className='col-md-3'>
                                 <div className={styles.trip_three_btn}>
                                     <button className={styles.trip_three_submit_btn}
-                                        disabled={name == "Enter Your Name (optional)" || mobile == "Mobile Number" || promo == "Promo Code (optional)"}
+                                        disabled={mobile == "Mobile Number"}
                                         onClick={handleSubmit}>Submit</button>
                                     {
                                         open ?
-                                            <Popup position="top" open={open} contentStyle={{ borderRadius: "20px",width:"70%" }}>
+                                            <Popup position="top" open={open} contentStyle={{ borderRadius: "20px", width: "70%" }}>
                                                 {
                                                     <div className={styles.model}>
                                                         <div className={styles.popup_img11}>

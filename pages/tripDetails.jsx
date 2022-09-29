@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/TripThree.module.css";
 import left_arrow from "../public/images/trip/left_arrow.png";
 
 function TripDetails() {
+    const [destinationPlace, setDestinationPlace] = useState([])
+    const [interest11, setInterest11] = useState([]);
+    const [userDetails, setUserDetails] = useState([])
 
-    // const data = JSON.parse(localStorage.getItem('trip-three'));
-    // console.log("data ====>", data)
+    useEffect(() => {
+        const user_dest = JSON.parse(localStorage.getItem('trip_one'));
+        if (user_dest) {
+            setDestinationPlace(user_dest)
+        }
+        const user_interest = JSON.parse(localStorage.getItem('trip_two'));
+        if (user_interest) {
+            setInterest11(user_interest)
+        }
+        const three = JSON.parse(localStorage.getItem('trip_three'));
+        if (three) {
+            setUserDetails(three)
+        }
+    }, []);
+
     return (
         <div>
             <div className={styles.main_container}>
@@ -49,13 +65,13 @@ function TripDetails() {
 
                                     </div>
                                     <div className={styles.trip_user_p}>
-                                        <p>Rohan Preet</p>
-                                        <p>+91 983483555</p>
-                                        <p>Manali</p>
-                                        <p>2</p>
-                                        <p>11Sep - 20 Sept, 2022</p>
-                                        <p>Camping, Hiking</p>
-                                        <p>₹ 10,000</p>
+                                        <p>{!!userDetails ? userDetails.name : null}</p>
+                                        <p>+{!!userDetails ? userDetails.mobile : null}</p>
+                                        <p>{destinationPlace.destination}</p>
+                                        <p>{!!destinationPlace ? destinationPlace.guests : null}</p>
+                                        <p>{!!destinationPlace ? destinationPlace.startdate : null}, {!!destinationPlace ? destinationPlace.enddate : null}</p>
+                                        <p>{!!interest11 ? interest11.user_interest : null}</p>
+                                        <p>₹ {!!interest11 ? interest11.budget : null}</p>
                                     </div>
                                 </div>
                             </div>

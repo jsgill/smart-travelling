@@ -37,6 +37,7 @@ function TripTwo() {
   const [elevenColor, setElevenColor] = useState(true);
   const [text, setText] = useState([]);
   const [info, setInfo] = useState("");
+  const [localStr, setLocalStr] = useState("")
 
   const toggleInput1 = () => {
     setInput1(!input1);
@@ -55,8 +56,6 @@ function TripTwo() {
   const demo = () => { };
 
   const saveBtn = () => {
-    localStorage.setItem("budget_amount", JSON.stringify(amount));
-    console.log("second_input=============>", amount);
     toggleInput2();
   };
 
@@ -113,10 +112,7 @@ function TripTwo() {
     var filter = text.filter(
       (item, index, array) => text.indexOf(item) === array.lastIndexOf(item)
     );
-    console.log("first_input=============>", filter);
-    localStorage.setItem("choose_intrest", JSON.stringify(filter));
     setText(filter);
-
     for (let i = 0; i < filter.length; i++) {
       info = info.concat(filter[i]);
       if (i < filter.length - 1) {
@@ -125,6 +121,20 @@ function TripTwo() {
     }
     setInfo(info);
   };
+  const handleSubmit_TripTwoData = () => {
+    for (let j = 0; j < text.length; j++) {
+      localStr = localStr.concat(text[j]);
+      if (j < text.length - 1) {
+        localStr = localStr.concat(", ")
+      }
+    }
+    setLocalStr(localStr)
+    const obj = {
+      user_interest: localStr,
+      budget: amount
+    }
+    localStorage.setItem("trip_two", JSON.stringify(obj));
+  }
 
   return (
     <div className={styles.tripTwo}>
@@ -157,7 +167,7 @@ function TripTwo() {
               className={styles.input_field}
               onClick={toggleInput1}
             />
-           <div style={{ display: input1 ? "block" : "none" }}>
+            <div style={{ display: input1 ? "block" : "none" }}>
               <div
                 className="container"
                 id={styles.tripTwo_inputtwo_container2}
@@ -172,7 +182,7 @@ function TripTwo() {
                     className={styles.cross_image}
                   />
                 </p>
-               
+
                 <div className={styles.image_display_container}>
                   <div className="row jsutify-content-center">
                     <div className="col-xl-3  col-sm-4 " id={styles.column}>
@@ -307,8 +317,8 @@ function TripTwo() {
                         <p className={styles.image_para_content}>Romantic</p>
                       </div>
                     </div>
-                   
-                    <div className="col-xl-3  col-sm-4 " id={styles.column}>
+
+                    <div className="col-3 ">
                       <div className={`${!eighthColor ? styles.camping_div_color1 : styles.camping_div1}`} onClick={() => handleEighthColor("Adventure")}>
                         <p className=" py-2">
                           <Image
@@ -486,7 +496,7 @@ function TripTwo() {
         <div className="row justify-content-center">
           <div className="col-xl-3  col-sm-4 text-center">
             <Link href="/tripThree">
-              <button className={styles.save_btn} disabled={!info || !amount}>
+              <button className={styles.save_btn} disabled={!info || !amount} onClick={handleSubmit_TripTwoData}>
                 Save & Continue
               </button>
             </Link>
