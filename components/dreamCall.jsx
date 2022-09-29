@@ -45,6 +45,7 @@ function DreamCall() {
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
+                            
                                 <Image src={group1} height="382px" width="351px" alt="group"></Image>
                             </div>
                             <div className={styles.abc}>245 trips booked in last week</div>
@@ -56,7 +57,7 @@ function DreamCall() {
                                     trigger={<Image src={group2} className="button" height="382px" width="351px" alt="group2"></Image>}
                                     modal
                                     contentStyle={{ borderRadius: "20px", width: "70%" }}
-                                >
+                                 >
                                     {close => (
                                         <div className={styles.modal}>
                                             <button className={styles.close} onClick={close}>
@@ -84,7 +85,7 @@ function DreamCall() {
 
                                                     </div>
                                                     <div className={styles.Popup_bottom_button}>
-                                                        <Link href="/">
+                                                        <Link href="/tripOne">
                                                             <a className="btn" id={styles.home_popup_planYourTrip} type="button">
                                                                 <span>Plan your Trip</span>
                                                             </a>
