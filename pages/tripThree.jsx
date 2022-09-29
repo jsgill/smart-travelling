@@ -86,9 +86,9 @@ function TripThree() {
                     <div className='container'>
                         <div className="row justify-content-center">
                             <div className="col-md-7 text-center">
-                                <input type="text" autoComplete="off" value={name} name="username" className={styles.trip_three_inputs} onChange={(e) => setName(e.target.value)} onFocus={(e) => e.target.value = ""} />
-                                <input type="text" autoComplete="off" maxLength={10} value={mobile} name="mobileNumber" className={styles.trip_three_inputs} onChange={(e) => setMobile(e.target.value)} onFocus={(e) => e.target.value = ""} />
-                                <input type="text" autoComplete="off" value={promo} name="promoCode" className={styles.trip_three_inputs} onChange={(e) => setPromo(e.target.value)} onFocus={(e) => e.target.value = ""} />
+                                <input type="text" autoComplete="off" value={name} name="username" className={styles.trip_three_inputs} onChange={(e) => setName(e.target.value)} onFocus={(e) => e.target.value = ""} onBlur={(e) => e.target.value = name} />
+                                <input type="text" autoComplete="off" maxLength={10} value={mobile} name="mobileNumber" className={styles.trip_three_inputs} onChange={(e) => setMobile(e.target.value)} onFocus={(e) => e.target.value = ""} onBlur={(e) => e.target.value = mobile} />
+                                <input type="text" autoComplete="off" value={promo} name="promoCode" className={styles.trip_three_inputs} onChange={(e) => setPromo(e.target.value)} onFocus={(e) => e.target.value = ""} onBlur={(e) => e.target.value = promo} />
                             </div>
                         </div>
                     </div>
