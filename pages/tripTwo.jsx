@@ -128,7 +128,7 @@ function TripTwo() {
     intrest:text,
     budget:amount,
 }
-localStorage.setItem("trip-two", JSON.stringify(obj));
+  localStorage.setItem("trip-two", JSON.stringify(obj));
  }
 
   return (
