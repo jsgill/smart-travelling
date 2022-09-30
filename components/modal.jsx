@@ -10,78 +10,78 @@ import Card from "react-bootstrap/Card";
 function MydModalWithGrid(props) {
   const destination_object = {
     destination_1: {
-        path: "/images/trip/destination_1.png",
-        name: "destination_1",
-        title: "Manali",
-        selected: false
+      path: "/images/trip/destination_1.png",
+      name: "destination_1",
+      title: "Manali",
+      selected: false
     },
     destination_2: {
-        path: "/images/trip/destination_2.png",
-        name: "destination_2",
-        title: "Kasol",
-        selected: false
+      path: "/images/trip/destination_2.png",
+      name: "destination_2",
+      title: "Kasol",
+      selected: false
     },
     destination_3: {
-        path: "/images/trip/destination_3.png",
-        name: "destination_3",
-        title: "Leh-Ladakh",
-        selected: false
+      path: "/images/trip/destination_3.png",
+      name: "destination_3",
+      title: "Leh-Ladakh",
+      selected: false
     }
 
-    }
+  }
   const [DestinationSelected, setDestinationSelected] = useState(destination_object);
-  function setDestinationBorder (key){
+  function setDestinationBorder(key) {
     const NewState = Object.assign({}, DestinationSelected)
-    if (! DestinationSelected[key].selected){
-        NewState[key].selected = true;
-        props.change(NewState[key].title)
-        setDestinationSelected(NewState);
-        console.log(DestinationSelected);
+    if (!DestinationSelected[key].selected) {
+      NewState[key].selected = true;
+      props.change(NewState[key].title)
+      setDestinationSelected(NewState);
+      console.log(DestinationSelected);
     }
     else {
-        NewState[key].selected = false;
-        props.change(NewState[key].title)
-        setDestinationSelected(NewState);
-        console.log(DestinationSelected);
-        }
+      NewState[key].selected = false;
+      props.change(NewState[key].title)
+      setDestinationSelected(NewState);
+      console.log(DestinationSelected);
+    }
   }
-  
+
   return (
     <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Choose 2 or more
+          Choose 1 or more
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Container>
-        <Row>
-        {Object.keys(DestinationSelected).map(key => {
-            return (
-                    <Col key={key} xs={12} md={4}>
-                    <Card onClick={() => setDestinationBorder(key)} className={DestinationSelected[key].selected ? "withBorder": "noBorder"}>
+          <Row>
+            {Object.keys(DestinationSelected).map(key => {
+              return (
+                <Col key={key} xs={12} md={4}>
+                  <Card onClick={() => setDestinationBorder(key)} className={DestinationSelected[key].selected ? "withBorder" : "noBorder"}>
                     <Card.Title className="text-center">{DestinationSelected[key].title}</Card.Title>
                     <Card.Img src={DestinationSelected[key].path} alt="Card image" />
-                    </Card>
-                    </Col>
-            );
-        })}
-        </Row>
-        <Row> 
-        <Card.Title className="text-center">Coming Soon</Card.Title>
-        <Col>
-        <Card className="noBorder">
-        <Card.Title className="text-center">Goa</Card.Title>
-        <Card.Img src="/images/trip/destination_4.png"/>
-        </Card>
-        </Col>
-        <Col>
-        <Card className="noBorder">
-        <Card.Title className="text-center">Rajasthan</Card.Title>
-        <Card.Img className="card-image" src="/images/trip/destination_5.png"/>
-        </Card>
-        </Col>
-        </Row>
+                  </Card>
+                </Col>
+              );
+            })}
+          </Row>
+          <Row>
+            <Card.Title className="text-center">Coming Soon</Card.Title>
+            <Col>
+              <Card className="noBorder">
+                <Card.Title className="text-center">Goa</Card.Title>
+                <Card.Img src="/images/trip/destination_4.png" />
+              </Card>
+            </Col>
+            <Col>
+              <Card className="noBorder">
+                <Card.Title className="text-center">Rajasthan</Card.Title>
+                <Card.Img className="card-image" src="/images/trip/destination_5.png" />
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </Modal.Body>
       <Modal.Footer>

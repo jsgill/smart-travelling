@@ -48,9 +48,9 @@ function TripOne() {
     console.log("++++input1++++", input1);
   };
   const handleClick = () => {
-    if (userInfo.length === 1 || userInfo.length === 0) {
+    if (userInfo.length === 0) {
       Swal.fire({
-        text: "Select minumum 2 destination",
+        text: "Select minumum 1 destination",
         icon: "warning",
         button: "Ok",
       });
@@ -174,7 +174,7 @@ function TripOne() {
                             <div >
                               <button
                                 onClick={decrement}
-                                
+
                                 className="btn rounded-pill"
                                 id={styles.increment}
                               >
@@ -196,7 +196,7 @@ function TripOne() {
                                 id={styles.increment}
                                 className="btn rounded-pill"
                               >
-                               <i className="fa fa-plus"></i>
+                                <i className="fa fa-plus"></i>
                               </button>
                             </div>
                           </div>
@@ -207,7 +207,7 @@ function TripOne() {
                           <button className="btn btn-success"
                             // className={styles.tripOne_inputone_btn}
                             onClick={inputTwoBtn}
-                            
+
                           >
                             Save
                           </button>
