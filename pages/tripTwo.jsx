@@ -172,7 +172,7 @@ function TripTwo() {
                   className={styles.input_field}
                   onClick={toggleInput1}
                 />
-                <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup}>
+                <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
 
                   <div className={styles.modal}>
 
@@ -411,7 +411,7 @@ function TripTwo() {
                     />
                     <div style={{
                       display: input2 ? "block" : "none",
-                    }} id={styles.budget_popup}>
+                    }} id={styles.budget_popup} readOnly >
 
 
                       <div className="row justify-content-center">
