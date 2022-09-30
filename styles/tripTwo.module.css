@@ -36,7 +36,7 @@
   #budget_popup {
     background-color: #FFFFFF !important;
     border-radius: 20px !important;
-    width: 85% !important;
+    width: 95% !important;
     padding: 20px 50px !important;
     position: absolute !important;
     top: 50% !important;
@@ -53,6 +53,16 @@
 
   .input_field {
     height: 50px !important;
+  }
+
+  .tripTwo_inputTwo_input_container_input {
+    width: 60%;
+    padding: 7px 20px;
+    outline: none;
+    border: 1px solid rgba(18, 18, 18, 0.8);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
   }
 
   #TripTwo_input_container_btn {
@@ -283,7 +293,7 @@
 .tripTwo_inputtwo_btn_container {
   text-align: center;
   margin-top: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
 }
 
@@ -297,6 +307,7 @@
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
+  margin-top: 30px;
 }
 
 .tripTwo_cross_para {
@@ -348,7 +359,7 @@
 }
 
 .tripTwo_inputTwo_input_container_input {
-  width: 40%;
+  width: 60%;
   padding: 7px 20px;
   outline: none;
   border: 1px solid rgba(18, 18, 18, 0.8);
@@ -363,7 +374,7 @@
 
 .tripTwo_inputtwo_btn_container {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 
@@ -386,13 +397,13 @@
 }
 
 .TripTwo_btn_container_btn {
-  margin: 0px 20px;
-  padding: 7px 30px;
+  margin: 0px 10px;
+  padding: 7px 20px;
   border-radius: 10px;
   border: 1px solid #000000;
   font-size: 16px;
   font-weight: 500;
-  width: 110px;
+  width: 100%;
   outline: none;
   cursor: pointer;
 }
@@ -430,8 +441,17 @@
 #budget_popup {
   background-color: #FFFFFF;
   border-radius: 20px;
-  width: 50%;
+
   padding: 20px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 35%;
+  transform: translate(-50%, -50%);
+}
+
+#budget_btn_div {
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
