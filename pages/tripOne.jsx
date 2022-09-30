@@ -47,7 +47,7 @@ function TripOne() {
   const handleClick = () => {
     if (userInfo.length === 0) {
       Swal.fire({
-        text: "Select minumum 1 destination",
+        text: "Select minimum 1 destination",
         icon: "warning",
         button: "Ok",
       });
@@ -143,7 +143,7 @@ function TripOne() {
           <div className="row justify-content-center">
             <div className="col-md-8">
               <div onClick={toggleInput1} className={styles.input_field}> 
-                {info.length === 0 ? "Choose Destination" : userInfo}
+                {info.length === 0 ? "Choose Destination" : info}
               </div>
               {/*hide show div for first input  */}
               <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} />
@@ -198,8 +198,9 @@ function TripOne() {
                         <div
                           className={styles.tripOne_inputone_btn_container}
                         >
-                          <button className="btn btn-success"
-                            // className={styles.tripOne_inputone_btn}
+                          <button 
+                          // className="btn btn-success"
+                            className={styles.tripOne_inputone_btn}
                             onClick={inputTwoBtn}
 
                           >
