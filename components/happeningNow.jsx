@@ -28,7 +28,11 @@ function HappeningNow() {
                                         <div className={styles.demo}></div>
                                     </div>
                                     <div className='row pt-1'>
-                                        <div className='col-6'><h5 className={styles.home_explore}>Explore</h5></div>
+                                        <div className='col-6'><Link href="/tripOne">
+                                                            <a className={styles.home_explore} type="button">
+                                                                <span>Plan your Trip</span>
+                                                            </a>
+                                                        </Link></div>
                                         <div className='col-6 text-end'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="right"></Image></a></Link></div>
                                     </div>
                                 </div>
@@ -45,7 +49,11 @@ function HappeningNow() {
                                 <p>Going to the mountain is going to the home</p>
                             </div>
                             <div className='row pt-1'>
-                                <div className='col-6'><h5 className={styles.home_explore}>Explore</h5></div>
+                                <div className='col-6'><Link href="/tripOne">
+                                                            <a className={styles.home_explore} type="button">
+                                                                <span>Plan your Trip</span>
+                                                            </a>
+                                                        </Link></div>
                                 <div className='col-6 text-end'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="arrow"></Image></a></Link></div>
                             </div>
                         </div>

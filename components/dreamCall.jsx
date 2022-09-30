@@ -46,7 +46,7 @@ function DreamCall() {
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
                             
-                                <Image src={group1} height="382px" width="351px" alt="group"></Image>
+                               <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view?usp=sharing"><a> <Image src={group1} height="382px" width="351px" alt="group"></Image></a></Link>
                             </div>
                             <div className={styles.abc}>245 trips booked in last week</div>
                             <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
@@ -101,8 +101,9 @@ function DreamCall() {
                             <div className={styles.home_carousal_title}>MANALI</div>
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}>
-                                <Image src={group1} height="382px" width="351px" alt="bca"></Image>
+                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing
+"><a> <Image src={group1} height="382px" width="351px" alt="bca"></Image></a></Link>
+                                
                             </div>
                             <div className={styles.abc}>245 trips booked in last week</div>
                             <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
