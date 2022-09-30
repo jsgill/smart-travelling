@@ -60,7 +60,7 @@ function TripThree() {
                 <div className={styles.top_tripThree_padding}>
                     <div className="container">
                         <div
-                            className="row mb-5 justify-content-center"
+                            className="row pt-5 pb-5 justify-content-center"
                             id={styles.icon_main_row}>
 
                             <div className="col-1 p-0">
