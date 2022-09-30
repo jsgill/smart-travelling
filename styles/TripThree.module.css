@@ -89,7 +89,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 180%;
   letter-spacing: 0.02em;
   color: rgba(18, 18, 18, 0.9);
@@ -129,7 +129,6 @@
   border-radius: 32px;
   outline: none;
   border: 0px;
-  font-size: 1rem;
   color: #ffffff;
 }
 

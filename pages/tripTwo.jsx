@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+
 import Link from "next/link";
 import cross from "../public/images/trip/cross.png";
 import styles from "../styles/tripTwo.module.css";
@@ -400,7 +401,7 @@ function TripTwo() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> 
 
                 <input
                   className={styles.input_field}

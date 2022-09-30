@@ -164,18 +164,6 @@ function TripOne() {
                       className="col-md-3 text-center"
                       id={styles.tripOne_inputtwo_container}
                     >
-                      {/* <p
-                        className={styles.tripOne_cross_para1}
-                        onClick={toggleInput2}
-                      >
-                        <Image
-                          src={cross}
-                          alt="cross_image"
-                          height={12}
-                          width={15}
-                          className={styles.cross_image}
-                        />
-                      </p> */}
                       <div className="row justify-content-center">
                         <div className="col-md-12">
                           <div
@@ -183,14 +171,14 @@ function TripOne() {
                               styles.tripOne_inputtwo_content_container
                             }
                           >
-                            <div className={styles.inputtwo_div1}>
+                            <div >
                               <button
                                 onClick={decrement}
-                                className={
-                                  styles.tripOne_content_inc_dec_operator1
-                                }
+                                
+                                className="btn rounded-pill"
+                                id={styles.increment}
                               >
-                                -
+                                <i class="fa fa-minus"></i>
                               </button>
                             </div>
                             <p
@@ -199,14 +187,16 @@ function TripOne() {
                             >
                               {count}
                             </p>
-                            <div className={styles.inputtwo_div1}>
+                            <div >
                               <button
                                 onClick={increment}
-                                className={
-                                  styles.tripOne_content_inc_dec_operator2
-                                }
+                                // className={
+                                //   styles.tripOne_content_inc_dec_operator2
+                                // }
+                                id={styles.increment}
+                                className="btn rounded-pill"
                               >
-                                +
+                               <i className="fa fa-plus"></i>
                               </button>
                             </div>
                           </div>
@@ -214,9 +204,10 @@ function TripOne() {
                         <div
                           className={styles.tripOne_inputone_btn_container}
                         >
-                          <button
-                            className={styles.tripOne_inputone_btn}
+                          <button className="btn btn-success"
+                            // className={styles.tripOne_inputone_btn}
                             onClick={inputTwoBtn}
+                            
                           >
                             Save
                           </button>
