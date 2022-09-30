@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import group5 from '../public/images/home/unnamed.png';
 import group1 from '../public/images/home/Group 22104.png';
 import group2 from '../public/images/home/Group 22103.png'
 import group3 from '../public/images/home/Rectangle 4566.png'
@@ -46,10 +47,10 @@ function DreamCall() {
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
                             
-                               <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view?usp=sharing"><a> <Image src={group1} height="382px" width="351px" alt="group"></Image></a></Link>
+                               <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view?usp=sharing"><a> <Image src={group5} height="382px" width="351px" alt="group"></Image></a></Link>
                             </div>
-                            <div className={styles.abc}>245 trips booked in last week</div>
-                            <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
+                            <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
+                            <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
@@ -97,7 +98,8 @@ function DreamCall() {
                                     )}
                                 </Popup>
                             </div>
-                            <div className={styles.abc}>Sssh, hidden gem just for you</div>
+                            <div className={styles.abc}>245 trips booked in last week
+</div>
                             <div className={styles.home_carousal_title}>MANALI</div>
                         </div>
                         <div className={styles.home_carousal_card}>
@@ -105,8 +107,8 @@ function DreamCall() {
 "><a> <Image src={group1} height="382px" width="351px" alt="bca"></Image></a></Link>
                                 
                             </div>
-                            <div className={styles.abc}>245 trips booked in last week</div>
-                            <div className={styles.home_carousal_title}>DREAM VILLAGE</div>
+                            <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
+                            <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                     </Carousel>
                 </div>

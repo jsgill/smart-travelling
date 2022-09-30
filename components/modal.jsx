@@ -50,7 +50,7 @@ function MydModalWithGrid(props) {
     <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Choose 1 or more
+          Choose 2 or more
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

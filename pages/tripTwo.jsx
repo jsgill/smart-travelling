@@ -178,7 +178,7 @@ function TripTwo() {
                   <div className={styles.modal}>
 
                     <div className="row justify-content-center">
-                      <p className={styles.tripTwo_content}>Choose 3 or more</p>
+                      <p className={styles.tripTwo_content}>Choose 1 or more</p>
                       <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
                         <Image
                           src={cross}

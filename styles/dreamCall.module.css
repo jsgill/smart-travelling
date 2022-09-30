@@ -50,6 +50,7 @@
 
 .bca {
     position: relative;
+    filter: contrast(70%);
 }
 
 .home_carousal_card .abc {

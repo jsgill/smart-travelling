@@ -23,12 +23,13 @@ function HappeningNow() {
                             <div className='col-md-8'>
                                 <div className='container'>
                                     <div className={styles.home_mountain}>
-                                        <h4>Mountain & Vibes</h4>
-                                        <p>Going to the mountain is going <br /> to the home</p>
+                                        <h4>BBQ at hidden waterfall</h4>
+                                        <p>Sizzling hot muchies out of barbecue,
+in the middle of nowhere waterfall</p>
                                         <div className={styles.demo}></div>
                                     </div>
                                     <div className='row pt-1'>
-                                        <div className='col-6'><Link href="/tripOne">
+                                        <div className='col-6 text-start'><Link href="/tripOne">
                                                             <a className={styles.home_explore} type="button">
                                                                 <span>Plan your Trip</span>
                                                             </a>
@@ -45,8 +46,8 @@ function HappeningNow() {
                         <Image src={image2} height="212px" width="458px" alt="right-now"></Image>
                         <div className='container mb-2'>
                             <div className={styles.saprater}>
-                                <h4>Mountain & Vibes</h4>
-                                <p>Going to the mountain is going to the home</p>
+                                <h4>Riverside camping at kasol </h4>
+                                <p>A bad day camping is still better than a good day working</p>
                             </div>
                             <div className='row pt-1'>
                                 <div className='col-6'><Link href="/tripOne">
