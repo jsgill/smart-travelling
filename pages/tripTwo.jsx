@@ -163,339 +163,346 @@ function TripTwo() {
         </div>
         <div className="row justify-content-center py-5">
           <div className="col-md-8">
-         
-         <div className={styles.home_carousal_card}>
-         <div className={styles.bca}>
-           <input
+
+            <div className={styles.home_carousal_card}>
+              <div className={styles.bca}>
+                <input
                   value={info.length == 0 ? "Choose Interest" : text}
                   onChange={demo}
                   className={styles.input_field}
                   onClick={toggleInput1}
                 />
-                <div style={{ display: input1 ? "block" : "none"}} id={styles.intrest_popup}> 
-               
-               <div className={styles.modal}>
-                       
-                  <div className="row justify-content-center">
-                  <p className={styles.tripTwo_content}>Choose 1 or more</p>
-                  <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
-                  <Image
-                    src={cross}
-                    alt="cross"
-                    height={12}
-                    width={15}
-                    className={styles.cross_image}
-                  />
-                </p>
-                  <div className="col-xl-3 col-sm-3" id={styles.column}>
-                  <div
-                    className={`${!changeColor
-                      ? styles.camping_div_color
-                      : styles.camping_div
-                      }`}
-                    onClick={() => handleChangeColor("Camping")}
-                  >
-                    <p className=" py-2">
-                      <Image src={image2} height={60} width={60} alt="camping" />
-                    </p>
-                    <p className={styles.image_para_content}>Camping</p>
-                  </div>
-                </div>
-                      <div className="col-xl-3 col-sm-3" id={styles.column}>
-                      <div
-                        className={`${!firstColor
-                          ? styles.camping_div_color
-                          : styles.camping_div
-                          }`}
-                        onClick={() => handleFirstColor("Hiking")}
-                      >
-                        <p className=" py-2">
-                          <Image src={image2} height={60} width={60} alt="hiking" />
-                        </p>
-                        <p className={styles.image_para_content}>Hiking</p>
-                      </div>
-                    </div>
-                    <div className="col-xl-3 col-sm-3 " id={styles.column}>
-                    <div
-                      className={`${!secondColor
-                        ? styles.camping_div_color
-                        : styles.camping_div
-                        }`}
-                      onClick={() => handleSecondColor("Offbeat")}
-                    >
-                      <p className=" py-2">
+                <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup}>
+
+                  <div className={styles.modal}>
+
+                    <div className="row justify-content-center">
+                      <p className={styles.tripTwo_content}>Choose 1 or more</p>
+                      <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
                         <Image
-                          src={image3}
-                          height={60}
-                          width={60}
-                          alt="offbeat"
+                          src={cross}
+                          alt="cross"
+                          height={12}
+                          width={15}
+                          className={styles.cross_image}
                         />
                       </p>
-                      <p className={styles.image_para_content}>Offbeat</p>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-sm-3" id={styles.column}>
-                      <div
-                        className={`${!thirdColor
-                          ? styles.camping_div_color
-                          : styles.camping_div
-                          }`}
-                        onClick={() => handleThirdColor("Apple Orchards")}
-                      >
-                        <p className=" py-2">
-                          <Image src={image4} height={60} width={60} alt="apple" />
-                        </p>
-                        <p className={styles.image_para_content3}>Apple Orchards</p>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!changeColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
+                          onClick={() => handleChangeColor("Camping")}
+                        >
+                          <p className=" py-2">
+                            <Image src={image2} height={60} width={60} alt="camping" />
+                          </p>
+                          <p className={styles.image_para_content}>Camping</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!firstColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
+                          onClick={() => handleFirstColor("Hiking")}
+                        >
+                          <p className=" py-2">
+                            <Image src={image2} height={60} width={60} alt="hiking" />
+                          </p>
+                          <p className={styles.image_para_content}>Hiking</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3 " id={styles.column}>
+                        <div
+                          className={`${!secondColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
+                          onClick={() => handleSecondColor("Offbeat")}
+                        >
+                          <p className=" py-2">
+                            <Image
+                              src={image3}
+                              height={60}
+                              width={60}
+                              alt="offbeat"
+                            />
+                          </p>
+                          <p className={styles.image_para_content}>Offbeat</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!thirdColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
+                          onClick={() => handleThirdColor("Apple Orchards")}
+                        >
+                          <p className=" py-2">
+                            <Image src={image4} height={60} width={60} alt="apple" />
+                          </p>
+                          <p className={styles.image_para_content3}>Apple Orchards</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!fourthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleFourthColor("Biking")}
+                        >
+                          <p className=" py-2">
+                            <Image src={image5} height={60} width={60} alt="biking" />
+                          </p>
+                          <p className={styles.image_para_content}>Biking</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!fifthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleFifthColor("Forest")}
+                        >
+                          <p className=" py-2">
+                            <Image src={image6} height={60} width={60} alt="forest" />
+                          </p>
+                          <p className={styles.image_para_content}>Forest</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!sixthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleSixthColor("Historical")}
+                        >
+                          <p className=" py-2">
+                            <Image
+                              src={image7}
+                              height={60}
+                              width={60}
+                              alt="historical"
+                            />
+                          </p>
+                          <p className={styles.image_para_content}>Historical</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!seventhColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleSeventhColor("Romantic")}
+                        >
+                          <p className=" py-2">
+                            <Image
+                              src={image8}
+                              height={60}
+                              width={60}
+                              alt="romantic"
+                            />
+                          </p>
+                          <p className={styles.image_para_content}>Romantic</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!eighthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleEighthColor("Adventure")}
+                        >
+                          <p className=" py-2">
+                            <Image
+                              src={image9}
+                              height={60}
+                              width={60}
+                              alt="adventure"
+                            />
+                          </p>
+                          <p className={styles.image_para_content}>Adventure</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!ninthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleNinthColor("Offroading")}
+                        >
+                          <p className=" py-2">
+                            <Image
+                              src={image10}
+                              height={60}
+                              width={60}
+                              alt="offroading"
+                            />
+                          </p>
+                          <p className={styles.image_para_content}>Offroading</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!tenthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleTenthColor("Traditional")}
+                        >
+                          <p className=" py-2">
+                            <Image
+                              src={image11}
+                              height={60}
+                              width={60}
+                              alt="traditional"
+                            />
+                          </p>
+                          <p className={styles.image_para_content}>Traditional</p>
+                        </div>
+                      </div>
+                      <div className="col-xl-3 col-sm-3" id={styles.column}>
+                        <div
+                          className={`${!elevenColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
+                          onClick={() => handleElevenColor("Waterfall")}
+                        >
+                          <p className=" py-2">
+                            <Image
+                              src={image12}
+                              height={60}
+                              width={60}
+                              alt="waterfall"
+                            />
+                          </p>
+                          <p className={styles.image_para_content}>Waterfall</p>
+                        </div>
+                      </div>
+                      <div className={styles.tripone_inputtwo_btn_container3}>
+                        <button
+                          className={styles.tripTwo_inputtwo_btn}
+                          onClick={handleSubmit}
+                        >
+                          Save
+                        </button>
                       </div>
                     </div>
-                    <div className="col-xl-3 col-sm-3" id={styles.column}>
-                    <div
-                      className={`${!fourthColor
-                        ? styles.camping_div_color1
-                        : styles.camping_div1
-                        }`}
-                      onClick={() => handleFourthColor("Biking")}
-                    >
-                      <p className=" py-2">
-                        <Image src={image5} height={60} width={60} alt="biking" />
-                      </p>
-                      <p className={styles.image_para_content}>Biking</p>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-sm-3" id={styles.column}>
-                  <div
-                    className={`${!fifthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleFifthColor("Forest")}
-                  >
-                    <p className=" py-2">
-                      <Image src={image6} height={60} width={60} alt="forest" />
-                    </p>
-                    <p className={styles.image_para_content}>Forest</p>
                   </div>
                 </div>
-                <div className="col-xl-3 col-sm-3" id={styles.column}>
-                <div
-                  className={`${!sixthColor
-                    ? styles.camping_div_color1
-                    : styles.camping_div1
-                    }`}
-                  onClick={() => handleSixthColor("Historical")}
-                >
-                  <p className=" py-2">
-                    <Image
-                      src={image7}
-                      height={60}
-                      width={60}
-                      alt="historical"
+                <div className={styles.home_carousal_card}>
+                  <div className={styles.bca}>
+                    <input
+                      className={styles.input_field}
+                      onClick={toggleInput2}
+                      onChange={demo}
+                      value={amount.length === 0 ? "Budget Per Person" : amount}
                     />
-                  </p>
-                  <p className={styles.image_para_content}>Historical</p>
-                </div>
-              </div>
-              <div className="col-xl-3 col-sm-3" id={styles.column}>
-                      <div
-                        className={`${!seventhColor
-                          ? styles.camping_div_color1
-                          : styles.camping_div1
-                          }`}
-                        onClick={() => handleSeventhColor("Romantic")}
-                      >
-                        <p className=" py-2">
-                          <Image
-                            src={image8}
-                            height={60}
-                            width={60}
-                            alt="romantic"
-                          />
-                        </p>
-                        <p className={styles.image_para_content}>Romantic</p>
-                      </div>
-                    </div>
-                    <div className="col-xl-3 col-sm-3" id={styles.column}>
-                  <div
-                    className={`${!eighthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleEighthColor("Adventure")}
-                  >
-                    <p className=" py-2">
-                      <Image
-                        src={image9}
-                        height={60}
-                        width={60}
-                        alt="adventure"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Adventure</p>
-                  </div>
-                </div>
-                  <div className="col-xl-3 col-sm-3" id={styles.column}>
-                  <div
-                    className={`${!ninthColor
-                      ? styles.camping_div_color1
-                      : styles.camping_div1
-                      }`}
-                    onClick={() => handleNinthColor("Offroading")}
-                  >
-                    <p className=" py-2">
-                      <Image
-                        src={image10}
-                        height={60}
-                        width={60}
-                        alt="offroading"
-                      />
-                    </p>
-                    <p className={styles.image_para_content}>Offroading</p>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-sm-3" id={styles.column}>
-                <div
-                  className={`${!tenthColor
-                    ? styles.camping_div_color1
-                    : styles.camping_div1
-                    }`}
-                  onClick={() => handleTenthColor("Traditional")}
-                >
-                  <p className=" py-2">
-                    <Image
-                      src={image11}
-                      height={60}
-                      width={60}
-                      alt="traditional"
-                    />
-                  </p>
-                  <p className={styles.image_para_content}>Traditional</p>
-                </div>
-              </div>
-              <div className="col-xl-3 col-sm-3" id={styles.column}>
-              <div
-                className={`${!elevenColor
-                  ? styles.camping_div_color1
-                  : styles.camping_div1
-                  }`}
-                onClick={() => handleElevenColor("Waterfall")}
-              >
-                <p className=" py-2">
-                  <Image
-                    src={image12}
-                    height={60}
-                    width={60}
-                    alt="waterfall"
-                  />
-                </p>
-                <p className={styles.image_para_content}>Waterfall</p>
-              </div>
-            </div>
-            <div className={styles.tripone_inputtwo_btn_container3}>
-            <button
-              className={styles.tripTwo_inputtwo_btn}
-              onClick={handleSubmit}
-            >
-              Save
-            </button>
-          </div>
-              </div>
-            </div>
-          </div>
-             
-         </div>
-        
-     </div>
-           
-           
+                    <div style={{
+                      display: input2 ? "block" : "none",
+                    }} id={styles.budget_popup}>
 
-            <input
-              className={styles.input_field}
-              onClick={toggleInput2}
-              onChange={demo}
-              value={amount.length === 0 ? "Budget Per Person" : amount}
-            />
-            <div
-              style={{
-                display: input2 ? "block" : "none",
-              }}
-            >
-              <div
-                className="container p-0"
-                id={styles.tripTwo_inputtwo_container2}
-              >
-                <p className={styles.tripTwo_cross_para} onClick={toggleInput2}>
-                  <Image
-                    src={cross}
-                    alt="cross"
-                    height={12}
-                    width={15}
-                    className={styles.cross_image}
-                  />
-                </p>
-                <div className={styles.tripTwo_inputTwo_input_container}>
-                  <input
-                    placeholder="Enter Amount"
-                    onChange={handleAmount}
-                    className={styles.tripTwo_inputTwo_input_container_input}
-                    id={styles.enter_amount_input}
-                  />
-                </div>
-                <div className={styles.tripTwo_input_container}>
-                  <input
-                    className={`${amount === "5,000"
-                      ? styles.TripTwo_btn_container_btn2
-                      : styles.TripTwo_btn_container_btn
-                      }`}
-                    onClick={(e) => handleBudgetAmount(e)}
-                    value="5,000"
-                    onChange={demo}
-                    readOnly
-                    id={styles.TripTwo_input_container_btn}
-                  />
-                  <input
-                    className={`${amount === "10,000"
-                      ? styles.TripTwo_btn_container_btn2
-                      : styles.TripTwo_btn_container_btn
-                      }`}
-                    onClick={(e) => handleBudgetAmount(e)}
-                    value="10,000"
-                    onChange={demo}
-                    readOnly
-                    id={styles.TripTwo_input_container_btn}
-                  />
-                  <input
-                    className={`${amount === "15,000"
-                      ? styles.TripTwo_btn_container_btn2
-                      : styles.TripTwo_btn_container_btn
-                      }`}
-                    onClick={(e) => handleBudgetAmount(e)}
-                    value="15,000"
-                    onChange={demo}
-                    readOnly
-                    id={styles.TripTwo_input_container_btn}
-                  />
-                  <input
-                    className={`${amount === "20,000"
-                      ? styles.TripTwo_btn_container_btn2
-                      : styles.TripTwo_btn_container_btn
-                      }`}
-                    onClick={(e) => handleBudgetAmount(e)}
-                    value="20,000"
-                    onChange={demo}
-                    readOnly
-                    id={styles.TripTwo_input_container_btn}
-                  />
-                </div>
-                <div className={styles.tripTwo_inputtwo_btn_container}>
-                  <button
-                    className={styles.tripTwo_inputtwo_btn}
-                    onClick={saveBtn}
-                  >
-                    Save
-                  </button>
+                      <div className={styles.modal}>
+
+                        <div className="row justify-content-center">
+
+                          <p className={styles.tripTwo_cross_para} onClick={toggleInput2}>
+                            <Image
+                              src={cross}
+                              alt="cross"
+                              height={12}
+                              width={15}
+                              className={styles.cross_image}
+                            />
+                          </p>
+                          <div className={styles.tripTwo_inputTwo_input_container}>
+                            <input
+                              placeholder="Enter Amount"
+                              onChange={handleAmount}
+                              className={styles.tripTwo_inputTwo_input_container_input}
+                              id={styles.enter_amount_input}
+                            />
+                          </div>
+                          <div className={styles.tripTwo_input_container}>
+                            <input
+                              className={`${amount === "5,000"
+                                ? styles.TripTwo_btn_container_btn2
+                                : styles.TripTwo_btn_container_btn
+                                }`}
+                              onClick={(e) => handleBudgetAmount(e)}
+                              value="5,000"
+                              onChange={demo}
+                              readOnly
+                              id={styles.TripTwo_input_container_btn}
+                            />
+                            <input
+                              className={`${amount === "10,000"
+                                ? styles.TripTwo_btn_container_btn2
+                                : styles.TripTwo_btn_container_btn
+                                }`}
+                              onClick={(e) => handleBudgetAmount(e)}
+                              value="10,000"
+                              onChange={demo}
+                              readOnly
+                              id={styles.TripTwo_input_container_btn}
+                            />
+                            <input
+                              className={`${amount === "15,000"
+                                ? styles.TripTwo_btn_container_btn2
+                                : styles.TripTwo_btn_container_btn
+                                }`}
+                              onClick={(e) => handleBudgetAmount(e)}
+                              value="15,000"
+                              onChange={demo}
+                              readOnly
+                              id={styles.TripTwo_input_container_btn}
+                            />
+                            <input
+                              className={`${amount === "20,000"
+                                ? styles.TripTwo_btn_container_btn2
+                                : styles.TripTwo_btn_container_btn
+                                }`}
+                              onClick={(e) => handleBudgetAmount(e)}
+                              value="20,000"
+                              onChange={demo}
+                              readOnly
+                              id={styles.TripTwo_input_container_btn}
+                            />
+                          </div>
+                          <div className={styles.tripTwo_inputtwo_btn_container}>
+                            <button
+                              className={styles.tripTwo_inputtwo_btn}
+                              onClick={saveBtn}
+                            >
+                              Save
+                            </button>
+
+                          </div>
+
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
+
+
           </div>
         </div>
         <div className="row justify-content-center">
