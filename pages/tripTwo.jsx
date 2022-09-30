@@ -178,13 +178,13 @@ function TripTwo() {
                   <div className={styles.modal}>
 
                     <div className="row justify-content-center">
-                      <p className={styles.tripTwo_content}>Choose 1 or more</p>
+                      <p className={styles.tripTwo_content}>Choose 3 or more</p>
                       <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
                         <Image
                           src={cross}
                           alt="cross"
-                          height={12}
-                          width={15}
+                          height={20}
+                          width={20}
                           className={styles.cross_image}
                         />
                       </p>
@@ -420,8 +420,8 @@ function TripTwo() {
                       <Image
                         src={cross}
                         alt="cross"
-                        height={12}
-                        width={15}
+                        height={20}
+                        width={20}
                         className={styles.cross_image}
                       />
                     </p>
