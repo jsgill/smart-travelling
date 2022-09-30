@@ -31,10 +31,12 @@
     border-bottom: 2px solid #00754A;
     width: 100%;
     padding: 10px 0px 16px 0px;
+    text-align: start;
 }
 
 .home_mountain {
     padding: 22% 0% 0% 0%;
+    text-align: start;
 
 }
 
@@ -68,6 +70,10 @@
     font-size: 18px;
     line-height: 130%;
     font-family: "Poppins", sans-serif;
+    color: #00754A;
+    text-decoration: none;
+}
+.home_explore:hover{
     color: #00754A;
 }
 
