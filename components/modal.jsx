@@ -26,6 +26,12 @@ function MydModalWithGrid(props) {
       name: "destination_3",
       title: "Leh-Ladakh",
       selected: false
+    },
+    destination_4: {
+      path: "/images/trip/destination_6.png",
+      name: "destination_4",
+      title: "Spiti Valley",
+      selected: false
     }
 
   }
@@ -50,7 +56,7 @@ function MydModalWithGrid(props) {
     <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Choose 2 or more
+          Choose 1 or more
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -58,7 +64,7 @@ function MydModalWithGrid(props) {
           <Row>
             {Object.keys(DestinationSelected).map(key => {
               return (
-                <Col key={key} xs={12} md={4}>
+                <Col key={key} xs={6} md={3}>
                   <Card onClick={() => setDestinationBorder(key)} className={DestinationSelected[key].selected ? "withBorder" : "noBorder"}>
                     <Card.Title className="text-center">{DestinationSelected[key].title}</Card.Title>
                     <Card.Img src={DestinationSelected[key].path} alt="Card image" />
@@ -85,7 +91,7 @@ function MydModalWithGrid(props) {
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide} variant="success" size="md">Save</Button>
+        <Button onClick={props.onHide}  className={"tripOne_inputone_btn"} variant="success" size="md" >Save</Button>
       </Modal.Footer>
     </Modal>
   );

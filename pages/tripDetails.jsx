@@ -32,7 +32,7 @@ function TripDetails() {
                         <div className="col-md-6 py-5">
                             <div className={styles.happy_travling}>
                                 <p className={styles.happy_travel_p1}>Happy <br /> Travelling!</p>
-                                <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
+                                <p className={styles.happy_travel_p2}>We will get back to you in few hours!</p>
                             </div>
                         </div>
                         <div className="col-md-6 py-5">
