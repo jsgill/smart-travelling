@@ -121,7 +121,7 @@ function TripOne() {
       <div className={styles.main_top_background}>
         <div className="container">
           <div
-            className="row mb-5 justify-content-center"
+            className="row justify-content-center"
             id={styles.icon_main_row}
           >
             <div className="col-1 p-0">
@@ -161,10 +161,10 @@ function TripOne() {
                 <div className="container">
                   <div className="row justify-content-center">
                     <div
-                      className="col-md-6 text-center"
+                      className="col-md-3 text-center"
                       id={styles.tripOne_inputtwo_container}
                     >
-                      <p
+                      {/* <p
                         className={styles.tripOne_cross_para1}
                         onClick={toggleInput2}
                       >
@@ -175,9 +175,9 @@ function TripOne() {
                           width={15}
                           className={styles.cross_image}
                         />
-                      </p>
+                      </p> */}
                       <div className="row justify-content-center">
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                           <div
                             className={
                               styles.tripOne_inputtwo_content_container
@@ -212,15 +212,15 @@ function TripOne() {
                           </div>
                         </div>
                         <div
-                            className={styles.tripOne_inputone_btn_container}
+                          className={styles.tripOne_inputone_btn_container}
+                        >
+                          <button
+                            className={styles.tripOne_inputone_btn}
+                            onClick={inputTwoBtn}
                           >
-                            <button
-                              className={styles.tripOne_inputone_btn}
-                              onClick={inputTwoBtn}
-                            >
-                              Save
-                            </button>
-                          </div>
+                            Save
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -1,405 +1,414 @@
 @media only screen and (max-width: 768px) {
-    .save_btn {
-        width: 70% !important;
-        height: 50px !important;
-        font-size: 10px !important;
-    }
+  .save_btn {
+    width: 70% !important;
+    height: 50px !important;
+    font-size: 10px !important;
+  }
 
-    #tripOne_inputtwo_container {
-        width: 90% !important;
-        cursor: pointer;
-    }
+  #tripOne_inputtwo_container {
+    width: 90% !important;
+    cursor: pointer;
+  }
 
-    #tripOne_inputthree_container {
-        width: 90% !important;
-    }
+  #tripOne_inputthree_container {
+    width: 90% !important;
+  }
 
-    .input_field {
-        height: 50px !important;
-        font-size: 10px !important;
-    }
+  .input_field {
+    height: 50px !important;
+    font-size: 10px !important;
+  }
 
-    .tripOne_inputone_content_6 {
-        font-size: 10px !important;
-    }
+  .tripOne_inputone_content_6 {
+    font-size: 10px !important;
+  }
 
-    .tripOne_inputone_content_4 {
-        font-size: 10px !important;
-    }
+  .tripOne_inputone_content_4 {
+    font-size: 10px !important;
+  }
 
-    .tripOne_inputone_content_5 {
-        font-size: 10px !important;
-    }
+  .tripOne_inputone_content_5 {
+    font-size: 10px !important;
+  }
 
-    .tripOne_inputone_content {
-        font-size: 10px !important;
-        top: -40px !important;
-    }
+  .tripOne_inputone_content {
+    font-size: 10px !important;
+    top: -40px !important;
+  }
 
-    #tripOne_inputone_container {
-        width: 100% !important;
-    }
+  #tripOne_inputone_container {
+    width: 100% !important;
+  }
 
-    #calender_container {
-        flex: 0 0 auto;
-        width: 36%;
-    }
+  #calender_container {
+    flex: 0 0 auto;
+    width: 36%;
+  }
 }
 
 @media only screen and (max-width: 540px) {
-    #calender_container {
-        flex: 0 0 auto;
-        width: 50%;
-    }
+  #calender_container {
+    flex: 0 0 auto;
+    width: 50%;
+  }
 }
 
 .main_top_background {
-    background: url(../public/images/tripTwo/Rectangle4571.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: 50px 0px 100px 0px;
+  background: url(../public/images/tripTwo/Rectangle4571.png);
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* padding: 50px 0px 100px 0px; */
+}
+/*icon*/
+#icon_main_row {
+  padding-top: 51px;
+  padding-bottom: 51px;
 }
 
 .logo_saparator {
-    top: -20px;
-    margin: 0px 10px;
+  top: -20px;
+  margin: 0px 10px;
 }
 
 .tripOne_line {
-    height: 1px;
-    border-top: 1px solid #ffffff;
-    border-width: 100% !important;
-    margin: 0px 5px;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -45%);
-    position: relative;
+  height: 1px;
+  border-top: 1px solid #ffffff;
+  border-width: 100% !important;
+  margin: 0px 5px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -45%);
+  position: relative;
 }
 
 .input_field {
-    margin-bottom: 40px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 180%;
-    letter-spacing: 0.02em;
-    color: #ffffff;
-    width: 100%;
-    border: none;
-    outline: none;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.37);
-    border-radius: 44px;
-    cursor: pointer;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.37);
+  border-radius: 44px;
+  cursor: pointer;
 }
 
 .save_btn {
-    margin-top: 35px;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 180%;
-    letter-spacing: 0.02em;
-    color: #000000;
-    background-color: #ffffff;
-    border: none;
-    width: 100%;
-    height: 64px;
-    background: #ffffff;
-    border-radius: 32px;
+  margin-top: 35px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 180%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  width: 100%;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 32px;
 }
 
 /* trip one input one popup css */
 #tripOne_inputone_container {
-    position: absolute;
-    background-color: #fffff1;
-    z-index: 1;
-    width: 50%;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
-    padding: 20px 0px 20px 0px;
+  position: absolute;
+  background-color: #fffff1;
+  z-index: 1;
+  width: 50%;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  padding: 20px 0px 20px 0px;
 }
 
 .tripOne_inputone_content_1 {
-    position: relative;
-    top: -80px;
-    left: 50px;
-    color: white;
+  position: relative;
+  top: -80px;
+  left: 50px;
+  color: white;
 }
 
 .tripOne_inputone_content_2 {
-    position: relative;
-    top: -80px;
-    left: 50px;
-    color: white;
+  position: relative;
+  top: -80px;
+  left: 50px;
+  color: white;
 }
 
 .tripOne_inputone_content {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 180%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-    z-index: 1;
-    position: relative;
-    top: -80px;
-    color: white;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  z-index: 1;
+  position: relative;
+  top: -80px;
+  color: white;
 }
 
 .tripOne_inputone_content_4 {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 180%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-    z-index: 1;
-    position: relative;
-    top: -30%;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  z-index: 1;
+  position: relative;
+  top: -30%;
 }
 
 .tripOne_inputone_content_6 {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 180%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-    z-index: 1;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  z-index: 1;
 }
 
 .tripOne_inputone_content_5 {
-    position: relative;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 180%;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: #ffffff;
-    z-index: 1;
-    top: -30%;
+  position: relative;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  z-index: 1;
+  top: -30%;
 }
 
 #remove_image_padding {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 #tripOne_inputone_content_container {
-    position: relative;
+  position: relative;
 }
 
 .tripOne_content {
-    text-align: center;
-    margin-bottom: 15px;
-    font-family: "Poppins";
-    font-weight: 500;
-    font-size: 20px;
-    letter-spacing: 0.04em;
-    color: #121212;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  color: #121212;
 }
 
 .tripOne_inputone_btn_container {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
+  text-align: center;
+  /* margin-top: 30px; */
+  margin-bottom: 10px;
+}
+.TripOne_inputtwo {
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .tripOne_inputone_btn_container1 {
-    text-align: center;
-    position: absolute;
-    top: 74%;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 999;
+  text-align: center;
+  position: absolute;
+  top: 74%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 999;
 }
 
 .tripOne_inputone_btn {
-    margin-top: 10px;
-    background: #00754a;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    color: #ffffff;
-    padding: 8px 50px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 999;
+  /* margin-top: 10px; */
+  background: #00754a;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  padding: 8px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 999;
 }
 
 .tripOne_inputone_btn1 {
-    margin-top: 10px;
-    background: #00754a;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    color: #ffffff;
-    padding: 8px 50px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 999;
+  margin-top: 10px;
+  background: #00754a;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  padding: 8px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 999;
 }
 
 .tripOne_cross_para1 {
-    background-color: #000000;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    padding-top: 3px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  background-color: #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding-top: 3px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .tripOne_circle1 {
-    left: 74%;
-    position: absolute;
-    top: 11%;
-    z-index: 1;
+  left: 74%;
+  position: absolute;
+  top: 11%;
+  z-index: 1;
 }
 
 .tripOne_circle2 {
-    z-index: 1;
-    top: 11%;
-    left: 74%;
-    position: absolute;
-    z-index: 1;
+  z-index: 1;
+  top: 11%;
+  left: 74%;
+  position: absolute;
+  z-index: 1;
 }
 
 .tripOne_circle3 {
-    top: 11%;
-    left: 74%;
-    position: absolute;
-    z-index: 1;
+  top: 11%;
+  left: 74%;
+  position: absolute;
+  z-index: 1;
 }
 
 #tripOne_inputtwo_container {
-    position: absolute;
-    background-color: #ffffff;
-    z-index: 1;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .tripOne_inputtwo_content_container {
-    display: flex;
-    justify-content: space-around;
-    padding: 1.5rem 0rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0rem;
 }
 
 .inputtwo_div1 {
-    height: 20px;
-    border-radius: 50%;
+  height: 20px;
+  border-radius: 50%;
 }
 
 .tripOne_content_inc_dec_operator1 {
-    font-size: 2rem;
-    width: 50px;
-    background: #ffffff;
-    border: 1px solid #e3e3e3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
+  font-size: 2rem;
+  width: 50px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
 }
 
 .tripOne_content_btn {
-    color: #00754A;
-    font-size: 25px;
-    margin-top: 10px;
-    font-weight: 600;
-    padding: 0px 20px 0px 20px;
-    cursor: pointer;
+  color: #00754a;
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: 600;
+  padding: 0px 20px 0px 20px;
+  cursor: pointer;
 }
 
 .tripOne_content_inc_dec_operator2 {
-    font-size: 2rem;
-    width: 50px;
-    background: #ffffff;
-    border: 1px solid #e3e3e3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
+  font-size: 2rem;
+  width: 50px;
+  background: #ffffff;
+  border: 1px solid #e3e3e3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
 }
 
 /* tripone input three css start */
 
 #tripOne_inputthree_container {
-    position: absolute;
-    z-index: 1;
-    border-radius: 10px;
-    top: 50%;
-    padding: 1.5rem 0rem;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
+  border-radius: 10px;
+  top: 50%;
+  padding: 1.5rem 0rem;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
 }
 
 .app {
-    position: relative;
+  position: relative;
 }
 
 .tripOne_cross_para1 {
-    background-color: #000000;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    padding-top: 3px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  background-color: #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding-top: 3px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .tripOne_cross_para {
-    background-color: #000000;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    padding-top: 3px;
-    padding-left: 8px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  background-color: #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding-top: 3px;
+  padding-left: 8px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .colorChange {
-    background-color: #00754a;
+  background-color: #00754a;
 }
 
 .calender {
-    padding-bottom: 45px;
-    z-index: -1;
+  padding-bottom: 45px;
+  z-index: -1;
 }
 
 .Calendar_row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
