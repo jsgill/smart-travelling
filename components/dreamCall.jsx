@@ -47,7 +47,7 @@ function DreamCall() {
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
                             
-                               <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view?usp=sharing"><a> <Image src={group5} height="382px" width="351px" alt="group"></Image></a></Link>
+                               <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={group5} height="382px" width="351px" alt="group"></Image></a></Link>
                             </div>
                             <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
                             <div className={styles.home_carousal_title}>ITINERARY</div>
@@ -103,8 +103,7 @@ function DreamCall() {
                             <div className={styles.home_carousal_title}>MANALI</div>
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing
-"><a> <Image src={group1} height="382px" width="351px" alt="bca"></Image></a></Link>
+                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"></Image></a></Link>
                                 
                             </div>
                             <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
