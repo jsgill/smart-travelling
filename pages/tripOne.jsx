@@ -44,9 +44,6 @@ function TripOne() {
     }
   };
 
-  const handleInput = () => {
-    console.log("++++input1++++", input1);
-  };
   const handleClick = () => {
     if (userInfo.length === 0) {
       Swal.fire({
@@ -65,6 +62,9 @@ function TripOne() {
       setInfo(info);
     }
     setModalShow(false);
+  };
+  const handleInput = () => {
+    console.log("++++input1++++", input1);
   };
   function toggleInput1() {
     setModalShow(true);
@@ -142,20 +142,14 @@ function TripOne() {
           </div>
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <input
-                className={styles.input_field}
-                onClick={toggleInput1}
-                value={info.length === 0 ? "Choose Destination" : userInfo}
-                onChange={handleInput}
-              />
+              <div onClick={toggleInput1} className={styles.input_field}> 
+                {info.length === 0 ? "Choose Destination" : userInfo}
+              </div>
               {/*hide show div for first input  */}
               <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} />
-              <input
-                value={inputTwo.length == 0 ? "No. of Guests" : inputTwo}
-                className={styles.input_field}
-                onChange={handleInput}
-                onClick={toggleInput2}
-              />
+              <div onClick={toggleInput2} className={styles.input_field}> 
+                {inputTwo.length == 0 ? "No. of Guests" : inputTwo}
+              </div>
               {/*input second popup for no. of people */}
               <div style={{ display: input2 ? "block" : "none" }}>
                 <div className="container">
@@ -217,16 +211,13 @@ function TripOne() {
                   </div>
                 </div>
               </div>
-              <input
-                value={
+              <div onClick={toggleInput3} className={styles.input_field}> 
+                {
                   inputThree.length == 0
                     ? "Select the Start & End Date"
                     : startDate.concat(" - ") + endDate
                 }
-                className={styles.input_field}
-                onChange={handleInput}
-                onClick={toggleInput3}
-              />
+              </div>
 
 
               <div style={{ display: input3 ? "block" : "none" }}>
