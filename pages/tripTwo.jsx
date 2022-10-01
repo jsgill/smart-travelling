@@ -174,7 +174,7 @@ function TripTwo() {
                 <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
                   <div className={styles.modal}>
                     <div className="row justify-content-center">
-                      <p className={styles.tripTwo_content}>Choose 1 or more</p>
+                      <p className={styles.tripTwo_content}>Choose 3 or more</p>
                       <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
                         <Image
                           src={cross}
@@ -389,6 +389,7 @@ function TripTwo() {
                       </div>
                       <div className={styles.tripone_inputtwo_btn_container3}>
                         <button
+                          disabled={text?.length <= 2}
                           className={styles.tripTwo_inputtwo_btn}
                           onClick={handleSubmit}
                         >

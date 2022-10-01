@@ -142,12 +142,12 @@ function TripOne() {
           </div>
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <div onClick={toggleInput1} className={styles.input_field}> 
+              <div onClick={toggleInput1} className={styles.input_field}>
                 {info.length === 0 ? "Choose Destination" : info}
               </div>
               {/*hide show div for first input  */}
-              <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} />
-              <div onClick={toggleInput2} className={styles.input_field}> 
+              <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} selectCity={userInfo.length} />
+              <div onClick={toggleInput2} className={styles.input_field}>
                 {inputTwo.length == 0 ? "No. of Guests" : inputTwo}
               </div>
               {/*input second popup for no. of people */}
@@ -198,13 +198,10 @@ function TripOne() {
                         <div
                           className={styles.tripOne_inputone_btn_container}
                         >
-                          <button 
-                          // className="btn btn-success"
+                          <button
+                            // className="btn btn-success"
                             className={styles.tripOne_inputone_btn}
-                            onClick={inputTwoBtn}
-
-                          >
-                            Save
+                            onClick={inputTwoBtn}>Save
                           </button>
                         </div>
                       </div>
@@ -212,7 +209,7 @@ function TripOne() {
                   </div>
                 </div>
               </div>
-              <div onClick={toggleInput3} className={styles.input_field}> 
+              <div onClick={toggleInput3} className={styles.input_field}>
                 {
                   inputThree.length == 0
                     ? "Select the Start & End Date"

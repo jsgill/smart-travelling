@@ -91,7 +91,7 @@ function MydModalWithGrid(props) {
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}  className={"tripOne_inputone_btn"} variant="success" size="md" >Save</Button>
+        <Button onClick={props.onHide} disabled={!props.selectCity} className={"tripOne_inputone_btn"} variant="success" size="md" >Save</Button>
       </Modal.Footer>
     </Modal>
   );
