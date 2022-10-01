@@ -82,7 +82,7 @@
   .save_btn {
     width: 70% !important;
     height: 50px !important;
-    /* font-size: 10px !important; */
+    font-size: 10px !important;
   }
 
   .input_field {
@@ -150,13 +150,10 @@
   }
 }
 
-@media only screen and (max-width:460px) {
+@media only screen and (max-width:400px) {
   .save_btn {
     width: 50% !important;
     height: 50px !important;
-    font-size: 14px !important;
-  }
-  .tripTwo_inputtwo_btn{
   }
 
   .input_field {
@@ -223,7 +220,7 @@
   position: relative;
 }
 
-/* .input_field {
+.input_field {
   margin-bottom: 45px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
@@ -240,22 +237,6 @@
   background: rgba(0, 0, 0, 0.37);
   border-radius: 44px;
   cursor: pointer;
-} */
-
-.input_field {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin-bottom: 40px;
-  text-align: center;
-  color: #ffffff;
-  background: rgba(0, 0, 0, 0.37);
-  padding: 25px;
-  border-radius: 44px;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
 }
 
 .save_btn {
@@ -412,7 +393,6 @@
 }
 
 .tripTwo_inputtwo_btn {
-  margin-top: 60px;
   background: #00754A;
   border-radius: 20px;
   border: none;
@@ -443,14 +423,14 @@
 
 .TripTwo_btn_container_btn2 {
   background-color: #00754A;
-  margin: 0px 20px;
-  padding: 7px 30px;
+  margin: 0px 10px;
+  padding: 7px 20px;
   border-radius: 10px;
   border: 1px solid #00754A;
-  color: #FFFFFF;
   font-size: 16px;
+  color: #FFFFFF;
   font-weight: 500;
-  width: 110px;
+  width: 100%;
   outline: none;
   cursor: pointer;
 }
