@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Image from "next/image";
-
 import Link from "next/link";
 import cross from "../public/images/trip/cross.png";
 import styles from "../styles/tripTwo.module.css";
@@ -19,7 +18,7 @@ import image9 from "../public/images/tripTwo/image9.png";
 import image10 from "../public/images/tripTwo/image10.png";
 import image11 from "../public/images/tripTwo/image11.png";
 import image12 from "../public/images/tripTwo/image12.png";
-import Swal from "sweetalert2";
+import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
 function TripTwo() {
@@ -124,25 +123,6 @@ function TripTwo() {
     }
     setInfo(info);
   };
-  const handleClick = () => {
-    if (userInfo.length === 0) {
-      Swal.fire({
-        text: "Select minumum 1 destination",
-        icon: "warning",
-        button: "Ok",
-      });
-    } else {
-      toggleInput1();
-      for (let i = 0; i < userInfo.length; i++) {
-        info = info.concat(userInfo[i]);
-        if (i < userInfo.length - 1) {
-          info = info.concat(", ");
-        }
-      }
-      setInfo(info);
-    }
-    setModalShow(false);
-  };
   const handleSubmit_TripTwoData = () => {
     for (let j = 0; j < text.length; j++) {
       localStr = localStr.concat(text[j]);
@@ -186,23 +166,21 @@ function TripTwo() {
             <div className={styles.home_carousal_card}>
               <div className={styles.bca}>
                 <input
-                  value={info.length == 0 ? "Choose Interest" : text}
+                  value={text.length == 0 ? "Choose Interest" : text}
                   onChange={demo}
                   className={styles.input_field}
                   onClick={toggleInput1}
                 />
                 <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
-
                   <div className={styles.modal}>
-
                     <div className="row justify-content-center">
-                      <p className={styles.tripTwo_content}>Choose 3 or more</p>
+                      <p className={styles.tripTwo_content}>Choose 1 or more</p>
                       <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
                         <Image
                           src={cross}
                           alt="cross"
-                          height={20}
-                          width={20}
+                          height={12}
+                          width={15}
                           className={styles.cross_image}
                         />
                       </p>
@@ -438,8 +416,8 @@ function TripTwo() {
                       <Image
                         src={cross}
                         alt="cross"
-                        height={20}
-                        width={20}
+                        height={12}
+                        width={15}
                         className={styles.cross_image}
                       />
                     </p>
@@ -500,19 +478,12 @@ function TripTwo() {
                     <div className={styles.tripTwo_inputtwo_btn_container}>
                       <button
                         className={styles.tripTwo_inputtwo_btn}
-                        onClick={saveBtn}
-                      >
-                        Save
-                      </button>
-
+                        onClick={saveBtn}>Save </button>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
-
-
           </div>
         </div>
         <div className="row justify-content-center">
