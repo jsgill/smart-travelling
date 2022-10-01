@@ -50,8 +50,19 @@
 
 .bca {
     position: relative;
-    filter: contrast(70%);
+    filter: contrast(138%);
 }
+
+.bca2 {
+    position: relative;
+    filter: contrast(90%);
+}
+
+.bca3 {
+    position: relative;
+    filter: contrast(90%);
+}
+
 
 .home_carousal_card .abc {
     position: absolute;
@@ -122,7 +133,8 @@
     background: #ffffff;
     border: none;
 }
-.home_popup_para{
+
+.home_popup_para {
     padding: 0px 50px 0px 50px;
 }
 
@@ -162,10 +174,12 @@
     text-decoration: none;
     box-shadow: none;
 }
-.Popup_bottom_button{
+
+.Popup_bottom_button {
     text-align: center;
     padding-top: 50px;
 }
-.dfmqawfkijew{
+
+.dfmqawfkijew {
     width: 10% !important;
 }
