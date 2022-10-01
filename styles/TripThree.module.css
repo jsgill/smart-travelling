@@ -320,6 +320,9 @@
   background: #ffffff;
   border-radius: 32px;
 }
+.trip_three_submit_btn:disabled {
+  cursor: not-allowed;
+}
 
 .top_tripThree_padding {
   /* padding: 50px 0px 100px 0px; */

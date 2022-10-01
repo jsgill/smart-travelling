@@ -156,7 +156,7 @@ function TripThree() {
                         <div className='row justify-content-center'>
                             <div className='col-md-3'>
                                 <div className={styles.trip_three_btn}>
-                                    <button className={styles.trip_three_submit_btn}
+                                    <button className={styles.trip_three_submit_btn} disabled={!mobile}
                                         onClick={handleSubmit}>Submit</button>
                                     {
                                         open ?
