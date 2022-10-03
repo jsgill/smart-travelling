@@ -42,13 +42,11 @@ function MydModalWithGrid(props) {
       NewState[key].selected = true;
       props.change(NewState[key].title)
       setDestinationSelected(NewState);
-      console.log(DestinationSelected);
     }
     else {
       NewState[key].selected = false;
       props.change(NewState[key].title)
       setDestinationSelected(NewState);
-      console.log(DestinationSelected);
     }
   }
 
