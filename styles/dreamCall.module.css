@@ -50,19 +50,31 @@
 
 .bca {
     position: relative;
-    filter: contrast(138%);
+    filter: contrast(28%);
+}
+
+.bca:hover{
+    filter: contrast(128%);
 }
 
 .bca2 {
     position: relative;
-    filter: contrast(90%);
+    filter: contrast(40%);
 }
+
+.bca2:hover{
+    filter: contrast(100%);
+}
+
 
 .bca3 {
     position: relative;
-    filter: contrast(90%);
+    filter: contrast(30%);
 }
 
+.bca3:hover{
+    filter: contrast(100%);
+}
 
 .home_carousal_card .abc {
     position: absolute;
@@ -72,7 +84,7 @@
     transform: translate(-50%, -50%);
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 158.5%;
     font-family: 'Poppins', sans-serif;
 }
