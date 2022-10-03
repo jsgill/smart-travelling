@@ -324,9 +324,9 @@
   cursor: not-allowed;
 }
 
-.top_tripThree_padding {
-  /* padding: 50px 0px 100px 0px; */
-}
+/* .top_tripThree_padding {
+   padding: 50px 0px 100px 0px;
+} */
 
 #mobile_input::-webkit-input-placeholder {
   color: #fff;
