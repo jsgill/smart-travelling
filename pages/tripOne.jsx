@@ -45,26 +45,16 @@ function TripOne() {
   };
 
   const handleClick = () => {
-    if (userInfo.length === 0) {
-      Swal.fire({
-        text: "Select minimum 1 destination",
-        icon: "warning",
-        button: "Ok",
-      });
-    } else {
-      toggleInput1();
-      for (let i = 0; i < userInfo.length; i++) {
-        info = info.concat(userInfo[i]);
-        if (i < userInfo.length - 1) {
-          info = info.concat(", ");
-        }
+    toggleInput1();
+    info = ""
+    for (let i = 0; i < userInfo.length; i++) {
+      info = info.concat(userInfo[i]);
+      if (i < userInfo.length - 1) {
+        info = info.concat(", ");
       }
-      setInfo(info);
     }
+    setInfo(info);
     setModalShow(false);
-  };
-  const handleInput = () => {
-    console.log("++++input1++++", input1);
   };
   function toggleInput1() {
     setModalShow(true);
@@ -122,8 +112,7 @@ function TripOne() {
         <div className="container">
           <div
             className="row justify-content-center"
-            id={styles.icon_main_row}
-          >
+            id={styles.icon_main_row}>
             <div className="col-1 p-0">
               <Image src={icon1} alt="trip_section_logo" />
             </div>
@@ -156,8 +145,7 @@ function TripOne() {
                   <div className="row justify-content-center">
                     <div
                       className="col-md-3 text-center"
-                      id={styles.tripOne_inputtwo_container}
-                    >
+                      id={styles.tripOne_inputtwo_container}>
                       <div className="row justify-content-center">
                         <div className="col-md-12">
                           <div

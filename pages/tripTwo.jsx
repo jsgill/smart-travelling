@@ -115,6 +115,7 @@ function TripTwo() {
       (item, index, array) => text.indexOf(item) === array.lastIndexOf(item)
     );
     setText(filter);
+    info = ""
     for (let i = 0; i < filter.length; i++) {
       info = info.concat(filter[i]);
       if (i < filter.length - 1) {
