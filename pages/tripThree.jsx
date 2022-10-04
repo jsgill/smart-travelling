@@ -8,7 +8,7 @@ import Link from "next/link";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import popup_img from "../public/images/trip/popup_img.png";
-
+import axios from 'axios';
 
 function TripThree() {
     const [name, setName] = useState("Enter Your Name (optional)");
@@ -44,6 +44,25 @@ function TripThree() {
         obj.promo = (promo === "Promo Code (optional)" ? "-" : promo)
         localStorage.setItem('trip_three', JSON.stringify(obj))
         setOpen(true)
+        axios({
+            method: "POST",
+            url: "https://formbold.com/s/6MM76",
+            data: {
+                "userInterests": interest11.user_interest,
+                "userDestination": destinationPlace.destination,
+                "journeyBudget": interest11.budget,
+                "journeyStartingDate": destinationPlace.startdate,
+                "journeyEndingDate": destinationPlace.enddate,
+                "noOfGuests": destinationPlace.guests,
+                "name": obj.name,
+                "promo_code": obj.promo
+            },
+            })
+            .then((r) => {
+            console.log("data sent to formbold");
+        }).catch((r) => {
+        console.log("error");
+        });
         fetch(`https://ap-south-1.aws.data.mongodb-api.com/app/smarttraveller-zapex/endpoint/userInput?mob=${obj.mobile}`, {
             method: "POST",
             body: JSON.stringify({
