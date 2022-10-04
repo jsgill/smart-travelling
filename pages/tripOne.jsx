@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import icon1 from "../public/images/trip/Group 22133.png";
@@ -13,7 +13,9 @@ import MydModalWithGrid from "../components/modal";
 import cross from "../public/images/trip/cross.png";
 import styles from "../styles/TripOne.module.css";
 import Swal from "sweetalert2";
-import { Calendar } from "react-multi-date-picker";
+import { Calendar } from "react-multi-date-picker"
+
+
 
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
@@ -26,10 +28,10 @@ function TripOne() {
   const [inputThree, setInputThree] = useState("");
   const [count, setCount] = useState(0);
   const [date, setDate] = useState([]);
-  var startDate = new Date(date[0]).toDateString();
-  var endDate = new Date(date[1]).toDateString();
-  const [inputValue2, setInput2Value] = useState("");
+  const startDate = new Date(date[0]).toDateString();
+  const endDate = new Date(date[1]).toDateString();
   const [local, setLocal] = useState("");
+
 
   const handleChange = (key) => {
     if (userInfo.indexOf(key) == -1) {
@@ -106,9 +108,28 @@ function TripOne() {
     }
     localStorage.setItem("trip_one", JSON.stringify(obj));
   }
+
+  const [clickedOutside, setClickedOutside] = useState(false);
+  const myRef = useRef();
+
+  const handleClickOutside = e => {
+    if (!myRef.current.contains(e.target)) {
+      setClickedOutside(true);
+    }
+  };
+
+  const handleClickInside = () => setClickedOutside(false);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  });
+
+
   return (
     <div>
       <div className={styles.main_top_background}>
+
         <div className="container">
           <div
             className="row justify-content-center"
@@ -160,7 +181,7 @@ function TripOne() {
                                 className="btn rounded-pill"
                                 id={styles.increment}
                               >
-                                <i class="fa fa-minus"></i>
+                                <i className="fa fa-minus"></i>
                               </button>
                             </div>
                             <p
@@ -225,13 +246,14 @@ function TripOne() {
                           >
                             <div className={styles.Calendar_row} >
                               <Calendar
-                                multiple
-                                onlyShowInRangeDates={true}
-                                minDate={new Date()}
-                                maxDate={inputValue2}
+                                range
                                 value={date}
+                                minDate={new Date()}
                                 onChange={setDate}
+                                format="DD MMMM  YYYY"
                                 className={styles.calender}
+                                ref={myRef} onClick={handleClickInside}
+
                               />
                             </div>
                           </div>
@@ -246,6 +268,7 @@ function TripOne() {
                         >
                           Save
                         </button>
+
                       </div>
                     </div>
                   </div>
@@ -253,6 +276,7 @@ function TripOne() {
 
               </div>
             </div>
+            {clickedOutside ? toggleInput1 : input1}
             <div className="row justify-content-center">
               <div className="col-md-4 text-center">
                 <Link href="/tripTwo">
