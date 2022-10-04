@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import icon1 from "../public/images/trip/Group 22133.png";
 import icon2 from "../public/images/trip/Group 22134.png";
 import icon3 from "../public/images/trip/Group 22135.png";
-import destination_1 from "../public/images/trip/destination_1.png";
-import destination_2 from "../public/images/trip/destination_2.png";
-import destination_3 from "../public/images/trip/destination_3.png";
-import destination_4 from "../public/images/trip/destination_4.png";
-import destination_5 from "../public/images/trip/destination_5.png";
 import MydModalWithGrid from "../components/modal";
-import cross from "../public/images/trip/cross.png";
 import styles from "../styles/TripOne.module.css";
-import Swal from "sweetalert2";
 import { Calendar } from "react-multi-date-picker";
 
 function TripOne() {
@@ -30,7 +23,6 @@ function TripOne() {
   var endDate = new Date(date[1]).toDateString();
   const [inputValue2, setInput2Value] = useState("");
   const [local, setLocal] = useState("");
-
   const handleChange = (key) => {
     if (userInfo.indexOf(key) == -1) {
       setUserInfo([...userInfo, key]);
@@ -106,6 +98,25 @@ function TripOne() {
     }
     localStorage.setItem("trip_one", JSON.stringify(obj));
   }
+  function useOutsideAlerter(ref) {
+    alert("You clicked outside of me!");
+    /**
+     * Alert if clicked on outside of element
+     */
+  }
+  function handleClickOutside(event) {
+    if (ref.current && !ref.current.contains(event.target)) {
+      alert("You clicked outside of me!");
+    }
+  }
+  useEffect(() => {
+    // Bind the event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
   return (
     <div>
       <div className={styles.main_top_background}>
