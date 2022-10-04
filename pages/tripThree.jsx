@@ -11,9 +11,9 @@ import popup_img from "../public/images/trip/popup_img.png";
 
 
 function TripThree() {
-    const [name, setName] = useState("");
-    const [mobile, setMobile] = useState("");
-    const [promo, setPromo] = useState("");
+    const [name, setName] = useState("Enter Your Name (optional)");
+    const [mobile, setMobile] = useState("Mobile Number");
+    const [promo, setPromo] = useState("Promo Code (optional)");
     const [open, setOpen] = useState(false);
     const [destinationPlace, setDestinationPlace] = useState({})
     const [interest11, setInterest11] = useState({});
@@ -36,9 +36,12 @@ function TripThree() {
             mobile: '',
             promo: ''
         }
-        obj.name = (name || "-")
+        console.log("name --->", name)
+        console.log("mobile ----->", mobile)
+        console.log("promo ------>", promo)
+        obj.name = (name === "Enter Your Name (optional)" ? "-" : name)
         obj.mobile = mobile
-        obj.promo = (promo || "-")
+        obj.promo = (promo === "Promo Code (optional)" ? "-" : promo)
         localStorage.setItem('trip_three', JSON.stringify(obj))
         setOpen(true)
         fetch(`https://ap-south-1.aws.data.mongodb-api.com/app/smarttraveller-zapex/endpoint/userInput?mob=${obj.mobile}`, {
@@ -50,8 +53,8 @@ function TripThree() {
                 "journeyStartingDate": destinationPlace.startdate,
                 "journeyEndingDate": destinationPlace.enddate,
                 "noOfGuests": destinationPlace.guests,
-                "name": (name || "-"),
-                "promo_code": (promo || "-")
+                "name": obj.name,
+                "promo_code": obj.promo
             }),
             headers: { 'Content-Type': 'application/json' },
         }).then((result) => result.json())
@@ -61,17 +64,6 @@ function TripThree() {
             .catch((error) => {
                 console.error('Error:', error);
             });
-        setFormError(validate(mobile))
-    }
-
-    const validate = (mobile) => {
-        const errors = {}
-        if (!mobile) {
-            errors.mobile = 'Phone is required'
-        }
-        else if (!/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/i.test(mobile)) {
-            errors.mobile = 'Only ten digit numbers are allowed'
-        }
     }
 
     useEffect(() => {
@@ -120,33 +112,34 @@ function TripThree() {
                                 <input
                                     type="text"
                                     id={styles.mobile_input}
-                                    placeholder="Enter Your Name (optional)"
                                     name="username"
+                                    value={name}
                                     autoComplete='off'
                                     className={styles.trip_three_inputs}
                                     onChange={(e) => setName(e.target.value)}
+                                    onFocus={(e) => (e.target.value = "")}
                                     onBlur={(e) => e.target.value = name}
                                 />
                                 <input
                                     type="text"
                                     maxLength={10}
                                     id={styles.mobile_input}
-                                    placeholder="Mobile Number"
                                     value={mobile}
                                     autoComplete='off'
                                     className={styles.trip_three_inputs}
+                                    onFocus={(e) => (e.target.value = "")}
                                     onChange={handleChange}
                                 />
                                 <p style={{ color: "red" }}>{formError}</p>
                                 <input
                                     type="text"
                                     id={styles.mobile_input}
-                                    placeholder="Promo Code (optional)"
                                     value={promo}
                                     autoComplete='off'
                                     name="promoCode"
                                     className={styles.trip_three_inputs}
                                     onChange={(e) => setPromo(e.target.value)}
+                                    onFocus={(e) => (e.target.value = "")}
                                     onBlur={(e) => e.target.value = promo}
                                 />
                             </div>
@@ -156,7 +149,7 @@ function TripThree() {
                         <div className='row justify-content-center'>
                             <div className='col-md-3'>
                                 <div className={styles.trip_three_btn}>
-                                    <button className={styles.trip_three_submit_btn} disabled={!mobile}
+                                    <button className={styles.trip_three_submit_btn} disabled={mobile === "Mobile Number"}
                                         onClick={handleSubmit}>Submit</button>
                                     {
                                         open ?
