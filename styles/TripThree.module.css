@@ -1,8 +1,8 @@
 @media only screen and (max-width:500px) {
   .main_container {
     background: url(../public/images/trip/Rectangle\ 4586.png) !important;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
     position: relative;
   }
 }
@@ -48,12 +48,6 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-
-/* .tripThree_line {
-  height: 1px;
-  border-right: 2px solid #ffffff;
-  border-width: 315px;
-} */
 .three_inputs_container {
   padding: 17% 20% 0% 20%;
 }
@@ -177,7 +171,6 @@
   line-height: 180%;
   letter-spacing: 0.02em;
   color: #ffffff;
-  /* margin-top: -15px; */
 }
 
 .back_home_btn {
@@ -232,19 +225,15 @@
   padding: 25px;
 }
 
-/* .main_back_btn11 {
-  padding-top: 70px;
-} */
+.main_back_btn11 {
+  padding: 25px 0px 25px 0px;
+} 
 
 @media only screen and (max-width: 768px) {
   .happy_travel_p1 {
     font-size: 40px !important;
    
   }
-
-  /* .back_home_btn {
-    width: 25% !important;
-  } */
   .popup_btn {
     width: 120px !important;
     font-size: 14px;
@@ -275,7 +264,6 @@
 }
 
 .happy_travling {
-  /* padding-top: 205px; */
   color: white;
 }
 
@@ -317,6 +305,7 @@
   border-bottom: 2px solid #00754a;
 }
 
-/* .top_tripThree_padding {
- padding: 50px 0px 100px 0px; 
-} */
+#trip_details_top_bottom{
+padding: 50px 0px 100px 0px;
+}
+

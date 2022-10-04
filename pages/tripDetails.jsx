@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/TripThree.module.css";
-import left_arrow from "../public/images/trip/left_arrow.png";
 
 function TripDetails() {
     const [destinationPlace, setDestinationPlace] = useState([])
@@ -27,33 +25,24 @@ function TripDetails() {
     return (
         <div>
             <div className={styles.main_container}>
-                <div className="container">
+                <div className="container" id={styles.trip_details_top_bottom}>
                     <div className="row">
                         <div className="col-lg-6">
-                            <div className={styles.happy_travling}>
-                                <div>
-                                    <p className={styles.happy_travel_p1}>Happy Travelling!</p>
+                            <div className='container' >
+                                <div className={styles.happy_travling}>
+                                    <div>
+                                        <p className={styles.happy_travel_p1}>Happy Travelling!</p>
+                                    </div>
+                                    <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
                                 </div>
-                                <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
-                                <div className={styles.main_back_btn11}>
-                                    <Link href="/"><button className={styles.back_home_btn}><Image src={left_arrow} alt="arrow" /><span className={styles.back_btn11}>Back To Home</span></button></Link>
-                                </div>
+
                             </div>
                         </div>
-                        <div className="col-lg-6" id={styles.main_card_div}>
-                            <div>
+                        <div className="col-lg-6" >
+                            <div id={styles.main_card_div}>
                                 <p className={styles.trip_details_p}>Trip Detail</p>
                                 <div className={styles.hr_line}></div>
-                                <div className='d-flex'>
-                                    <div className={styles.trip_user_p}>
-                                        <p>Name</p>
-                                        <p>Mobile Number</p>
-                                        <p>Destination</p>
-                                        <p>No of Guests</p>
-                                        <p>Interest</p>
-                                        <p>Budget per person</p>
-                                        <p>Start & End Date</p>
-                                    </div>
+                                <div className='container'>
                                     <div className='row'>
                                         <div className='col-12'>
                                             <div className='row'>
@@ -111,10 +100,11 @@ function TripDetails() {
                     </div>
                     <div className='row'>
                         <div className={styles.main_back_btn11}>
+                            <div className='container'>
                             <Link href="/"><button className="btn btn-light rounded-pill"><i class="fa fa-long-arrow-left"></i><span className={styles.back_btn11}>Back To Home</span></button></Link>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

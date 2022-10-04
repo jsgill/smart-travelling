@@ -46,7 +46,10 @@ function DreamCall() {
                 <div className="col-12">
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <Image src={manali} height="382px" width="351px" alt="bca"></Image></a></Link>
+                            <div className={styles.bca}>
+
+                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing
+                                       "><a> <Image src={group1} height="382px" width="351px" alt="bca"></Image></a></Link>
                             </div>
                             <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
                                 <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link>
@@ -98,17 +101,29 @@ function DreamCall() {
                                     )}
                                 </Popup>
                             </div>
-                            <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing"><a target="_blank"> <div className={styles.abc}>132 trips booked last week
+                            <div className={styles.abc}>245 trips booked in last week
                             </div>
-                                <div className={styles.home_carousal_title}>MANALI</div></a></Link>
-
+                            <div className={styles.home_carousal_title}>MANALI</div>
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca3}><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <Image src={group5} height="382px" width="351px" alt="bca"></Image></a></Link>
+                            <div className={styles.bca}>
+                                <Popup trigger={ <Image src={group5} height="382px" width="351px" alt="group"></Image>} modal contentStyle={{ borderRadius: "20px", width: "70%" }}>
+                                    {close => (
+                                        <div className={styles.modal}>
+                                            <button className={styles.close} onClick={close}>
+                                                &times;
+                                            </button>
+                                           
+                                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view?usp=sharing"><a></a></Link>
+                                            
+                                        </div>
+                                    )}
+                                </Popup>
+
 
                             </div>
-                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
-                                <div className={styles.home_carousal_title}>ITINERARY</div></a></Link>
+                            <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
+                            <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                     </Carousel>
                 </div>
