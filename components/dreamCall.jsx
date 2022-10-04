@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import manali from '../public/images/home/manali.png';
 import group5 from '../public/images/home/unnamed.png';
 import group1 from '../public/images/home/Group 22104.png';
 import group2 from '../public/images/home/Group 22103.png'
@@ -47,18 +48,19 @@ function DreamCall() {
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
                             
-                               <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={group5} height="382px" width="351px" alt="group"></Image></a></Link>
+                               <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={manali} height="382px" width="351px" alt="group"></Image></a></Link>
                             </div>
-                            <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
-                            <div className={styles.home_carousal_title}>ITINERARY</div>
+                            <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
+                                <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link>
+
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}>
+                            <div className={styles.bca2}>
                                 <Popup
                                     trigger={<Image src={group2} className="button" height="382px" width="351px" alt="group2"></Image>}
                                     modal
                                     contentStyle={{ borderRadius: "20px", width: "70%" }}
-                                 >
+                                >
                                     {close => (
                                         <div className={styles.modal}>
                                             <button className={styles.close} onClick={close}>
@@ -98,16 +100,17 @@ function DreamCall() {
                                     )}
                                 </Popup>
                             </div>
-                            <div className={styles.abc}>245 trips booked in last week
-</div>
-                            <div className={styles.home_carousal_title}>MANALI</div>
+                            <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing"><a target="_blank"> <div className={styles.abc}>132 trips booked last week
+                            </div>
+                                <div className={styles.home_carousal_title}>MANALI</div></a></Link>
+
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={group1} height="382px" width="351px" alt="bca"></Image></a></Link>
+                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={group5} height="382px" width="351px" alt="bca"></Image></a></Link>
                                 
                             </div>
-                            <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
-                            <div className={styles.home_carousal_title}>ITINERARY</div>
+                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
+                                <div className={styles.home_carousal_title}>ITINERARY</div></a></Link>
                         </div>
                     </Carousel>
                 </div>

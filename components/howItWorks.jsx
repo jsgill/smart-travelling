@@ -22,18 +22,18 @@ function HowItWorks() {
                 </div>
             </div>
             <div className='row justify-content-center' id={styles.laptop_div}>
-                <div className='col-md-8'>
+                <div className='col-md-8 pb-3'>
                     <div className={styles.home_needs2}>
                         <h1>Start customising <br />
                             your itinerary</h1>
                         <p>Choose from a variety of stays <br /> & activities of your choice & <br /> budget</p>
                     </div>
                 </div>
-                <div className='col-md-4'>
+                <div className='col-md-4 text-center mb-5'>
                     <Image src={rectangle1} height="400px" width="300px" alt="angle1" />
                 </div>
             </div>
-            <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2' >
+            <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
                 <div className='col-md-8'>
                     <Image src={rectangle3} height="430px" width="621px" alt="angle3" />
                 </div>

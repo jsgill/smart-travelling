@@ -45,26 +45,16 @@ function TripOne() {
   };
 
   const handleClick = () => {
-    if (userInfo.length === 0) {
-      Swal.fire({
-        text: "Select minimum 1 destination",
-        icon: "warning",
-        button: "Ok",
-      });
-    } else {
-      toggleInput1();
-      for (let i = 0; i < userInfo.length; i++) {
-        info = info.concat(userInfo[i]);
-        if (i < userInfo.length - 1) {
-          info = info.concat(", ");
-        }
+    toggleInput1();
+    info = ""
+    for (let i = 0; i < userInfo.length; i++) {
+      info = info.concat(userInfo[i]);
+      if (i < userInfo.length - 1) {
+        info = info.concat(", ");
       }
-      setInfo(info);
     }
+    setInfo(info);
     setModalShow(false);
-  };
-  const handleInput = () => {
-    console.log("++++input1++++", input1);
   };
   function toggleInput1() {
     setModalShow(true);
@@ -122,8 +112,7 @@ function TripOne() {
         <div className="container">
           <div
             className="row justify-content-center"
-            id={styles.icon_main_row}
-          >
+            id={styles.icon_main_row}>
             <div className="col-1 p-0">
               <Image src={icon1} alt="trip_section_logo" />
             </div>
@@ -142,12 +131,12 @@ function TripOne() {
           </div>
           <div className="row justify-content-center">
             <div className="col-md-8">
-              <div onClick={toggleInput1} className={styles.input_field}> 
+              <div onClick={toggleInput1} className={styles.input_field}>
                 {info.length === 0 ? "Choose Destination" : info}
               </div>
               {/*hide show div for first input  */}
-              <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} />
-              <div onClick={toggleInput2} className={styles.input_field}> 
+              <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} selectCity={userInfo.length} />
+              <div onClick={toggleInput2} className={styles.input_field}>
                 {inputTwo.length == 0 ? "No. of Guests" : inputTwo}
               </div>
               {/*input second popup for no. of people */}
@@ -156,8 +145,7 @@ function TripOne() {
                   <div className="row justify-content-center">
                     <div
                       className="col-md-3 text-center"
-                      id={styles.tripOne_inputtwo_container}
-                    >
+                      id={styles.tripOne_inputtwo_container}>
                       <div className="row justify-content-center">
                         <div className="col-md-12">
                           <div
@@ -198,13 +186,10 @@ function TripOne() {
                         <div
                           className={styles.tripOne_inputone_btn_container}
                         >
-                          <button 
-                          // className="btn btn-success"
+                          <button
+                            // className="btn btn-success"
                             className={styles.tripOne_inputone_btn}
-                            onClick={inputTwoBtn}
-
-                          >
-                            Save
+                            onClick={inputTwoBtn}>Save
                           </button>
                         </div>
                       </div>
@@ -212,7 +197,7 @@ function TripOne() {
                   </div>
                 </div>
               </div>
-              <div onClick={toggleInput3} className={styles.input_field}> 
+              <div onClick={toggleInput3} className={styles.input_field}>
                 {
                   inputThree.length == 0
                     ? "Select the Start & End Date"

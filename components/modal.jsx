@@ -42,13 +42,11 @@ function MydModalWithGrid(props) {
       NewState[key].selected = true;
       props.change(NewState[key].title)
       setDestinationSelected(NewState);
-      console.log(DestinationSelected);
     }
     else {
       NewState[key].selected = false;
       props.change(NewState[key].title)
       setDestinationSelected(NewState);
-      console.log(DestinationSelected);
     }
   }
 
@@ -91,7 +89,7 @@ function MydModalWithGrid(props) {
         </Container>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}  className={"tripOne_inputone_btn"} variant="success" size="md" >Save</Button>
+        <Button onClick={props.onHide} disabled={!props.selectCity} className={"tripOne_inputone_btn"} variant="success" size="md" >Save</Button>
       </Modal.Footer>
     </Modal>
   );

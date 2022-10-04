@@ -1,15 +1,12 @@
-import Image from "next/image";
 import React, { useState } from "react";
-
+import Image from "next/image";
 import Link from "next/link";
-import "reactjs-popup/dist/index.css";
 import cross from "../public/images/trip/cross.png";
+import styles from "../styles/tripTwo.module.css";
 import icon1 from "../public/images/tripTwo/Group 22133.png";
 import icon2 from "../public/images/tripTwo/Group 22134.png";
 import icon3 from "../public/images/tripTwo/Group 22135.png";
-import image10 from "../public/images/tripTwo/image10.png";
-import image11 from "../public/images/tripTwo/image11.png";
-import image12 from "../public/images/tripTwo/image12.png";
+import image1 from "../public/images/tripTwo/image1.png";
 import image2 from "../public/images/tripTwo/image2.png";
 import image3 from "../public/images/tripTwo/image3.png";
 import image4 from "../public/images/tripTwo/image4.png";
@@ -18,7 +15,11 @@ import image6 from "../public/images/tripTwo/image6.png";
 import image7 from "../public/images/tripTwo/image7.png";
 import image8 from "../public/images/tripTwo/image8.png";
 import image9 from "../public/images/tripTwo/image9.png";
-import styles from "../styles/tripTwo.module.css";
+import image10 from "../public/images/tripTwo/image10.png";
+import image11 from "../public/images/tripTwo/image11.png";
+import image12 from "../public/images/tripTwo/image12.png";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 function TripTwo() {
   const [input1, setInput1] = useState(false);
@@ -38,7 +39,7 @@ function TripTwo() {
   const [elevenColor, setElevenColor] = useState(true);
   const [text, setText] = useState([]);
   const [info, setInfo] = useState("");
-  const [localStr, setLocalStr] = useState("");
+  const [localStr, setLocalStr] = useState("")
 
   const toggleInput1 = () => {
     setInput1(!input1);
@@ -54,7 +55,7 @@ function TripTwo() {
     setAmount(e.target.value);
   };
 
-  const demo = () => {};
+  const demo = () => { };
 
   const saveBtn = () => {
     toggleInput2();
@@ -114,6 +115,7 @@ function TripTwo() {
       (item, index, array) => text.indexOf(item) === array.lastIndexOf(item)
     );
     setText(filter);
+    info = ""
     for (let i = 0; i < filter.length; i++) {
       info = info.concat(filter[i]);
       if (i < filter.length - 1) {
@@ -126,17 +128,16 @@ function TripTwo() {
     for (let j = 0; j < text.length; j++) {
       localStr = localStr.concat(text[j]);
       if (j < text.length - 1) {
-        localStr = localStr.concat(", ");
+        localStr = localStr.concat(", ")
       }
     }
-    setLocalStr(localStr);
+    setLocalStr(localStr)
     const obj = {
       user_interest: localStr,
-      budget: amount,
-    };
+      budget: amount
+    }
     localStorage.setItem("trip_two", JSON.stringify(obj));
-  };
-
+  }
   return (
     <div className={styles.tripTwo}>
       <div className="container">
@@ -162,79 +163,62 @@ function TripTwo() {
         </div>
         <div className="row justify-content-center py-5">
           <div className="col-md-8">
+
             <div className={styles.home_carousal_card}>
               <div className={styles.bca}>
-                <div onClick={toggleInput1} className={styles.input_field}>
-                  {info.length == 0 ? "Choose Interest" : info}
-                </div>
-
-                <div
-                  style={{ display: input1 ? "block" : "none" }}
-                  id={styles.intrest_popup}
-                  readOnly
-                >
+                <input
+                  value={text.length == 0 ? "Choose Interest" : text}
+                  onChange={demo}
+                  className={styles.input_field}
+                  onClick={toggleInput1}
+                />
+                <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
                   <div className={styles.modal}>
                     <div className="row justify-content-center">
                       <p className={styles.tripTwo_content}>Choose 3 or more</p>
-                      <p
-                        className={styles.tripTwo_cross_para}
-                        onClick={toggleInput1}
-                      >
+                      <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
                         <Image
                           src={cross}
                           alt="cross"
-                          height={20}
-                          width={20}
+                          height={12}
+                          width={15}
                           className={styles.cross_image}
                         />
                       </p>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !changeColor
-                              ? styles.camping_div_color
-                              : styles.camping_div
-                          }`}
+                          className={`${!changeColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
                           onClick={() => handleChangeColor("Camping")}
                         >
                           <p className=" py-2">
-                            <Image
-                              src={image2}
-                              height={60}
-                              width={60}
-                              alt="camping"
-                            />
+                            <Image src={image2} height={60} width={60} alt="camping" />
                           </p>
                           <p className={styles.image_para_content}>Camping</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !firstColor
-                              ? styles.camping_div_color
-                              : styles.camping_div
-                          }`}
+                          className={`${!firstColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
                           onClick={() => handleFirstColor("Hiking")}
                         >
                           <p className=" py-2">
-                            <Image
-                              src={image2}
-                              height={60}
-                              width={60}
-                              alt="hiking"
-                            />
+                            <Image src={image2} height={60} width={60} alt="hiking" />
                           </p>
                           <p className={styles.image_para_content}>Hiking</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3 " id={styles.column}>
                         <div
-                          className={`${
-                            !secondColor
-                              ? styles.camping_div_color
-                              : styles.camping_div
-                          }`}
+                          className={`${!secondColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
                           onClick={() => handleSecondColor("Offbeat")}
                         >
                           <p className=" py-2">
@@ -250,73 +234,52 @@ function TripTwo() {
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !thirdColor
-                              ? styles.camping_div_color
-                              : styles.camping_div
-                          }`}
+                          className={`${!thirdColor
+                            ? styles.camping_div_color
+                            : styles.camping_div
+                            }`}
                           onClick={() => handleThirdColor("Apple Orchards")}
                         >
                           <p className=" py-2">
-                            <Image
-                              src={image4}
-                              height={60}
-                              width={60}
-                              alt="apple"
-                            />
+                            <Image src={image4} height={60} width={60} alt="apple" />
                           </p>
-                          <p className={styles.image_para_content3}>
-                            Apple Orchards
-                          </p>
+                          <p className={styles.image_para_content3}>Apple Orchards</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !fourthColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!fourthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleFourthColor("Biking")}
                         >
                           <p className=" py-2">
-                            <Image
-                              src={image5}
-                              height={60}
-                              width={60}
-                              alt="biking"
-                            />
+                            <Image src={image5} height={60} width={60} alt="biking" />
                           </p>
                           <p className={styles.image_para_content}>Biking</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !fifthColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!fifthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleFifthColor("Forest")}
                         >
                           <p className=" py-2">
-                            <Image
-                              src={image6}
-                              height={60}
-                              width={60}
-                              alt="forest"
-                            />
+                            <Image src={image6} height={60} width={60} alt="forest" />
                           </p>
                           <p className={styles.image_para_content}>Forest</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !sixthColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!sixthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleSixthColor("Historical")}
                         >
                           <p className=" py-2">
@@ -327,18 +290,15 @@ function TripTwo() {
                               alt="historical"
                             />
                           </p>
-                          <p className={styles.image_para_content}>
-                            Historical
-                          </p>
+                          <p className={styles.image_para_content}>Historical</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !seventhColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!seventhColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleSeventhColor("Romantic")}
                         >
                           <p className=" py-2">
@@ -354,11 +314,10 @@ function TripTwo() {
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !eighthColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!eighthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleEighthColor("Adventure")}
                         >
                           <p className=" py-2">
@@ -374,11 +333,10 @@ function TripTwo() {
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !ninthColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!ninthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleNinthColor("Offroading")}
                         >
                           <p className=" py-2">
@@ -389,18 +347,15 @@ function TripTwo() {
                               alt="offroading"
                             />
                           </p>
-                          <p className={styles.image_para_content}>
-                            Offroading
-                          </p>
+                          <p className={styles.image_para_content}>Offroading</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !tenthColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!tenthColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleTenthColor("Traditional")}
                         >
                           <p className=" py-2">
@@ -411,18 +366,15 @@ function TripTwo() {
                               alt="traditional"
                             />
                           </p>
-                          <p className={styles.image_para_content}>
-                            Traditional
-                          </p>
+                          <p className={styles.image_para_content}>Traditional</p>
                         </div>
                       </div>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
-                          className={`${
-                            !elevenColor
-                              ? styles.camping_div_color1
-                              : styles.camping_div1
-                          }`}
+                          className={`${!elevenColor
+                            ? styles.camping_div_color1
+                            : styles.camping_div1
+                            }`}
                           onClick={() => handleElevenColor("Waterfall")}
                         >
                           <p className=" py-2">
@@ -438,6 +390,7 @@ function TripTwo() {
                       </div>
                       <div className={styles.tripone_inputtwo_btn_container3}>
                         <button
+                          disabled={text?.length <= 2}
                           className={styles.tripTwo_inputtwo_btn}
                           onClick={handleSubmit}
                         >
@@ -447,27 +400,26 @@ function TripTwo() {
                     </div>
                   </div>
                 </div>
-                <div onClick={toggleInput2} className={styles.input_field}>
-                  {amount.length === 0 ? "Budget Per Person" : amount}
-                </div>
 
-                <div
-                  style={{
-                    display: input2 ? "block" : "none",
-                  }}
-                  id={styles.budget_popup}
-                  readOnly
-                >
+                <input
+                  className={styles.input_field}
+                  onClick={toggleInput2}
+                  onChange={demo}
+                  value={amount.length === 0 ? "Budget Per Person" : amount}
+                />
+                <div style={{
+                  display: input2 ? "block" : "none",
+                }} id={styles.budget_popup} readOnly >
+
+
                   <div className="row justify-content-center">
-                    <p
-                      className={styles.tripTwo_cross_para}
-                      onClick={toggleInput2}
-                    >
+
+                    <p className={styles.tripTwo_cross_para} onClick={toggleInput2}>
                       <Image
                         src={cross}
                         alt="cross"
-                        height={20}
-                        width={20}
+                        height={12}
+                        width={15}
                         className={styles.cross_image}
                       />
                     </p>
@@ -475,19 +427,16 @@ function TripTwo() {
                       <input
                         placeholder="Enter Amount"
                         onChange={handleAmount}
-                        className={
-                          styles.tripTwo_inputTwo_input_container_input
-                        }
+                        className={styles.tripTwo_inputTwo_input_container_input}
                         id={styles.enter_amount_input}
                       />
                     </div>
                     <div id={styles.budget_btn_div}>
                       <input
-                        className={`${
-                          amount === "5,000"
-                            ? styles.TripTwo_btn_container_btn2
-                            : styles.TripTwo_btn_container_btn
-                        }`}
+                        className={`${amount === "5,000"
+                          ? styles.TripTwo_btn_container_btn2
+                          : styles.TripTwo_btn_container_btn
+                          }`}
                         onClick={(e) => handleBudgetAmount(e)}
                         value="5,000"
                         onChange={demo}
@@ -495,11 +444,10 @@ function TripTwo() {
                         id={styles.TripTwo_input_container_btn}
                       />
                       <input
-                        className={`${
-                          amount === "10,000"
-                            ? styles.TripTwo_btn_container_btn2
-                            : styles.TripTwo_btn_container_btn
-                        }`}
+                        className={`${amount === "10,000"
+                          ? styles.TripTwo_btn_container_btn2
+                          : styles.TripTwo_btn_container_btn
+                          }`}
                         onClick={(e) => handleBudgetAmount(e)}
                         value="10,000"
                         onChange={demo}
@@ -507,11 +455,10 @@ function TripTwo() {
                         id={styles.TripTwo_input_container_btn}
                       />
                       <input
-                        className={`${
-                          amount === "15,000"
-                            ? styles.TripTwo_btn_container_btn2
-                            : styles.TripTwo_btn_container_btn
-                        }`}
+                        className={`${amount === "15,000"
+                          ? styles.TripTwo_btn_container_btn2
+                          : styles.TripTwo_btn_container_btn
+                          }`}
                         onClick={(e) => handleBudgetAmount(e)}
                         value="15,000"
                         onChange={demo}
@@ -519,11 +466,10 @@ function TripTwo() {
                         id={styles.TripTwo_input_container_btn}
                       />
                       <input
-                        className={`${
-                          amount === "20,000"
-                            ? styles.TripTwo_btn_container_btn2
-                            : styles.TripTwo_btn_container_btn
-                        }`}
+                        className={`${amount === "20,000"
+                          ? styles.TripTwo_btn_container_btn2
+                          : styles.TripTwo_btn_container_btn
+                          }`}
                         onClick={(e) => handleBudgetAmount(e)}
                         value="20,000"
                         onChange={demo}
@@ -534,10 +480,7 @@ function TripTwo() {
                     <div className={styles.tripTwo_inputtwo_btn_container}>
                       <button
                         className={styles.tripTwo_inputtwo_btn}
-                        onClick={saveBtn}
-                      >
-                        Save
-                      </button>
+                        onClick={saveBtn}>Save </button>
                     </div>
                   </div>
                 </div>
@@ -548,11 +491,7 @@ function TripTwo() {
         <div className="row justify-content-center">
           <div className="col-xl-3  col-sm-4 text-center">
             <Link href="/tripThree">
-              <button
-                className={styles.save_btn}
-                disabled={!info || !amount}
-                onClick={handleSubmit_TripTwoData}
-              >
+              <button className={styles.save_btn} disabled={!info || !amount} onClick={handleSubmit_TripTwoData}>
                 Save & Continue
               </button>
             </Link>
