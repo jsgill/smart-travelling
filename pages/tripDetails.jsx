@@ -42,7 +42,7 @@ function TripDetails() {
                             <div id={styles.main_card_div}>
                                 <p className={styles.trip_details_p}>Trip Detail</p>
                                 <div className={styles.hr_line}></div>
-                                <div className='container'>
+                                <div className='container pt-3'>
                                     <div className='row'>
                                         <div className='col-12'>
                                             <div className='row'>

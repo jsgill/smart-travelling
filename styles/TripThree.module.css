@@ -4,6 +4,8 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
     position: relative;
+    height: 100vh !important;
+    width: 100% !important
   }
 }
 
@@ -219,6 +221,7 @@
   background: #00754a;
   border-radius: 2px;
   margin-top: -36px;
+  
 }
 
 .trip_user_p {
@@ -261,6 +264,7 @@
   height: 100%;
   width: 100%;
   padding: 20px;
+ 
 }
 
 .happy_travling {
@@ -307,5 +311,6 @@
 
 #trip_details_top_bottom{
 padding: 50px 0px 100px 0px;
+border-radius: 25%;
 }
 
