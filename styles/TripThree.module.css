@@ -1,13 +1,20 @@
+@media only screen and (max-width:500px) {
+  .main_container {
+    background: url(../public/images/trip/Rectangle\ 4586.png) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+}
+
 .main_top_background {
   background: url(../public/images/trip/trip_background.png);
-  /* height: 100vh;
-  width: 100%; */
-  /* background-position: center; */
+  height: 100vh;
+  background-position: center; 
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 100vh;
-  width: 100%;
+  width: 100%
 }
 
 .tripThree_logo_container {
@@ -89,7 +96,7 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 180%;
   letter-spacing: 0.02em;
   color: rgba(18, 18, 18, 0.9);
@@ -129,7 +136,6 @@
   border-radius: 32px;
   outline: none;
   border: 0px;
-  font-size: 1rem;
   color: #ffffff;
 }
 
@@ -171,11 +177,11 @@
   line-height: 180%;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-top: -15px;
+  /* margin-top: -15px; */
 }
 
 .back_home_btn {
-  width: 270px;
+   width: 270px;
   height: 64px;
   background: #ffffff;
   border-radius: 32px;
@@ -195,15 +201,11 @@
 }
 
 #main_card_div {
-  /* width: 535px; */
+  width: 100%;
   background: #ffffff;
   border: 1px solid #9e9e9e;
   border-radius: 11.403px;
-  margin-top: 123px;
-  /* position: absolute;
-  left: 50%; */
-
-  transform: (-50%, -50%);
+  height: 100%;
 }
 
 .trip_details_p {
@@ -230,24 +232,14 @@
   padding: 25px;
 }
 
-.main_back_btn11 {
+/* .main_back_btn11 {
   padding-top: 70px;
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .happy_travel_p1 {
-    text-align: center;
-  }
-
-  .content {
-    width: 100%;
-    padding: 10px 5px;
-  }
-
-  .actions {
-    width: 100%;
     font-size: 40px !important;
-    text-align: center !important;
+   
   }
 
   /* .back_home_btn {
@@ -255,8 +247,9 @@
   } */
   .popup_btn {
     width: 120px !important;
-    font-size: 0.5rem;
+    font-size: 14px;
   }
+
   .header {
     font-size: 1.2rem;
   }
@@ -265,12 +258,10 @@
 @media only screen and (max-width: 1024px) {
   .happy_travel_p1 {
     font-size: 40px !important;
-    text-align: center !important;
+    
   }
 
-  .happy_travling {
-    text-align: center !important;
-  }
+  
 }
 
 .main_container {
@@ -278,12 +269,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 800px;
+  height: 100%;
   width: 100%;
+  padding: 20px;
 }
 
 .happy_travling {
-  padding-top: 205px;
+  /* padding-top: 205px; */
   color: white;
 }
 
@@ -320,10 +312,11 @@
   background: #ffffff;
   border-radius: 32px;
 }
-.trip_three_submit_btn:disabled {
-  cursor: not-allowed;
+
+.Trip_Details .h6 {
+  border-bottom: 2px solid #00754a;
 }
 
-#mobile_input::-webkit-input-placeholder {
-  color: #fff;
-}
+/* .top_tripThree_padding {
+ padding: 50px 0px 100px 0px; 
+} */

@@ -37,12 +37,24 @@
     }
 }
 
-.home_needs1 {
+/* .home_needs1 {
     padding: 25% 0% 25% 0%;
 }
 
 .home_needs2 {
-    padding: 15% 0% 25% 0%;
+    padding: 15% 0% 50% 0%;
+} */
+.home_needs2{
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    position: relative;
+}
+.home_needs1{
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    position: relative;
 }
 
 .home_needs1 h1 {
@@ -86,11 +98,15 @@
     font-weight: 600;
     font-size: 64px;
     line-height: 130%;
+    padding: 0px 0px 25px 0px;
     text-align: center;
     color: #121212;
     font-family: "Poppins", sans-serif;
 }
 
 #laptop_div {
-    margin-bottom: -100px;
+    padding: 50px 0px 50px 0px;
+}
+#howItWorks_main_container{
+    padding-bottom: 100px;
 }

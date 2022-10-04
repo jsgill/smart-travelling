@@ -8,12 +8,12 @@ import Link from 'next/link'
 function HappeningNow() {
     return (
         <div className='container mb-5'>
-            <div className='row justify-content-center'>
+            <div className='row justify-content-center py-2'>
                 <div className={styles.home_happening}>
                     <h1>Happening Now.....</h1>
                 </div>
             </div>
-            <div className='row justify-content-center'>
+            <div className='row justify-content-center' id={styles.main_happening}>
                 <div className='col-md-8 text-center'>
                     <div>
                         <div className='row'>
@@ -25,15 +25,15 @@ function HappeningNow() {
                                     <div className={styles.home_mountain}>
                                         <h4>BBQ at hidden waterfall</h4>
                                         <p>Sizzling hot muchies out of barbecue,
-in the middle of nowhere waterfall</p>
+                                            in the middle of nowhere waterfall</p>
                                         <div className={styles.demo}></div>
                                     </div>
                                     <div className='row pt-1'>
                                         <div className='col-6 text-start'><Link href="/tripOne">
-                                                            <a className={styles.home_explore} type="button">
-                                                                <span>Plan your Trip</span>
-                                                            </a>
-                                                        </Link></div>
+                                            <a className={styles.home_explore} type="button">
+                                                <span>Plan your Trip</span>
+                                            </a>
+                                        </Link></div>
                                         <div className='col-6 text-end'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="right"></Image></a></Link></div>
                                     </div>
                                 </div>
@@ -44,17 +44,17 @@ in the middle of nowhere waterfall</p>
                 <div className='col-md-4'>
                     <div>
                         <Image src={image2} height="212px" width="458px" alt="right-now"></Image>
-                        <div className='container mb-2'>
+                        <div className='container'>
                             <div className={styles.saprater}>
                                 <h4>Riverside camping at kasol </h4>
                                 <p>A bad day camping is still better than a good day working</p>
                             </div>
                             <div className='row pt-1'>
                                 <div className='col-6'><Link href="/tripOne">
-                                                            <a className={styles.home_explore} type="button">
-                                                                <span>Plan your Trip</span>
-                                                            </a>
-                                                        </Link></div>
+                                    <a className={styles.home_explore} type="button">
+                                        <span>Plan your Trip</span>
+                                    </a>
+                                </Link></div>
                                 <div className='col-6 text-end'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="arrow"></Image></a></Link></div>
                             </div>
                         </div>

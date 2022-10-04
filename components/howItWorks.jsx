@@ -6,17 +6,17 @@ import rectangle3 from '../public/images/home/Rectangle (2).png'
 import Image from 'next/image'
 function HowItWorks() {
     return (
-        <div className='container'>
+        <div className='container' id={styles.howItWorks_main_container}>
             <div className='row justify-content-center'>
                 <div className={styles.home_works}><h1>How it works</h1></div>
             </div>
             <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
-                <div className='col-md-8'>
+                <div className='col-md-7'>
                     <Image src={rectangle} height="456px" width="664px" alt="angle" />
                 </div>
-                <div className='col-md-4'>
+                <div className='col-md-5'>
                     <div className={styles.home_needs1}>
-                        <h1>Your Needs,<br /> Our Magic</h1>
+                        <h1>Your Needs,Our Magic</h1>
                         <p>Share your trip requirements to <br /> feed our magical <br /> recommendation algorithm</p>
                     </div>
                 </div>
@@ -33,9 +33,9 @@ function HowItWorks() {
                     <Image src={rectangle1} height="400px" width="300px" alt="angle1" />
                 </div>
             </div>
-            <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
+            <div className='row justify-content-center  flex-column-reverse flex-lg-row' >
                 <div className='col-md-8'>
-                    <Image src={rectangle3} height="430px" width="621px" alt="angle3" />
+                    <Image src={rectangle3} height="456px" width="664px" alt="angle3" />
                 </div>
                 <div className='col-md-4'>
                     <div className={styles.home_needs1}>

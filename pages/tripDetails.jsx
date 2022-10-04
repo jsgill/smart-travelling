@@ -54,28 +54,64 @@ function TripDetails() {
                                         <p>Budget per person</p>
                                         <p>Start & End Date</p>
                                     </div>
-                                    <div className={styles.trip_user_p}>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-
-                                    </div>
-                                    <div className={styles.trip_user_p}>
-                                        <p>{!!userDetails ? userDetails.name : null}</p>
-                                        <p>(+91) {!!userDetails ? userDetails.mobile : null}</p>
-                                        <p>{destinationPlace.destination}</p>
-                                        <p>{!!destinationPlace ? destinationPlace.guests : null}</p>
-                                        <p>{!!interest11 ? interest11.user_interest : null}</p>
-                                        <p>₹ {!!interest11 ? interest11.budget : null}</p>
-                                        <p>{!!destinationPlace ? destinationPlace.startdate : null}, {!!destinationPlace ? destinationPlace.enddate : null}</p>
-
+                                    <div className='row'>
+                                        <div className='col-12'>
+                                            <div className='row'>
+                                                <div className='col-4'><p>Name</p></div>
+                                                <div className='col-2'><p>:</p></div>
+                                                <div className='col-6'><p>{!!userDetails ? userDetails.name : null}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='col-12'>
+                                            <div className='row'>
+                                                <div className='col-4'><p>Mobile</p></div>
+                                                <div className='col-2'><p>:</p></div>
+                                                <div className='col-6'> <p>+{!!userDetails ? userDetails.mobile : null}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='col-12'>
+                                            <div className='row'>
+                                                <div className='col-4'><p>Destination</p></div>
+                                                <div className='col-2'><p>:</p></div>
+                                                <div className='col-6'><p>{destinationPlace.destination}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='col-12'>
+                                            <div className='row'>
+                                                <div className='col-4'><p>Guests</p></div>
+                                                <div className='col-2'><p>:</p></div>
+                                                <div className='col-6'> <p>{!!destinationPlace ? destinationPlace.guests : null}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='col-12'>
+                                            <div className='row'>
+                                                <div className='col-4'><p>Interest</p></div>
+                                                <div className='col-2'><p>:</p></div>
+                                                <div className='col-6'><p>{!!interest11 ? interest11.user_interest : null}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='col-12'>
+                                            <div className='row'>
+                                                <div className='col-4'><p>Budget</p></div>
+                                                <div className='col-2'><p>:</p></div>
+                                                <div className='col-6'> <p>₹ {!!interest11 ? interest11.budget : null}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='col-12'>
+                                            <div className='row'>
+                                                <div className='col-4'><p>Start & End Date</p></div>
+                                                <div className='col-2'><p>:</p></div>
+                                                <div className='col-6'><p>{!!destinationPlace ? destinationPlace.startdate : null}, {!!destinationPlace ? destinationPlace.enddate : null}</p></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className='row'>
+                        <div className={styles.main_back_btn11}>
+                            <Link href="/"><button className="btn btn-light rounded-pill"><i class="fa fa-long-arrow-left"></i><span className={styles.back_btn11}>Back To Home</span></button></Link>
                         </div>
                     </div>
 
