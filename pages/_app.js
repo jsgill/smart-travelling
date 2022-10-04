@@ -6,6 +6,16 @@ import Script from "next/script";
 function MyApp({ Component, pageProps }) {
   return (
     <div>
+          <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-FFHWQ93DPE`} />
+          <Script id="google-analytics" strategy="lazyOnload">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FFHWQ93DPE', {
+              page_path: window.location.pathname,
+              });`}
+          </Script>
       <Head>
         {/* --Font-Family-- */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

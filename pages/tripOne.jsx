@@ -181,7 +181,7 @@ function TripOne() {
                                 className="btn rounded-pill"
                                 id={styles.increment}
                               >
-                                <i class="fa fa-minus"></i>
+                                <i className="fa fa-minus"></i>
                               </button>
                             </div>
                             <p
