@@ -35,6 +35,9 @@
     .home_works h1 {
         font-size: 30px !important;
     }
+    .home_works{
+        padding: 25px 0px 25px 0px !important;
+    }
 }
 
 /* .home_needs1 {
@@ -98,7 +101,7 @@
     font-weight: 600;
     font-size: 64px;
     line-height: 130%;
-    padding: 0px 0px 25px 0px;
+    margin-bottom: 50px;
     text-align: center;
     color: #121212;
     font-family: "Poppins", sans-serif;

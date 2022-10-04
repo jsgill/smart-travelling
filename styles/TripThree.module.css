@@ -264,7 +264,7 @@
   height: 100%;
   width: 100%;
   padding: 20px;
- 
+  border-radius: 25%;
 }
 
 .happy_travling {
@@ -311,6 +311,5 @@
 
 #trip_details_top_bottom{
 padding: 50px 0px 100px 0px;
-border-radius: 25%;
 }
 

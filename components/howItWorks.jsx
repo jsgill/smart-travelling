@@ -10,11 +10,11 @@ function HowItWorks() {
             <div className='row justify-content-center'>
                 <div className={styles.home_works}><h1>How it works</h1></div>
             </div>
-            <div className='row justify-content-center  flex-column-reverse flex-lg-row mb-2'>
-                <div className='col-md-7'>
+            <div className='row justify-content-center'>
+                <div className='col-md-7 py-2'>
                     <Image src={rectangle} height="456px" width="664px" alt="angle" />
                 </div>
-                <div className='col-md-5'>
+                <div className='col-md-5 py-2'>
                     <div className={styles.home_needs1}>
                         <h1>Your Needs,Our Magic</h1>
                         <p>Share your trip requirements to <br /> feed our magical <br /> recommendation algorithm</p>
@@ -22,22 +22,22 @@ function HowItWorks() {
                 </div>
             </div>
             <div className='row justify-content-center' id={styles.laptop_div}>
-                <div className='col-md-8 pb-3'>
+                <div className='col-md-8 py-2'>
                     <div className={styles.home_needs2}>
                         <h1>Start customising <br />
                             your itinerary</h1>
                         <p>Choose from a variety of stays <br /> & activities of your choice & <br /> budget</p>
                     </div>
                 </div>
-                <div className='col-md-4 text-center mb-5'>
+                <div className='col-md-4 text-center py-2'>
                     <Image src={rectangle1} height="400px" width="300px" alt="angle1" />
                 </div>
             </div>
-            <div className='row justify-content-center  flex-column-reverse flex-lg-row' >
-                <div className='col-md-8'>
+            <div className='row justify-content-center' >
+                <div className='col-md-8 py-2'>
                     <Image src={rectangle3} height="456px" width="664px" alt="angle3" />
                 </div>
-                <div className='col-md-4'>
+                <div className='col-md-4 py-2'>
                     <div className={styles.home_needs1}>
                         <h1>Tap once & book it all</h1>
                         <p>Do all your stay, activities& <br /> transport booking at just one <br /> click, at only 20% booking <br /> amount</p>

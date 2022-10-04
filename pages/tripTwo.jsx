@@ -162,7 +162,7 @@ function TripTwo() {
           </div>
         </div>
         <div className="row justify-content-center py-5">
-          <div className="col-md-8">
+          <div className="col-md-7">
 
             <div className={styles.home_carousal_card}>
               <div className={styles.bca}>
@@ -489,7 +489,7 @@ function TripTwo() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-xl-3  col-sm-4 text-center">
+          <div className="col-md-5 text-center">
             <Link href="/tripThree">
               <button className={styles.save_btn} disabled={!info || !amount} onClick={handleSubmit_TripTwoData}>
                 Save & Continue

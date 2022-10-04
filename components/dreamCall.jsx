@@ -4,7 +4,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import manali from '../public/images/home/manali.png';
 import group5 from '../public/images/home/unnamed.png';
 import group1 from '../public/images/home/Group 22104.png';
 import group2 from '../public/images/home/Group 22103.png'
@@ -48,7 +47,7 @@ function DreamCall() {
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
 
-                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing
+                            <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing
                                        "><a> <Image src={group1} height="382px" width="351px" alt="bca"></Image></a></Link>
                             </div>
                             <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
@@ -101,29 +100,17 @@ function DreamCall() {
                                     )}
                                 </Popup>
                             </div>
-                            <div className={styles.abc}>245 trips booked in last week
+                             <div className={styles.abc}>245 trips booked in last week
                             </div>
                             <div className={styles.home_carousal_title}>MANALI</div>
                         </div>
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
-                                <Popup trigger={ <Image src={group5} height="382px" width="351px" alt="group"></Image>} modal contentStyle={{ borderRadius: "20px", width: "70%" }}>
-                                    {close => (
-                                        <div className={styles.modal}>
-                                            <button className={styles.close} onClick={close}>
-                                                &times;
-                                            </button>
-                                           
-                                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view?usp=sharing"><a></a></Link>
-                                            
-                                        </div>
-                                    )}
-                                </Popup>
-
+                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view?usp=sharing"><a> <Image src={group5} height="382px" width="351px" alt="group"></Image></a></Link>
 
                             </div>
-                            <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
-                            <div className={styles.home_carousal_title}>ITINERARY</div>
+                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
+                                <div className={styles.home_carousal_title}>ITINERARY</div></a></Link>
                         </div>
                     </Carousel>
                 </div>

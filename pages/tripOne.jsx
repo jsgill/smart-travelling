@@ -130,7 +130,7 @@ function TripOne() {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-md-8">
+            <div className="col-md-7">
               <div onClick={toggleInput1} className={styles.input_field}>
                 {info.length === 0 ? "Choose Destination" : info}
               </div>
@@ -172,9 +172,6 @@ function TripOne() {
                             <div >
                               <button
                                 onClick={increment}
-                                // className={
-                                //   styles.tripOne_content_inc_dec_operator2
-                                // }
                                 id={styles.increment}
                                 className="btn rounded-pill"
                               >
@@ -254,7 +251,7 @@ function TripOne() {
               </div>
             </div>
             <div className="row justify-content-center">
-              <div className="col-md-4 text-center">
+              <div className="col-md-5 text-center">
                 <Link href="/tripTwo">
                   <button
                     className={styles.save_btn}
