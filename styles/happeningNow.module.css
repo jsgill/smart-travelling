@@ -2,6 +2,13 @@
     .home_happening h1 {
         font-size: 30px !important;
     }
+    .home_mountain {
+        text-align: center !important;
+    }
+    .saprater {
+        text-align: center !important;
+        padding: 100px 0px 100px 0px !important;
+    }
 }
 
 .home_happening h1 {
@@ -31,7 +38,7 @@
     border-bottom: 2px solid #00754A;
     width: 100%;
     padding: 10px 0px 16px 0px;
-    text-align: start;
+    text-align: start ;
 }
 
 .home_mountain {

@@ -14,7 +14,7 @@ function HappeningNow() {
                 </div>
             </div>
             <div className='row justify-content-center' id={styles.main_happening}>
-                <div className='col-md-8 text-center'>
+                <div className='col-md-8 text-center mb-5'>
                     <div>
                         <div className='row'>
                             <div className='col-md-4 '>
@@ -41,16 +41,16 @@ function HappeningNow() {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-4'>
+                <div className='col-md-4 text-center'>
                     <div>
                         <Image src={image2} height="212px" width="458px" alt="right-now"></Image>
-                        <div className='container'>
+                        <div>
                             <div className={styles.saprater}>
                                 <h4>Riverside camping at kasol </h4>
                                 <p>A bad day camping is still better than a good day working</p>
                             </div>
                             <div className='row pt-1'>
-                                <div className='col-6'><Link href="/tripOne">
+                                <div className='col-6 text-start'><Link href="/tripOne">
                                     <a className={styles.home_explore} type="button">
                                         <span>Plan your Trip</span>
                                     </a>
