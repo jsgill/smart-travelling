@@ -28,7 +28,7 @@ function HappeningNow() {
                                             in the middle of nowhere waterfall</p>
                                         <div className={styles.demo}></div>
                                     </div>
-                                    <div className='row'>
+                                    <div className='row pt-1'>
                                         <div className='col-6 text-start'><Link href="/tripOne">
                                             <a className={styles.home_explore} type="button">
                                                 <span>Plan your Trip</span>

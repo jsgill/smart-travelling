@@ -48,22 +48,36 @@
     text-align: center;
 }
 
+
+
 .bca {
     position: relative;
-    filter: contrast(28%);
+    filter: contrast(50%);
 }
 
-.bca:hover{
-    filter: contrast(128%);
+
+.bca:hover {
+    filter: contrast(18%);
 }
 
-.bca2 {
+.bca1 {
     position: relative;
-    filter: contrast(40%);
+    filter: contrast(50%);
+    border-radius: 10px;
 }
 
-.bca2:hover{
-    filter: contrast(100%);
+
+.bca1:hover {
+    filter: contrast(18%);
+}
+
+#bca2 {
+    position: relative;
+    filter: contrast(50%);
+}
+
+#bca2:hover {
+    filter: contrast(18%);
 }
 
 
@@ -72,8 +86,8 @@
     filter: contrast(30%);
 }
 
-.bca3:hover{
-    filter: contrast(100%);
+.bca3:hover {
+    filter: contrast(50%);
 }
 
 .home_carousal_card .abc {

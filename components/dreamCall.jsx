@@ -4,10 +4,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import manali from '../public/images/home/manali.png';
-import group5 from '../public/images/home/unnamed.png';
-import group1 from '../public/images/home/Group 22104.png';
-import group2 from '../public/images/home/Group 22103.png'
+import slider1 from "../public/images/home/slider1.jpg";
+import slider3 from "../public/images/home/slider3.png";
+import slider2 from "../public/images/home/slider2.png";
 import group3 from '../public/images/home/Rectangle 4566.png'
 import group4 from '../public/images/home/Rectangle 4567.png'
 import circle from '../public/images/home/Ellipse 293.png'
@@ -39,25 +38,25 @@ function DreamCall() {
                 <div className={styles.home_dream}>
                     <div className={styles.home_div_1}>Don’t call it a dream,</div>
                     <div className={styles.home_div_2}>call it a plan</div>
-                    <p className='py-2'>Check out these trending attractions</p>
+                    <p className='py-2 mb-5'>Check out these trending attractions</p>
                 </div>
             </div>
             <div className='row justify-content-center'>
                 <div className="col-12">
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}>
+                            <div >
 
-                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={manali} height="382px" width="351px" alt="group"></Image></a></Link>
+                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={slider1} height="382px" width="351px" alt="group" className={styles.bca1}></Image></a></Link>
                             </div>
                             <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
                                 <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link>
 
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca2}>
+                            <div >
                                 <Popup
-                                    trigger={<Image src={group2} className="button" height="382px" width="351px" alt="group2"></Image>}
+                                    trigger={<Image src={slider2} className="button" height="382px" width="351px" alt="group2" id={styles.bca2}></Image>}
                                     modal
                                     contentStyle={{ borderRadius: "20px", width: "70%" }}
                                 >
@@ -106,7 +105,7 @@ function DreamCall() {
 
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={group5} height="382px" width="351px" alt="bca"></Image></a></Link>
+                            <div ><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={slider3} height="382px" width="351px" alt="bca" className={styles.bca}></Image></a></Link>
 
                             </div>
                             <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
