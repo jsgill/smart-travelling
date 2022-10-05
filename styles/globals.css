@@ -1,5 +1,6 @@
 .container {
   max-width: 1200px !important;
+  padding: 5px 0px 5px 0px;
 }
 
 .nav-link {
@@ -48,21 +49,22 @@
   padding-top: 10px;
   margin-bottom: 10px;
 }
+
 .col-6 {
   margin-bottom: auto;
 }
 
 .tripOne_inputone_btn {
   margin-top: 10px;
-    background: #00754a;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    color: #ffffff;
-    padding: 8px 50px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 1px;
+  background: #00754a;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  padding: 8px 50px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
   /* margin-top: 10px; */
   /* background: #00754a;
   border-radius: 20px;
@@ -75,6 +77,7 @@
   letter-spacing: 1px; */
   z-index: 999;
 }
+
 .modal-footer {
   justify-content: center;
 }

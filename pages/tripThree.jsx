@@ -57,12 +57,12 @@ function TripThree() {
                 "name": obj.name,
                 "promo_code": obj.promo
             },
-            })
+        })
             .then((r) => {
-            console.log("data sent to formbold");
-        }).catch((r) => {
-        console.log("error");
-        });
+                console.log("data sent to formbold");
+            }).catch((r) => {
+                console.log("error");
+            });
         fetch(`https://ap-south-1.aws.data.mongodb-api.com/app/smarttraveller-zapex/endpoint/userInput?mob=${obj.mobile}`, {
             method: "POST",
             body: JSON.stringify({

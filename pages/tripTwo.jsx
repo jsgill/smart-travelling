@@ -177,13 +177,7 @@ function TripTwo() {
                     <div className="row justify-content-center">
                       <p className={styles.tripTwo_content}>Choose 3 or more</p>
                       <p className={styles.tripTwo_cross_para} onClick={toggleInput1}>
-                        <Image
-                          src={cross}
-                          alt="cross"
-                          height={12}
-                          width={15}
-                          className={styles.cross_image}
-                        />
+                        <button type="button" class="btn-close" aria-label="Close"></button>
                       </p>
                       <div className="col-xl-3 col-sm-3" id={styles.column}>
                         <div
@@ -415,13 +409,7 @@ function TripTwo() {
                   <div className="row justify-content-center">
 
                     <p className={styles.tripTwo_cross_para} onClick={toggleInput2}>
-                      <Image
-                        src={cross}
-                        alt="cross"
-                        height={12}
-                        width={15}
-                        className={styles.cross_image}
-                      />
+                      <button type="button" class="btn-close" aria-label="Close"></button>
                     </p>
                     <div className="text-center mb-5 mt-2">
                       <input

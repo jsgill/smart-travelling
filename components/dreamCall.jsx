@@ -39,7 +39,7 @@ function DreamCall() {
                 <div className={styles.home_dream}>
                     <div className={styles.home_div_1}>Don’t call it a dream,</div>
                     <div className={styles.home_div_2}>call it a plan</div>
-                    <p>Check out these trending attractions</p>
+                    <p className='py-2'>Check out these trending attractions</p>
                 </div>
             </div>
             <div className='row justify-content-center'>
@@ -47,8 +47,8 @@ function DreamCall() {
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}>
-                            
-                               <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={manali} height="382px" width="351px" alt="group"></Image></a></Link>
+
+                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={manali} height="382px" width="351px" alt="group"></Image></a></Link>
                             </div>
                             <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
                                 <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link>
@@ -107,7 +107,7 @@ function DreamCall() {
                         </div>
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca}><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={group5} height="382px" width="351px" alt="bca"></Image></a></Link>
-                                
+
                             </div>
                             <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
                                 <div className={styles.home_carousal_title}>ITINERARY</div></a></Link>

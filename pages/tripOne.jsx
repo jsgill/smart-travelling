@@ -109,22 +109,6 @@ function TripOne() {
     localStorage.setItem("trip_one", JSON.stringify(obj));
   }
 
-  const [clickedOutside, setClickedOutside] = useState(false);
-  const myRef = useRef();
-
-  const handleClickOutside = e => {
-    if (!myRef.current.contains(e.target)) {
-      setClickedOutside(true);
-    }
-  };
-
-  const handleClickInside = () => setClickedOutside(false);
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  });
-
 
   return (
     <div>
@@ -252,7 +236,7 @@ function TripOne() {
                                 onChange={setDate}
                                 format="DD MMMM  YYYY"
                                 className={styles.calender}
-                                ref={myRef} onClick={handleClickInside}
+
 
                               />
                             </div>
@@ -276,7 +260,7 @@ function TripOne() {
 
               </div>
             </div>
-            {clickedOutside ? toggleInput1 : input1}
+
             <div className="row justify-content-center">
               <div className="col-md-4 text-center">
                 <Link href="/tripTwo">
