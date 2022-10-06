@@ -7,6 +7,8 @@ import icon2 from "../public/images/tripTwo/Group 22134.png";
 import icon from "../public/images/tripTwo/Color.png";
 import 'reactjs-popup/dist/index.css';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function TripThree() {
     const [name, setName] = useState("Enter Your Name (optional)");
@@ -81,6 +83,9 @@ function TripThree() {
             headers: { 'Content-Type': 'application/json' },
         }).then((result) => result.json())
             .then((response) => {
+                toast.success("Success, Done, Let's Go", {
+                position: "top-right"
+                });
                 console.log("++++response ++++++", response)
                 if (response) {
                     Router.push({ pathname: "/tripDetails" });
