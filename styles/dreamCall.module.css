@@ -54,6 +54,7 @@
 .bca {
   position: relative;
   filter: contrast(50%);
+  border-radius: 10px;
 }
 
 
