@@ -7,9 +7,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function TripDetails() {
-    const [destinationPlace, setDestinationPlace] = useState([])
-    const [userInterest, setUserInterest] = useState([]);
-    const [userDetails, setUserDetails] = useState([])
+    const [destinationPlace, setDestinationPlace] = useState("")
+    const [userInterest, setUserInterest] = useState("");
+    const [userDetails, setUserDetails] = useState("")
 
     useEffect(() => {
         const user_dest = JSON.parse(localStorage.getItem('trip_one'));

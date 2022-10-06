@@ -13,25 +13,29 @@ function TripThree() {
     const [mobile, setMobile] = useState("Mobile Number");
     const [promo, setPromo] = useState("Promo Code (optional)");
     const [destinationPlace, setDestinationPlace] = useState({})
-    const [interest11, setInterest11] = useState({});
+    const [userInterest, setUserInterest] = useState({});
     const [formError, setFormError] = useState("");
-    const [dbRes, setDbRes] = useState("");
     const [userDetails, setUserDetails] = useState([]);
 
     useEffect(() => {
         const user_dest = JSON.parse(localStorage.getItem('trip_one'));
-        if (user_dest) {
-            setDestinationPlace(user_dest)
-        }
+        setDestinationPlace(user_dest)
         const user_interest = JSON.parse(localStorage.getItem('trip_two'));
-        if (user_interest) {
-            setInterest11(user_interest)
-        }
+        setUserInterest(user_interest)
         const three = JSON.parse(localStorage.getItem('trip_three'));
-        if (three) {
-            setUserDetails(three)
-        }
+        setUserDetails(three)
     }, []);
+
+    const handleChange = event => {
+        const result = event.target.value.replace(/\D/g, '');
+        setMobile(result);
+        if (result.length < 10) {
+            setFormError("Please enter 10 digit");
+        }
+        else {
+            setFormError("")
+        }
+    };
 
     const handleSubmit = () => {
         const obj = {
@@ -47,9 +51,9 @@ function TripThree() {
             method: "POST",
             url: "https://formbold.com/s/6MM76",
             data: {
-                "userInterests": interest11.user_interest,
+                "userInterests": userInterest.user_interest,
                 "userDestination": destinationPlace.destination,
-                "journeyBudget": interest11.budget,
+                "journeyBudget": userInterest.budget,
                 "journeyStartingDate": destinationPlace.startdate,
                 "journeyEndingDate": destinationPlace.enddate,
                 "noOfGuests": destinationPlace.guests,
@@ -65,9 +69,9 @@ function TripThree() {
         fetch(`https://ap-south-1.aws.data.mongodb-api.com/app/smarttraveller-zapex/endpoint/userInput?mob=${obj.mobile}`, {
             method: "POST",
             body: JSON.stringify({
-                "userInterests": interest11.user_interest,
+                "userInterests": userInterest.user_interest,
                 "userDestination": destinationPlace.destination,
-                "journeyBudget": interest11.budget,
+                "journeyBudget": userInterest.budget,
                 "journeyStartingDate": destinationPlace.startdate,
                 "journeyEndingDate": destinationPlace.enddate,
                 "noOfGuests": destinationPlace.guests,
@@ -78,26 +82,15 @@ function TripThree() {
         }).then((result) => result.json())
             .then((response) => {
                 console.log("++++response ++++++", response)
-                setDbRes(response)
+                if (response) {
+                    Router.push({ pathname: "/tripDetails" });
+                }
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
-        if (dbRes) {
-            Router.push({ pathname: "/tripDetails" });
-        }
+
     }
-
-    useEffect(() => {
-        if (!mobile.length) {
-            setFormError("");
-        }
-    }, [mobile]);
-
-    const handleChange = event => {
-        const result = event.target.value.replace(/\D/g, '');
-        setMobile(result);
-    };
     return (
         <div>
             <div className={styles.main_top_background}>
@@ -147,10 +140,11 @@ function TripThree() {
                                     value={mobile}
                                     autoComplete='off'
                                     className={styles.trip_three_inputs}
-                                    onFocus={(e) => (e.target.value = "")}
                                     onChange={handleChange}
+                                    onFocus={(e) => (e.target.value = "")}
+                                    onBlur={(e) => e.target.value = mobile}
                                 />
-                                <p style={{ color: "red" }}>{formError}</p>
+                                <span className={styles.mobile_validation_error}>{formError}</span>
                                 <input
                                     type="text"
                                     id={styles.mobile_input}
