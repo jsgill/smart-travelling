@@ -3,26 +3,31 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/TripThree.module.css";
 import left_arrow from "../public/images/trip/left_arrow.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function TripDetails() {
     const [destinationPlace, setDestinationPlace] = useState([])
-    const [interest11, setInterest11] = useState([]);
+    const [userInterest, setUserInterest] = useState([]);
     const [userDetails, setUserDetails] = useState([])
 
     useEffect(() => {
         const user_dest = JSON.parse(localStorage.getItem('trip_one'));
-        if (user_dest) {
-            setDestinationPlace(user_dest)
-        }
+        setDestinationPlace(user_dest)
         const user_interest = JSON.parse(localStorage.getItem('trip_two'));
-        if (user_interest) {
-            setInterest11(user_interest)
-        }
-        const three = JSON.parse(localStorage.getItem('trip_three'));
-        if (three) {
-            setUserDetails(three)
-        }
-    }, []);
+        setUserInterest(user_interest)
+        const tripThree = JSON.parse(localStorage.getItem('trip_three'));
+        setUserDetails(tripThree)
+    }, [])
+
+    useEffect(() => {
+        return () =>
+            toast.success("Success, Done, Let's Go", {
+                position: "top-right",
+                autoClose: 3000
+            });
+        // eslint-disable-next-line
+    }, [])
 
     return (
         <div>
@@ -62,25 +67,23 @@ function TripDetails() {
                                         <p>:</p>
                                         <p>:</p>
                                         <p>:</p>
-
                                     </div>
                                     <div className={styles.trip_user_p}>
-                                        <p>{!!userDetails ? userDetails.name : null}</p>
-                                        <p>(+91) {!!userDetails ? userDetails.mobile : null}</p>
+                                        <p>{userDetails.name}</p>
+                                        <p>(+91) {userDetails.mobile}</p>
                                         <p>{destinationPlace.destination}</p>
-                                        <p>{!!destinationPlace ? destinationPlace.guests : null}</p>
-                                        <p>{!!interest11 ? interest11.user_interest : null}</p>
-                                        <p>₹ {!!interest11 ? interest11.budget : null}</p>
-                                        <p>{!!destinationPlace ? destinationPlace.startdate : null}, {!!destinationPlace ? destinationPlace.enddate : null}</p>
-
+                                        <p>{destinationPlace.guests}</p>
+                                        <p>{userInterest.user_interest}</p>
+                                        <p>₹ {userInterest.budget}</p>
+                                        <p>{destinationPlace.startdate}, {destinationPlace.enddate}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
+            <ToastContainer />
         </div>
     )
 }
