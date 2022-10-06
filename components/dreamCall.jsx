@@ -13,6 +13,7 @@ import group4 from '../public/images/home/Rectangle 4567.png'
 import circle from '../public/images/home/Ellipse 293.png'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+
 function DreamCall() {
     const responsive = {
 
@@ -33,6 +34,28 @@ function DreamCall() {
             items: 1
         }
     };
+    const popupOne = (url) => {
+        if (typeof window !== "undefined") {
+            const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
+            const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
+            const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+            const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+            const systemZoom = width / window.screen.availWidth;
+            const left = (width - 900) / 2 / systemZoom + dualScreenLeft
+            const top = (height - 600) / 2 / systemZoom + dualScreenTop
+            const newWindow = window.open(url, 'pdf',
+                `
+              scrollbars=yes,
+              width=${900 / systemZoom},
+              height=${600 / systemZoom},
+              top=${top},
+              left=${left}
+              `
+            )
+            if (window.focus) newWindow.focus();
+        }
+
+    }
     return (
         <div className='container'>
             <div className='row justify-content-center'>
@@ -45,22 +68,18 @@ function DreamCall() {
             <div className='row justify-content-center'>
                 <div className="col-12">
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
-                        <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}>
-                            
-                               <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={manali} height="382px" width="351px" alt="group"></Image></a></Link>
+                        <div className={styles.home_carousal_card} onClick={() => popupOne("https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view")}>
+                            <div className={styles.bca}><Image src={manali} height="382px" width="351px" alt="bca"></Image>
                             </div>
-                            <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
-                                <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link>
-
+                            <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
+                            <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                         <div className={styles.home_carousal_card}>
                             <div className={styles.bca2}>
                                 <Popup
                                     trigger={<Image src={group2} className="button" height="382px" width="351px" alt="group2"></Image>}
                                     modal
-                                    contentStyle={{ borderRadius: "20px", width: "70%" }}
-                                >
+                                    contentStyle={{ borderRadius: "20px", width: "70%" }}>
                                     {close => (
                                         <div className={styles.modal}>
                                             <button className={styles.close} onClick={close}>
@@ -105,12 +124,11 @@ function DreamCall() {
                                 <div className={styles.home_carousal_title}>MANALI</div></a></Link>
 
                         </div>
-                        <div className={styles.home_carousal_card}>
-                            <div className={styles.bca}><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={group5} height="382px" width="351px" alt="bca"></Image></a></Link>
-                                
+                        <div className={styles.home_carousal_card} onClick={() => popupOne("https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view")}>
+                            <div className={styles.bca3}><Image src={group5} height="382px" width="351px" alt="bca"></Image>
                             </div>
-                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
-                                <div className={styles.home_carousal_title}>ITINERARY</div></a></Link>
+                            <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
+                            <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                     </Carousel>
                 </div>
