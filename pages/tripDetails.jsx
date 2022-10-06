@@ -16,15 +16,7 @@ function TripDetails() {
         setUserInterest(user_interest)
         const tripThree = JSON.parse(localStorage.getItem('trip_three'));
         setUserDetails(tripThree)
-    }, [])
-    useEffect(() => {
-        return () =>
-            toast.success("Success, Done, Let's Go", {
-                position: "top-right",
-                autoClose: 3000
-            });
-        // eslint-disable-next-line
-    }, [])
+    }, []) 
     return (
         <div>
             <div className={styles.main_container}>
