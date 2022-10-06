@@ -5,12 +5,10 @@ import styles from "../styles/TripThree.module.css";
 import left_arrow from "../public/images/trip/left_arrow.png";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 function TripDetails() {
     const [destinationPlace, setDestinationPlace] = useState("")
     const [userInterest, setUserInterest] = useState("");
     const [userDetails, setUserDetails] = useState("")
-
     useEffect(() => {
         const user_dest = JSON.parse(localStorage.getItem('trip_one'));
         setDestinationPlace(user_dest)
@@ -19,7 +17,6 @@ function TripDetails() {
         const tripThree = JSON.parse(localStorage.getItem('trip_three'));
         setUserDetails(tripThree)
     }, [])
-
     useEffect(() => {
         return () =>
             toast.success("Success, Done, Let's Go", {
@@ -28,7 +25,6 @@ function TripDetails() {
             });
         // eslint-disable-next-line
     }, [])
-
     return (
         <div>
             <div className={styles.main_container}>

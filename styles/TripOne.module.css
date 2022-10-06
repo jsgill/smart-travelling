@@ -72,6 +72,7 @@
   align-items: center; */
   /* padding: 50px 0px 100px 0px; */
 }
+
 #icon_main_row {
   padding-top: 51px;
   padding-bottom: 51px;
@@ -240,6 +241,7 @@
   /* margin-top: 30px; */
   margin-bottom: 10px;
 }
+
 .TripOne_inputtwo {
   margin-right: 0px;
   margin-left: 0px;
@@ -279,8 +281,22 @@
   z-index: 999;
 }
 
+.tripTwo_cross_para {
+
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  padding-top: 5px;
+  right: 35%;
+  top: 10px;
+  z-index: 1;
+}
+
 .tripOne_inputone_btn1 {
-  margin-top: 10px;
+  margin-top: 16px;
   background: #00754a;
   border-radius: 20px;
   outline: none;
@@ -430,6 +446,7 @@
   justify-content: center;
   margin-bottom: 10px;
 }
+
 #increment {
   border: 1px solid #e3e3e3;
   background: #ffffff;

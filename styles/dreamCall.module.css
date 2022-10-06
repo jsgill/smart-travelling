@@ -1,4 +1,4 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width:768px) {
   .home_dream .home_div_1 {
     font-size: 40px !important;
   }
@@ -19,16 +19,16 @@
 .home_dream .home_div_1 {
   color: #121212;
   font-style: normal;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 64px;
   line-height: 120%;
 }
 
 .home_dream .home_div_2 {
-  color: #00754a;
+  color: #00754A;
   font-style: normal;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 64px;
   line-height: 120%;
@@ -36,7 +36,7 @@
 
 .home_dream p {
   font-style: normal;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 142%;
@@ -49,23 +49,38 @@
   cursor: pointer;
 }
 
+
+
 .bca {
   position: relative;
-  filter: contrast(28%);
+  filter: contrast(50%);
 }
+
 
 .bca:hover {
-  filter: contrast(128%);
+  filter: contrast(18%);
 }
 
-.bca2 {
+.bca1 {
   position: relative;
-  filter: contrast(40%);
+  filter: contrast(50%);
+  border-radius: 10px;
 }
 
-.bca2:hover {
-  filter: contrast(100%);
+
+.bca1:hover {
+  filter: contrast(18%);
 }
+
+#bca2 {
+  position: relative;
+  filter: contrast(50%);
+}
+
+#bca2:hover {
+  filter: contrast(18%);
+}
+
 
 .bca3 {
   position: relative;
@@ -73,20 +88,20 @@
 }
 
 .bca3:hover {
-  filter: contrast(100%);
+  filter: contrast(50%);
 }
 
 .home_carousal_card .abc {
   position: absolute;
   top: 50%;
-  color: #ffffff;
+  color: #FFFFFF;
   left: 50%;
   transform: translate(-50%, -50%);
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 158.5%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .home_carousal_title {
@@ -99,7 +114,7 @@
   font-size: 12px;
   line-height: 151%;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .styles.arrow {
@@ -110,14 +125,14 @@
   font-size: 12px;
 }
 
-.modal > .header {
+.modal>.header {
   width: 100%;
   font-size: 18px;
   text-align: center;
   padding: 5px;
 }
 
-.modal > .content {
+.modal>.content {
   width: 100%;
   padding: 10px 5px;
 }
@@ -126,14 +141,14 @@
   padding-right: 0px !important;
 }
 
-.modal > .actions {
+.modal>.actions {
   width: 100%;
   padding: 10px 5px;
   margin: auto;
   text-align: center;
 }
 
-.modal > .close {
+.modal>.close {
   cursor: pointer;
   position: absolute;
   display: block;
@@ -172,15 +187,15 @@
 }
 
 #home_popup_planYourTrip {
-  background: #00754a;
+  background: #00754A;
   border-radius: 32px;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 180%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: #FFFFFF;
   padding-left: 30px;
   padding-right: 30px;
   text-decoration: none;

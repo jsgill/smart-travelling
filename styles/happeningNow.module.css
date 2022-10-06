@@ -1,8 +1,35 @@
+@media only screen and (max-width:400px) {
+    .demo {
+        border-bottom: 2px solid #00754A !important;
+        width: 100% !important;
+        padding: 2% 0% 0% 0% !important;
+    }
+
+    .home_mountain {
+        padding: 7% 0% 0% 0% !important;
+        text-align: start !important;
+    }
+}
+
 @media only screen and (max-width:768px) {
     .home_happening h1 {
         font-size: 30px !important;
     }
+
+    .demo {
+        border-bottom: 2px solid #00754A !important;
+        width: 100% !important;
+        padding: 5% 0% 0% 0% !important;
+    }
+
+    .home_mountain {
+        padding: 7% 0% 0% 0% !important;
+        text-align: start !important;
+
+    }
 }
+
+
 
 .home_happening h1 {
     font-style: normal;
@@ -15,7 +42,7 @@
 }
 
 .home_happening {
-    padding: 40px 0px 40px 0px;
+    padding: 90px 0px 60px 0px;
 }
 
 .saprater p {
@@ -30,7 +57,7 @@
 .saprater {
     border-bottom: 2px solid #00754A;
     width: 100%;
-    padding: 10px 0px 16px 0px;
+    padding: 18px 5px 16px 5px;
     text-align: start;
 }
 
@@ -43,7 +70,7 @@
 .demo {
     border-bottom: 2px solid #00754A;
     width: 100%;
-    padding: 26% 0% 0% 0%;
+    padding: 21.5% 0% 0% 0%;
 }
 
 .home_mountain h4 {
@@ -53,6 +80,11 @@
     line-height: 130%;
     color: #121212;
     font-family: "Poppins", sans-serif;
+}
+
+.sizzling {
+    margin-bottom: 0.8rem;
+    padding-top: 10px;
 }
 
 .home_mountain p {
@@ -72,8 +104,10 @@
     font-family: "Poppins", sans-serif;
     color: #00754A;
     text-decoration: none;
+    padding-bottom: 20px;
 }
-.home_explore:hover{
+
+.home_explore:hover {
     color: #00754A;
 }
 
