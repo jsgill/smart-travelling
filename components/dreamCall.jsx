@@ -1,23 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from '../styles/dreamCall.module.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import slider1 from "../public/images/home/slider1.jpg";
-import slider3 from "../public/images/home/slider3.png";
 import slider2 from "../public/images/home/slider2.png";
+import slider3 from "../public/images/home/slider3.png";
 import group3 from '../public/images/home/Rectangle 4566.png'
 import group4 from '../public/images/home/Rectangle 4567.png'
 import circle from '../public/images/home/Ellipse 293.png'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
-import Modal from "react-bootstrap/Modal";
-
 function DreamCall() {
-    const [modalShow, setModalShow] = useState(false);
     const responsive = {
-
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
             items: 5
@@ -35,45 +31,41 @@ function DreamCall() {
             items: 1
         }
     };
-
+    const popupOne = (url) => {
+        if (typeof window !== "undefined") {
+            const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
+            const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
+            const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+            const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+            const systemZoom = width / window.screen.availWidth;
+            const left = (width - 900) / 2 / systemZoom + dualScreenLeft
+            const top = (height - 600) / 2 / systemZoom + dualScreenTop
+            const newWindow = window.open(url, 'pdf',
+                `
+              scrollbars=yes,
+              width=${900 / systemZoom},
+              height=${600 / systemZoom},
+              top=${top},
+              left=${left}
+              `
+            )
+            if (window.focus) newWindow.focus();
+        }
+    }
     return (
         <div className='container'>
             <div className='row justify-content-center'>
                 <div className={styles.home_dream}>
                     <div className={styles.home_div_1}>Don’t call it a dream,</div>
                     <div className={styles.home_div_2}>call it a plan</div>
-                    <p className='py-2 mb-5'>Check out these trending attractions</p>
+                    <p>Check out these trending attractions</p>
                 </div>
             </div>
             <div className='row justify-content-center'>
                 <div className="col-12">
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
-                        <div className={styles.home_carousal_card}>
-                            {/* <div >
-
-                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={slider1} height="382px" width="351px" alt="group" className={styles.bca1} show={modalShow}></Image></a></Link>
-                            </div>
-                            <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
-                                <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link> */}
-                            <div>
-                                <Popup
-                                    trigger={<Image src={slider1} height="382px" width="351px" alt="group" className={styles.bca1} show={modalShow}></Image>}
-                                    modal
-                                    contentStyle={{ borderRadius: "20px", width: "50%", height: "50%" }}
-                                >
-                                    {close => (
-                                        <div className={styles.modal}>
-                                            <button className={styles.close} onClick={close}>
-                                                &times;
-                                            </button>
-                                            <div>
-                                                <iframe src="https://pdfjs-express.s3-us-west-2.amazonaws.com/docs/choosing-a-pdf-viewer.pdf" width={620} height={278} className="m-4"></iframe>
-
-                                            </div>
-                                        </div>
-                                    )}
-
-                                </Popup>
+                        <div className={styles.home_carousal_card} onClick={() => popupOne("https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view")}>
+                            <div ><Image src={slider1} height="382px" width="351px" alt="bca" className={styles.bca}></Image>
                             </div>
                             <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
                             <div className={styles.home_carousal_title}>ITINERARY</div>
@@ -81,10 +73,9 @@ function DreamCall() {
                         <div className={styles.home_carousal_card}>
                             <div >
                                 <Popup
-                                    trigger={<Image src={slider2} className="button" height="382px" width="351px" alt="group2" id={styles.bca2}></Image>}
+                                    trigger={<Image src={slider2} className="button" height="382px" width="351px" alt="group2" id={styles.bca2} ></Image>}
                                     modal
-                                    contentStyle={{ borderRadius: "20px", width: "70%" }}
-                                >
+                                    contentStyle={{ borderRadius: "20px", width: "70%" }}>
                                     {close => (
                                         <div className={styles.modal}>
                                             <button className={styles.close} onClick={close}>
@@ -100,7 +91,6 @@ function DreamCall() {
                                                     </div>
                                                 </div>
                                                 <div className='row justify-content-center'>
-
                                                     <div className={styles.home_popup_title}>
                                                         <h2>Manali</h2>
                                                     </div>
@@ -109,7 +99,6 @@ function DreamCall() {
                                                         <div><Image src={circle} height="15px" width="15px" alt="circle2"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
                                                     </div>
                                                     <div className={styles.home_popup_para}>
-
                                                     </div>
                                                     <div className={styles.Popup_bottom_button}>
                                                         <Link href="/tripOne">
@@ -124,50 +113,20 @@ function DreamCall() {
                                     )}
                                 </Popup>
                             </div>
-                            <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view?usp=sharing"><a target="_blank"> <div className={styles.abc}>132 trips booked last week
+                            <div className={styles.abc}>132 trips booked last week
                             </div>
-                                <div className={styles.home_carousal_title}>MANALI</div></a></Link>
-
+                            <div className={styles.home_carousal_title}>MANALI</div>
                         </div>
-                        <div className={styles.home_carousal_card}>
-                            {/* <div ><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={slider3} height="382px" width="351px" alt="bca" className={styles.bca}></Image></a></Link>
-
-                            </div>
-                            <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
-                                <div className={styles.home_carousal_title}>ITINERARY</div></a></Link> */}
-                            <div>
-
-
-                                <Popup
-                                    trigger={<Image src={slider3} height="382px" width="351px" alt="group" className={styles.bca1} show={modalShow}></Image>}
-                                    modal
-                                    contentStyle={{ borderRadius: "20px", width: "50%", height: "50%" }}
-                                >
-                                    {close => (
-                                        <div className={styles.modal}>
-                                            <button className={styles.close} onClick={close}>
-                                                &times;
-                                            </button>
-                                            <div>
-                                                <iframe src="https://pdfjs-express.s3-us-west-2.amazonaws.com/docs/choosing-a-pdf-viewer.pdf" width={620} height={278} className="m-4"></iframe>
-
-                                            </div>
-                                        </div>
-                                    )}
-
-                                </Popup>
+                        <div className={styles.home_carousal_card} onClick={() => popupOne("https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view")}>
+                            <div ><Image src={slider3} height="382px" width="351px" alt="bca" className={styles.bca3}></Image>
                             </div>
                             <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
                             <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                     </Carousel>
-
                 </div>
-            </div >
-
-        </div >
+            </div>
+        </div>
     )
 }
-
 export default DreamCall
-

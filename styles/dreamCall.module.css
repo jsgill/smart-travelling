@@ -46,6 +46,7 @@
 .home_carousal_card {
   border: none;
   text-align: center;
+  cursor: pointer;
 }
 
 
