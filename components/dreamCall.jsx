@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/dreamCall.module.css'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -12,7 +12,10 @@ import group4 from '../public/images/home/Rectangle 4567.png'
 import circle from '../public/images/home/Ellipse 293.png'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
+import Modal from "react-bootstrap/Modal";
+
 function DreamCall() {
+    const [modalShow, setModalShow] = useState(false);
     const responsive = {
 
         superLargeDesktop: {
@@ -32,6 +35,7 @@ function DreamCall() {
             items: 1
         }
     };
+
     return (
         <div className='container'>
             <div className='row justify-content-center'>
@@ -45,13 +49,34 @@ function DreamCall() {
                 <div className="col-12">
                     <Carousel responsive={responsive} className={styles.demo} keyBoardControl={styles.arrow} >
                         <div className={styles.home_carousal_card}>
-                            <div >
+                            {/* <div >
 
-                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={slider1} height="382px" width="351px" alt="group" className={styles.bca1}></Image></a></Link>
+                                <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a> <Image src={slider1} height="382px" width="351px" alt="group" className={styles.bca1} show={modalShow}></Image></a></Link>
                             </div>
                             <Link href="https://drive.google.com/file/d/1Kzp-FsRHKG6z-FjjxuerPJ-1nmW_Okpj/view"><a target="_blank">  <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
-                                <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link>
+                                <div className={styles.home_carousal_title}>ITINERARY</div> </a></Link> */}
+                            <div>
+                                <Popup
+                                    trigger={<Image src={slider1} height="382px" width="351px" alt="group" className={styles.bca1} show={modalShow}></Image>}
+                                    modal
+                                    contentStyle={{ borderRadius: "20px", width: "50%", height: "50%" }}
+                                >
+                                    {close => (
+                                        <div className={styles.modal}>
+                                            <button className={styles.close} onClick={close}>
+                                                &times;
+                                            </button>
+                                            <div>
+                                                <iframe src="https://pdfjs-express.s3-us-west-2.amazonaws.com/docs/choosing-a-pdf-viewer.pdf" width={620} height={278} className="m-4"></iframe>
 
+                                            </div>
+                                        </div>
+                                    )}
+
+                                </Popup>
+                            </div>
+                            <div className={styles.abc}>Offbeat Autumn Manali Trip</div>
+                            <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                         <div className={styles.home_carousal_card}>
                             <div >
@@ -105,18 +130,44 @@ function DreamCall() {
 
                         </div>
                         <div className={styles.home_carousal_card}>
-                            <div ><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={slider3} height="382px" width="351px" alt="bca" className={styles.bca}></Image></a></Link>
+                            {/* <div ><Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view" height="382px" width="351px" alt="bca"><a> <Image src={slider3} height="382px" width="351px" alt="bca" className={styles.bca}></Image></a></Link>
 
                             </div>
                             <Link href="https://drive.google.com/file/d/1YZx_IcOmylGlcp8WN0pkqK82ARXiJ8Wg/view"><a target="_blank"> <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
-                                <div className={styles.home_carousal_title}>ITINERARY</div></a></Link>
+                                <div className={styles.home_carousal_title}>ITINERARY</div></a></Link> */}
+                            <div>
+
+
+                                <Popup
+                                    trigger={<Image src={slider3} height="382px" width="351px" alt="group" className={styles.bca1} show={modalShow}></Image>}
+                                    modal
+                                    contentStyle={{ borderRadius: "20px", width: "50%", height: "50%" }}
+                                >
+                                    {close => (
+                                        <div className={styles.modal}>
+                                            <button className={styles.close} onClick={close}>
+                                                &times;
+                                            </button>
+                                            <div>
+                                                <iframe src="https://pdfjs-express.s3-us-west-2.amazonaws.com/docs/choosing-a-pdf-viewer.pdf" width={620} height={278} className="m-4"></iframe>
+
+                                            </div>
+                                        </div>
+                                    )}
+
+                                </Popup>
+                            </div>
+                            <div className={styles.abc}>Kasol - Manali Weekend Gateway</div>
+                            <div className={styles.home_carousal_title}>ITINERARY</div>
                         </div>
                     </Carousel>
-                </div>
-            </div>
 
-        </div>
+                </div>
+            </div >
+
+        </div >
     )
 }
 
 export default DreamCall
+

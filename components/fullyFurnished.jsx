@@ -17,7 +17,7 @@ function FullyFurnished() {
                             </div>
                             <div>
                                 <h5>Fully Personalised</h5>
-                                <p>Get hour-by-hour itinerary based
+                                <p className={styles.fully_para}>Get hour-by-hour itinerary based
                                     on your interests & budget</p>
                             </div>
                         </div>
@@ -29,7 +29,7 @@ function FullyFurnished() {
                             </div>
                             <div>
                                 <h5>Fast & Free</h5>
-                                <p>No more google searches to find
+                                <p className={styles.fully_para}>No more google searches to find
                                     the best deals,plan it for free</p>
                             </div>
                         </div>
@@ -41,7 +41,7 @@ function FullyFurnished() {
                             </div>
                             <div>
                                 <h5>Save Extra</h5>
-                                <p>Choose from the most affordable
+                                <p className={styles.fully_para}>Choose from the most affordable
                                     stays,activities and transport</p>
                             </div>
                         </div>
@@ -53,7 +53,7 @@ function FullyFurnished() {
                             </div>
                             <div>
                                 <h5>Easy to Customise</h5>
-                                <p>Shape the itinerary with your personal touch & manage all
+                                <p className={styles.fully_para}>Shape the itinerary with your personal touch & manage all
                                     your bookings</p>
                             </div>
                         </div>

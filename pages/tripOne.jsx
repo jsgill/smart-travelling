@@ -1,21 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import icon1 from "../public/images/trip/Group 22133.png";
 import icon2 from "../public/images/trip/Group 22134.png";
 import icon3 from "../public/images/trip/Group 22135.png";
-import destination_1 from "../public/images/trip/destination_1.png";
-import destination_2 from "../public/images/trip/destination_2.png";
-import destination_3 from "../public/images/trip/destination_3.png";
-import destination_4 from "../public/images/trip/destination_4.png";
-import destination_5 from "../public/images/trip/destination_5.png";
 import MydModalWithGrid from "../components/modal";
-import cross from "../public/images/trip/cross.png";
 import styles from "../styles/TripOne.module.css";
-import Swal from "sweetalert2";
 import { Calendar } from "react-multi-date-picker"
-
-
 
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
@@ -109,7 +100,6 @@ function TripOne() {
     localStorage.setItem("trip_one", JSON.stringify(obj));
   }
 
-
   return (
     <div>
       <div className={styles.main_top_background}>
@@ -154,45 +144,25 @@ function TripOne() {
                       <div className="row justify-content-center">
                         <div className="col-md-12">
                           <div
-                            className={
-                              styles.tripOne_inputtwo_content_container
-                            }
-                          >
-                            <div >
-                              <button
-                                onClick={decrement}
-
+                            className={styles.tripOne_inputtwo_content_container}>
+                            <div>
+                              <button onClick={decrement}
                                 className="btn rounded-pill"
-                                id={styles.increment}
-                              >
+                                id={styles.increment}>
                                 <i className="fa fa-minus"></i>
                               </button>
                             </div>
-                            <p
-                              className={styles.tripOne_content_btn}
-                              value={inputTwo}
-                            >
-                              {count}
+                            <p className={styles.tripOne_content_btn} value={inputTwo}>{count}
                             </p>
                             <div >
-                              <button
-                                onClick={increment}
-                                // className={
-                                //   styles.tripOne_content_inc_dec_operator2
-                                // }
-                                id={styles.increment}
-                                className="btn rounded-pill"
-                              >
+                              <button onClick={increment} id={styles.increment} className="btn rounded-pill">
                                 <i className="fa fa-plus"></i>
                               </button>
                             </div>
                           </div>
                         </div>
-                        <div
-                          className={styles.tripOne_inputone_btn_container}
-                        >
+                        <div className={styles.tripOne_inputone_btn_container} >
                           <button
-                            // className="btn btn-success"
                             className={styles.tripOne_inputone_btn}
                             onClick={inputTwoBtn}>Save
                           </button>
@@ -209,25 +179,16 @@ function TripOne() {
                     : startDate.concat(" - ") + endDate
                 }
               </div>
-
-
               <div style={{ display: input3 ? "block" : "none" }}>
-                <div
-                  className="container  text-center"
-                  id={styles.calender_main_container}
-                >
+                <div className="container  text-center" id={styles.calender_main_container}>
                   <div className="row justify-content-center">
-                    <div
-                      className="col-md-6"
-                      id={styles.tripOne_inputthree_container}
-                    >
-
+                    <div className="col-md-6"
+                      id={styles.tripOne_inputthree_container}>
                       <div className={styles.app}>
                         <div className="row justify-content-center">
                           <div
                             className="col-md-2"
-                            id={styles.calender_container}
-                          >
+                            id={styles.calender_container} >
                             <div className={styles.Calendar_row} >
                               <Calendar
                                 range
@@ -236,39 +197,28 @@ function TripOne() {
                                 onChange={setDate}
                                 format="DD MMMM  YYYY"
                                 className={styles.calender}
-
-
                               />
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div
-                        className={styles.tripOne_inputone_btn_container1}
-                      >
-                        <button
-                          className={styles.tripOne_inputone_btn1}
-                          onClick={inputThreeBtn}
-                        >
+                      <div className={styles.tripOne_inputone_btn_container1}>
+                        <button className={styles.tripOne_inputone_btn1} onClick={inputThreeBtn}>
                           Save
                         </button>
-
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-
             <div className="row justify-content-center">
               <div className="col-md-4 text-center">
                 <Link href="/tripTwo">
                   <button
                     className={styles.save_btn}
                     onClick={handleSubmitInput1}
-                    disabled={!info || !inputTwo || !inputThree}
-                  >
+                    disabled={!info || !inputTwo || !inputThree}>
                     Save & Continue
                   </button>
                 </Link>

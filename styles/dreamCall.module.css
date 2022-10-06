@@ -1,211 +1,211 @@
 @media only screen and (max-width:768px) {
-    .home_dream .home_div_1 {
-        font-size: 40px !important;
-    }
+  .home_dream .home_div_1 {
+    font-size: 40px !important;
+  }
 
-    .home_dream .home_div_2 {
-        font-size: 40px !important;
-    }
+  .home_dream .home_div_2 {
+    font-size: 40px !important;
+  }
 
-    .home_dream p {
-        font-size: 15px !important;
-    }
+  .home_dream p {
+    font-size: 15px !important;
+  }
 }
 
 .home_dream {
-    text-align: center;
+  text-align: center;
 }
 
 .home_dream .home_div_1 {
-    color: #121212;
-    font-style: normal;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 120%;
+  color: #121212;
+  font-style: normal;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 120%;
 }
 
 .home_dream .home_div_2 {
-    color: #00754A;
-    font-style: normal;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 120%;
+  color: #00754A;
+  font-style: normal;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 120%;
 }
 
 .home_dream p {
-    font-style: normal;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 142%;
-    color: rgba(18, 18, 18, 0.8);
+  font-style: normal;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 142%;
+  color: rgba(18, 18, 18, 0.8);
 }
 
 .home_carousal_card {
-    border: none;
-    text-align: center;
+  border: none;
+  text-align: center;
 }
 
 
 
 .bca {
-    position: relative;
-    filter: contrast(50%);
+  position: relative;
+  filter: contrast(50%);
 }
 
 
 .bca:hover {
-    filter: contrast(18%);
+  filter: contrast(18%);
 }
 
 .bca1 {
-    position: relative;
-    filter: contrast(50%);
-    border-radius: 10px;
+  position: relative;
+  filter: contrast(50%);
+  border-radius: 10px;
 }
 
 
 .bca1:hover {
-    filter: contrast(18%);
+  filter: contrast(18%);
 }
 
 #bca2 {
-    position: relative;
-    filter: contrast(50%);
+  position: relative;
+  filter: contrast(50%);
 }
 
 #bca2:hover {
-    filter: contrast(18%);
+  filter: contrast(18%);
 }
 
 
 .bca3 {
-    position: relative;
-    filter: contrast(30%);
+  position: relative;
+  filter: contrast(30%);
 }
 
 .bca3:hover {
-    filter: contrast(50%);
+  filter: contrast(50%);
 }
 
 .home_carousal_card .abc {
-    position: absolute;
-    top: 50%;
-    color: #FFFFFF;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 158.5%;
-    font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 50%;
+  color: #FFFFFF;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 158.5%;
+  font-family: 'Poppins', sans-serif;
 }
 
 .home_carousal_title {
-    top: 90%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -200%);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 151%;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
+  top: 90%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -200%);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 151%;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
 }
 
 .styles.arrow {
-    color: red !important;
+  color: red !important;
 }
 
 .modal {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .modal>.header {
-    width: 100%;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
 }
 
 .modal>.content {
-    width: 100%;
-    padding: 10px 5px;
+  width: 100%;
+  padding: 10px 5px;
 }
 
 .content div {
-    padding-right: 0px !important;
+  padding-right: 0px !important;
 }
 
 .modal>.actions {
-    width: 100%;
-    padding: 10px 5px;
-    margin: auto;
-    text-align: center;
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
 }
 
 .modal>.close {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: 0px;
-    top: 0px;
-    font-size: 24px;
-    background: #ffffff;
-    border: none;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: 0px;
+  top: 0px;
+  font-size: 24px;
+  background: #ffffff;
+  border: none;
 }
 
 .home_popup_para {
-    padding: 0px 50px 0px 50px;
+  padding: 0px 50px 0px 50px;
 }
 
 .home_popup_para div span {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 182%;
-    color: rgba(18, 18, 18, 0.75);
-    font-family: "Poppins", sans-serif;
-    padding-left: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 182%;
+  color: rgba(18, 18, 18, 0.75);
+  font-family: "Poppins", sans-serif;
+  padding-left: 10px;
 }
 
 .home_popup_title h2 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 130%;
-    color: rgba(18, 18, 18, 0.8);
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    padding-top: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 130%;
+  color: rgba(18, 18, 18, 0.8);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding-top: 20px;
 }
 
 #home_popup_planYourTrip {
-    background: #00754A;
-    border-radius: 32px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 180%;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
-    padding-left: 30px;
-    padding-right: 30px;
-    text-decoration: none;
-    box-shadow: none;
+  background: #00754A;
+  border-radius: 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 180%;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+  box-shadow: none;
 }
 
 .Popup_bottom_button {
-    text-align: center;
-    padding-top: 50px;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .dfmqawfkijew {
-    width: 10% !important;
+  width: 10% !important;
 }

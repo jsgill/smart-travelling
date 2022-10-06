@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import styles from '../styles/howItWorks.module.css'
 import rectangle from '../public/images/home/Rectangle.png'
