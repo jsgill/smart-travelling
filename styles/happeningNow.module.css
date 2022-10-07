@@ -115,3 +115,11 @@
     height: 8.5px;
     width: 15.5px;
 }
+
+.happeningNow_images {
+    filter: contrast(50%);
+}
+
+.happeningNow_images:hover {
+    filter: contrast(18%);
+}

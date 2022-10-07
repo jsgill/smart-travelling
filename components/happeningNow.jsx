@@ -18,7 +18,7 @@ function HappeningNow() {
                     <div>
                         <div className='row'>
                             <div className='col-md-4'>
-                                <Image src={image1} height="413px" width='279px' alt="tour"></Image>
+                                <Image src={image1} height="413px" width='279px' alt="tour" className={styles.happeningNow_images}></Image>
                             </div>
                             <div className='col-md-8 mb-5'>
                                 <div className='container'>
@@ -43,7 +43,7 @@ function HappeningNow() {
                 </div>
                 <div className='col-md-4 mt-2'>
                     <div>
-                        <Image src={image2} height="220px" width="458px" alt="right-now"></Image>
+                        <Image src={image2} height="220px" width="458px" alt="right-now" className={styles.happeningNow_images}></Image>
                         <div className='container mb-2'>
                             <div className={styles.saprater}>
                                 <h4>Riverside camping at kasol </h4>
