@@ -85,11 +85,11 @@
 
 .bca3 {
   position: relative;
-  filter: contrast(30%);
+  filter: contrast(50%);
 }
 
 .bca3:hover {
-  filter: contrast(50%);
+  filter: contrast(18%);
 }
 
 .home_carousal_card .abc {
