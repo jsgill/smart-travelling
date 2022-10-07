@@ -1,12 +1,13 @@
 @media only screen and (max-width:768px) {
-    .home_PlanTrip .home_bestTrip h1{
+    .home_PlanTrip .home_bestTrip h1 {
         font-size: 40px !important;
         padding: 0% 8% !important;
     }
 }
+
 .home_PlanTrip {
     background: url(../public/images/home/Rectangle4544.png);
-    height: 600px;
+    height: 81vh;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
