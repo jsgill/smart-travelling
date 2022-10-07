@@ -1,7 +1,6 @@
 @media only screen and (max-width: 768px) {
   .save_btn {
-    /* width: 70% !important;
-    height: 50px !important; */
+    width: 50% !important;
     font-size: 14px !important;
   }
 
