@@ -58,7 +58,7 @@ function DreamCall() {
                 <div className={styles.home_dream}>
                     <div className={styles.home_div_1}>Don’t call it a dream,</div>
                     <div className={styles.home_div_2}>call it a plan</div>
-                    <p>Check out these trending attractions</p>
+                    <p className='pt-2 pb-5'>Check out these trending attractions</p>
                 </div>
             </div>
             <div className='row justify-content-center'>

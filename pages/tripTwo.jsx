@@ -188,7 +188,7 @@ function TripTwo() {
                           onClick={() => handleChangeColor("Camping")}
                         >
                           <p className=" py-2">
-                            <Image src={image2} height={60} width={60} alt="camping" />
+                            <Image src={image1} height={60} width={60} alt="camping" />
                           </p>
                           <p className={styles.image_para_content}>Camping</p>
                         </div>
