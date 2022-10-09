@@ -16,57 +16,72 @@ function TripDetails() {
         setUserInterest(user_interest)
         const tripThree = JSON.parse(localStorage.getItem('trip_three'));
         setUserDetails(tripThree)
-    }, []) 
+    }, [])
     return (
         <div>
             <div className={styles.main_container}>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-md-6">
                             <div className={styles.happy_travling}>
                                 <div>
-                                    <p className={styles.happy_travel_p1}>Happy Travelling!</p>
+                                    <p className={styles.happy_travel_p1}>Happy <br /> Travelling!</p>
                                 </div>
                                 <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
-                                <div className={styles.main_back_btn11}>
-                                    <Link href="/"><button className={styles.back_home_btn}><Image src={left_arrow} alt="arrow" /><span className={styles.back_btn11}>Back To Home</span></button></Link>
-                                </div>
+                            </div>
+                            <div>
+                                <Link href="/"><button className="btn btn-light rounded-pill" id={styles.back_home_btn}><i className="fa fa-long-arrow-left"></i><span className={styles.back_btn11}>Back To Home</span></button></Link>
                             </div>
                         </div>
-                        <div className="col-lg-6" id={styles.main_card_div}>
-                            <div>
-                                <p className={styles.trip_details_p}>Trip Detail</p>
-                                <div className={styles.hr_line}></div>
-                                <div className='d-flex'>
-                                    <div className={styles.trip_user_p}>
-                                        <p>Name</p>
-                                        <p>Mobile Number</p>
-                                        <p>Destination</p>
-                                        <p>No of Guests</p>
-                                        <p>Interest</p>
-                                        <p>Budget per person</p>
-                                        <p>Start & End Date</p>
+                        <div className="col-md-6" >
+                           <div className={styles.main_back_btn11}>
+                           <div id={styles.main_card_div}>
+                                <div className='container'>
+                                    <div className='row'>
+                                        <div className='col-md-12'>
+                                            <div className={styles.hr_line}>
+                                                <p className={styles.trip_details_p}>Trip Detail</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className={styles.trip_user_p}>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
-                                        <p>:</p>
+                                    <div className='row justify-content-center'>
+                                        <div className='col-5'><b>Name</b></div>
+                                        <div className='col-1'> <p>:</p></div>
+                                        <div className='col-6'> <p>{userDetails.name}</p></div>
                                     </div>
-                                    <div className={styles.trip_user_p}>
-                                        <p>{userDetails.name}</p>
-                                        <p>(+91) {userDetails.mobile}</p>
-                                        <p>{destinationPlace.destination}</p>
-                                        <p>{destinationPlace.guests}</p>
-                                        <p>{userInterest.user_interest}</p>
-                                        <p>₹ {userInterest.budget}</p>
-                                        <p>{destinationPlace.startdate}, {destinationPlace.enddate}</p>
+                                    <div className='row justify-content-center'>
+                                        <div className='col-5'><b>Mobile Number</b></div>
+                                        <div className='col-1'><p>:</p></div>
+                                        <div className='col-6'><p>(+91) {userDetails.mobile}</p></div>
+                                    </div>
+                                    <div className='row justify-content-center'>
+                                        <div className='col-5'> <b>Destination</b></div>
+                                        <div className='col-1'><p>:</p></div>
+                                        <div className='col-6'><p>{destinationPlace.destination}</p></div>
+                                    </div>
+                                    <div className='row justify-content-center'>
+                                        <div className='col-5'><b>No of Guests</b></div>
+                                        <div className='col-1'><p>:</p></div>
+                                        <div className='col-6'><p>{destinationPlace.guests}</p></div>
+                                    </div>
+                                    <div className='row justify-content-center'>
+                                        <div className='col-5'><b>Interest</b></div>
+                                        <div className='col-1'><p>:</p></div>
+                                        <div className='col-6'><p>{userInterest.user_interest}</p></div>
+                                    </div>
+                                    <div className='row justify-content-center'>
+                                        <div className='col-5'><b>Budget per person</b></div>
+                                        <div className='col-1'><p>:</p></div>
+                                        <div className='col-6'><p>₹ {userInterest.budget}</p></div>
+                                    </div>
+                                    <div className='row justify-content-center'>
+                                        <div className='col-5'><b>Start & End Date</b></div>
+                                        <div className='col-1'><p>:</p></div>
+                                        <div className='col-6'><p>{destinationPlace.startdate}, {destinationPlace.enddate}</p></div>
                                     </div>
                                 </div>
                             </div>
+                           </div>
                         </div>
                     </div>
                 </div>
