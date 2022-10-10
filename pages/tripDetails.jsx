@@ -40,7 +40,7 @@ function TripDetails() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='row justify-content-center'>
+                                        <div className='row justify-content-center pt-2'>
                                             <div className='col-5'><b>Name</b></div>
                                             <div className='col-1'> <p>:</p></div>
                                             <div className='col-6'> <p>{userDetails.name}</p></div>
