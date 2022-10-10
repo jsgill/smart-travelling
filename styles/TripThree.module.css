@@ -226,19 +226,7 @@
 .main_back_btn11 {
   padding-top: 100px;
 }
-
-@media only screen and (max-width: 768px) {
-  .content {
-    width: 100%;
-    padding: 10px 5px;
-  }
-
-  .actions {
-    width: 100%;
-    font-size: 40px !important;
-    text-align: center !important;
-  }
-
+@media only screen and (max-width:767px) {
   .happy_travel_p1 {
     font-size: 25px !important;
   }
@@ -254,6 +242,19 @@
   .happy_travling {
     padding-top: 20px !important;
   }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+    padding: 10px 5px;
+  }
+
+  .actions {
+    width: 100%;
+    font-size: 40px !important;
+    text-align: center !important;
+  }
 
   .trip_details_p {
     font-size: 20px !important;
@@ -262,10 +263,6 @@
   #back_to_home_row {
     padding-top: 20px;
   }
-
-  /* .back_home_btn {
-    width: 25% !important;
-  } */
   .popup_btn {
     width: 120px !important;
     font-size: 0.5rem;
