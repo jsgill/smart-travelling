@@ -8,7 +8,7 @@ import rectangle3 from '../public/images/home/Rectangle (2).png'
 import Image from 'next/image'
 function HowItWorks() {
     return (
-        <div className='container'>
+        <div className='container pb-5'>
             <div className='row justify-content-center'>
                 <div className={styles.home_works}><h1>How it works</h1></div>
             </div>

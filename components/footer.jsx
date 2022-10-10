@@ -13,7 +13,7 @@ function Footer() {
                 <div className='row justify-content-center'>
                     <div className='col-md-3'>
                         <div className={styles.footer_image}>
-                            <Image src={smart} height="158px" width="158p" alt="footer" />
+                            <Image src={smart} height="130px" width="130p" alt="footer" />
                         </div>
                     </div>
                     <div className='col-md-3'>
