@@ -176,7 +176,7 @@
 
 #back_home_btn {
   width: 270px;
-  height: 64px;
+  height: 60px;
   background: #ffffff;
   border-radius: 32px;
   color: #000000;
@@ -267,6 +267,24 @@
   height: 100vh !important;
   width: 100% !important;
   }
+  .happy_travel_p1 {
+    font-size: 25px !important;
+  }
+  .happy_travel_p2 {
+    font-size: 12px !important;
+  }
+  .main_back_btn11 {
+    padding-top: 0px !important;
+  }
+  .happy_travling {
+    padding-top: 0px !important;
+  }
+  .trip_details_p {
+    font-size: 20px !important;
+  }
+  #back_to_home_row{
+    padding-top: 20px;
+  }
 }
 .main_container {
   background: url(../public/images/trip/trip_details_img.png);
@@ -318,7 +336,6 @@
 .trip_three_submit_btn:disabled {
   cursor: not-allowed;
 }
-
 #mobile_input::-webkit-input-placeholder {
   color: #fff;
 }
