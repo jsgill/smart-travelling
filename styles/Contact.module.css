@@ -127,6 +127,7 @@
   letter-spacing: 0.02em;
   padding-left: 15px;
   color: rgba(18, 18, 18, 0.8);
+  text-decoration: none;
 }
 .contact_gmail {
   font-family: "Poppins", sans-serif;

@@ -193,7 +193,7 @@ function Contact() {
                             <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
                             {
                                 open ?
-                                    <Popup position="top" open={open} contentStyle={{ borderRadius: "20px", width: "50%" }}>
+                                    <Popup position="top" open={open} contentStyle={{ borderRadius: "20px", width: "60%" }}>
                                         {
                                             <div className={styles.model}>
                                                 <div className={styles.popup_img11}>
