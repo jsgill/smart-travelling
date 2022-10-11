@@ -199,7 +199,7 @@ function Contact() {
                                                 <div className={styles.popup_img11}>
                                                     <Image src={popup_img} width="110px" height="110px" alt="popup" />
                                                 </div>
-                                                <p className={styles.header}>Success, Done, Let's Go</p>
+                                                <p className={styles.header}>Thanks for contacting us! We will get in touch with you shortly.</p>
                                                 <div className={styles.popup_view_details}>
                                                     <Link href="/"><a><button className={styles.popup_btn}>Success</button></a></Link>
                                                 </div>
