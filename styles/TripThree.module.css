@@ -176,7 +176,7 @@
 }
 
 #back_home_btn {
-  width: 270px;
+  width: 25%;
   height: 60px;
   background: #ffffff;
   border-radius: 32px;
@@ -239,9 +239,7 @@
     padding-top: 0px !important;
   }
 
-  .happy_travling {
-    padding-top: 100px !important;
-  }
+  
 }
 
 @media only screen and (max-width: 768px) {
@@ -275,7 +273,13 @@
 
 @media only screen and (max-width: 1024px) {
   .happy_travel_p1 {
-    font-size: 40px !important;
+    font-size: 40px;
+  }
+  .happy_travling {
+    padding-left: 30px;
+  }
+  #back_to_home_row{
+    padding-right: 30px;
   }
 }
 
@@ -285,32 +289,21 @@
     background: url(../public/images/trip/Rectangle\ 4586.png) !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
-    height: 100vh !important;
+    height: 800px !important;
     width: 100% !important;
   }
 
+  #back_to_home_row{
+    padding-left: 0px !important;
+  }
+  #back_home_btn {
+    width: 100% !important;
+  }
   .happy_travling {
-    padding-top: 100px !important;
+    padding-left: 0px !important;
   }
 
-  /* .happy_travel_p1 {
-    font-size: 25px !important;
-  }
-  .happy_travel_p2 {
-    font-size: 12px !important;
-  }
-  .main_back_btn11 {
-    padding-top: 0px !important;
-  }
-  .happy_travling {
-    padding-top: 0px !important;
-  }
-  .trip_details_p {
-    font-size: 20px !important;
-  }
-  #back_to_home_row{
-    padding-top: 20px;
-  } */
+  
 }
 
 .main_container {
@@ -324,7 +317,7 @@
 
 .happy_travling {
   color: white;
-  padding-top: 100px;
+ 
 }
 
 .seema_renu {
