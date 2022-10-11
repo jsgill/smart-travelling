@@ -176,7 +176,7 @@ function TripOne() {
               </div>
 
 
-              <Popup position="top center" id={styles.calender_popup} trigger={<div onClick={toggleInput3} className={styles.input_field} >
+              <Popup position="top center" id={styles.calender_popup} trigger={<div disabled={!inputTwo} onClick={toggleInput3} className={styles.input_field} >
                 {
                   inputThree.length == 0
                     ? "Select the Start & End Date"
