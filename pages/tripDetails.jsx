@@ -33,44 +33,44 @@ function TripDetails() {
                             <div className={styles.main_back_btn11}>
                                 <div id={styles.main_card_div}>
                                     <div className='container'>
-                                        <div className='row'>
+                                        <div className='row gx-0'>
                                             <div className='col-md-12'>
                                                 <div className={styles.hr_line}>
                                                     <p className={styles.trip_details_p}>Trip Detail</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className='row justify-content-center pt-2'>
+                                        <div className='row justify-content-center gx-0 pt-4'>
                                             <div className='col-5'><b>Name</b></div>
                                             <div className='col-1'> <p>:</p></div>
                                             <div className='col-6'> <p>{userDetails.name}</p></div>
                                         </div>
-                                        <div className='row justify-content-center'>
+                                        <div className='row justify-content-center gx-0'>
                                             <div className='col-5'><b>Mobile Number</b></div>
                                             <div className='col-1'><p>:</p></div>
                                             <div className='col-6'><p>(+91) {userDetails.mobile}</p></div>
                                         </div>
-                                        <div className='row justify-content-center'>
+                                        <div className='row justify-content-center gx-0'>
                                             <div className='col-5'> <b>Destination</b></div>
                                             <div className='col-1'><p>:</p></div>
                                             <div className='col-6'><p>{destinationPlace.destination}</p></div>
                                         </div>
-                                        <div className='row justify-content-center'>
+                                        <div className='row justify-content-center gx-0'>
                                             <div className='col-5'><b>No of Guests</b></div>
                                             <div className='col-1'><p>:</p></div>
                                             <div className='col-6'><p>{destinationPlace.guests}</p></div>
                                         </div>
-                                        <div className='row justify-content-center'>
+                                        <div className='row justify-content-center gx-0'>
                                             <div className='col-5'><b>Interest</b></div>
                                             <div className='col-1'><p>:</p></div>
                                             <div className='col-6'><p>{userInterest.user_interest}</p></div>
                                         </div>
-                                        <div className='row justify-content-center'>
+                                        <div className='row justify-content-center gx-0'>
                                             <div className='col-5'><b>Budget per person</b></div>
                                             <div className='col-1'><p>:</p></div>
                                             <div className='col-6'><p>₹ {userInterest.budget}</p></div>
                                         </div>
-                                        <div className='row justify-content-center'>
+                                        <div className='row justify-content-center gx-0'>
                                             <div className='col-5'><b>Start & End Date</b></div>
                                             <div className='col-1'><p>:</p></div>
                                             <div className='col-6'><p>{destinationPlace.startdate}, {destinationPlace.enddate}</p></div>
