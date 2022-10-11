@@ -5,7 +5,7 @@ import logo from '../public/images/home/Group 18260.png'
 function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light">
                 <div className="container">
                     <Link href="/">
                         <a className="navbar-brand d-flex">

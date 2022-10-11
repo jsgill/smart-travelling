@@ -1,6 +1,10 @@
 .container {
   max-width: 1200px !important;
 }
+/* .nav_blue {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(34, 34, 34, 0.62)
+} */
 
 .nav-link {
   color: #121212 !important;
