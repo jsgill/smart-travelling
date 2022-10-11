@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import icon1 from "../public/images/trip/Group 22133.png";
@@ -7,6 +7,8 @@ import icon3 from "../public/images/trip/Group 22135.png";
 import MydModalWithGrid from "../components/modal";
 import styles from "../styles/TripOne.module.css";
 import { Calendar } from "react-multi-date-picker"
+import Popup from 'reactjs-popup';
+// import 'reactjs-popup/dist/index.css';
 
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
@@ -172,62 +174,56 @@ function TripOne() {
                   </div>
                 </div>
               </div>
-              <div onClick={toggleInput3} className={styles.input_field}>
+
+
+              <Popup position="top center" id={styles.calender_popup} trigger={<div disabled={!inputTwo} onClick={toggleInput3} className={styles.input_field} >
                 {
                   inputThree.length == 0
                     ? "Select the Start & End Date"
                     : startDate.concat(" - ") + endDate
                 }
-              </div>
-              <div style={{ display: input3 ? "block" : "none" }}>
-                <div className="container  text-center" id={styles.calender_main_container}>
-                  <div className="row justify-content-center">
-                    <div className="col-md-6"
-                      id={styles.tripOne_inputthree_container}>
-                      <div className={styles.app}>
-                        <div className="row justify-content-center">
-                          <div
-                            className="col-md-2"
-                            id={styles.calender_container} >
-                            <div className={styles.Calendar_row} >
-                              <Calendar
-                                range
-                                value={date}
-                                minDate={new Date()}
-                                onChange={setDate}
-                                format="DD MMMM  YYYY"
-                                className={styles.calender}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className={styles.tripOne_inputone_btn_container1}>
-                        <button className={styles.tripOne_inputone_btn1} onClick={inputThreeBtn}>
-                          Save
-                        </button>
-                      </div>
+              </div>} contentStyle={{
+                borderRadius: "10px",
+              }} modal nested>
+                {close => (
+                  <div >
+                    <Calendar
+                      range
+                      value={date}
+                      minDate={new Date()}
+                      onChange={setDate}
+                      format="DD MMMM  YYYY"
+                      className={styles.calender}
+
+                    />
+                    <div className={styles.tripOne_inputone_btn_container1} onClick={() => {
+                      close();
+                    }}>
+                      <button className={styles.tripOne_inputone_btn1} onClick={inputThreeBtn}>
+                        Save
+                      </button>
                     </div>
                   </div>
-                </div>
-              </div>
+                )}
+              </Popup>
+
             </div>
-            <div className="row justify-content-center">
-              <div className="col-md-3 text-center">
-                <Link href="/tripTwo">
-                  <button
-                    className={styles.save_btn}
-                    onClick={handleSubmitInput1}
-                    disabled={!info || !inputTwo || !inputThree}>
-                    Save & Continue
-                  </button>
-                </Link>
-              </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-md-3 text-center">
+              <Link href="/tripTwo">
+                <button
+                  className={styles.save_btn}
+                  onClick={handleSubmitInput1}
+                  disabled={!info || !inputTwo || !inputThree}>
+                  Save & Continue
+                </button>
+              </Link>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
 export default TripOne;
