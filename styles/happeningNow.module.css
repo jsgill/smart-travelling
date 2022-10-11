@@ -1,5 +1,6 @@
 @media only screen and (max-width:400px) {
-    .demo {
+
+    /* .demo {
         border-bottom: 2px solid #00754A !important;
         width: 100% !important;
         padding: 2% 0% 0% 0% !important;
@@ -8,7 +9,31 @@
     .home_mountain {
         padding: 7% 0% 0% 0% !important;
         text-align: start !important;
+        margin: 0px 10px;
+    } */
+    .home_mountain {
+        margin-top: -8px !important;
+        text-align: start !important;
     }
+
+    .saprater {
+        padding: 15px 0px !important;
+        text-align: start !important;
+    }
+
+    .demo {
+        border-bottom: 2px solid #00754A !important;
+        width: 96% !important;
+        margin-top: -4px !important;
+    }
+
+    #happenNow_images_div {
+        margin-bottom: 5em;
+
+
+    }
+
+
 }
 
 @media only screen and (max-width:768px) {
@@ -25,8 +50,15 @@
     .home_mountain {
         padding: 7% 0% 0% 0% !important;
         text-align: start !important;
-
+        margin: 0px 10px;
     }
+
+    #happenNow_images_div {
+        margin-bottom: 5em;
+    }
+
+
+
 }
 
 
@@ -45,45 +77,65 @@
     padding: 90px 0px 60px 0px;
 }
 
+
 .saprater p {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 130%;
+    font-size: 17.6px;
+    line-height: 146%;
+    color: rgba(18, 18, 18, 0.8);
+}
+
+.saprater h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #121212;
+    font-family: "Poppins", sans-serif;
+    line-height: 122%;
     color: rgba(18, 18, 18, 0.8);
 }
 
 .saprater {
     border-bottom: 2px solid #00754A;
-    width: 100%;
-    padding: 18px 5px 16px 5px;
+    width: 95%;
     text-align: start;
+    padding: 10px 0px;
 }
 
 .home_mountain {
-    padding: 22% 0% 0% 0%;
+    margin-top: 92px;
     text-align: start;
 
 }
 
 .demo {
     border-bottom: 2px solid #00754A;
-    width: 100%;
-    padding: 21.5% 0% 0% 0%;
+    width: 96%;
+    margin-top: 112px;
+
 }
 
 .home_mountain h4 {
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
-    line-height: 130%;
     color: #121212;
+    line-height: 126%;
     font-family: "Poppins", sans-serif;
 }
 
+#image1 {
+    padding: 7px 10px 0px 18px;
+}
+
+.image2 {
+    padding: 7px 7px 0px 7px;
+}
+
 .sizzling {
-    margin-bottom: 0.8rem;
+
     padding-top: 10px;
 }
 
@@ -104,7 +156,7 @@
     font-family: "Poppins", sans-serif;
     color: #00754A;
     text-decoration: none;
-    padding-bottom: 20px;
+
 }
 
 .home_explore:hover {
@@ -116,10 +168,17 @@
     width: 15.5px;
 }
 
-.happeningNow_images {
-    filter: contrast(50%);
+.happeningNow_container {
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.35);
+
+    /* margin: 0px 5px; */
 }
 
-.happeningNow_images:hover {
-    filter: contrast(18%);
+#happeningNow_container {
+    border-radius: 10px;
+    padding: 0;
+    /* margin: 0px 5px; */
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.35);
 }
