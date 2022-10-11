@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../styles/Contact.module.css";
 import user_one from "../public/images/contact/Rectangle 4409.png";
@@ -15,10 +15,15 @@ import Navbar from "../components/navbar"
 import Link from "next/link";
 import Footer from "../components/footer";
 import { useForm } from "react-hook-form";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import popup_img from "../public/images/trip/popup_img.png";
 
 function Contact() {
+    const [open, setOpen] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onTouched" });
     const onSubmit = (data) => {
+        setOpen(true)
         console.log(" ++++++contact data ++++", data)
 
     }
@@ -37,65 +42,69 @@ function Contact() {
                         <div className={styles.contact_all_card}>
                             <div className="row text-center">
                                 <div className="col-lg-6">
-                                    <div className="card" id={styles.contact_card_one}>
-                                        <div className={styles.contact_user_one}>
-                                            <Image src={user_one} width="214px" height="214px" alt="user-one" />
-                                        </div>
-                                        <div className="card-body text-center">
-                                            <p className="card-title" id={styles.contact_card_title}>Nihal Choudhary</p>
-                                            <div className={styles.text_div}>
-                                                <small className="card-text" id={styles.contact_card_text}>Co-Founder, Product IITK'21</small>
+                                    <div className="justify-content-center">
+                                        <div className="card" id={styles.contact_card_one}>
+                                            <div className={styles.contact_user_one}>
+                                                <Image src={user_one} width="214px" height="214px" alt="user-one" />
                                             </div>
-                                            <div className={styles.all_icons}>
-                                                <div id={styles.user_icons}>
-                                                    <Link href='mailto:nihal@thesmartraveller.com'>
-                                                        <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
-                                                    </Link>
+                                            <div className="card-body p-0 text-center">
+                                                <p className="card-title" id={styles.contact_card_title}>Nihal Choudhary</p>
+                                                <div className={styles.text_div}>
+                                                    <small className="card-text" id={styles.contact_card_text}>Co-Founder, Product IITK'21</small>
                                                 </div>
-                                                <div id={styles.user_icons}>
-                                                    <Link href="https://instagram.com/nihilistic___?igshid=YmMyMTA2M2Y">
-                                                        <a target="_blank"><Image src={group_img} alt="envelope" /></a>
-                                                    </Link>
-                                                </div>
-                                                <div id={styles.user_icons}>
-                                                    <Link href="https://www.linkedin.com/in/nihalchoudhary">
-                                                        <a target="_blank">
-                                                            <Image src={vector_img} alt="envelope" />
-                                                        </a>
-                                                    </Link>
+                                                <div className={styles.all_icons}>
+                                                    <div id={styles.user_icons}>
+                                                        <Link href='mailto:nihal@thesmartraveller.com'>
+                                                            <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
+                                                        </Link>
+                                                    </div>
+                                                    <div id={styles.user_icons}>
+                                                        <Link href="https://instagram.com/nihilistic___?igshid=YmMyMTA2M2Y">
+                                                            <a target="_blank"><Image src={group_img} alt="envelope" /></a>
+                                                        </Link>
+                                                    </div>
+                                                    <div id={styles.user_icons}>
+                                                        <Link href="https://www.linkedin.com/in/nihalchoudhary">
+                                                            <a target="_blank">
+                                                                <Image src={vector_img} alt="envelope" />
+                                                            </a>
+                                                        </Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6" id={styles.contact_second_user22}>
-                                    <div className="card" id={styles.contact_card_one}>
-                                        <div>
-                                            <Image src={user_two} width="214px" height="214px" alt="user-two" />
-                                        </div>
-                                        <div className="card-body text-center">
-                                            <p className="card-title" id={styles.contact_card_title}>Dhruv Sihag</p>
-                                            <div className={styles.text_div}>
-                                                <small className="card-text" id={styles.contact_card_text}>Co-Founder, Operations IITK'21</small>
+                                    <div className="justify-content-center">
+                                        <div className="card" id={styles.contact_card_one}>
+                                            <div>
+                                                <Image src={user_two} width="214px" height="214px" alt="user-two" />
                                             </div>
-                                            <div className={styles.all_icons}>
-                                                <div id={styles.user_icons}>
-                                                    <Link href="mailto:dhruv@thesmartraveller.com">
-                                                        <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
-                                                    </Link>
+                                            <div className="card-body p-0 text-center">
+                                                <p className="card-title" id={styles.contact_card_title}>Dhruv Sihag</p>
+                                                <div className={styles.text_div}>
+                                                    <small className="card-text" id={styles.contact_card_text}>Co-Founder, Operations IITK'21</small>
+                                                </div>
+                                                <div className={styles.all_icons}>
+                                                    <div id={styles.user_icons}>
+                                                        <Link href="mailto:dhruv@thesmartraveller.com">
+                                                            <a target="_blank"><Image src={envelope_img} alt="envelope" /></a>
+                                                        </Link>
 
-                                                </div>
-                                                <div id={styles.user_icons}>
-                                                    <Link href="https://instagram.com/_dhruvsihag?igshid=YmMyMTA2M2Y">
-                                                        <a target="_blank"><Image src={group_img} alt="envelope" /></a>
-                                                    </Link>
-                                                </div>
-                                                <div id={styles.user_icons}>
-                                                    <Link href="https://www.linkedin.com/in/dhruv-sihag-99a1b91a0">
-                                                        <a target="_blank">
-                                                            <Image src={vector_img} alt="envelope" />
-                                                        </a>
-                                                    </Link>
+                                                    </div>
+                                                    <div id={styles.user_icons}>
+                                                        <Link href="https://instagram.com/_dhruvsihag?igshid=YmMyMTA2M2Y">
+                                                            <a target="_blank"><Image src={group_img} alt="envelope" /></a>
+                                                        </Link>
+                                                    </div>
+                                                    <div id={styles.user_icons}>
+                                                        <Link href="https://www.linkedin.com/in/dhruv-sihag-99a1b91a0">
+                                                            <a target="_blank">
+                                                                <Image src={vector_img} alt="envelope" />
+                                                            </a>
+                                                        </Link>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -112,12 +121,12 @@ function Contact() {
                     </div>
                     <div className={styles.contact_info11}>
                         <div className="row">
-                            <div className="col-lg-6">
-                                <div className="">
+                            <div className="col-lg-6" id={styles.contact_number_card11}>
+                                <div className={styles.contact_number_card}>
                                     <span><Image src={contact_img11} width="20.64px" height="20.64px" alt="contact" /></span>
                                     <span className={styles.contact_number}>+91 7807021868</span>
                                 </div>
-                                <div className="" id={styles.contact_main_mail}>
+                                <div className={styles.contact_number_card} id={styles.contact_main_mail}>
                                     <span className={styles.contact_mail_img11}><Image src={mail_img} width="24.45px" height="15.px" alt="mail" /></span>
                                     <span className={styles.contact_gmail}>smartestraveller@gmail.com</span>
                                 </div>
@@ -145,7 +154,6 @@ function Contact() {
                                         </Link>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -183,6 +191,22 @@ function Contact() {
                         </div>
                         <div className={styles.contact_main_btn}>
                             <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
+                            {
+                                open ?
+                                    <Popup position="top" open={open} contentStyle={{ borderRadius: "20px", width: "60%" }}>
+                                        {
+                                            <div className={styles.model}>
+                                                <div className={styles.popup_img11}>
+                                                    <Image src={popup_img} width="110px" height="110px" alt="popup" />
+                                                </div>
+                                                <p className={styles.header}>Success, Done, Let's Go</p>
+                                                <div className={styles.popup_view_details}>
+                                                    <Link href="/"><a><button className={styles.popup_btn}>Success</button></a></Link>
+                                                </div>
+                                            </div>
+                                        }
+                                    </Popup> : null
+                            }
                         </div>
                     </div>
                 </div>
