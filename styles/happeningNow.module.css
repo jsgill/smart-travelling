@@ -12,7 +12,7 @@
         margin: 0px 10px;
     } */
     .home_mountain {
-        margin-top: -8px !important;
+        margin-top: -11px !important;
         text-align: start !important;
     }
 
@@ -29,7 +29,52 @@
 
     #happenNow_images_div {
         margin-bottom: 5em;
+    }
 
+    .plan_trip_btn {
+        padding-left: 10px !important;
+        font-size: 16.5px !important;
+    }
+
+    .home_explore {
+        font-size: 16.5px !important;
+    }
+
+    #image1 {
+        border-radius: 10px 10px 0px 0px;
+        background-image: url("../public/images/home/Rectangle 4554.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50vh;
+
+    }
+}
+
+@media only screen and (max-width:414px) {
+    .home_mountain {
+        margin-top: -11px !important;
+        text-align: start !important;
+    }
+
+    .saprater {
+        padding: 15px 0px !important;
+        text-align: start !important;
+    }
+
+    .demo {
+        border-bottom: 2px solid #00754A !important;
+        width: 96% !important;
+        margin-top: -4px !important;
+    }
+
+    #image1 {
+        border-radius: 10px 10px 0px 0px;
+        background-image: url("../public/images/home/Rectangle 4554.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50vh;
 
     }
 
@@ -57,8 +102,28 @@
         margin-bottom: 5em;
     }
 
+    .plan_trip_btn {
+        padding-left: 10px !important;
+    }
 
+    .plan_trip_btn {
+        padding-left: 10px !important;
+        font-size: 16.5px !important;
+    }
 
+    .home_explore {
+        font-size: 16.5px !important;
+    }
+
+    #image1 {
+        border-radius: 10px 10px 0px 0px !important;
+        background-image: url("../public/images/home/Rectangle 4554.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50vh;
+
+    }
 }
 
 
@@ -90,7 +155,7 @@
 .saprater h4 {
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 21px;
     color: #121212;
     font-family: "Poppins", sans-serif;
     line-height: 122%;
@@ -99,20 +164,20 @@
 
 .saprater {
     border-bottom: 2px solid #00754A;
-    width: 95%;
+    width: 98%;
     text-align: start;
-    padding: 10px 0px;
+    padding: 18px 0px;
 }
 
 .home_mountain {
-    margin-top: 92px;
+    margin-top: 124px;
     text-align: start;
 
 }
 
 .demo {
     border-bottom: 2px solid #00754A;
-    width: 96%;
+    width: 97%;
     margin-top: 112px;
     padding-left: 7px;
 }
@@ -127,12 +192,18 @@
 }
 
 #image1 {
-    padding: 7px 10px 0px 18px;
+    border-radius: 10px 0px 0px 10px;
+    background-image: url("../public/images/home/Rectangle 4554.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 57vh;
+
 }
 
-.image2 {
+/* .image2 {
     padding: 7px 7px 0px 7px;
-}
+} */
 
 .sizzling {
 

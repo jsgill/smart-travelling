@@ -13,14 +13,14 @@ function HappeningNow() {
                     <h1>Happening Now.....</h1>
                 </div>
             </div>
-            <div className='row justify-content-center mx-1'>
-                <div className='col-md-8 text-center' id={styles.happenNow_images_div}>
+            <div className='row justify-content-center'>
+                <div className='col-md-8 p-0 text-center' id={styles.happenNow_images_div}>
                     <div className='row'>
                         <div className='col-md-12 px-4'>
                             <div className={styles.happeningNow_container}>
-                                <div className='row'>
-                                    <div className='col-md-4' id={styles.image1} >
-                                        <Image src={image1} alt="tour" className={styles.image1_container}></Image>
+                                <div className='row p-0'>
+                                    <div className='col-md-4'  >
+                                        <div id={styles.image1}></div>
                                     </div>
                                     <div className='col-md-8'>
                                         <div className='container px-1'>
@@ -30,13 +30,13 @@ function HappeningNow() {
                                                     in the <br /> middle of nowhere waterfall</p>
                                                 <div className={styles.demo}></div>
                                             </div>
-                                            <div className='row'>
+                                            <div className='row pt-1'>
                                                 <div className='col-6 text-start'><Link href="/tripOne">
                                                     <a className={styles.home_explore} type="button">
-                                                        <span className='px-1'>Plan your Trip</span>
+                                                        <span className={styles.plan_trip_btn}>Plan your Trip</span>
                                                     </a>
                                                 </Link></div>
-                                                <div className='col-6 text-end px-4 pb-2'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="right" ></Image></a></Link></div>
+                                                <div className='col-6 text-end px-3 pb-2'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="right" ></Image></a></Link></div>
                                             </div>
                                         </div>
                                     </div>
@@ -49,8 +49,8 @@ function HappeningNow() {
                 <div className='col-md-4 px-3'>
                     <div id={styles.happeningNow_container}>
                         <div className={styles.image2}>
-                            <Image src={image2} height="212px" width="458px" alt="right-now" ></Image>
-                            <div className='container px-1'>
+                            <Image src={image2} height="225px" width="458px" alt="right-now" ></Image>
+                            <div className='container px-3'>
                                 <div className={styles.saprater}>
                                     <h4>Riverside camping at kasol </h4>
                                     <p className={styles.sizzling}>A bad day camping is still better than a good day working</p>
@@ -61,7 +61,7 @@ function HappeningNow() {
                                             <span >Plan your Trip</span>
                                         </a>
                                     </Link></div>
-                                    <div className='col-6 text-end px-4 pb-2'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="arrow"></Image></a></Link></div>
+                                    <div className='col-6 text-end px-2 pb-2'><Link href="/"><a className={styles.home_right_button}><Image src={rightarrow} height="24px" width="24px" alt="arrow"></Image></a></Link></div>
                                 </div>
                             </div>
                         </div>
