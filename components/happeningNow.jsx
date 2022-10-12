@@ -27,7 +27,7 @@ function HappeningNow() {
                                             <div className={styles.home_mountain}>
                                                 <h4>BBQ at hidden waterfall</h4>
                                                 <p className={styles.sizzling}>Sizzling hot muchies out of barbecue,
-                                                    in the <br /> middle of nowhere waterfall</p>
+                                                    in the middle of nowhere waterfall</p>
                                                 <div className={styles.demo}></div>
                                             </div>
                                             <div className='row pt-1'>
