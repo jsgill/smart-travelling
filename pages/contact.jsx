@@ -18,13 +18,28 @@ import { useForm } from "react-hook-form";
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import popup_img from "../public/images/trip/popup_img.png";
+import axios from "axios";
 
 function Contact() {
     const [open, setOpen] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onTouched" });
+
     const onSubmit = (data) => {
+        const { name, phone, message } = data
         setOpen(true)
-        console.log(" ++++++contact data ++++", data)
+        axios({
+            method: "POST",
+            url: "https://formbold.com/s/3Oqk6",
+            data: {
+                "name": name,
+                "number": phone,
+                "message": message
+            },
+        }).then((res) => {
+            console.log("data sent to formbold");
+        }).catch((error) => {
+            console.log("error");
+        });
 
     }
     return (
@@ -120,7 +135,7 @@ function Contact() {
                         <p className={styles.contact_user_para}>Our team is here to help you make the most of your time with us!</p>
                     </div>
                     <div className={styles.contact_info11}>
-                        <div className="row">
+                        <div className="row" id={styles.contact_info22}>
                             <div className="col-lg-6" id={styles.contact_number_card11}>
                                 <div className={styles.contact_number_card}>
                                     <span><Image src={contact_img11} width="20.64px" height="20.64px" alt="contact" /></span>
