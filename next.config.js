@@ -3,9 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    loader: 'imgix',
-    path: '/',
-  },
+        unoptimized: true
+    } 
 }
 
 module.exports = nextConfig
