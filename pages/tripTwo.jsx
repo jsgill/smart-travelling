@@ -171,6 +171,7 @@ function TripTwo() {
                   onChange={demo}
                   className={styles.input_field}
                   onClick={toggleInput1}
+                  isSearchable={ false }
                 />
                 <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
                   <div className={styles.modal}>
