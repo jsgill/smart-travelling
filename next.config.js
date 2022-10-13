@@ -4,8 +4,9 @@ const nextConfig = {
   swcMinify: true,
   distDir: 'build',
   images: {
-        unoptimized: true
-    }
+    loader: 'imgix',
+    path: '/',
+  },
 }
 
 module.exports = nextConfig
