@@ -233,7 +233,7 @@
 .card2 {
     background-image: url("../public/images/home/Rectangle 4557.png");
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
     height: 180px;
     border-radius: 10px 10px 0px 0px;
