@@ -1,7 +1,40 @@
+@media only screen and (max-width: 400px) {
+  .input_field {
+    height: 50px !important;
+  }
+
+  #TripTwo_input_container_btn {
+    padding: 8px 10px !important;
+  }
+
+  .budget_select_section {
+    padding: 20px 0px;
+  }
+  #budget_popup {
+   
+    top: 60% !important;
+    
+  }
+  
+}
 @media only screen and (max-width: 768px) {
   .save_btn {
     width: 50% !important;
     font-size: 10px !important;
+  }
+
+  .budget_select_section {
+    padding: 20px 50px;
+  }
+
+  #budget_popup {
+    width: 90% !important;
+  }
+
+  #TripTwo_input_container_btn {
+    width: 10vh !important;
+    font-size: 11px !important;
+    padding: 5px 8px !important;
   }
 
 
@@ -24,6 +57,18 @@
 
 }
 
+@media only screen and (max-width: 1024px) {
+  #tripTwo_inputtwo_container2 {
+    width: 90% !important;
+    height: 50% !important;
+    overflow: scroll !important;
+  }
+
+  .image_para_content2 {
+    margin-top: -10px !important;
+  }
+}
+
 .save_btn:disabled {
   cursor: not-allowed;
 }
@@ -38,45 +83,6 @@
 
 }
 
-@media only screen and (max-width: 768px) {
-  .budget_select_section {
-    padding: 20px 50px;
-  }
-
-  #budget_popup {
-    width: 90% !important;
-  }
-
-  #TripTwo_input_container_btn {
-    width: 10vh !important;
-    font-size: 11px !important;
-    padding: 5px 8px !important;
-  }
-
-}
-
-
-
-
-
-@media only screen and (max-width: 1024px) {
-  #tripTwo_inputtwo_container2 {
-    width: 90% !important;
-    height: 50% !important;
-    overflow: scroll !important;
-  }
-
-  .image_para_content2 {
-    margin-top: -10px !important;
-  }
-}
-
-
-
-
-
-
-
 #TripTwo_input_container_btn {
   margin: 10px 8px;
   padding: 6px 15px;
@@ -85,18 +91,7 @@
 }
 
 
-@media only screen and (max-width: 400px) {
-  .input_field {
-    height: 50px !important;
-  }
-  #TripTwo_input_container_btn {
-    padding: 8px 10px !important;
-  }
 
-  .budget_select_section {
-    padding: 20px 0px;
-  }
-}
 
 #column {
   margin-bottom: 20px !important;
@@ -365,10 +360,3 @@
   transform: translate(-50%, -50%);
 }
 
-/* #budget_btn_div {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
