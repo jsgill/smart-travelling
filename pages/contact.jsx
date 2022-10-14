@@ -19,13 +19,22 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import popup_img from "../public/images/trip/popup_img.png";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
+    const recaptchaRef = React.createRef();
     const [open, setOpen] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onTouched" });
 
     const onSubmit = (data) => {
         const { name, phone, message } = data
+        console.log(!recaptchaRef.current.getValue());
+        if (!recaptchaRef.current.getValue()){
+            toast.error("Captcha required !", {position: "bottom-center"});
+        }
+        else {
         setOpen(true)
         axios({
             method: "POST",
@@ -33,14 +42,15 @@ function Contact() {
             data: {
                 "name": name,
                 "number": phone,
-                "message": message
+                "message": message,
+                "g-recaptcha-response": recaptchaRef.current.getValue()
             },
         }).then((res) => {
             console.log("data sent to formbold");
         }).catch((error) => {
             console.log("error");
         });
-
+        }
     }
     return (
         <div>
@@ -204,7 +214,10 @@ function Contact() {
 
                             </div>
                         </div>
+                        <ToastContainer />
                         <div className={styles.contact_main_btn}>
+                            <ReCAPTCHA ref={recaptchaRef}
+                            sitekey="6LdMwnoiAAAAAFkL7HdMdEH_U7znOtagObm7k_tR"/>
                             <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
                             {
                                 open ?
