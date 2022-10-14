@@ -67,10 +67,7 @@ function HappeningNow() {
                         </div>
                     </div>
                 </div>
-
-
             </div>
-
         </div >
     )
 }

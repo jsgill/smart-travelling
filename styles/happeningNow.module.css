@@ -116,17 +116,44 @@
     }
 
     #image1 {
-        border-radius: 10px 10px 0px 0px !important;
+        border-radius: 10px 0px 0px 10px !important;
         background-image: url("../public/images/home/Rectangle 4554.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 50vh;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        height: 37vh !important;
+    }
 
+}
+
+@media only screen and (max-width:1024px) {
+    .saprater h4 {
+        font-style: normal !important;
+        font-weight: 600 !important;
+        font-size: 19px !important;
+        color: #121212 !important;
+        font-family: "Poppins", sans-serif !important;
+        line-height: 122% !important;
+        color: rgba(18, 18, 18, 0.8) !important;
     }
 }
 
+@media only screen and (max-width:1280px) {
+    #image1 {
+        border-radius: 10px 10px 0px 0px !important;
+        background-image: url("../public/images/home/Rectangle 4554.png");
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        height: 48vh !important;
+    }
 
+    .home_mountain {
+        margin-top: 125px !important;
+        text-align: start;
+    }
+
+}
 
 .home_happening h1 {
     font-style: normal;
@@ -198,7 +225,6 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 57vh;
-
 }
 
 /* .image2 {
