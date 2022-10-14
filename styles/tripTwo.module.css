@@ -27,38 +27,35 @@
 .save_btn:disabled {
   cursor: not-allowed;
 }
-.budget_select_section{
- top: 50%;
- left: 50%;
- transform: translate(-50%,-50%);
- position: relative;
- padding: 20px 0px; 
- text-align: center;
+
+.budget_select_section {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  padding: 20px 0px;
+  text-align: center;
 
 }
+
 @media only screen and (max-width: 768px) {
-  .budget_select_section{
+  .budget_select_section {
     padding: 20px 50px;
   }
+
   #budget_popup {
     width: 90% !important;
   }
+
   #TripTwo_input_container_btn {
     width: 10vh !important;
     font-size: 11px !important;
     padding: 5px 8px !important;
-  }  
-
-}
-@media only screen and (max-width: 400px) {
-  #TripTwo_input_container_btn {
-    padding: 8px 16px !important;
-  }  
-  .budget_select_section{
-    padding: 20px 0px;
   }
 
 }
+
+
 
 
 
@@ -75,9 +72,9 @@
 }
 
 
- 
 
-   
+
+
 
 
 #TripTwo_input_container_btn {
@@ -85,12 +82,19 @@
   padding: 6px 15px;
   font-size: 20px;
   width: 100px;
-}  
+}
 
 
 @media only screen and (max-width: 400px) {
   .input_field {
     height: 50px !important;
+  }
+  #TripTwo_input_container_btn {
+    padding: 8px 10px !important;
+  }
+
+  .budget_select_section {
+    padding: 20px 0px;
   }
 }
 
@@ -215,7 +219,7 @@
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
-  
+
 }
 
 .tripTwo_inputtwo_btn:disabled {
