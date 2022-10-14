@@ -219,12 +219,9 @@
 }
 
 #image1 {
-    border-radius: 10px 0px 0px 10px;
     background-image: url("../public/images/home/Rectangle 4554.png");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 57vh;
 }
 
 /* .image2 {
