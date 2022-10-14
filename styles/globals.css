@@ -5,9 +5,7 @@
   backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(34, 34, 34, 0.62)
 } */
-input{
-  caret-color: transparent !important;
-}
+
 .nav-link {
   color: #121212 !important;
   font-style: normal;
