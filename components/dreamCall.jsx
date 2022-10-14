@@ -72,10 +72,13 @@ function DreamCall() {
                         </div>
                         <div className={styles.home_carousal_card}>
                             <div >
-                                <Popup
+                            
+                                 <Popup
                                     trigger={<Image src={slider2} className="button" height="382px" width="351px" alt="group2" id={styles.bca2} ></Image>}
                                     modal
-                                    contentStyle={{ borderRadius: "20px", width: "70%" }}>
+                                    className={styles.center_popup_open}
+                                    contentStyle={{  width: "90vh",overflow:"hidden",backgroundSize:"cover" }}
+                                    >
                                     {close => (
                                         <div className={styles.modal}>
                                             <button className={styles.close} onClick={close}>
@@ -84,10 +87,12 @@ function DreamCall() {
                                             <div className={styles.content}>
                                                 <div className='row justify-content-center pt-3'>
                                                     <div className='col-8'>
-                                                        <div><Image src={group3} height="365px" width="645px" alt="group3"></Image></div>
+                                                        <div className={styles.group3}>
+                                                        </div>
                                                     </div>
                                                     <div className='col-4 '>
-                                                        <div><Image src={group4} height="520px" alt="group4"></Image></div>
+                                                        <div className={styles.group4}>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div className='row justify-content-center'>
@@ -98,8 +103,7 @@ function DreamCall() {
                                                         <div><Image src={circle} width="15px" height="15px" alt="circle"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
                                                         <div><Image src={circle} height="15px" width="15px" alt="circle2"></Image> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span></div>
                                                     </div>
-                                                    <div className={styles.home_popup_para}>
-                                                    </div>
+                                                   
                                                     <div className={styles.Popup_bottom_button}>
                                                         <Link href="/tripOne">
                                                             <a className="btn" id={styles.home_popup_planYourTrip} type="button">
@@ -111,7 +115,7 @@ function DreamCall() {
                                             </div>
                                         </div>
                                     )}
-                                </Popup>
+                                </Popup> 
                             </div>
                             <div className={styles.abc}>132 trips booked last week
                             </div>
