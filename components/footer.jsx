@@ -41,7 +41,9 @@ function Footer() {
                 <div className="row justify-content-center">
                     <div className={styles.footer_copyright}>
                         <p>Copyright © 2022 Travel Company. All Rights Reserved</p>
-                        <p>Web Design Melbourne  Make My Website</p>
+                        <Link href="https://www.makemywebsite.com.au/">
+                            <p className={styles.web_design}>Web Design Melbourne  Make My Website</p>
+                        </Link>
                     </div>
                 </div>
             </div>
