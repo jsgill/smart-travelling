@@ -19,28 +19,36 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import popup_img from "../public/images/trip/popup_img.png";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
+    const recaptchaRef = React.createRef();
     const [open, setOpen] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onTouched" });
-
     const onSubmit = (data) => {
         const { name, phone, message } = data
-        setOpen(true)
-        axios({
-            method: "POST",
-            url: "https://formbold.com/s/3Oqk6",
-            data: {
-                "name": name,
-                "number": phone,
-                "message": message
-            },
-        }).then((res) => {
-            console.log("data sent to formbold");
-        }).catch((error) => {
-            console.log("error");
-        });
-
+        console.log(!recaptchaRef.current.getValue());
+        if (!recaptchaRef.current.getValue()) {
+            toast.error("Captcha required !", { position: "bottom-center" });
+        }
+        else {
+            setOpen(true)
+            axios({
+                method: "POST",
+                url: process.env.NEXT_PUBLIC_CONTACT_US_URL,
+                data: {
+                    "name": name,
+                    "number": phone,
+                    "message": message,
+                    "g-recaptcha-response": recaptchaRef.current.getValue()
+                },
+                headers: { 'Content-Type': 'application/json' },
+            }).then((res) => {
+                console.log("data sent to formbold");
+            }).catch((error) => {
+                console.log("error");
+            });
+        }
     }
     return (
         <div>
@@ -205,7 +213,12 @@ function Contact() {
                             </div>
                         </div>
                         <div className={styles.contact_main_btn}>
-                            <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
+                            <div><ReCAPTCHA ref={recaptchaRef}
+                                sitekey={process.env.NEXT_PUBLIC_SITEKEY} /></div>
+                            <div className="pt-4 text-center">
+                                <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
+                            </div>
+
                             {
                                 open ?
                                     <Popup position="top" open={open} contentStyle={{ borderRadius: "20px", width: "60%" }}>
