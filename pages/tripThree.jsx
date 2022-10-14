@@ -9,6 +9,7 @@ import 'reactjs-popup/dist/index.css';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReCAPTCHA from "react-google-recaptcha";
 
 function TripThree() {
     const [name, setName] = useState("Enter Your Name (optional)");
@@ -18,6 +19,7 @@ function TripThree() {
     const [userInterest, setUserInterest] = useState({});
     const [formError, setFormError] = useState("");
     const [userDetails, setUserDetails] = useState([]);
+    const recaptchaRef = React.createRef();
 
     useEffect(() => {
         const user_dest = JSON.parse(localStorage.getItem('trip_one'));
@@ -49,9 +51,12 @@ function TripThree() {
         obj.mobile = mobile
         obj.promo = (promo === "Promo Code (optional)" ? "-" : promo)
         localStorage.setItem('trip_three', JSON.stringify(obj))
+        if (!recaptchaRef.current.getValue()) {
+            toast.error("Captcha required !", { position: "start" });
+        }
         axios({
             method: "POST",
-            url: "https://formbold.com/s/6MM76",
+            url: process.env.NEXT_PUBLIC_TRIP_DETAILS_URL,
             data: {
                 "userInterests": userInterest.user_interest,
                 "userDestination": destinationPlace.destination,
@@ -60,8 +65,10 @@ function TripThree() {
                 "journeyEndingDate": destinationPlace.enddate,
                 "noOfGuests": destinationPlace.guests,
                 "name": obj.name,
-                "promo_code": obj.promo
+                "promo_code": obj.promo,
+                "g-recaptcha-response": recaptchaRef.current.getValue()
             },
+            headers: { 'Content-Type': 'application/json' },
         })
             .then((r) => {
                 console.log("data sent to formbold");
@@ -84,7 +91,7 @@ function TripThree() {
         }).then((result) => result.json())
             .then((response) => {
                 toast.success("Success, Done, Let's Go", {
-                position: "top-right"
+                    position: "top-right"
                 });
                 console.log("++++response ++++++", response)
                 if (response) {
@@ -165,13 +172,18 @@ function TripThree() {
                         </div>
                     </div>
                     <div className='container'>
-                        <div className='row justify-content-center'>
+                        <div className='row justify-content-center gx-0'>
                             <div className='col-md-3'>
+                                <div>
+                                    <ReCAPTCHA ref={recaptchaRef}
+                                        sitekey={process.env.NEXT_PUBLIC_SITEKEY} />
+                                </div>
                                 <div className={styles.trip_three_btn}>
                                     <button className={styles.trip_three_submit_btn} disabled={mobile === "Mobile Number"}
-                                        onClick={handleSubmit}>Submit</button>
-                                </div>
+                                        onClick={handleSubmit}>Submit</button></div>
+
                             </div>
+
                         </div>
                     </div>
                 </div>
