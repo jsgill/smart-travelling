@@ -4,6 +4,7 @@ import styles from '../styles/footer.module.css'
 import smart from '../public/images/home/Smart Traveller.png'
 import media1 from '../public/images/home/Group 22067.png'
 import media2 from '../public/images/home/Group 22068.png'
+import mmw from "../public/images/footer/mmw_logo.png";
 import Link from 'next/link'
 
 function Footer() {
@@ -42,7 +43,8 @@ function Footer() {
                     <div className={styles.footer_copyright}>
                         <p>Copyright © 2022 Travel Company. All Rights Reserved</p>
                         <Link href="https://www.makemywebsite.com.au/">
-                            <p className={styles.web_design}>Web Design Melbourne  Make My Website</p>
+                            <div className='d-flex justify-content-center'>
+                                <Image src={mmw} alt="mmw_logo" height={10} width="50px" className={styles.mmw} /> <p className={styles.web_design}>Web Design Melbourne  Make My Website</p></div>
                         </Link>
                     </div>
                 </div>
