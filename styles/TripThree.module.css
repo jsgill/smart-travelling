@@ -45,7 +45,7 @@
 
 .reCapcha_section_tripThree{
   margin-top: -40px;
-  margin-left: 35px;
+  margin-left: 15px;
 }
 .trip_three_inputs {
   margin-bottom: 40px;
@@ -335,7 +335,7 @@
 }
 
 .trip_three_submit_btn {
- 
+ margin-top: -10px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
