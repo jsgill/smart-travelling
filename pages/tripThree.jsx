@@ -52,9 +52,9 @@ function TripThree() {
         obj.promo = (promo === "Promo Code (optional)" ? "-" : promo)
         localStorage.setItem('trip_three', JSON.stringify(obj))
         if (!recaptchaRef.current.getValue()) {
-            toast.error("Captcha required !", { position: "start" });
-            return
+            toast.error("Captcha required !", { position: "bottom-center" });
         }
+        else {
         axios({
             method: "POST",
             url: process.env.NEXT_PUBLIC_TRIP_DETAILS_URL,
@@ -102,6 +102,7 @@ function TripThree() {
             .catch((error) => {
                 console.error('Error:', error);
             });
+        }
 
     }
     return (
