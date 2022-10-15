@@ -437,65 +437,7 @@ function TripTwo() {
                           onClick={saveBtn}>Save </button>
                       </div>
                     </div>
-                    {/* <div className="text-center mb-5 mt-2">
-                      <input
-                        placeholder="Enter Amount"
-                        onChange={handleAmount}
-                        className={styles.tripTwo_inputTwo_input_container_input}
-                        id={styles.enter_amount_input}
-                      />
-                    </div>
-                    <div id={styles.budget_btn_div}>
-                      <input
-                        className={`${amount === "5,000"
-                          ? styles.TripTwo_btn_container_btn2
-                          : styles.TripTwo_btn_container_btn
-                          }`}
-                        onClick={(e) => handleBudgetAmount(e)}
-                        value="5,000"
-                        onChange={demo}
-                        readOnly
-                        id={styles.TripTwo_input_container_btn}
-                      />
-                      <input
-                        className={`${amount === "10,000"
-                          ? styles.TripTwo_btn_container_btn2
-                          : styles.TripTwo_btn_container_btn
-                          }`}
-                        onClick={(e) => handleBudgetAmount(e)}
-                        value="10,000"
-                        onChange={demo}
-                        readOnly
-                        id={styles.TripTwo_input_container_btn}
-                      />
-                      <input
-                        className={`${amount === "15,000"
-                          ? styles.TripTwo_btn_container_btn2
-                          : styles.TripTwo_btn_container_btn
-                          }`}
-                        onClick={(e) => handleBudgetAmount(e)}
-                        value="15,000"
-                        onChange={demo}
-                        readOnly
-                        id={styles.TripTwo_input_container_btn}
-                      />
-                      <input
-                        className={`${amount === "20,000"
-                          ? styles.TripTwo_btn_container_btn2
-                          : styles.TripTwo_btn_container_btn
-                          }`}
-                        onClick={(e) => handleBudgetAmount(e)}
-                        value="20,000"
-                        onChange={demo}
-                        readOnly
-                        id={styles.TripTwo_input_container_btn}
-                      /> 
-                    </div>*/}
-                    {/* <div className={styles.tripTwo_inputtwo_btn_container}>
-                      <button
-                        className={styles.tripTwo_inputtwo_btn}
-                        onClick={saveBtn}>Save </button>
-                    </div> */}
+                   
                   </div>
                 </div>
               </div>

@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
 }
 
@@ -44,8 +44,8 @@
 }
 
 .reCapcha_section_tripThree{
-  margin-top: -40px;
-  margin-left: 15px;
+ margin-top: -25px;
+  margin-left: 25px;
 }
 .trip_three_inputs {
   margin-bottom: 40px;
@@ -246,7 +246,9 @@
     width: 100%;
     padding: 10px 5px;
   }
-
+  .trip_three_submit_btn {
+    width: 50% !important;
+  }
   .actions {
     width: 100%;
     font-size: 40px !important;
@@ -335,7 +337,7 @@
 }
 
 .trip_three_submit_btn {
- margin-top: -10px;
+  margin-top: 19px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
