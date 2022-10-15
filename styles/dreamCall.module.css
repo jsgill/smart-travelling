@@ -19,11 +19,8 @@
   .home_popup_para {
     padding: 0px 25px 0px 25px;
   }
-  
 }
-.demo{
-  z-index: 0 !important;
-}
+
 .group3{
   background: url(../public/images/home/Rectangle\ 4566.png);
   background-size: cover;
@@ -74,9 +71,6 @@
   text-align: center;
   cursor: pointer;
 }
-
-
-
 .bca {
   position: relative;
   filter: contrast(50%);
