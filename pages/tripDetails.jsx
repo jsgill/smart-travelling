@@ -25,7 +25,7 @@ function TripDetails() {
                                 <div>
                                     <p className={styles.happy_travel_p1}>Happy <br /> Travelling!</p>
                                 </div>
-                                <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
+                                <p className={styles.happy_travel_p2}>We’ll get back to you in few hours!</p>
                             </div>
 
                         </div>
