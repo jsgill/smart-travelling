@@ -25,7 +25,7 @@ function TripDetails() {
                                 <div>
                                     <p className={styles.happy_travel_p1}>Happy <br /> Travelling!</p>
                                 </div>
-                                <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
+                                <p className={styles.happy_travel_p2}>We’ll get back to you in few hours!</p>
                             </div>
 
                         </div>
@@ -81,12 +81,12 @@ function TripDetails() {
                         </div>
                     </div>
                     <div className='row' id={styles.back_to_home_row}>
-                    <div>
-                        <Link href="/"><button className="btn btn-light rounded-pill" id={styles.back_home_btn}><i className="fa fa-long-arrow-left"></i><span className={styles.back_btn11}>Back To Home</span></button></Link>
+                        <div>
+                            <Link href="/"><button className="btn btn-light rounded-pill" id={styles.back_home_btn}><i className="fa fa-long-arrow-left"></i><span className={styles.back_btn11}>Back To Home</span></button></Link>
+                        </div>
                     </div>
                 </div>
-                </div>
-                
+
             </div>
             <ToastContainer />
         </div>
