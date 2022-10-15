@@ -53,6 +53,7 @@ function TripThree() {
         localStorage.setItem('trip_three', JSON.stringify(obj))
         if (!recaptchaRef.current.getValue()) {
             toast.error("Captcha required !", { position: "start" });
+            return
         }
         axios({
             method: "POST",
@@ -174,6 +175,7 @@ function TripThree() {
                     <div className='container'>
                         <div className='row justify-content-center gx-0'>
                             <div className='col-md-3'>
+                                <ToastContainer/>
                                 <div>
                                     <ReCAPTCHA ref={recaptchaRef}
                                         sitekey={process.env.NEXT_PUBLIC_SITEKEY} />
