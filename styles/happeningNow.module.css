@@ -1,67 +1,159 @@
-@media only screen and (max-width:400px) {
-
-    /* .demo {
-        border-bottom: 2px solid #00754A !important;
-        width: 100% !important;
-        padding: 2% 0% 0% 0% !important;
-    }
-
+@media only screen and (max-width: 767.98px) {
     .home_mountain {
-        padding: 7% 0% 0% 0% !important;
-        text-align: start !important;
-        margin: 0px 10px;
-    } */
-    .home_mountain {
-        margin-top: -8px !important;
-        text-align: start !important;
-    }
-
-    .saprater {
-        padding: 15px 0px !important;
-        text-align: start !important;
+        margin-top: 18px !important;
+        text-align: start;
     }
 
     .demo {
-        border-bottom: 2px solid #00754A !important;
-        width: 96% !important;
-        margin-top: -4px !important;
+        border-bottom: 2px solid #00754A;
+        width: 97%;
+        margin-top: 35px !important;
+        padding-left: 7px;
     }
 
-    #happenNow_images_div {
-        margin-bottom: 5em;
-
-
+    .home_mountain h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px !important;
+        color: #121212;
+        line-height: 126%;
+        font-family: "Poppins", sans-serif;
     }
 
-
-}
-
-@media only screen and (max-width:768px) {
-    .home_happening h1 {
-        font-size: 30px !important;
+    .card2 {
+        background-image: url("../public/images/home/Rectangle 4557.png");
+        background-size: cover;
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        height: 300px !important;
+        /* border-radius: 10px 0px 0px 10px; */
     }
 
-    .demo {
-        border-bottom: 2px solid #00754A !important;
-        width: 100% !important;
-        padding: 5% 0% 0% 0% !important;
+    #image1 {
+
+        border-radius: 10px 10px 0px 0px !important;
     }
-
-    .home_mountain {
-        padding: 7% 0% 0% 0% !important;
-        text-align: start !important;
-        margin: 0px 10px;
-    }
-
-    #happenNow_images_div {
-        margin-bottom: 5em;
-    }
-
-
 
 }
 
 
+
+@media (min-width: 768px) and (max-width:912px) {
+    .home_mountain h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px !important;
+        color: #121212;
+        line-height: 126%;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .demo {
+        border-bottom: 2px solid #00754A;
+        width: 97%;
+        margin-top: 83px !important;
+        padding-left: 7px;
+    }
+
+    #image1 {
+        background-image: url("/_next/static/media/Rectangle 4554.9afd64b1.png");
+        background-size: cover;
+        background-position: center;
+        height: 355px !important;
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    .card2 {
+        background-image: url("../public/images/home/Rectangle 4557.png");
+        background-size: cover;
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        height: 147px !important;
+        /* border-radius: 10px 0px 0px 10px; */
+    }
+
+    .saprater h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px !important;
+        color: #121212;
+        font-family: "Poppins", sans-serif;
+        line-height: 122%;
+        color: rgba(18, 18, 18, 0.8);
+    }
+}
+
+@media (min-width: 912px)and(max-width:1056px) {
+    .saprater h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px !important;
+        color: #121212;
+        font-family: "Poppins", sans-serif;
+        line-height: 122%;
+        color: rgba(18, 18, 18, 0.8);
+    }
+
+    .saprater p {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16.6px !important;
+        line-height: 146%;
+        color: rgba(18, 18, 18, 0.8);
+    }
+}
+
+/* @media (min-width: 768px)and (max-width:912px) {
+    .home_mountain h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 27px !important;
+        color: #121212;
+        line-height: 126%;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .demo {
+        border-bottom: 2px solid #00754A;
+        width: 97%;
+        margin-top: 90px !important;
+        padding-left: 7px;
+    }
+
+    .saprater h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px !important;
+        color: #121212;
+        font-family: "Poppins", sans-serif;
+        line-height: 122%;
+        color: rgba(18, 18, 18, 0.8);
+    }
+
+    .home_explore {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px !important;
+        line-height: 130%;
+        font-family: "Poppins", sans-serif;
+        color: #00754A;
+        text-decoration: none;
+    }
+
+    .home_mountain {
+        margin-top: 91px !important;
+        text-align: start;
+    }
+
+    #image1 {
+        background-image: url("/_next/static/media/Rectangle 4554.9afd64b1.png");
+        background-size: cover;
+        background-position: center;
+        height: 349px !important;
+        border-radius: 10px 0px 0px 10px;
+    }
+} */
 
 .home_happening h1 {
     font-style: normal;
@@ -71,6 +163,10 @@
     text-align: center;
     color: #121212;
     font-family: "Poppins", sans-serif;
+}
+
+#happenNow_images_div {
+    border: 2px solid red;
 }
 
 .home_happening {
@@ -90,7 +186,7 @@
 .saprater h4 {
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 21px;
     color: #121212;
     font-family: "Poppins", sans-serif;
     line-height: 122%;
@@ -99,21 +195,21 @@
 
 .saprater {
     border-bottom: 2px solid #00754A;
-    width: 95%;
+    width: 98%;
     text-align: start;
-    padding: 10px 0px;
+    padding: 18px 0px;
 }
 
 .home_mountain {
-    margin-top: 92px;
+    margin-top: 113px;
     text-align: start;
 
 }
 
 .demo {
     border-bottom: 2px solid #00754A;
-    width: 96%;
-    margin-top: 112px;
+    width: 97%;
+    margin-top: 115px;
     padding-left: 7px;
 }
 
@@ -127,12 +223,25 @@
 }
 
 #image1 {
-    padding: 7px 10px 0px 18px;
+    background-image: url("../public/images/home/Rectangle 4554.png");
+    background-size: cover;
+    background-position: center;
+    height: 372px;
+    border-radius: 10px 0px 0px 10px;
 }
 
-.image2 {
-    padding: 7px 7px 0px 7px;
+.card2 {
+    background-image: url("../public/images/home/Rectangle 4557.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 180px;
+    border-radius: 10px 10px 0px 0px;
 }
+
+/* .image2 {
+    padding: 7px 7px 0px 7px;
+} */
 
 .sizzling {
 
