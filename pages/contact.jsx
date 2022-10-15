@@ -215,10 +215,10 @@ function Contact() {
                             </div>
                         </div>
                         <div className={styles.contact_main_btn}>
-                            <ToastContainer />
-                            <div><ReCAPTCHA ref={recaptchaRef}
-                                sitekey={process.env.NEXT_PUBLIC_SITEKEY} /></div>
                             <div className="pt-4 text-center">
+                                <ToastContainer />
+                                <div><ReCAPTCHA ref={recaptchaRef}
+                                sitekey={process.env.NEXT_PUBLIC_SITEKEY} /></div>
                                 <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
                             </div>
 

@@ -176,12 +176,10 @@ function TripThree() {
                     <div className='container'>
                         <div className='row justify-content-center gx-0'>
                             <div className='col-md-3'>
-                                <ToastContainer/>
-                                <div>
+                                <div className={styles.trip_three_btn}>
+                                     <ToastContainer/>
                                     <ReCAPTCHA ref={recaptchaRef}
                                         sitekey={process.env.NEXT_PUBLIC_SITEKEY} />
-                                </div>
-                                <div className={styles.trip_three_btn}>
                                     <button className={styles.trip_three_submit_btn} disabled={mobile === "Mobile Number"}
                                         onClick={handleSubmit}>Submit</button></div>
 
