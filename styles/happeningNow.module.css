@@ -3,7 +3,9 @@
         margin-top: 18px !important;
         text-align: start;
     }
-
+    .home_happening h1{
+        font-size: 32px !important;
+    }
     .demo {
         border-bottom: 2px solid #00754A;
         width: 97%;

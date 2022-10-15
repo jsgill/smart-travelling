@@ -185,7 +185,7 @@ function Contact() {
                     <div className={styles.contact_your_details}>
                         <p className={styles.contact_your_text}>Your Details:</p>
                         <div className="row">
-                            <div className="col-lg-6">
+                            <div className="col-lg-6 mb-2">
                                 <input type="text" placeholder="Your name" autoComplete="off" name="name" className={styles.contact_inputs11} defaultValue=""
                                     {...register("name",
                                         {
@@ -194,7 +194,7 @@ function Contact() {
                                     )} />
                                 {errors.name?.type === "required" && (<small style={{ color: "red" }}>Enter your name</small>)}
                             </div>
-                            <div className="col-lg-6" id={styles.contact_ph_info}>
+                            <div className="col-lg-6 mb-2" id={styles.contact_ph_info}>
                                 <input type="text" placeholder="Phone number" autoComplete="off" name="phone" maxLength={10} className={styles.contact_inputs22} defaultValue=""
                                     {...register("phone", {
                                         required: true,
