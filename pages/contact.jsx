@@ -20,6 +20,8 @@ import 'reactjs-popup/dist/index.css';
 import popup_img from "../public/images/trip/popup_img.png";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
     const recaptchaRef = React.createRef();
@@ -213,9 +215,10 @@ function Contact() {
                             </div>
                         </div>
                         <div className={styles.contact_main_btn}>
-                            <div><ReCAPTCHA ref={recaptchaRef}
-                                sitekey={process.env.NEXT_PUBLIC_SITEKEY} /></div>
                             <div className="pt-4 text-center">
+                                <ToastContainer />
+                                <div><ReCAPTCHA ref={recaptchaRef}
+                                sitekey={process.env.NEXT_PUBLIC_SITEKEY} /></div>
                                 <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
                             </div>
 
