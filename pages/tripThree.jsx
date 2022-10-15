@@ -168,20 +168,22 @@ function TripThree() {
                                     onFocus={(e) => (e.target.value = "")}
                                     onBlur={(e) => e.target.value = promo}
                                 />
+                                <div className={styles.reCapcha_section_tripThree}>
+                                <ReCAPTCHA ref={recaptchaRef}
+                                    sitekey="{process.env.NEXT_PUBLIC_SITEKEY}" style={{ transform: "scale(0.77)", transformOrigin: "0.0" }} />
+                            </div>
                             </div>
                         </div>
                     </div>
                     <div className='container'>
                         <div className='row justify-content-center gx-0'>
+                            
                             <div className='col-md-3'>
-                                <div>
-                                    <ReCAPTCHA ref={recaptchaRef}
-                                        sitekey={process.env.NEXT_PUBLIC_SITEKEY} />
-                                </div>
                                 <div className={styles.trip_three_btn}>
                                     <button className={styles.trip_three_submit_btn} disabled={mobile === "Mobile Number"}
-                                        onClick={handleSubmit}>Submit</button></div>
-
+                                        onClick={handleSubmit}>Submit
+                                    </button>
+                                </div>
                             </div>
 
                         </div>

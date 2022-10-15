@@ -214,7 +214,7 @@ function Contact() {
                         </div>
                         <div className={styles.contact_main_btn}>
                             <div><ReCAPTCHA ref={recaptchaRef}
-                                sitekey={process.env.NEXT_PUBLIC_SITEKEY} /></div>
+                                sitekey={process.env.NEXT_PUBLIC_SITEKEY}  style={{ transform: "scale(0.77)", transformOrigin: "0.0" }}/></div>
                             <div className="pt-4 text-center">
                                 <button className={styles.contact_submit_btn} onClick={handleSubmit(onSubmit)}>Submit</button>
                             </div>

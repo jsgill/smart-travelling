@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 110vh;
+  height: 100vh;
   width: 100%;
 }
 
@@ -43,6 +43,10 @@
   padding: 17% 20% 0% 20%;
 }
 
+.reCapcha_section_tripThree{
+  margin-top: -30px;
+  margin-left: 35px;
+}
 .trip_three_inputs {
   margin-bottom: 40px;
   text-align: center;
@@ -76,10 +80,6 @@
   left: 50%;
   transform: (-50%, -50%);
 }
-
-/* .trip_three_btn {
-  text-align: center;
-} */
 
 .modal {
   font-size: 12px;
@@ -226,6 +226,10 @@
 @media only screen and (max-width: 767px) {
   .happy_travel_p1 {
     font-size: 25px !important;
+  }
+  .reCapcha_section_tripThree{
+   
+    margin-left: 5px !important;
   }
 
   .happy_travel_p2 {
