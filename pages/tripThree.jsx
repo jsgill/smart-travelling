@@ -170,7 +170,7 @@ function TripThree() {
                                 />
                                 <div className={styles.reCapcha_section_tripThree}>
                                 <ReCAPTCHA ref={recaptchaRef}
-                                    sitekey="{process.env.NEXT_PUBLIC_SITEKEY}" style={{ transform: "scale(0.77)", transformOrigin: "0.0" }} />
+                                    sitekey={process.env.NEXT_PUBLIC_SITEKEY} style={{ transform: "scale(0.77)", transformOrigin: "0.0" }} />
                             </div>
                             </div>
                         </div>
