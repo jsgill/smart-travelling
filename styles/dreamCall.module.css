@@ -2,9 +2,6 @@
   .home_dream .home_div_1 {
     font-size: 40px !important;
   }
-  #ifram11 {
-    position: relative !important;
-  }
   .home_dream .home_div_2 {
     font-size: 40px !important;
   }
@@ -120,7 +117,10 @@
 }
 
 #ifram11 {
-  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* justify-content: center;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
@@ -129,8 +129,16 @@
   left: 0%;
   right: 0%;
   top: 0%;
-  /* transform: translate(-50%, -50%); */
-  z-index: 2000;
+  z-index: 2000; */
+}
+.iframe_pdf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
 }
 .home_carousal_card .abc {
   position: absolute;
