@@ -282,6 +282,11 @@
   #back_to_home_row {
     padding-right: 30px;
   }
+  .main_container {
+    background-size: auto !important;
+  }
+  
+
 }
 
 @media only screen and (max-width: 500px) {

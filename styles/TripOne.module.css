@@ -8,7 +8,8 @@
     width: 90% !important;
     cursor: pointer;
   }
-  #tripOne_inputtwo_container{
+
+  #tripOne_inputtwo_container {
     top: 30% !important;
   }
 
@@ -42,6 +43,7 @@
   }
 
   #calender_container {
+
     flex: 0 0 auto;
     width: 36%;
   }
@@ -459,10 +461,8 @@
 }
 
 .calender {
-
   padding: 5px 5px 56px 0px;
   z-index: -1;
-
   margin-bottom: 58px;
 }
 
