@@ -7,7 +7,7 @@ import Script from "next/script";
 function Iframe({ rref, ssrc }) {
 
     useEffect(() => {
-        <Script>
+        <Script id='fdvfrerfe'>
             document.getElementById("theFrame").contentWindow.onload = function() {
                 document.getElementsByTagName("img")[0].style.width = "100%"
             };
