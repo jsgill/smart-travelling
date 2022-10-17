@@ -115,7 +115,10 @@
   cursor: pointer;
   padding-left: 50px;
 }
-
+/* .iframe_pdf {
+  background-color: white;
+  opacity: ;
+} */
 #ifram11 {
   justify-content: center;
   width: 100vw;
