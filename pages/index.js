@@ -1,13 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
-import DreamCall from "../components/dreamCall";
-import Footer from "../components/footer";
-import FullyFurnished from "../components/fullyFurnished";
-import HappeningNow from "../components/happeningNow";
-import HowItWorks from "../components/howItWorks";
-import Navbar from "../components/navbar";
-import PlanTrip from "../pages/planTrip";
 import styles from "../styles/Home.module.css";
+import Layout from './../components/layout';
 
 export default function Home() {
   return (
@@ -46,13 +40,7 @@ export default function Home() {
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossOrigin="anonymous"
       />
-      <Navbar />
-      <PlanTrip />
-      <FullyFurnished />
-      <DreamCall />
-      <HappeningNow />
-      <HowItWorks />
-      <Footer />
+      <Layout/>
     </div>
   );
 }
