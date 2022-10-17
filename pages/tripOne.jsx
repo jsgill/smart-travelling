@@ -8,6 +8,7 @@ import MydModalWithGrid from "../components/modal";
 import styles from "../styles/TripOne.module.css";
 import { Calendar } from "react-multi-date-picker"
 import Popup from 'reactjs-popup';
+
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
   const [userInfo, setUserInfo] = useState([]);

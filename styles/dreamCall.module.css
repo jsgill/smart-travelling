@@ -1,4 +1,4 @@
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
   .home_dream .home_div_1 {
     font-size: 40px !important;
   }
@@ -10,7 +10,7 @@
   .home_dream p {
     font-size: 15px !important;
   }
-  .home_popup_title h2{
+  .home_popup_title h2 {
     font-size: 20px !important;
   }
   .home_popup_para div span {
@@ -19,19 +19,18 @@
   .home_popup_para {
     padding: 0px 25px 0px 25px;
   }
-  
 }
-.demo{
+.demo {
   z-index: 0 !important;
 }
-.group3{
+.group3 {
   background: url(../public/images/home/Rectangle\ 4566.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 25vh;
 }
-.group4{
+.group4 {
   background: url(../public/images/home/Rectangle\ 4567.png);
   background-size: cover;
   background-position: center;
@@ -45,16 +44,16 @@
 .home_dream .home_div_1 {
   color: #121212;
   font-style: normal;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 64px;
   line-height: 120%;
 }
 
 .home_dream .home_div_2 {
-  color: #00754A;
+  color: #00754a;
   font-style: normal;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 64px;
   line-height: 120%;
@@ -62,7 +61,7 @@
 
 .home_dream p {
   font-style: normal;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 142%;
@@ -75,14 +74,11 @@
   cursor: pointer;
 }
 
-
-
 .bca {
   position: relative;
   filter: contrast(50%);
   border-radius: 10px;
 }
-
 
 .bca:hover {
   filter: contrast(18%);
@@ -93,7 +89,6 @@
   filter: contrast(50%);
   border-radius: 10px;
 }
-
 
 .bca1:hover {
   filter: contrast(18%);
@@ -108,7 +103,6 @@
   filter: contrast(18%);
 }
 
-
 .bca3 {
   position: relative;
   filter: contrast(50%);
@@ -117,18 +111,35 @@
 .bca3:hover {
   filter: contrast(18%);
 }
+.cross_pdf {
+  margin: 15px 0px 0px 10px;
+  cursor: pointer;
+}
 
+#ifram11 {
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  position: fixed;
+  left: 50%;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
 .home_carousal_card .abc {
   position: absolute;
   top: 50%;
-  color: #FFFFFF;
+  color: #ffffff;
   left: 50%;
   transform: translate(-50%, -50%);
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 158.5%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .home_carousal_title {
@@ -141,7 +152,7 @@
   font-size: 12px;
   line-height: 151%;
   letter-spacing: 0.05em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .styles.arrow {
@@ -152,14 +163,14 @@
   font-size: 12px;
 }
 
-.modal>.header {
+.modal > .header {
   width: 100%;
   font-size: 18px;
   text-align: center;
   padding: 5px;
 }
 
-.modal>.content {
+.modal > .content {
   width: 100%;
   padding: 10px 5px;
 }
@@ -168,14 +179,14 @@
   padding-right: 0px !important;
 }
 
-.modal>.actions {
+.modal > .actions {
   width: 100%;
   padding: 10px 5px;
   margin: auto;
   text-align: center;
 }
 
-.modal>.close {
+.modal > .close {
   cursor: pointer;
   position: absolute;
   display: block;
@@ -214,15 +225,15 @@
 }
 
 #home_popup_planYourTrip {
-  background: #00754A;
+  background: #00754a;
   border-radius: 32px;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 180%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-left: 30px;
   padding-right: 30px;
   text-decoration: none;

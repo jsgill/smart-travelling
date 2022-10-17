@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import cross from "../public/images/trip/cross.png";
 import styles from "../styles/tripTwo.module.css";
 import icon1 from "../public/images/tripTwo/Group 22133.png";
 import icon2 from "../public/images/tripTwo/Group 22134.png";
@@ -171,7 +170,7 @@ function TripTwo() {
                   onChange={demo}
                   className={styles.input_field}
                   onClick={toggleInput1}
-                  isSearchable={ false }
+                  isSearchable={false}
                 />
                 <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
                   <div className={styles.modal}>
