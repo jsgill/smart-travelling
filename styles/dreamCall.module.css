@@ -114,6 +114,7 @@
 .cross_pdf {
   margin: 15px 0px 0px 10px;
   cursor: pointer;
+  padding-left: 50px;
 }
 
 #ifram11 {
@@ -123,10 +124,10 @@
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   position: fixed;
-  left: 50%;
+  left: 0%;
   right: 0%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 0%;
+  /* transform: translate(-50%, -50%); */
   z-index: 2000;
 }
 .home_carousal_card .abc {
