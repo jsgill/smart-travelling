@@ -22,6 +22,9 @@
     width: 50% !important;
     font-size: 10px !important;
   }
+  #budget_popup {
+    top: 30% !important;
+  }
 
   .budget_select_section {
     padding: 20px 50px;
@@ -354,7 +357,7 @@
   border-radius: 20px;
   padding: 50px 20px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   width: 600px;
   transform: translate(-50%, -50%);

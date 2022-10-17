@@ -125,10 +125,10 @@ function TripOne() {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-md-7">
-              <div onClick={toggleInput1} className={styles.input_field}>
-                {info.length === 0 ? "Choose Destination" : info}
-              </div>
+            <div className="col-md-7"><div onClick={toggleInput1} className={styles.input_field}>
+              {info.length === 0 ? "Choose Destination" : info}
+            </div>
+
               {/*hide show div for first input  */}
               <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} selectCity={userInfo.length} />
               <div onClick={toggleInput2} className={styles.input_field}>
