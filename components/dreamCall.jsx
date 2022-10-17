@@ -61,10 +61,10 @@ function DreamCall() {
             </div>
             <div className='row justify-content-center' id={styles.iframe_div}>
                 {
-                    pdf ? <Iframe rref={imgRef} ssrc="https://docs.google.com/gview?url=https://pdf-data-travel.s3.ap-south-1.amazonaws.com/manali-offbeat-autumn+trip.pdf&embedded=true" /> : null
+                    pdf ? <Iframe rref={imgRef} ssrc="https://drive.google.com/viewerng/viewer?embedded=true&url=https://pdf-data-travel.s3.ap-south-1.amazonaws.com/manali-offbeat-autumn+trip.pdf" /> : null
                 }
                 {
-                    pdf2 ? <Iframe rref={imgRef} ssrc="https://docs.google.com/gview?url=https://pdf-data-travel.s3.ap-south-1.amazonaws.com/manali-kasol+trip.pdf&embedded=true" /> : null
+                    pdf2 ? <Iframe rref={imgRef} ssrc="https://drive.google.com/viewerng/viewer?embedded=true&url=https://pdf-data-travel.s3.ap-south-1.amazonaws.com/manali-kasol+trip.pdf" /> : null
                 }
 
                 <div className="col-12">
