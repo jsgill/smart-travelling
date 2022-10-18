@@ -414,7 +414,7 @@ function TripTwo() {
                     </p>
                     <div className="row justift-content-center">
                       <div className="text-center">
-                        <input placeholder="Enter Amount" onChange={handleAmount}
+                        <input type="text" placeholder="Enter Amount" onChange={handleAmount}
                           className={styles.tripTwo_inputTwo_input_container_input} />
                       </div>
                     </div>
@@ -432,7 +432,7 @@ function TripTwo() {
                     </div>
                     <div className="row justify-content-center">
                       <div className="text-center">
-                        <button
+                        <button type="submit"
                           className={styles.tripTwo_inputtwo_btn}
                           onClick={saveBtn}>Save </button>
                       </div>
