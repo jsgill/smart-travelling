@@ -166,12 +166,9 @@ function TripTwo() {
 
             <div className={styles.home_carousal_card}>
               <div className={styles.bca}>
-                <div
-                  onChange={demo}
-                  className={styles.input_field}
-                  onClick={toggleInput1}
-                  isSearchable={false}
-                >{text.length == 0 ? "Choose Interest" : text}</div>
+                <div onChange={demo} className={styles.input_field} onClick={toggleInput1} isSearchable={false}>
+                  {text.length == 0 ? "Choose Interest" : text}
+                </div>
                 <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
                   <div className={styles.modal}>
                     <div className="row justify-content-center">
@@ -394,11 +391,9 @@ function TripTwo() {
                     </div>
                   </div>
                 </div>
-                <div
-                  className={styles.input_field}
-                  onClick={toggleInput2}
-                  onChange={demo}
-                >{amount.length === 0 ? "Budget Per Person" : amount}</div>
+                <div className={styles.input_field} onClick={toggleInput2} onChange={demo}>
+                  {amount.length === 0 ? "Budget Per Person" : amount}
+                </div>
                 <div style={{
                   display: input2 ? "block" : "none",
                 }} id={styles.budget_popup} readOnly >

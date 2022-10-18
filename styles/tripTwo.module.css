@@ -132,7 +132,9 @@
 
 .input_field {
   margin-bottom: 45px;
-  padding-top: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding:15px 0px 15px 0px;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-style: normal;
