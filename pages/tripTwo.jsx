@@ -170,7 +170,7 @@ function TripTwo() {
                   onChange={demo}
                   className={styles.input_field}
                   onClick={toggleInput1}
-                  isSearchable={ false }
+                  isSearchable={false}
                 >{text.length == 0 ? "Choose Interest" : text}</div>
                 <div style={{ display: input1 ? "block" : "none" }} id={styles.intrest_popup} readOnly>
                   <div className={styles.modal}>
@@ -394,13 +394,11 @@ function TripTwo() {
                     </div>
                   </div>
                 </div>
-
-                <input
+                <div
                   className={styles.input_field}
                   onClick={toggleInput2}
                   onChange={demo}
-                  value={amount.length === 0 ? "Budget Per Person" : amount}
-                />
+                >{amount.length === 0 ? "Budget Per Person" : amount}</div>
                 <div style={{
                   display: input2 ? "block" : "none",
                 }} id={styles.budget_popup} readOnly >
@@ -436,7 +434,7 @@ function TripTwo() {
                           onClick={saveBtn}>Save </button>
                       </div>
                     </div>
-                   
+
                   </div>
                 </div>
               </div>
