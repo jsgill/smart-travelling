@@ -11,11 +11,8 @@
     padding: 20px 0px;
   }
   #budget_popup {
-   
     top: 40% !important;
-    
   }
-  
 }
 @media only screen and (max-width: 768px) {
   .save_btn {
@@ -37,7 +34,6 @@
     padding: 5px 8px !important;
   }
 
-
   #column {
     width: 50% !important;
   }
@@ -54,7 +50,6 @@
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
   }
-
 }
 
 @media only screen and (max-width: 1024px) {
@@ -80,7 +75,6 @@
   position: relative;
   padding: 20px 0px;
   text-align: center;
-
 }
 
 #TripTwo_input_container_btn {
@@ -90,15 +84,12 @@
   width: 100px;
 }
 
-
-
-
 #column {
   margin-bottom: 20px !important;
 }
 
 .tripTwo {
-  background: url(../public/images/tripTwo/Rectangle4571.png);
+  background: url("https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/Rectangle4571_6uOlJ5Vnh.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082894631");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -171,8 +162,6 @@
   border-radius: 10px;
 }
 
-
-
 .image_para_content {
   margin-top: -30px;
   font-size: 12px;
@@ -214,7 +203,6 @@
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
-
 }
 
 .tripTwo_inputtwo_btn:disabled {
@@ -222,7 +210,6 @@
 }
 
 .tripTwo_cross_para {
-
   height: 35px;
   width: 35px;
   text-align: center;
@@ -359,4 +346,3 @@
   width: 600px;
   transform: translate(-50%, -50%);
 }
-

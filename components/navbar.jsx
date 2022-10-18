@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import logo from '../public/images/home/Group 18260.png'
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
 function Navbar() {
     return (
         <div>
@@ -9,7 +9,7 @@ function Navbar() {
                 <div className="container">
                     <Link href="/">
                         <a className="navbar-brand d-flex">
-                            <Image src={logo} height="50%" width="50%" alt="navbar" />
+                            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/home/Group_18260_EfqzL2iFB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082884284" height="50%" width="50%" alt="navbar" />
                             <div className='smart'>The Smart Traveller</div>
                         </a>
                     </Link>

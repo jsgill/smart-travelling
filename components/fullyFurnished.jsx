@@ -1,10 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/fullyFernished.module.css'
-import image127 from '../public/images/home/image 127.png'
-import image128 from '../public/images/home/image 128.png'
-import image129 from '../public/images/home/image 129.png'
-import image130 from '../public/images/home/image 130.png'
+
 function FullyFurnished() {
     return (
         <div>
@@ -13,7 +10,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image127} alt="home" />
+                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/home/image_127_feWxw2tdb.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082886634" alt="home" width={45} height={45} />
                             </div>
                             <div>
                                 <h5>Fully Personalised</h5>
@@ -25,7 +22,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image128} alt="card" />
+                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/home/image_128_JDvKxygNK-.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082882161" alt="card" width={45} height={45} />
                             </div>
                             <div>
                                 <h5>Fast & Free</h5>
@@ -37,7 +34,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image129} alt="card2" />
+                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/home/image_129_EPo65xX76o.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082886984" alt="card2" width={45} height={45} />
                             </div>
                             <div>
                                 <h5>Save Extra</h5>
@@ -49,7 +46,7 @@ function FullyFurnished() {
                     <div className="col-md-3">
                         <div className={styles.home_card}>
                             <div>
-                                <Image src={image130} alt="card3" />
+                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/home/image_130_6P1ziPmFx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082883727" alt="card3" width={45} height={45} />
                             </div>
                             <div>
                                 <h5>Easy to Customise</h5>

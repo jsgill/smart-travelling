@@ -1,7 +1,5 @@
 import React from 'react'
 import styles from '../styles/happeningNow.module.css'
-import image1 from '../public/images/home/Rectangle 4554.png'
-import image2 from '../public/images/home/Rectangle 4557.png'
 import rightarrow from '../public/images/home/Arrow - Right 2.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -50,7 +48,6 @@ function HappeningNow() {
                     <div id={styles.happeningNow_container}>
                         <div className={styles.image2}>
                             <div className={styles.card2}></div>
-                            {/* <Image src={image2} alt="right-now" className='w-100' ></Image> */}
                             <div className='container px-3'>
                                 <div className={styles.saprater}>
                                     <h4>Riverside camping at kasol </h4>

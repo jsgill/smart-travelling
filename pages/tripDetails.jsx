@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "../styles/TripThree.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function TripDetails() {
     const [destinationPlace, setDestinationPlace] = useState("")
     const [userInterest, setUserInterest] = useState("");
@@ -27,7 +28,6 @@ function TripDetails() {
                                 </div>
                                 <p className={styles.happy_travel_p2}>Erat egestas diam felis eget sit lectus.</p>
                             </div>
-
                         </div>
                         <div className="col-md-6" >
                             <div className={styles.main_back_btn11}>
@@ -81,12 +81,12 @@ function TripDetails() {
                         </div>
                     </div>
                     <div className='row' id={styles.back_to_home_row}>
-                    <div>
-                        <Link href="/"><button className="btn btn-light rounded-pill" id={styles.back_home_btn}><i className="fa fa-long-arrow-left"></i><span className={styles.back_btn11}>Back To Home</span></button></Link>
+                        <div>
+                            <Link href="/"><button className="btn btn-light rounded-pill" id={styles.back_home_btn}><i className="fa fa-long-arrow-left"></i><span className={styles.back_btn11}>Back To Home</span></button></Link>
+                        </div>
                     </div>
                 </div>
-                </div>
-                
+
             </div>
             <ToastContainer />
         </div>

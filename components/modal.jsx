@@ -10,25 +10,25 @@ import Card from "react-bootstrap/Card";
 function MydModalWithGrid(props) {
   const destination_object = {
     destination_1: {
-      path: "/images/trip/destination_1.png",
+      path: "https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/destination_1_Plh6sEMLc.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082888969",
       name: "destination_1",
       title: "Manali",
       selected: false
     },
     destination_2: {
-      path: "/images/trip/destination_2.png",
+      path: "https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/destination_2_8nFcnlA-F.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889289",
       name: "destination_2",
       title: "Kasol",
       selected: false
     },
     destination_3: {
-      path: "/images/trip/destination_3.png",
+      path: "https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/destination_3_6MgKp6SiN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889339",
       name: "destination_3",
       title: "Leh-Ladakh",
       selected: false
     },
     destination_4: {
-      path: "/images/trip/destination_6.png",
+      path: "https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/destination_6_CLeKf6aeGT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889452",
       name: "destination_4",
       title: "Spiti Valley",
       selected: false
@@ -76,13 +76,13 @@ function MydModalWithGrid(props) {
             <Col>
               <Card className="noBorder">
                 <Card.Title className="text-center">Goa</Card.Title>
-                <Card.Img src="/images/trip/destination_4.png" />
+                <Card.Img src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/destination_4_X1RnPxgh7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082891336" />
               </Card>
             </Col>
             <Col>
               <Card className="noBorder">
                 <Card.Title className="text-center">Rajasthan</Card.Title>
-                <Card.Img className="card-image" src="/images/trip/destination_5.png" />
+                <Card.Img className="card-image" src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/destination_5_iOtQfi2KX.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889328" />
               </Card>
             </Col>
           </Row>

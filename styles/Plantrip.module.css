@@ -1,57 +1,56 @@
-@media only screen and (max-width:768px) {
-    .home_PlanTrip .home_bestTrip h1 {
-        font-size: 35px !important;
-        padding: 0% 8% !important;
-    }
+@media only screen and (max-width: 768px) {
+  .home_PlanTrip .home_bestTrip h1 {
+    font-size: 35px !important;
+    padding: 0% 8% !important;
+  }
 }
 
 .home_PlanTrip {
-    background: url(../public/images/home/Rectangle4544.png);
-    height: 95vh;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url("https://ik.imagekit.io/ahsrg6khu/New_Folder/home/Rectangle4544_XPrnPRWv0k.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082887043");
+  height: 95vh;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .home_PlanTrip .home_bestTrip {
-    top: 50%;
-    transform: translate(-0%, -50%);
-    position: relative;
-    text-align: center;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  position: relative;
+  text-align: center;
 }
 
 .home_PlanTrip .home_bestTrip h1 {
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 130%;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
-    padding: 0% 15%;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding: 0% 15%;
 }
 
 #home_planYourTrip {
-    background: #00754A;
-    border-radius: 32px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 180%;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 0.02em;
-    color: #FFFFFF;
-    padding-left: 50px;
-    padding-right: 50px;
-    text-decoration: none;
-    box-shadow: none;
+  background: #00754a;
+  border-radius: 32px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 180%;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-decoration: none;
+  box-shadow: none;
 }
 
 .home_planButton {
-    text-align: center;
-    top: -25px;
-    position: relative;
-
+  text-align: center;
+  top: -25px;
+  position: relative;
 }

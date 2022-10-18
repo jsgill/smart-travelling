@@ -2,12 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Image from "next/image";
 import Router from "next/router";
 import styles from "../styles/TripThree.module.css";
-import icon1 from "../public/images/tripTwo/Group 22133.png";
-import icon2 from "../public/images/tripTwo/Group 22134.png";
-import icon from "../public/images/tripTwo/Color.png";
 import 'reactjs-popup/dist/index.css';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -112,7 +109,7 @@ function TripThree() {
                             className="row pt-5 pb-5 justify-content-center"
                             id={styles.icon_main_row}>
                             <div className="col-1 p-0">
-                                <Image src={icon1} alt="trip_section_logo" />
+                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22133_wcxGGYAI2F.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889387" alt="trip_section_logo" width={80} height={80} />
                             </div>
                             <div className="col-3 p-0">
                                 {" "}
@@ -120,14 +117,14 @@ function TripThree() {
                             </div>
                             <div className="col-1 p-0">
                                 {" "}
-                                <Image src={icon2} alt="trip_section_logo" />
+                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/Group_22134_nUP1lnP_v.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082896211" alt="trip_section_logo" width={80} height={80} />
                             </div>
                             <div className="col-3 p-0">
                                 {" "}
                                 <div className={styles.tripThree_line}></div>
                             </div>
                             <div className="col-1 p-0">
-                                <Image src={icon} alt="trip_section_logo" />
+                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/Color_ooO8MfSb1J.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082897146" alt="trip_section_logo" width={80} height={80} />
                             </div>
                         </div>
                     </div>

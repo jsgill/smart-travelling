@@ -84,7 +84,7 @@
 }
 
 .main_top_background {
-  background: url(../public/images/tripTwo/Rectangle4571.png);
+  background: url("https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/trip_background_VEmCkd7o0n.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082891922");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -297,7 +297,6 @@
 }
 
 .tripTwo_cross_para {
-
   height: 35px;
   width: 35px;
   text-align: center;
@@ -456,7 +455,6 @@
 }
 
 .calender {
-
   padding: 5px 5px 56px 0px;
   z-index: -1;
 

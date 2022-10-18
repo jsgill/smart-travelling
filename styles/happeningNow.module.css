@@ -1,107 +1,103 @@
 @media only screen and (max-width: 767.98px) {
-    .home_mountain {
-        margin-top: 18px !important;
-        text-align: start;
-    }
+  .home_mountain {
+    margin-top: 18px !important;
+    text-align: start;
+  }
 
-    .demo {
-        border-bottom: 2px solid #00754A;
-        width: 97%;
-        margin-top: 35px !important;
-        padding-left: 7px;
-    }
+  .demo {
+    border-bottom: 2px solid #00754a;
+    width: 97%;
+    margin-top: 35px !important;
+    padding-left: 7px;
+  }
 
-    .home_mountain h4 {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 26px !important;
-        color: #121212;
-        line-height: 126%;
-        font-family: "Poppins", sans-serif;
-    }
+  .home_mountain h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px !important;
+    color: #121212;
+    line-height: 126%;
+    font-family: "Poppins", sans-serif;
+  }
 
-    .card2 {
-        background-image: url("../public/images/home/Rectangle 4557.png");
-        background-size: cover;
-        /* background-position: center; */
-        background-repeat: no-repeat;
-        height: 300px !important;
-        /* border-radius: 10px 0px 0px 10px; */
-    }
+  .card2 {
+    background-image: url("../public/images/home/Rectangle 4557.png");
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    height: 300px !important;
+    /* border-radius: 10px 0px 0px 10px; */
+  }
 
-    #image1 {
-
-        border-radius: 10px 10px 0px 0px !important;
-    }
-
+  #image1 {
+    border-radius: 10px 10px 0px 0px !important;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 912px) {
+  .home_mountain h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px !important;
+    color: #121212;
+    line-height: 126%;
+    font-family: "Poppins", sans-serif;
+  }
 
+  .demo {
+    border-bottom: 2px solid #00754a;
+    width: 97%;
+    margin-top: 83px !important;
+    padding-left: 7px;
+  }
 
-@media (min-width: 768px) and (max-width:912px) {
-    .home_mountain h4 {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px !important;
-        color: #121212;
-        line-height: 126%;
-        font-family: "Poppins", sans-serif;
-    }
+  #image1 {
+    background-image: url("/_next/static/media/Rectangle 4554.9afd64b1.png");
+    background-size: cover;
+    background-position: center;
+    height: 355px !important;
+    border-radius: 10px 0px 0px 10px;
+  }
 
-    .demo {
-        border-bottom: 2px solid #00754A;
-        width: 97%;
-        margin-top: 83px !important;
-        padding-left: 7px;
-    }
+  .card2 {
+    background-image: url("../public/images/home/Rectangle 4557.png");
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    height: 147px !important;
+    /* border-radius: 10px 0px 0px 10px; */
+  }
 
-    #image1 {
-        background-image: url("/_next/static/media/Rectangle 4554.9afd64b1.png");
-        background-size: cover;
-        background-position: center;
-        height: 355px !important;
-        border-radius: 10px 0px 0px 10px;
-    }
-
-    .card2 {
-        background-image: url("../public/images/home/Rectangle 4557.png");
-        background-size: cover;
-        /* background-position: center; */
-        background-repeat: no-repeat;
-        height: 147px !important;
-        /* border-radius: 10px 0px 0px 10px; */
-    }
-
-    .saprater h4 {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px !important;
-        color: #121212;
-        font-family: "Poppins", sans-serif;
-        line-height: 122%;
-        color: rgba(18, 18, 18, 0.8);
-    }
+  .saprater h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px !important;
+    color: #121212;
+    font-family: "Poppins", sans-serif;
+    line-height: 122%;
+    color: rgba(18, 18, 18, 0.8);
+  }
 }
 
-@media (min-width: 912px)and(max-width:1056px) {
-    .saprater h4 {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 18px !important;
-        color: #121212;
-        font-family: "Poppins", sans-serif;
-        line-height: 122%;
-        color: rgba(18, 18, 18, 0.8);
-    }
+@media (min-width: 912px) and(max-width:1056px) {
+  .saprater h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px !important;
+    color: #121212;
+    font-family: "Poppins", sans-serif;
+    line-height: 122%;
+    color: rgba(18, 18, 18, 0.8);
+  }
 
-    .saprater p {
-        font-family: "Poppins", sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16.6px !important;
-        line-height: 146%;
-        color: rgba(18, 18, 18, 0.8);
-    }
+  .saprater p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.6px !important;
+    line-height: 146%;
+    color: rgba(18, 18, 18, 0.8);
+  }
 }
 
 /* @media (min-width: 768px)and (max-width:912px) {
@@ -156,87 +152,85 @@
 } */
 
 .home_happening h1 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 130%;
-    text-align: center;
-    color: #121212;
-    font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 130%;
+  text-align: center;
+  color: #121212;
+  font-family: "Poppins", sans-serif;
 }
 
 #happenNow_images_div {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
 .home_happening {
-    padding: 90px 0px 60px 0px;
+  padding: 90px 0px 60px 0px;
 }
 
-
 .saprater p {
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17.6px;
-    line-height: 146%;
-    color: rgba(18, 18, 18, 0.8);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.6px;
+  line-height: 146%;
+  color: rgba(18, 18, 18, 0.8);
 }
 
 .saprater h4 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 21px;
-    color: #121212;
-    font-family: "Poppins", sans-serif;
-    line-height: 122%;
-    color: rgba(18, 18, 18, 0.8);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  color: #121212;
+  font-family: "Poppins", sans-serif;
+  line-height: 122%;
+  color: rgba(18, 18, 18, 0.8);
 }
 
 .saprater {
-    border-bottom: 2px solid #00754A;
-    width: 98%;
-    text-align: start;
-    padding: 18px 0px;
+  border-bottom: 2px solid #00754a;
+  width: 98%;
+  text-align: start;
+  padding: 18px 0px;
 }
 
 .home_mountain {
-    margin-top: 113px;
-    text-align: start;
-
+  margin-top: 113px;
+  text-align: start;
 }
 
 .demo {
-    border-bottom: 2px solid #00754A;
-    width: 97%;
-    margin-top: 115px;
-    padding-left: 7px;
+  border-bottom: 2px solid #00754a;
+  width: 97%;
+  margin-top: 115px;
+  padding-left: 7px;
 }
 
 .home_mountain h4 {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 28px;
-    color: #121212;
-    line-height: 126%;
-    font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  color: #121212;
+  line-height: 126%;
+  font-family: "Poppins", sans-serif;
 }
 
 #image1 {
-    background-image: url("../public/images/home/Rectangle 4554.png");
-    background-size: cover;
-    background-position: center;
-    height: 372px;
-    border-radius: 10px 0px 0px 10px;
+  background-image: url("https://ik.imagekit.io/ahsrg6khu/New_Folder/home/Rectangle_4554_1f8IjowOan.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082887094");
+  background-size: cover;
+  background-position: center;
+  height: 372px;
+  border-radius: 10px 0px 0px 10px;
 }
 
 .card2 {
-    background-image: url("../public/images/home/Rectangle 4557.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 180px;
-    border-radius: 10px 10px 0px 0px;
+  background-image: url("https://ik.imagekit.io/ahsrg6khu/New_Folder/home/Rectangle_4557_4fP7DRZxbo.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082884477");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 180px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 /* .image2 {
@@ -244,50 +238,48 @@
 } */
 
 .sizzling {
-
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .home_mountain p {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 130%;
-    color: rgba(18, 18, 18, 0.8);
-    font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: rgba(18, 18, 18, 0.8);
+  font-family: "Poppins", sans-serif;
 }
 
 .home_explore {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 130%;
-    font-family: "Poppins", sans-serif;
-    color: #00754A;
-    text-decoration: none;
-
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  font-family: "Poppins", sans-serif;
+  color: #00754a;
+  text-decoration: none;
 }
 
 .home_explore:hover {
-    color: #00754A;
+  color: #00754a;
 }
 
 .home_right_button {
-    height: 8.5px;
-    width: 15.5px;
+  height: 8.5px;
+  width: 15.5px;
 }
 
 .happeningNow_container {
-    border-radius: 10px;
-    padding: 0;
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.35);
 
-    /* margin: 0px 5px; */
+  /* margin: 0px 5px; */
 }
 
 #happeningNow_container {
-    border-radius: 10px;
-    padding: 0;
-    /* margin: 0px 5px; */
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 0;
+  /* margin: 0px 5px; */
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.35);
 }

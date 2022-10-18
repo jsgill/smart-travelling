@@ -1,13 +1,11 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import icon1 from "../public/images/trip/Group 22133.png";
-import icon2 from "../public/images/trip/Group 22134.png";
-import icon3 from "../public/images/trip/Group 22135.png";
 import MydModalWithGrid from "../components/modal";
 import styles from "../styles/TripOne.module.css";
 import { Calendar } from "react-multi-date-picker"
 import Popup from 'reactjs-popup';
+
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
   const [userInfo, setUserInfo] = useState([]);
@@ -103,25 +101,24 @@ function TripOne() {
   return (
     <div>
       <div className={styles.main_top_background}>
-
         <div className="container">
           <div
             className="row justify-content-center"
             id={styles.icon_main_row}>
             <div className="col-1 p-0">
-              <Image src={icon1} alt="trip_section_logo" />
+              <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22133_wcxGGYAI2F.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889387" alt="trip_section_logo" width={80} height={80} />
             </div>
             <div className="col-3 p-0">
               <div className={styles.tripOne_line}></div>
             </div>
             <div className="col-1 p-0">
-              <Image src={icon2} alt="trip_section_logo" />
+              <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22134_iWSDRcfHX.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082891421" alt="trip_section_logo" width={80} height={80} />
             </div>
             <div className="col-3 p-0">
               <div className={styles.tripOne_line}></div>
             </div>
             <div className="col-1 p-0">
-              <Image src={icon3} alt="trip_section_logo" />
+              <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22135_GMd-ixhFl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082888963" alt="trip_section_logo" width={80} height={80} />
             </div>
           </div>
           <div className="row justify-content-center">
