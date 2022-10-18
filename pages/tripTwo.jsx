@@ -420,13 +420,13 @@ function TripTwo() {
                     </div>
                     <div className="row justify-content-center position-relative gx-0">
                       <div className={styles.budget_select_section}>
-                        <input className={`${amount === "5,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
+                        <input type="button" className={`${amount === "5,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
                           onClick={(e) => handleBudgetAmount(e)} value="5,000" onChange={demo} readOnly id={styles.TripTwo_input_container_btn} />
-                        <input className={`${amount === "10,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
+                        <input type="button" className={`${amount === "10,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
                           onClick={(e) => handleBudgetAmount(e)} value="10,000" onChange={demo} readOnly id={styles.TripTwo_input_container_btn} />
-                        <input className={`${amount === "15,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
+                        <input type="button" className={`${amount === "15,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
                           onClick={(e) => handleBudgetAmount(e)} value="15,000" onChange={demo} readOnly id={styles.TripTwo_input_container_btn} />
-                        <input className={`${amount === "20,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
+                        <input type="button" className={`${amount === "20,000" ? styles.TripTwo_btn_container_btn2 : styles.TripTwo_btn_container_btn}`}
                           onClick={(e) => handleBudgetAmount(e)} value="20,000" onChange={demo} readOnly id={styles.TripTwo_input_container_btn} />
                       </div>
                     </div>
