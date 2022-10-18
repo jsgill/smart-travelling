@@ -206,8 +206,7 @@ function TripOne() {
               </Popup>
 
             </div>
-          </div>
-          <div className="row justify-content-center">
+            <div className="row justify-content-center">
             <div className="col-md-3 text-center">
               <Link href="/tripTwo">
                 <button
@@ -219,6 +218,8 @@ function TripOne() {
               </Link>
             </div>
           </div>
+          </div>
+          
         </div>
       </div >
     </div >

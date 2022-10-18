@@ -435,16 +435,17 @@ function TripTwo() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="row justify-content-center">
-          <div className="col-md-3 text-center">
-            <Link href="/tripThree">
-              <button className={styles.save_btn} disabled={!info || !amount} onClick={handleSubmit_TripTwoData}>
-                Save & Continue
-              </button>
-            </Link>
+          <div className="row justify-content-center">
+            <div className="col-md-3 text-center">
+              <Link href="/tripThree">
+                <button className={styles.save_btn} disabled={!info || !amount} onClick={handleSubmit_TripTwoData}>
+                  Save & Continue
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   );
