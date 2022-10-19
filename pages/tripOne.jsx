@@ -5,6 +5,7 @@ import MydModalWithGrid from "../components/modal";
 import styles from "../styles/TripOne.module.css";
 import { Calendar } from "react-multi-date-picker"
 import Popup from 'reactjs-popup';
+import { trip_one_calender, trip_one_location, trip_one_pencil, trip_one_bg } from "../public/imagesList/list";
 
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
@@ -20,15 +21,17 @@ function TripOne() {
   const startDate = new Date(date[0]).toDateString();
   const endDate = new Date(date[1]).toDateString();
   const [local, setLocal] = useState("");
-
+  const [inputVAL, setinputVAL] = useState([])
 
   const handleChange = (key) => {
+
     if (userInfo.indexOf(key) == -1) {
       setUserInfo([...userInfo, key]);
     } else {
       var val = userInfo.indexOf(key);
       if (val !== -1) {
         var val11 = userInfo.splice(val, 1);
+        console.log(val11)
         var filter = userInfo.filter((item) => item !== val11);
         setUserInfo(filter);
       }
@@ -36,6 +39,7 @@ function TripOne() {
   };
 
   const handleClick = () => {
+    console.log("now clicked+")
     toggleInput1();
     info = ""
     for (let i = 0; i < userInfo.length; i++) {
@@ -44,6 +48,7 @@ function TripOne() {
         info = info.concat(", ");
       }
     }
+    setinputVAL(userInfo)
     setInfo(info);
     setModalShow(false);
   };
@@ -100,34 +105,34 @@ function TripOne() {
 
   return (
     <div>
-      <div className={styles.main_top_background}>
+      <div className={styles.main_top_background} style={{ backgroundImage: `url(${trip_one_bg})` }}>
         <div className="container">
           <div
             className="row justify-content-center"
             id={styles.icon_main_row}>
             <div className="col-1 p-0">
-              <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22133_wcxGGYAI2F.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889387" alt="trip_section_logo" width={80} height={80} />
+              <Image src={trip_one_calender} alt="trip_section_logo" width={80} height={80} />
             </div>
             <div className="col-3 p-0">
               <div className={styles.tripOne_line}></div>
             </div>
             <div className="col-1 p-0">
-              <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22134_iWSDRcfHX.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082891421" alt="trip_section_logo" width={80} height={80} />
+              <Image src={trip_one_location} alt="trip_section_logo" width={80} height={80} />
             </div>
             <div className="col-3 p-0">
               <div className={styles.tripOne_line}></div>
             </div>
             <div className="col-1 p-0">
-              <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22135_GMd-ixhFl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082888963" alt="trip_section_logo" width={80} height={80} />
+              <Image src={trip_one_pencil} alt="trip_section_logo" width={80} height={80} />
             </div>
           </div>
           <div className="row justify-content-center">
             <div className="col-md-7">
               <div onClick={toggleInput1} className={styles.input_field}>
-                {info.length === 0 ? "Choose Destination" : info}
+                {inputVAL.length === 0 ? "Choose Destination" : inputVAL.join(",")}
               </div>
               {/*hide show div for first input  */}
-              <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => handleClick()} selectCity={userInfo.length} />
+              <MydModalWithGrid show={modalShow} change={handleChange} onHide={() => setModalShow(false)} onNop={() => handleClick()} selectCity={userInfo.length} />
               <div onClick={toggleInput2} className={styles.input_field}>
                 {inputTwo.length == 0 ? "No. of Guests" : inputTwo}
               </div>
@@ -169,8 +174,6 @@ function TripOne() {
                   </div>
                 </div>
               </div>
-
-
               <Popup position="top center" id={styles.calender_popup} trigger={<div disabled={!inputTwo} onClick={toggleInput3} className={styles.input_field} >
                 {
                   inputThree.length == 0

@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../styles/Plantrip.module.css";
+import { plan_trip_img } from "../public/imagesList/list"
 
 function PlanTrip() {
   return (
     <>
-      <div className={styles.home_PlanTrip}>
+      <div className={styles.home_PlanTrip} style={{ backgroundImage: `url(${plan_trip_img})` }}>
         <div className={styles.home_bestTrip}>
           <h1>
             YOUR BEST TRIP,

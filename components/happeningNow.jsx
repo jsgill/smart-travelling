@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from '../styles/happeningNow.module.css'
-import rightarrow from '../public/images/home/Arrow - Right 2.png'
+import rightarrow from '../public/images/home/Arrow-Right.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { waterfall_img, riverside_img } from "../public/imagesList/list"
+
 function HappeningNow() {
     return (
         <div className='container mb-5'>
@@ -18,7 +20,7 @@ function HappeningNow() {
                             <div className={styles.happeningNow_container}>
                                 <div className='row'>
                                     <div className='col-md-4'  >
-                                        <div id={styles.image1}></div>
+                                        <div id={styles.image1} style={{ backgroundImage: `url(${waterfall_img})` }}></div>
                                     </div>
                                     <div className='col-md-8'>
                                         <div className='container px-4'>
@@ -47,7 +49,7 @@ function HappeningNow() {
                 <div className='col-md-4' >
                     <div id={styles.happeningNow_container}>
                         <div className={styles.image2}>
-                            <div className={styles.card2}></div>
+                            <div className={styles.card2} style={{ backgroundImage: `url(${riverside_img})` }}></div>
                             <div className='container px-3'>
                                 <div className={styles.saprater}>
                                     <h4>Riverside camping at kasol </h4>

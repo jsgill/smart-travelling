@@ -3,10 +3,11 @@ import Link from "next/link";
 import styles from "../styles/TripThree.module.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { trip_details_bg } from '../public/imagesList/list';
 
 function TripDetails() {
     const [destinationPlace, setDestinationPlace] = useState("")
-    const [userInterest, setUserInterest] = useState("");
+    const [userInterest, setUserInterest] = useState([]);
     const [userDetails, setUserDetails] = useState("")
     useEffect(() => {
         const user_dest = JSON.parse(localStorage.getItem('trip_one'));
@@ -18,7 +19,7 @@ function TripDetails() {
     }, [])
     return (
         <div>
-            <div className={styles.main_container}>
+            <div className={styles.main_container} style={{ backgroundImage: `url(${trip_details_bg})` }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -63,7 +64,7 @@ function TripDetails() {
                                         <div className='row justify-content-center gx-0'>
                                             <div className='col-5'><b>Interest</b></div>
                                             <div className='col-1'><p>:</p></div>
-                                            <div className='col-6'><p>{userInterest.user_interest}</p></div>
+                                            <div className='col-6'><p>{userInterest.user_interest?.join(",")}</p></div>
                                         </div>
                                         <div className='row justify-content-center gx-0'>
                                             <div className='col-5'><b>Budget per person</b></div>

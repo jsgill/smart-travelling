@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { nav_logo } from "../public/imagesList/list";
 
 function Navbar() {
     return (
@@ -9,11 +10,10 @@ function Navbar() {
                 <div className="container">
                     <Link href="/">
                         <a className="navbar-brand d-flex">
-                            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/home/Group_18260_EfqzL2iFB.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082884284" height="50%" width="50%" alt="navbar" />
+                            <Image src={nav_logo} height="50%" width="50%" alt="navbar" />
                             <div className='smart'>The Smart Traveller</div>
                         </a>
                     </Link>
-
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>

@@ -10,6 +10,7 @@ import 'reactjs-popup/dist/index.css';
 import popup_img from "../public/images/trip/popup_img.png";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { contact_bg, dhruv, nihal } from "../public/imagesList/list";
 
 function Contact() {
     const recaptchaRef = React.createRef();
@@ -44,7 +45,7 @@ function Contact() {
         <div>
             <Navbar />
             <div className="container-fluid" id={styles.main_contact_container}>
-                <div className={styles.contact_image}>
+                <div className={styles.contact_image} style={{ backgroundImage: `url(${contact_bg})` }}>
                     <h1 className={styles.contact_tourist_care}>TOURIST CARE</h1>
                 </div>
             </div>
@@ -58,7 +59,7 @@ function Contact() {
                                     <div className="justify-content-center">
                                         <div className="card" id={styles.contact_card_one}>
                                             <div className={styles.contact_user_one}>
-                                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/contact/Rectangle_4409_pWtlTSAjU.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082879034" width="214px" height="214px" alt="user-one" />
+                                                <Image src={nihal} width="214px" height="214px" alt="user-one" />
                                             </div>
                                             <div className="card-body p-0 text-center">
                                                 <p className="card-title" id={styles.contact_card_title}>Nihal Choudhary</p>
@@ -92,7 +93,7 @@ function Contact() {
                                     <div className="justify-content-center">
                                         <div className="card" id={styles.contact_card_one}>
                                             <div>
-                                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/contact/Rectangle_4411_mVu6A0G0nI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082879285" width="214px" height="214px" alt="user-two" />
+                                                <Image src={dhruv} width="214px" height="214px" alt="user-two" />
                                             </div>
                                             <div className="card-body p-0 text-center">
                                                 <p className="card-title" id={styles.contact_card_title}>Dhruv Sihag</p>

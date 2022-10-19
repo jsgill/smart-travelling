@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/tripTwo.module.css";
 import 'reactjs-popup/dist/index.css';
+import { trip_one_calender, trip_two_location, trip_one_pencil, trip_one_bg, camping, hiking, offbeat, biking, forest, apple, historial, romantic, adventure, offroading, traditional, waterfall } from "../public/imagesList/list";
 
 function TripTwo() {
   const [input1, setInput1] = useState(false);
@@ -21,8 +22,7 @@ function TripTwo() {
   const [tenthColor, setTenthColor] = useState(true);
   const [elevenColor, setElevenColor] = useState(true);
   const [text, setText] = useState([]);
-  const [info, setInfo] = useState("");
-  const [localStr, setLocalStr] = useState("")
+  const [inputVal, setinputVal] = useState([])
 
   const toggleInput1 = () => {
     setInput1(!input1);
@@ -43,104 +43,97 @@ function TripTwo() {
   const saveBtn = () => {
     toggleInput2();
   };
-
+  const handleData = (data) => {
+    const dataInd = text.indexOf(data)
+    if (dataInd == -1 && text.length < 1) {
+      setText([...text, data])
+    } else if (dataInd != -1 && text.length == 1) {
+      setText([])
+    } else {
+      dataInd == -1 ? setText([...text, data]) : setText([...text.slice(0, dataInd), ...text.slice(dataInd + 1)])
+    }
+  }
   const handleChangeColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
+    console.log("Asdfasdf", data)
     setChangeColor(!changeColor);
   };
   const handleFirstColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setFirstColor(!firstColor);
   };
   const handleSecondColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setSecondColor(!secondColor);
   };
   const handleThirdColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setThirdColor(!thirdColor);
   };
   const handleFourthColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setFourthColor(!fourthColor);
   };
   const handleFifthColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setFifthColor(!fifthColor);
   };
   const handleSixthColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setSixthColor(!sixthColor);
   };
   const handleSeventhColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setSeventhColor(!seventhColor);
   };
   const handleEighthColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setEighthColor(!eighthColor);
   };
   const handleNinthColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setNinthColor(!ninthColor);
   };
   const handleTenthColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setTenthColor(!tenthColor);
   };
   const handleElevenColor = (data) => {
-    setText([...text, data]);
+    handleData(data)
     setElevenColor(!elevenColor);
   };
   const handleSubmit = () => {
     toggleInput1();
-    var filter = text.filter(
-      (item, index, array) => text.indexOf(item) === array.lastIndexOf(item)
-    );
-    setText(filter);
-    info = ""
-    for (let i = 0; i < filter.length; i++) {
-      info = info.concat(filter[i]);
-      if (i < filter.length - 1) {
-        info = info.concat(", ");
-      }
-    }
-    setInfo(info);
+    setinputVal(text)
   };
   const handleSubmit_TripTwoData = () => {
-    for (let j = 0; j < text.length; j++) {
-      localStr = localStr.concat(text[j]);
-      if (j < text.length - 1) {
-        localStr = localStr.concat(", ")
-      }
-    }
-    setLocalStr(localStr)
     const obj = {
-      user_interest: localStr,
+      user_interest: inputVal,
       budget: amount
     }
+    console.log("obj -->", obj)
     localStorage.setItem("trip_two", JSON.stringify(obj));
   }
   return (
-    <div className={styles.tripTwo}>
+    <div className={styles.tripTwo} style={{ backgroundImage: `url(${trip_one_bg})` }}>
       <div className="container">
         <div
           className="row mb-5 justify-content-center"
           id={styles.icon_main_row}>
           <div className="col-1 p-0">
-            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22133_wcxGGYAI2F.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889387" alt="trip_section_logo" width={80} height={80} />
+            <Image src={trip_one_calender} alt="trip_section_logo" width={80} height={80} />
           </div>
           <div className="col-3 p-0">
             <div className={styles.tripOne_line}></div>
           </div>
           <div className="col-1 p-0">
-            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/Group_22134_nUP1lnP_v.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082896211" alt="trip_section_logo" width={80} height={80} />
+            <Image src={trip_two_location} alt="trip_section_logo" width={80} height={80} />
           </div>
           <div className="col-3 p-0">
             <div className={styles.tripOne_line}></div>
           </div>
           <div className="col-1 p-0">
-            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/Group_22135__oF86yY1sf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082893895" alt="trip_section_logo" width={80} height={80} />
+            <Image src={trip_one_pencil} alt="trip_section_logo" width={80} height={80} />
           </div>
         </div>
         <div className="row justify-content-center py-5">
@@ -149,7 +142,7 @@ function TripTwo() {
             <div className={styles.home_carousal_card}>
               <div className={styles.bca}>
                 <input
-                  value={text.length == 0 ? "Choose Interest" : text}
+                  value={inputVal.length == 0 ? "Choose Interest" : inputVal}
                   onChange={demo}
                   className={styles.input_field}
                   onClick={toggleInput1}
@@ -171,7 +164,7 @@ function TripTwo() {
                           onClick={() => handleChangeColor("Camping")}
                         >
                           <p className=" py-2">
-                            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image1_tOXW1PvQU.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082896119" height={60} width={60} alt="camping" />
+                            <Image src={camping} height={60} width={60} alt="camping" />
                           </p>
                           <p className={styles.image_para_content}>Camping</p>
                         </div>
@@ -185,7 +178,7 @@ function TripTwo() {
                           onClick={() => handleFirstColor("Hiking")}
                         >
                           <p className=" py-2">
-                            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image2_t5ZLq_cbNx.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082894574" height={60} width={60} alt="hiking" />
+                            <Image src={hiking} height={60} width={60} alt="hiking" />
                           </p>
                           <p className={styles.image_para_content}>Hiking</p>
                         </div>
@@ -200,7 +193,7 @@ function TripTwo() {
                         >
                           <p className=" py-2">
                             <Image
-                              src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image3_FBnqrnlCp.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082894607"
+                              src={offbeat}
                               height={60}
                               width={60}
                               alt="offbeat"
@@ -218,7 +211,7 @@ function TripTwo() {
                           onClick={() => handleThirdColor("Apple Orchards")}
                         >
                           <p className=" py-2">
-                            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image4_MBe9Txad4.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082894593" height={60} width={60} alt="apple" />
+                            <Image src={apple} height={60} width={60} alt="apple" />
                           </p>
                           <p className={styles.image_para_content3}>Apple Orchards</p>
                         </div>
@@ -232,7 +225,7 @@ function TripTwo() {
                           onClick={() => handleFourthColor("Biking")}
                         >
                           <p className=" py-2">
-                            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image5_AEppa6Yo9.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082898575" height={60} width={60} alt="biking" />
+                            <Image src={biking} height={60} width={60} alt="biking" />
                           </p>
                           <p className={styles.image_para_content}>Biking</p>
                         </div>
@@ -246,7 +239,7 @@ function TripTwo() {
                           onClick={() => handleFifthColor("Forest")}
                         >
                           <p className=" py-2">
-                            <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image6_SHV8O2VW3.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082896423" height={60} width={60} alt="forest" />
+                            <Image src={forest} height={60} width={60} alt="forest" />
                           </p>
                           <p className={styles.image_para_content}>Forest</p>
                         </div>
@@ -257,11 +250,10 @@ function TripTwo() {
                             ? styles.camping_div_color1
                             : styles.camping_div1
                             }`}
-                          onClick={() => handleSixthColor("Historical")}
-                        >
-                          <p className=" py-2">
+                          onClick={() => handleSixthColor("Historical")}>
+                          <p className="py-2">
                             <Image
-                              src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image7_IasKHlvAKY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082894022"
+                              src={historial}
                               height={60}
                               width={60}
                               alt="historical"
@@ -280,7 +272,7 @@ function TripTwo() {
                         >
                           <p className=" py-2">
                             <Image
-                              src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image8__LFWpJpxa.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082893651"
+                              src={romantic}
                               height={60}
                               width={60}
                               alt="romantic"
@@ -299,7 +291,7 @@ function TripTwo() {
                         >
                           <p className=" py-2">
                             <Image
-                              src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image9_NVwNZpf6t.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082898427"
+                              src={adventure}
                               height={60}
                               width={60}
                               alt="adventure"
@@ -318,7 +310,7 @@ function TripTwo() {
                         >
                           <p className=" py-2">
                             <Image
-                              src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image10_XGze_GU17.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082897303"
+                              src={offroading}
                               height={60}
                               width={60}
                               alt="offroading"
@@ -337,7 +329,7 @@ function TripTwo() {
                         >
                           <p className=" py-2">
                             <Image
-                              src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image11_3AqIpUvPN.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082893738"
+                              src={traditional}
                               height={60}
                               width={60}
                               alt="traditional"
@@ -356,7 +348,7 @@ function TripTwo() {
                         >
                           <p className=" py-2">
                             <Image
-                              src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/image12_2Q6TjXvWys.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082897379"
+                              src={waterfall}
                               height={60}
                               width={60}
                               alt="waterfall"
@@ -487,7 +479,7 @@ function TripTwo() {
         <div className="row justify-content-center">
           <div className="col-md-3 text-center">
             <Link href="/tripThree">
-              <button className={styles.save_btn} disabled={!info || !amount} onClick={handleSubmit_TripTwoData}>
+              <button className={styles.save_btn} disabled={inputVal.length == 0 || amount == ""} onClick={handleSubmit_TripTwoData}>
                 Save & Continue
               </button>
             </Link>

@@ -1,5 +1,4 @@
 .main_top_background {
-  background: url("https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/trip_background_VEmCkd7o0n.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082891922");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -300,7 +299,6 @@
 }
 
 .main_container {
-  background: url("https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/trip_details_img_u4dOSbJfk7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082892188");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

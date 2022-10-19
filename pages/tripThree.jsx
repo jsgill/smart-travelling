@@ -7,6 +7,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReCAPTCHA from "react-google-recaptcha";
+import { trip_one_bg, trip_one_calender, trip_three_pencil, trip_two_location } from "../public/imagesList/list"
 
 function TripThree() {
     const [name, setName] = useState("Enter Your Name (optional)");
@@ -102,14 +103,14 @@ function TripThree() {
     }
     return (
         <div>
-            <div className={styles.main_top_background}>
+            <div className={styles.main_top_background} style={{ backgroundImage: `url(${trip_one_bg})` }}>
                 <div className={styles.top_tripThree_padding}>
                     <div className="container">
                         <div
                             className="row pt-5 pb-5 justify-content-center"
                             id={styles.icon_main_row}>
                             <div className="col-1 p-0">
-                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/trip/Group_22133_wcxGGYAI2F.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082889387" alt="trip_section_logo" width={80} height={80} />
+                                <Image src={trip_one_calender} alt="trip_section_logo" width={80} height={80} />
                             </div>
                             <div className="col-3 p-0">
                                 {" "}
@@ -117,14 +118,14 @@ function TripThree() {
                             </div>
                             <div className="col-1 p-0">
                                 {" "}
-                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/Group_22134_nUP1lnP_v.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082896211" alt="trip_section_logo" width={80} height={80} />
+                                <Image src={trip_two_location} alt="trip_section_logo" width={80} height={80} />
                             </div>
                             <div className="col-3 p-0">
                                 {" "}
                                 <div className={styles.tripThree_line}></div>
                             </div>
                             <div className="col-1 p-0">
-                                <Image src="https://ik.imagekit.io/ahsrg6khu/New_Folder/tripTwo/Color_ooO8MfSb1J.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666082897146" alt="trip_section_logo" width={80} height={80} />
+                                <Image src={trip_three_pencil} alt="trip_section_logo" width={80} height={80} />
                             </div>
                         </div>
                     </div>
