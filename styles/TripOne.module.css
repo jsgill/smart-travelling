@@ -2,6 +2,7 @@
   .save_btn {
     width: 50% !important;
     font-size: 14px !important;
+    margin-top: 85px !important;
   }
 
   #tripOne_inputtwo_container {
@@ -130,7 +131,7 @@
 }
 
 .save_btn {
-  margin-top: 55px;
+  margin-top: 60px;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -265,7 +266,7 @@
 .tripOne_inputone_btn_container1 {
   text-align: center;
   position: absolute;
-  top: 69%;
+  top: 80%;
   display: flex;
   justify-content: center;
   width: 100%;

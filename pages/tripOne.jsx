@@ -6,7 +6,8 @@ import icon2 from "../public/images/trip/Group 22134.png";
 import icon3 from "../public/images/trip/Group 22135.png";
 import MydModalWithGrid from "../components/modal";
 import styles from "../styles/TripOne.module.css";
-import { Calendar } from "react-multi-date-picker"
+import Calendar from 'react-calendar';
+
 import Popup from 'reactjs-popup';
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
@@ -18,7 +19,7 @@ function TripOne() {
   const [inputTwo, setInputTwo] = useState("");
   const [inputThree, setInputThree] = useState("");
   const [count, setCount] = useState(0);
-  const [date, setDate] = useState([]);
+  const [date, setDate] = useState(new Date());
   const startDate = new Date(date[0]).toDateString();
   const endDate = new Date(date[1]).toDateString();
   const [local, setLocal] = useState("");
@@ -184,15 +185,12 @@ function TripOne() {
                 borderRadius: "10px",
               }} modal nested>
                 {close => (
-                  <div >
+                  <div className='calendar-container'>
                     <Calendar
-                      range
                       value={date}
                       minDate={new Date()}
                       onChange={setDate}
-                      format="DD MMMM  YYYY"
-                      className={styles.calender}
-
+                      selectRange={true}
                     />
                     <div className={styles.tripOne_inputone_btn_container1} onClick={() => {
                       close();
