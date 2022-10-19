@@ -1,3 +1,17 @@
+@media only screen and (max-width: 768px) {
+  .react-calendar__navigation button {
+    min-width: 44px;
+    font-size: 17px !important;
+    font-weight: 500;
+    background-color: #fff;
+  }
+
+  .react-calendar__month-view__weekdays abbr {
+    text-decoration: auto !important;
+  }
+}
+
+
 .container {
   max-width: 1200px !important;
 }
