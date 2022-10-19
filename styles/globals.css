@@ -1,7 +1,7 @@
 @media only screen and (max-width: 768px) {
   .react-calendar__navigation button {
     min-width: 44px;
-    font-size: 17px !important;
+    font-size: 16px !important;
     font-weight: 500;
     background-color: #fff;
   }
