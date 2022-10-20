@@ -10,7 +10,7 @@ function HappeningNow() {
         <div className='container mb-5'>
             <div className='row justify-content-center'>
                 <div className={styles.home_happening}>
-                    <h1>Happening Now.....</h1>
+                    <h1 id={styles.HappeningNow_h1}>Happening Now.....</h1>
                 </div>
             </div>
             <div className='row justify-content-center' >
