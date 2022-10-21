@@ -20,7 +20,7 @@ function TripOne() {
   const [inputTwo, setInputTwo] = useState("");
   const [inputThree, setInputThree] = useState("");
   const [count, setCount] = useState(0);
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState("");
   const startDate = new Date(date[0]).toDateString();
   const endDate = new Date(date[1]).toDateString();
   const [local, setLocal] = useState("");
