@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import icon1 from "../public/images/trip/Group 22133.png";
@@ -7,8 +7,9 @@ import icon3 from "../public/images/trip/Group 22135.png";
 import MydModalWithGrid from "../components/modal";
 import styles from "../styles/TripOne.module.css";
 import Calendar from 'react-calendar';
-
 import Popup from 'reactjs-popup';
+
+
 function TripOne() {
   const [modalShow, setModalShow] = useState(false);
   const [userInfo, setUserInfo] = useState([]);
@@ -175,7 +176,7 @@ function TripOne() {
               </div>
 
 
-              <Popup position="top center" id={styles.calender_popup} trigger={<div disabled={!inputTwo} onClick={toggleInput3} className={styles.input_field} >
+              <Popup position="top center" trigger={<div disabled={!inputTwo} onClick={toggleInput3} className={styles.input_field} >
                 {
                   inputThree.length == 0
                     ? "Select the Start & End Date"
